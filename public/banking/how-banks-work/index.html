@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How Banks Work — UnschoolMe</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600;1,700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:'DM Sans',sans-serif;color:#1A1A1A;background:#F8F6F1;}
+
+.progress-bar{position:fixed;top:0;left:0;height:3px;background:#C8A96E;z-index:200;width:0%;transition:width 0.1s linear;}
+
+.flag{height:5px;background:linear-gradient(90deg,#B22234 33%,#fff 33%,#fff 66%,#3C3B6E 66%);}
+nav{display:flex;align-items:center;justify-content:space-between;padding:1rem 3rem;background:rgba(10,10,30,0.98);border-bottom:1px solid rgba(255,255,255,0.08);}
+.logo{font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:700;color:#fff;flex-shrink:0;text-decoration:none;}
+.logo b{color:#C8A96E;}
+.nav-links{display:flex;gap:2rem;margin-left:4rem;flex:1;}
+.nav-links a{font-size:11px;color:rgba(255,255,255,0.45);letter-spacing:2px;text-transform:uppercase;font-weight:500;text-decoration:none;transition:color 0.2s;}
+.nav-links a:hover,.nav-links a.active{color:#fff;}
+.nav-right{display:flex;gap:8px;flex-shrink:0;}
+.nbtn1{background:transparent;color:rgba(255,255,255,0.5);border:1px solid rgba(255,255,255,0.15);border-radius:6px;padding:7px 16px;font-size:12px;font-family:'DM Sans',sans-serif;cursor:pointer;}
+.nbtn2{background:#C8A96E;color:#0A0A1E;border:none;border-radius:6px;padding:7px 16px;font-size:12px;font-family:'DM Sans',sans-serif;font-weight:500;cursor:pointer;}
+
+.article-hero{background:#0A0A1E;padding:3.5rem 3rem;position:relative;overflow:hidden;}
+.article-hero::after{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,#B22234 33%,#fff 33%,#fff 66%,#3C3B6E 66%);}
+.ah-inner{max-width:960px;margin:0 auto;}
+.breadcrumb{font-size:11px;color:rgba(255,255,255,0.3);letter-spacing:1px;text-transform:uppercase;margin-bottom:1.5rem;}
+.breadcrumb a{color:rgba(255,255,255,0.3);text-decoration:none;transition:color 0.2s;}
+.breadcrumb a:hover{color:#C8A96E;}
+.breadcrumb span{color:#C8A96E;}
+.article-tag{display:inline-flex;align-items:center;gap:6px;background:rgba(200,169,110,0.1);border:1px solid rgba(200,169,110,0.3);border-radius:99px;font-size:11px;color:#C8A96E;padding:4px 14px;margin-bottom:1.2rem;}
+.article-title{font-family:'Cormorant Garamond',serif;font-size:46px;font-weight:700;color:#fff;letter-spacing:-1.5px;line-height:1.1;margin-bottom:1rem;max-width:680px;}
+.article-title em{font-style:italic;color:#C8A96E;}
+.article-subtitle{font-size:15px;color:rgba(255,255,255,0.45);line-height:1.75;max-width:560px;font-weight:300;margin-bottom:1.8rem;}
+.article-meta{display:flex;align-items:center;gap:1.5rem;flex-wrap:wrap;}
+.meta-badge{font-size:10px;letter-spacing:1.5px;text-transform:uppercase;padding:3px 12px;border-radius:99px;font-weight:500;background:#E8F5E9;color:#2E7D32;}
+.meta-item{font-size:12px;color:rgba(255,255,255,0.3);display:flex;align-items:center;gap:6px;}
+.meta-sep{width:3px;height:3px;border-radius:50%;background:rgba(255,255,255,0.15);}
+
+.content-wrap{max-width:960px;margin:0 auto;padding:3rem;}
+.content-grid{display:grid;grid-template-columns:1fr 280px;gap:3rem;align-items:start;}
+
+.article-body{}
+.key-takeaways{background:#0A0A1E;border-radius:14px;padding:1.8rem;margin-bottom:2.5rem;}
+.kt-label{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#C8A96E;font-weight:500;margin-bottom:1rem;}
+.kt-item{color:rgba(255,255,255,0.65);font-size:13px;display:flex;gap:10px;align-items:flex-start;margin-bottom:9px;line-height:1.6;font-weight:300;}
+.kt-arrow{color:#C8A96E;flex-shrink:0;font-size:11px;margin-top:2px;}
+.kt-item:last-child{margin-bottom:0;}
+
+.article-body h2{font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:700;color:#1A1A1A;margin:2.5rem 0 1rem;letter-spacing:-0.5px;line-height:1.2;}
+.article-body h3{font-size:10px;letter-spacing:2.5px;text-transform:uppercase;color:#B22234;font-weight:500;margin:2rem 0 0.7rem;}
+.article-body p{font-size:15px;line-height:1.85;color:#555;margin-bottom:1.2rem;font-weight:300;}
+.article-body p strong{color:#1A1A1A;font-weight:500;}
+.article-body ul,.article-body ol{padding-left:1.5rem;margin-bottom:1.3rem;}
+.article-body li{font-size:15px;line-height:1.8;color:#555;margin-bottom:7px;font-weight:300;}
+.article-body li strong{color:#1A1A1A;font-weight:500;}
+
+.callout{border-left:3px solid #C8A96E;background:#FEFCF7;padding:1.2rem 1.5rem;border-radius:0 10px 10px 0;margin:1.8rem 0;}
+.callout.red{border-color:#B22234;background:#FFF8F8;}
+.callout.blue{border-color:#3C3B6E;background:#F8F8FF;}
+.callout p{margin-bottom:0;font-size:14px;}
+.callout-label{font-size:10px;letter-spacing:2px;text-transform:uppercase;font-weight:500;color:#C8A96E;margin-bottom:6px;}
+.callout.red .callout-label{color:#B22234;}
+.callout.blue .callout-label{color:#3C3B6E;}
+
+.data-table{width:100%;border-collapse:collapse;margin:1.5rem 0;font-size:13px;border-radius:10px;overflow:hidden;}
+.data-table thead th{background:#0A0A1E;color:#C8A96E;padding:11px 16px;text-align:left;font-weight:500;letter-spacing:0.5px;font-size:11px;}
+.data-table tbody td{padding:11px 16px;border-bottom:1px solid #E8E4DC;color:#555;font-weight:300;}
+.data-table tbody tr:last-child td{border-bottom:none;}
+.data-table tbody tr:nth-child(even) td{background:#FAFAF8;}
+.data-table tbody tr.highlight td{background:rgba(200,169,110,0.08);color:#1A1A1A;font-weight:500;}
+
+.example-box{background:#F8F6F1;border:1px solid #E8E4DC;border-radius:14px;padding:1.5rem;margin:1.8rem 0;}
+.ex-label{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#888;margin-bottom:1rem;font-weight:500;}
+.ex-row{display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid #E8E4DC;font-size:13px;}
+.ex-row:last-child{border-bottom:none;font-weight:500;color:#1A1A1A;}
+.ex-row span:first-child{color:#888;font-weight:300;}
+.ex-row span:last-child{color:#1A1A1A;font-family:'Cormorant Garamond',serif;font-size:16px;font-weight:700;}
+
+.article-footer{margin-top:3rem;padding-top:2rem;border-top:1px solid #E8E4DC;}
+.af-nav{display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem;}
+.af-btn{display:inline-flex;align-items:center;gap:8px;font-size:13px;color:#888;text-decoration:none;padding:10px 16px;border:1px solid #E8E4DC;border-radius:8px;background:#fff;transition:all 0.2s;}
+.af-btn:hover{border-color:#C8A96E;color:#1A1A1A;}
+.af-btn.next{background:#0A0A1E;color:#fff;border-color:#0A0A1E;}
+.af-btn.next:hover{background:#1A1A2E;}
+
+.sidebar{position:sticky;top:2rem;}
+.sb-card{background:#fff;border:1px solid #E8E4DC;border-radius:14px;padding:1.5rem;margin-bottom:16px;}
+.sb-title{font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:700;color:#1A1A1A;margin-bottom:1rem;}
+.toc-list{display:flex;flex-direction:column;}
+.toc-link{font-size:12px;color:#888;padding:7px 0;border-bottom:1px solid #F0EDE8;text-decoration:none;transition:color 0.15s;display:flex;align-items:flex-start;gap:8px;font-weight:300;line-height:1.4;}
+.toc-link:last-child{border-bottom:none;}
+.toc-link.active,.toc-link:hover{color:#1A1A1A;}
+.toc-link .toc-num{font-size:10px;color:#C8A96E;flex-shrink:0;margin-top:2px;}
+.related-link{display:flex;gap:10px;align-items:flex-start;text-decoration:none;padding:10px 0;border-bottom:1px solid #F0EDE8;transition:all 0.15s;}
+.related-link:last-child{border-bottom:none;}
+.related-link:hover .rl-title{color:#C8A96E;}
+.rl-arrow{color:#C8A96E;flex-shrink:0;font-size:12px;margin-top:2px;}
+.rl-title{font-size:12px;color:#1A1A1A;line-height:1.5;font-weight:400;}
+.rl-meta{font-size:11px;color:#AAA;margin-top:3px;font-weight:300;}
+.premium-card{background:#0A0A1E;border-radius:14px;padding:1.5rem;margin-bottom:16px;}
+.pc-eye{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#C8A96E;margin-bottom:8px;}
+.pc-title{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:700;color:#fff;margin-bottom:8px;}
+.pc-desc{font-size:12px;color:rgba(255,255,255,0.4);line-height:1.6;margin-bottom:1.2rem;font-weight:300;}
+.pc-btn{width:100%;background:#C8A96E;color:#0A0A1E;border:none;border-radius:8px;padding:10px;font-size:13px;font-family:'DM Sans',sans-serif;font-weight:500;cursor:pointer;}
+
+footer{background:#060610;padding:3rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;border-top:1px solid rgba(255,255,255,0.05);}
+.flogo{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:700;color:#fff;}
+.flogo b{color:#C8A96E;}
+.flinks{display:flex;gap:2rem;flex-wrap:wrap;}
+.flinks a{font-size:10px;color:rgba(255,255,255,0.2);letter-spacing:2px;text-transform:uppercase;text-decoration:none;transition:color 0.2s;}
+.flinks a:hover{color:#fff;}
+.fcopy{font-size:11px;color:rgba(255,255,255,0.15);width:100%;margin-top:0.5rem;}
+.flag-b{height:3px;background:linear-gradient(90deg,#B22234 33%,rgba(255,255,255,0.15) 33%,rgba(255,255,255,0.15) 66%,#3C3B6E 66%);width:100%;margin-top:1.5rem;border-radius:2px;}
+</style>
+</head>
+<body>
+
+<div class="progress-bar" id="progress-bar"></div>
+<div class="flag"></div>
+
+<nav>
+  <a href="/" class="logo">Unschool<b>Me</b></a>
+  <div class="nav-links">
+    <a href="/taxes">Taxes</a>
+    <a href="/banking" class="active">Banking</a>
+    <a href="/credit">Credit</a>
+    <a href="/government">Government</a>
+    <a href="/business">Business</a>
+    <a href="/rights">Rights</a>
+  </div>
+  <div class="nav-right">
+    <button class="nbtn1">Log in</button>
+    <button class="nbtn2">Get Started →</button>
+  </div>
+</nav>
+
+<div class="article-hero">
+  <div class="ah-inner">
+    <div class="breadcrumb">
+      <a href="/">Home</a> → <a href="/banking">Banking</a> → <span>How Banks Work</span>
+    </div>
+    <div class="article-tag">🏦 Banking · Free Article</div>
+    <h1 class="article-title">How Banks Work — And How They Make <em>Billions</em> From Your Money</h1>
+    <p class="article-subtitle">Banks aren't just safe boxes for your cash. They lend it out, charge interest, and profit enormously. Here's exactly how — and what it means for you.</p>
+    <div class="article-meta">
+      <span class="meta-badge">Free</span>
+      <span class="meta-item">5 min read</span>
+      <span class="meta-sep"></span>
+      <span class="meta-item">UnschoolMe Editorial</span>
+      <span class="meta-sep"></span>
+      <span class="meta-item">Updated 2025</span>
+    </div>
+  </div>
+</div>
+
+<div class="content-wrap">
+  <div class="content-grid">
+
+    <div class="article-body" id="article-body">
+
+      <div class="key-takeaways">
+        <div class="kt-label">Key Takeaways</div>
+        <div class="kt-item"><span class="kt-arrow">→</span> Your money doesn't sit in a vault — banks lend most of it out to other borrowers</div>
+        <div class="kt-item"><span class="kt-arrow">→</span> Banks profit from the spread between what they pay depositors (~0.5%) and charge borrowers (7–24%)</div>
+        <div class="kt-item"><span class="kt-arrow">→</span> The FDIC insures your deposits up to $250,000 per bank per account category</div>
+        <div class="kt-item"><span class="kt-arrow">→</span> Through fractional reserve banking, banks can lend ~$9 for every $1 deposited</div>
+        <div class="kt-item"><span class="kt-arrow">→</span> Online banks pay 10–50x more interest than traditional banks because their cost structure is lower</div>
+      </div>
+
+      <h2 id="what-banks-do">What Banks Actually Do With Your Money</h2>
+      <p>Most people picture a bank as a giant vault — you deposit $5,000, they store $5,000, you withdraw it later. That's not how banks work. Not even close.</p>
+      <p>Banks are <strong>financial intermediaries</strong>. Their business model is simple: borrow money cheaply from depositors, lend it out at a higher rate to borrowers, and keep the difference. That difference — called the <strong>net interest margin</strong> — averages about 3% across the US banking industry and generates hundreds of billions of dollars in profit each year.</p>
+      <p>Here's the gap in stark terms: in 2024, the national average savings account APY at big traditional banks was <strong>0.46%</strong>. The average 30-year fixed mortgage rate was around <strong>7%</strong>. Auto loans averaged <strong>8%</strong>. Credit cards charged <strong>20–24%</strong>. The bank borrows from you at 0.46% and lends at 7–24%. The spread is the business.</p>
+      <p>Put it in dollar terms: your $5,000 savings account earns <strong>$23/year</strong> at 0.46% APY. Meanwhile, the bank might lend that same $5,000 to a credit card borrower at 22% — collecting <strong>$1,100/year</strong> in interest. You get $23. They keep $1,077. That's not a coincidence; that's the model.</p>
+
+      <h2 id="fractional-reserve">Fractional Reserve Banking — How One Dollar Becomes Ten</h2>
+      <p>Here's the part that surprises most people: when you deposit $1,000, the bank does not hold all $1,000 in reserve. They never have. Banks operate on a system called <strong>fractional reserve banking</strong> — they hold only a fraction of deposits and lend out the rest.</p>
+      <p>The Federal Reserve historically required banks to hold 10% of deposits in reserve. In March 2020, the Fed reduced this requirement to zero — officially, banks can now lend out 100% of deposits (though in practice they maintain voluntary reserves for liquidity and regulatory capital reasons).</p>
+      <p>But even at the old 10% reserve requirement, the lending multiplier effect was dramatic. Here's how it works:</p>
+
+      <div class="example-box">
+        <div class="ex-label">The Money Multiplier — How $1,000 Becomes $9,000 in Loans</div>
+        <div class="ex-row"><span>You deposit into Bank A</span><span>$1,000</span></div>
+        <div class="ex-row"><span>Bank A keeps 10% ($100), lends $900 to borrower</span><span>$900 lent out</span></div>
+        <div class="ex-row"><span>Borrower deposits $900 into Bank B</span><span>$900</span></div>
+        <div class="ex-row"><span>Bank B keeps $90, lends $810 to another borrower</span><span>$810 lent out</span></div>
+        <div class="ex-row"><span>That $810 deposits into Bank C, which lends $729...</span><span>$729 lent out</span></div>
+        <div class="ex-row"><span>Chain continues across the banking system</span><span>~$9,000 total loans created</span></div>
+      </div>
+
+      <p>Your original $1,000 deposit ultimately supports roughly $9,000 in loans across the entire banking system. This is why banks are so powerful — and why a bank run (everyone withdrawing at once) can be catastrophic. No bank actually has everyone's money on hand at the same time.</p>
+      <p>This is also why the Federal Reserve exists: as a lender of last resort, it can inject cash into banks during a crisis so that a liquidity shortage doesn't turn into a full collapse.</p>
+
+      <h2 id="how-banks-profit">The Three Ways Banks Make Money</h2>
+
+      <h3>1. Net Interest Margin</h3>
+      <p>This is the core of the banking business. Banks pay depositors a low rate, charge borrowers a high rate, and pocket the gap. The table below shows just how large this gap is in practice:</p>
+
+      <table class="data-table">
+        <thead>
+          <tr><th>Product</th><th>Rate (2024 Avg)</th><th>Who Pays / Who Receives</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Savings account (big bank)</td><td>0.01–0.46% APY</td><td>Bank pays this to you</td></tr>
+          <tr><td>Savings account (online bank)</td><td>4.50–5.00% APY</td><td>Bank pays this to you</td></tr>
+          <tr class="highlight"><td>30-year fixed mortgage</td><td>~7.00%</td><td>You pay this to the bank</td></tr>
+          <tr><td>Auto loan (new car)</td><td>~8.00%</td><td>You pay this to the bank</td></tr>
+          <tr><td>Credit card (average APR)</td><td>20–24%</td><td>You pay this to the bank</td></tr>
+          <tr><td>Personal loan</td><td>11–14%</td><td>You pay this to the bank</td></tr>
+        </tbody>
+      </table>
+
+      <h3>2. Fees</h3>
+      <p>Banks generate enormous revenue from fees entirely separate from lending. The most notorious: the overdraft fee. When you spend more than your account balance, banks let the transaction go through — then charge you around <strong>$35 per overdraft</strong>. Sometimes they process multiple overdrafts in a single day. US banks collected over <strong>$8 billion in overdraft fees in 2023</strong> alone.</p>
+      <p>Other common fees include monthly maintenance fees ($10–$15/month at big banks), out-of-network ATM fees ($2.50–$5 per transaction), wire transfer fees ($25–$35), and paper statement fees ($2–$3/month). These are not accidental — they're deliberate revenue streams.</p>
+
+      <h3>3. Services and Investments</h3>
+      <p>Large banks — especially the big four (JPMorgan Chase, Bank of America, Wells Fargo, Citibank) — operate massive wealth management divisions, investment banking arms, and insurance subsidiaries. JPMorgan Chase, the largest US bank, reported net income of <strong>$49.6 billion in 2023</strong>. These numbers come from the full ecosystem of financial services, not just your checking account.</p>
+
+      <h2 id="fdic">FDIC Insurance — Why Your Money Is Actually Safe</h2>
+      <p>After the Great Depression of the 1930s — when bank panics caused thousands of banks to fail and ordinary people lost their life savings overnight — Congress created the Federal Deposit Insurance Corporation (FDIC) in 1933.</p>
+      <p>The FDIC insures your deposits up to <strong>$250,000 per depositor, per bank, per account ownership category</strong>. If your bank fails, the FDIC steps in and you get your money back — typically within a few business days. You don't have to file a claim or hire a lawyer. It just happens.</p>
+      <p>Account categories matter. A single person can have more than $250,000 FDIC-insured at the same bank by spreading across ownership categories: individual accounts ($250K), joint accounts ($250K per co-owner), certain retirement accounts ($250K), and more. If you have significant deposits, this is worth understanding precisely.</p>
+      <p>Credit unions have equivalent protection through the <strong>National Credit Union Administration (NCUA)</strong>, also up to $250,000. Always verify your institution is insured — you can check any bank at <strong>fdic.gov</strong> and any credit union at <strong>ncua.gov</strong>.</p>
+
+      <div class="callout red">
+        <div class="callout-label">Historical Lesson</div>
+        <p>During the 2008 financial crisis, banks had lent recklessly and nearly collapsed. The FDIC protected depositors, but the crisis showed what happens when banks take too many risks. Washington Mutual — the largest bank failure in US history — was seized by regulators in September 2008. Its depositors lost nothing. Its shareholders lost everything.</p>
+      </div>
+
+      <div class="callout blue">
+        <div class="callout-label">What FDIC Does and Does NOT Cover</div>
+        <p>FDIC insures checking accounts, savings accounts, money market deposit accounts, and CDs. It does <strong>NOT</strong> cover stocks, bonds, mutual funds, ETFs, annuities, or crypto — even if you bought them through your bank. Keep investment accounts and insured bank accounts separate in your mental accounting.</p>
+      </div>
+
+      <h2 id="what-this-means">What This Means for You Practically</h2>
+      <p>Understanding how banks profit directly points you toward better financial decisions. The most actionable one: <strong>you should be earning far more interest on your savings.</strong></p>
+      <p>Online banks — Ally, Marcus by Goldman Sachs, SoFi, Discover — consistently pay 4–5% APY on savings accounts. They can do this because they have no physical branch network. No branch leases, no teller salaries, no armored trucks. Those savings go to depositors instead of overhead. They have the exact same FDIC insurance as Chase or Bank of America.</p>
+      <p>Traditional big banks pay 0.01% on savings — not because they can't afford to pay more, but because they don't have to. Most people never switch. Your $10,000 sitting in a big bank savings account earns you <strong>$1 per year</strong>. That same $10,000 in a high-yield online account earns <strong>$450–$500 per year</strong>. The protection is identical. The difference is entirely in what you choose to do.</p>
+      <p>Switching takes about 15 minutes online. The money transfer takes 1–3 business days. It is one of the highest-return-per-hour financial moves available to ordinary people.</p>
+
+      <div class="article-footer">
+        <div class="af-nav">
+          <span></span>
+          <a href="/banking/how-to-open-a-bank-account" class="af-btn next">How to Open a Bank Account →</a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="sidebar">
+      <div class="sb-card">
+        <div class="sb-title">In This Article</div>
+        <div class="toc-list">
+          <a href="#what-banks-do" class="toc-link"><span class="toc-num">01</span> What Banks Do With Your Money</a>
+          <a href="#fractional-reserve" class="toc-link"><span class="toc-num">02</span> Fractional Reserve Banking</a>
+          <a href="#how-banks-profit" class="toc-link"><span class="toc-num">03</span> How Banks Make Money</a>
+          <a href="#fdic" class="toc-link"><span class="toc-num">04</span> FDIC Insurance</a>
+          <a href="#what-this-means" class="toc-link"><span class="toc-num">05</span> What This Means for You</a>
+        </div>
+      </div>
+
+      <div class="sb-card">
+        <div class="sb-title">Up Next</div>
+        <a href="/banking/how-to-open-a-bank-account" class="related-link">
+          <span class="rl-arrow">→</span>
+          <div><div class="rl-title">How to Open a Bank Account — Step by Step</div><div class="rl-meta">4 min · Free</div></div>
+        </a>
+        <a href="/banking/bank-fees-how-to-avoid" class="related-link">
+          <span class="rl-arrow">→</span>
+          <div><div class="rl-title">Bank Fees: How to Avoid Every One</div><div class="rl-meta">4 min · Free</div></div>
+        </a>
+      </div>
+
+      <div class="premium-card">
+        <div class="pc-eye">Premium</div>
+        <div class="pc-title">Go deeper with Premium</div>
+        <div class="pc-desc">Unlock expert guides on high-yield savings, compound interest, and making your money work harder.</div>
+        <button class="pc-btn">Get Premium — $9/mo →</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<footer>
+  <div class="flogo">Unschool<b>Me.</b></div>
+  <div class="flinks">
+    <a href="/taxes">Taxes</a>
+    <a href="/banking">Banking</a>
+    <a href="/credit">Credit</a>
+    <a href="/government">Government</a>
+    <a href="/business">Business</a>
+    <a href="/rights">Rights</a>
+  </div>
+  <div class="fcopy">Built by someone who had to figure it all out alone. — UnschoolMe 2026 🇺🇸</div>
+  <div class="flag-b"></div>
+</footer>
+
+<script>
+// Reading progress bar
+const bar = document.getElementById('progress-bar');
+const body = document.getElementById('article-body');
+window.addEventListener('scroll', () => {
+  const total = body.offsetTop + body.offsetHeight - window.innerHeight;
+  const pct = Math.min(Math.max((window.scrollY / total) * 100, 0), 100);
+  bar.style.width = pct + '%';
+});
+
+// TOC active link on scroll
+const sections = document.querySelectorAll('h2[id]');
+const tocLinks = document.querySelectorAll('.toc-link');
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      tocLinks.forEach(l => l.classList.remove('active'));
+      const active = document.querySelector(`.toc-link[href="#${entry.target.id}"]`);
+      if (active) active.classList.add('active');
+    }
+  });
+}, { rootMargin: '-20% 0% -70% 0%' });
+sections.forEach(s => observer.observe(s));
+</script>
+
+</body>
+</html>

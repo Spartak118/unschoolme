@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bank Fees — How to Avoid Every One | UnschoolMe</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600;1,700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:'DM Sans',sans-serif;color:#1A1A1A;background:#F8F6F1;}
+
+.progress-bar{position:fixed;top:0;left:0;height:3px;background:#C8A96E;z-index:200;width:0%;transition:width 0.1s linear;}
+
+.flag{height:5px;background:linear-gradient(90deg,#B22234 33%,#fff 33%,#fff 66%,#3C3B6E 66%);}
+nav{display:flex;align-items:center;justify-content:space-between;padding:1rem 3rem;background:rgba(10,10,30,0.98);border-bottom:1px solid rgba(255,255,255,0.08);}
+.logo{font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:700;color:#fff;flex-shrink:0;text-decoration:none;}
+.logo b{color:#C8A96E;}
+.nav-links{display:flex;gap:2rem;margin-left:4rem;flex:1;}
+.nav-links a{font-size:11px;color:rgba(255,255,255,0.45);letter-spacing:2px;text-transform:uppercase;font-weight:500;text-decoration:none;transition:color 0.2s;}
+.nav-links a:hover,.nav-links a.active{color:#fff;}
+.nav-right{display:flex;gap:8px;flex-shrink:0;}
+.nbtn1{background:transparent;color:rgba(255,255,255,0.5);border:1px solid rgba(255,255,255,0.15);border-radius:6px;padding:7px 16px;font-size:12px;font-family:'DM Sans',sans-serif;cursor:pointer;}
+.nbtn2{background:#C8A96E;color:#0A0A1E;border:none;border-radius:6px;padding:7px 16px;font-size:12px;font-family:'DM Sans',sans-serif;font-weight:500;cursor:pointer;}
+
+.article-hero{background:#0A0A1E;padding:3.5rem 3rem;position:relative;overflow:hidden;}
+.article-hero::after{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,#B22234 33%,#fff 33%,#fff 66%,#3C3B6E 66%);}
+.ah-inner{max-width:960px;margin:0 auto;}
+.breadcrumb{font-size:11px;color:rgba(255,255,255,0.3);letter-spacing:1px;text-transform:uppercase;margin-bottom:1.5rem;}
+.breadcrumb a{color:rgba(255,255,255,0.3);text-decoration:none;transition:color 0.2s;}
+.breadcrumb a:hover{color:#C8A96E;}
+.breadcrumb span{color:#C8A96E;}
+.article-tag{display:inline-flex;align-items:center;gap:6px;background:rgba(200,169,110,0.1);border:1px solid rgba(200,169,110,0.3);border-radius:99px;font-size:11px;color:#C8A96E;padding:4px 14px;margin-bottom:1.2rem;}
+.article-title{font-family:'Cormorant Garamond',serif;font-size:46px;font-weight:700;color:#fff;letter-spacing:-1.5px;line-height:1.1;margin-bottom:1rem;max-width:680px;}
+.article-title em{font-style:italic;color:#C8A96E;}
+.article-subtitle{font-size:15px;color:rgba(255,255,255,0.45);line-height:1.75;max-width:560px;font-weight:300;margin-bottom:1.8rem;}
+.article-meta{display:flex;align-items:center;gap:1.5rem;flex-wrap:wrap;}
+.meta-badge{font-size:10px;letter-spacing:1.5px;text-transform:uppercase;padding:3px 12px;border-radius:99px;font-weight:500;background:#E8F5E9;color:#2E7D32;}
+.meta-item{font-size:12px;color:rgba(255,255,255,0.3);display:flex;align-items:center;gap:6px;}
+.meta-sep{width:3px;height:3px;border-radius:50%;background:rgba(255,255,255,0.15);}
+
+.content-wrap{max-width:960px;margin:0 auto;padding:3rem;}
+.content-grid{display:grid;grid-template-columns:1fr 280px;gap:3rem;align-items:start;}
+
+.article-body{}
+.key-takeaways{background:#0A0A1E;border-radius:14px;padding:1.8rem;margin-bottom:2.5rem;}
+.kt-label{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#C8A96E;font-weight:500;margin-bottom:1rem;}
+.kt-item{color:rgba(255,255,255,0.65);font-size:13px;display:flex;gap:10px;align-items:flex-start;margin-bottom:9px;line-height:1.6;font-weight:300;}
+.kt-arrow{color:#C8A96E;flex-shrink:0;font-size:11px;margin-top:2px;}
+.kt-item:last-child{margin-bottom:0;}
+
+.article-body h2{font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:700;color:#1A1A1A;margin:2.5rem 0 1rem;letter-spacing:-0.5px;line-height:1.2;}
+.article-body h3{font-size:10px;letter-spacing:2.5px;text-transform:uppercase;color:#B22234;font-weight:500;margin:2rem 0 0.7rem;}
+.article-body p{font-size:15px;line-height:1.85;color:#555;margin-bottom:1.2rem;font-weight:300;}
+.article-body p strong{color:#1A1A1A;font-weight:500;}
+.article-body ul,.article-body ol{padding-left:1.5rem;margin-bottom:1.3rem;}
+.article-body li{font-size:15px;line-height:1.8;color:#555;margin-bottom:7px;font-weight:300;}
+.article-body li strong{color:#1A1A1A;font-weight:500;}
+
+.callout{border-left:3px solid #C8A96E;background:#FEFCF7;padding:1.2rem 1.5rem;border-radius:0 10px 10px 0;margin:1.8rem 0;}
+.callout.red{border-color:#B22234;background:#FFF8F8;}
+.callout.blue{border-color:#3C3B6E;background:#F8F8FF;}
+.callout.gold{border-color:#C8A96E;background:#FEFCF7;}
+.callout p{margin-bottom:0;font-size:14px;}
+.callout-label{font-size:10px;letter-spacing:2px;text-transform:uppercase;font-weight:500;color:#C8A96E;margin-bottom:6px;}
+.callout.red .callout-label{color:#B22234;}
+.callout.blue .callout-label{color:#3C3B6E;}
+
+.data-table{width:100%;border-collapse:collapse;margin:1.5rem 0;font-size:13px;border-radius:10px;overflow:hidden;}
+.data-table thead th{background:#0A0A1E;color:#C8A96E;padding:11px 16px;text-align:left;font-weight:500;letter-spacing:0.5px;font-size:11px;}
+.data-table tbody td{padding:11px 16px;border-bottom:1px solid #E8E4DC;color:#555;font-weight:300;}
+.data-table tbody tr:last-child td{border-bottom:none;}
+.data-table tbody tr:nth-child(even) td{background:#FAFAF8;}
+.data-table tbody tr.highlight td{background:rgba(200,169,110,0.08);color:#1A1A1A;font-weight:500;}
+
+.example-box{background:#F8F6F1;border:1px solid #E8E4DC;border-radius:14px;padding:1.5rem;margin:1.8rem 0;}
+.ex-label{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#888;margin-bottom:1rem;font-weight:500;}
+.ex-row{display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid #E8E4DC;font-size:13px;}
+.ex-row:last-child{border-bottom:none;font-weight:500;color:#1A1A1A;}
+.ex-row span:first-child{color:#888;font-weight:300;}
+.ex-row span:last-child{color:#1A1A1A;font-family:'Cormorant Garamond',serif;font-size:16px;font-weight:700;}
+
+.zero-fee-cards{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:1.8rem 0;}
+.zf-card{background:#fff;border:1px solid #E8E4DC;border-radius:12px;padding:1.3rem;}
+.zf-name{font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:700;color:#1A1A1A;margin-bottom:4px;}
+.zf-type{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#C8A96E;font-weight:500;margin-bottom:8px;}
+.zf-detail{font-size:12px;color:#888;line-height:1.65;font-weight:300;}
+.zf-detail strong{color:#1A1A1A;font-weight:500;}
+
+.article-footer{margin-top:3rem;padding-top:2rem;border-top:1px solid #E8E4DC;}
+.af-nav{display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem;}
+.af-btn{display:inline-flex;align-items:center;gap:8px;font-size:13px;color:#888;text-decoration:none;padding:10px 16px;border:1px solid #E8E4DC;border-radius:8px;background:#fff;transition:all 0.2s;}
+.af-btn:hover{border-color:#C8A96E;color:#1A1A1A;}
+.af-btn.next{background:#0A0A1E;color:#fff;border-color:#0A0A1E;}
+.af-btn.next:hover{background:#1A1A2E;}
+
+.sidebar{position:sticky;top:2rem;}
+.sb-card{background:#fff;border:1px solid #E8E4DC;border-radius:14px;padding:1.5rem;margin-bottom:16px;}
+.sb-title{font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:700;color:#1A1A1A;margin-bottom:1rem;}
+.toc-list{display:flex;flex-direction:column;}
+.toc-link{font-size:12px;color:#888;padding:7px 0;border-bottom:1px solid #F0EDE8;text-decoration:none;transition:color 0.15s;display:flex;align-items:flex-start;gap:8px;font-weight:300;line-height:1.4;}
+.toc-link:last-child{border-bottom:none;}
+.toc-link.active,.toc-link:hover{color:#1A1A1A;}
+.toc-link .toc-num{font-size:10px;color:#C8A96E;flex-shrink:0;margin-top:2px;}
+.related-link{display:flex;gap:10px;align-items:flex-start;text-decoration:none;padding:10px 0;border-bottom:1px solid #F0EDE8;transition:all 0.15s;}
+.related-link:last-child{border-bottom:none;}
+.related-link:hover .rl-title{color:#C8A96E;}
+.rl-arrow{color:#C8A96E;flex-shrink:0;font-size:12px;margin-top:2px;}
+.rl-title{font-size:12px;color:#1A1A1A;line-height:1.5;font-weight:400;}
+.rl-meta{font-size:11px;color:#AAA;margin-top:3px;font-weight:300;}
+.premium-card{background:#0A0A1E;border-radius:14px;padding:1.5rem;margin-bottom:16px;}
+.pc-eye{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#C8A96E;margin-bottom:8px;}
+.pc-title{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:700;color:#fff;margin-bottom:8px;}
+.pc-desc{font-size:12px;color:rgba(255,255,255,0.4);line-height:1.6;margin-bottom:1.2rem;font-weight:300;}
+.pc-btn{width:100%;background:#C8A96E;color:#0A0A1E;border:none;border-radius:8px;padding:10px;font-size:13px;font-family:'DM Sans',sans-serif;font-weight:500;cursor:pointer;}
+
+footer{background:#060610;padding:3rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;border-top:1px solid rgba(255,255,255,0.05);}
+.flogo{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:700;color:#fff;}
+.flogo b{color:#C8A96E;}
+.flinks{display:flex;gap:2rem;flex-wrap:wrap;}
+.flinks a{font-size:10px;color:rgba(255,255,255,0.2);letter-spacing:2px;text-transform:uppercase;text-decoration:none;transition:color 0.2s;}
+.flinks a:hover{color:#fff;}
+.fcopy{font-size:11px;color:rgba(255,255,255,0.15);width:100%;margin-top:0.5rem;}
+.flag-b{height:3px;background:linear-gradient(90deg,#B22234 33%,rgba(255,255,255,0.15) 33%,rgba(255,255,255,0.15) 66%,#3C3B6E 66%);width:100%;margin-top:1.5rem;border-radius:2px;}
+</style>
+</head>
+<body>
+
+<div class="progress-bar" id="progress-bar"></div>
+<div class="flag"></div>
+
+<nav>
+  <a href="/" class="logo">Unschool<b>Me</b></a>
+  <div class="nav-links">
+    <a href="/taxes">Taxes</a>
+    <a href="/banking" class="active">Banking</a>
+    <a href="/credit">Credit</a>
+    <a href="/government">Government</a>
+    <a href="/business">Business</a>
+    <a href="/rights">Rights</a>
+  </div>
+  <div class="nav-right">
+    <button class="nbtn1">Log in</button>
+    <button class="nbtn2">Get Started →</button>
+  </div>
+</nav>
+
+<div class="article-hero">
+  <div class="ah-inner">
+    <div class="breadcrumb">
+      <a href="/">Home</a> → <a href="/banking">Banking</a> → <span>Bank Fees: How to Avoid Them</span>
+    </div>
+    <div class="article-tag">🏦 Banking · Free Article</div>
+    <h1 class="article-title">Bank Fees That Drain Your Money —<br>And How to Avoid <em>Every One</em></h1>
+    <p class="article-subtitle">Overdraft fees. Monthly fees. ATM fees. Americans pay billions in unnecessary bank fees every year. Here's how to pay zero.</p>
+    <div class="article-meta">
+      <span class="meta-badge">Free</span>
+      <span class="meta-item">4 min read</span>
+      <span class="meta-sep"></span>
+      <span class="meta-item">UnschoolMe Editorial</span>
+      <span class="meta-sep"></span>
+      <span class="meta-item">Updated 2025</span>
+    </div>
+  </div>
+</div>
+
+<div class="content-wrap">
+  <div class="content-grid">
+
+    <div class="article-body" id="article-body">
+
+      <div class="key-takeaways">
+        <div class="kt-label">Key Takeaways</div>
+        <div class="kt-item"><span class="kt-arrow">→</span> US banks collected over $8 billion in overdraft fees in 2023 — that's money from people who could least afford it</div>
+        <div class="kt-item"><span class="kt-arrow">→</span> The average overdraft fee is $35, sometimes for a transaction as small as $1</div>
+        <div class="kt-item"><span class="kt-arrow">→</span> Monthly maintenance fees at big banks run $12–$15/month ($180/year)</div>
+        <div class="kt-item"><span class="kt-arrow">→</span> You can legally opt out of overdraft coverage with a single phone call</div>
+        <div class="kt-item"><span class="kt-arrow">→</span> Switching to Chime, Ally, or a credit union eliminates most fees permanently</div>
+      </div>
+
+      <h2 id="monthly-fees">Monthly Maintenance Fees — Paying to Have an Account</h2>
+      <p>At many big banks, simply having a checking account costs money. This is the most quietly damaging fee because it's automatic — it comes out whether you use the account or not, and many people don't notice it for months.</p>
+      <p>Here's what the three largest US banks charge for basic checking in 2024:</p>
+
+      <table class="data-table">
+        <thead>
+          <tr><th>Bank</th><th>Account</th><th>Monthly Fee</th><th>How to Waive It</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Chase</td><td>Total Checking</td><td>$12/month</td><td>$500+ monthly direct deposit</td></tr>
+          <tr><td>Bank of America</td><td>Advantage Plus</td><td>$12/month</td><td>$250+ direct deposit or $1,500 daily balance</td></tr>
+          <tr class="highlight"><td>Wells Fargo</td><td>Everyday Checking</td><td>$10/month</td><td>$500+ direct deposit or $500 daily balance</td></tr>
+          <tr><td>Citibank</td><td>Regular Checking</td><td>$15/month</td><td>$1,500 combined balance</td></tr>
+        </tbody>
+      </table>
+
+      <p>Even with the waivers available, millions of people pay these fees — either because they fall below the threshold, don't have qualifying direct deposit, or simply don't know the waiver exists. At $12/month, that's <strong>$144/year</strong> to hold a basic checking account. At $15/month, <strong>$180/year</strong>. For someone living paycheck to paycheck, this is a meaningful sum taken from the most financially vulnerable customers.</p>
+      <p>The permanent solution is simple: choose a bank that charges no monthly fee at all. Ally, Chime, Discover, and most credit unions charge $0 with no minimums, no strings, no conditions.</p>
+
+      <h2 id="overdraft-fees">Overdraft Fees — The Biggest Fee Trap in Banking</h2>
+      <p>An overdraft happens when you spend more than your available balance. Banks have two choices: decline the transaction, or let it process and charge you a fee. Most traditional banks choose the fee.</p>
+      <p>The average overdraft fee is <strong>$35 per transaction</strong>. Many banks charge this multiple times per day if multiple transactions hit while you're in the negative. A string of small purchases — a $4 coffee, a $12 lunch, a $3 app subscription — can each trigger a separate $35 fee. Your $19 of transactions just cost you $19 + $105 in fees. That's the math.</p>
+      <p>US banks collected <strong>$8.8 billion in overdraft fees in 2022</strong> and approximately $8 billion in 2023 (after regulatory pressure prompted some banks to reduce fees). The Consumer Financial Protection Bureau (CFPB) found that overdraft fees fall disproportionately on households earning under $50,000 — the people least able to absorb a $35 surprise charge.</p>
+
+      <div class="callout red">
+        <div class="callout-label">The Real Cost — Do This Math</div>
+        <p>One overdraft fee per week = $35 × 52 = <strong>$1,820 per year</strong>. Many people who struggle with overdrafts aren't irresponsible — they're one unexpected expense away from a negative balance at the wrong moment. The fee structure punishes the unlucky and the under-resourced most severely.</p>
+      </div>
+
+      <p>Here's exactly how to protect yourself:</p>
+      <ol>
+        <li><strong>Call your bank today and opt out of overdraft protection.</strong> Federal law (Regulation E) requires banks to get your explicit consent before enrolling you in debit card overdraft coverage. If you haven't opted in, they cannot charge you for overdrafts on debit card purchases — the transaction will simply decline. If you've already opted in, call and opt back out. It takes 5 minutes. Declined transactions are embarrassing. $35 fees are worse.</li>
+        <li><strong>Set up low-balance text alerts.</strong> Most banks let you trigger a text when your balance drops below $50 or $100. This gives you time to transfer funds before a transaction hits. Do this today — it's free and takes 2 minutes in your app's settings.</li>
+        <li><strong>Link a savings account as overdraft backup.</strong> Many banks allow you to link a savings account to your checking account. If your checking overdrafts, they pull from savings automatically. This is usually free or costs a flat $5 per transfer — vastly cheaper than $35 per item.</li>
+        <li><strong>Switch to a bank with no overdraft fees.</strong> Chime's SpotMe feature covers up to $200 in overdrafts with no fee if you have qualifying direct deposit. Ally Bank offers a no-fee "overdraft transfer" from savings. These aren't gimmicks — they're permanent policy differences.</li>
+      </ol>
+
+      <h2 id="atm-fees">ATM Fees — Paying to Access Your Own Money</h2>
+      <p>Every time you use an out-of-network ATM, you're hit with two separate fees: one from your own bank, one from the ATM owner. They stack.</p>
+
+      <div class="example-box">
+        <div class="ex-label">The Real Cost of One Out-of-Network ATM Withdrawal</div>
+        <div class="ex-row"><span>Your bank's out-of-network fee (avg)</span><span>$2.50</span></div>
+        <div class="ex-row"><span>ATM operator surcharge (avg)</span><span>$3.08</span></div>
+        <div class="ex-row"><span>Total cost per withdrawal</span><span>$5.58</span></div>
+        <div class="ex-row"><span>Weekly withdrawals × 52 weeks</span><span>$290/year</span></div>
+      </div>
+
+      <p>$290 per year to access your own cash. This is entirely avoidable with four strategies:</p>
+      <ul>
+        <li><strong>Use your bank's ATM network.</strong> Every major bank has a map in their app showing nearby in-network ATMs. Plan ahead.</li>
+        <li><strong>Get cash back at the grocery store.</strong> Walmart, Kroger, Target, CVS, and most grocery stores offer free cash back at checkout when you use your debit card. Ask for $20–$40 back when you pay for groceries. Zero fee, ever.</li>
+        <li><strong>Use the Allpoint or MoneyPass network.</strong> These networks have 55,000+ ATMs inside Walgreens, CVS, Target, 7-Eleven, and other retailers nationwide — often free with online bank accounts. Download their apps to find the nearest one.</li>
+        <li><strong>Switch to Ally or Charles Schwab.</strong> These banks reimburse all ATM fees nationwide, every month, regardless of which ATM you use. Schwab's checking account is particularly well-regarded for travelers internationally — they reimburse foreign ATM fees too.</li>
+      </ul>
+
+      <h2 id="other-fees">Other Fees Most People Don't Know About</h2>
+      <p>Beyond the big three, banks have an extensive menu of smaller fees that quietly drain accounts. Most are completely avoidable once you know they exist.</p>
+
+      <table class="data-table">
+        <thead>
+          <tr><th>Fee Type</th><th>Typical Amount</th><th>How to Avoid It</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Paper statement fee</td><td>$2–$3/month</td><td>Switch to paperless statements in your app's settings today</td></tr>
+          <tr><td>Domestic wire transfer</td><td>$25–$35</td><td>Use Zelle (free), Venmo (free), or ACH bank transfer (free, 1–2 days)</td></tr>
+          <tr class="highlight"><td>Foreign transaction fee</td><td>1–3% of purchase</td><td>Use Schwab, Capital One 360, or Wise for international travel</td></tr>
+          <tr><td>Returned deposit fee</td><td>$25–$35</td><td>Confirm checks are valid before depositing; allow holds to clear</td></tr>
+          <tr><td>Stop payment order</td><td>$25–$35</td><td>Be cautious writing checks; use digital payments when possible</td></tr>
+          <tr><td>Inactivity fee</td><td>$5–$10/month</td><td>Keep a small auto-transfer or recurring transaction on idle accounts</td></tr>
+          <tr><td>Replacement debit card (rush)</td><td>$5–$30</td><td>Standard replacement is free; plan ahead, don't expedite</td></tr>
+          <tr><td>Cashier's check fee</td><td>$8–$10</td><td>Some online banks offer free cashier's checks; ask before you pay</td></tr>
+        </tbody>
+      </table>
+
+      <p>The foreign transaction fee deserves special attention. If you use a Bank of America or Chase debit card abroad, every purchase — a meal, a cab, a hotel — costs an additional 1–3% on top of whatever you spend. On a $3,000 trip, that's $30–$90 in invisible fees on every swipe. Charles Schwab Bank's checking account charges zero foreign transaction fees and reimburses foreign ATM surcharges worldwide — making it the near-unanimous recommendation for international travelers.</p>
+
+      <h2 id="zero-fee-banks">The Permanent Solution: Switch to a Zero-Fee Bank</h2>
+      <p>The most reliable way to stop paying bank fees is to bank with an institution that doesn't charge them. These exist. They're FDIC-insured. They have excellent apps. And they're free.</p>
+
+      <div class="zero-fee-cards">
+        <div class="zf-card">
+          <div class="zf-type">Best for Checking</div>
+          <div class="zf-name">Chime</div>
+          <div class="zf-detail"><strong>No monthly fees.</strong> No overdraft fees. No minimum balance. SpotMe feature covers up to $200 in overdrafts fee-free with qualifying direct deposit. 2-day early direct deposit. 60,000+ fee-free ATMs via Allpoint and Visa Plus Alliance networks.</div>
+        </div>
+        <div class="zf-card">
+          <div class="zf-type">Best for Savings</div>
+          <div class="zf-name">Ally Bank</div>
+          <div class="zf-detail"><strong>No fees. No minimums.</strong> 4.50%+ APY on savings (vs 0.01% at big banks). Reimburses up to $10/month in out-of-network ATM fees. 24/7 customer service. No overdraft fees on checking — just declines or free savings backup transfer.</div>
+        </div>
+        <div class="zf-card">
+          <div class="zf-type">Best Savings Rate</div>
+          <div class="zf-name">Marcus by Goldman Sachs</div>
+          <div class="zf-detail"><strong>No fees. No minimums.</strong> 4.70%+ APY on savings (savings account only — no checking). Backed by Goldman Sachs. Simple, no-frills interface. Best choice if you want maximum savings rate with zero complexity.</div>
+        </div>
+        <div class="zf-card">
+          <div class="zf-type">Best All-in-One</div>
+          <div class="zf-name">SoFi Bank</div>
+          <div class="zf-detail"><strong>No fees. No minimums.</strong> Up to 4.60% APY on savings with qualifying direct deposit. Early direct deposit (2 days). $0 overdraft on debit. 55,000+ fee-free ATMs via Allpoint network. Checking and savings in one account.</div>
+        </div>
+        <div class="zf-card">
+          <div class="zf-type">Best for Travel</div>
+          <div class="zf-name">Charles Schwab</div>
+          <div class="zf-detail"><strong>No fees. No minimums.</strong> Reimburses all ATM fees worldwide, every month. No foreign transaction fees. If you travel internationally even once a year, this account saves you money every trip.</div>
+        </div>
+        <div class="zf-card">
+          <div class="zf-type">Best Community Option</div>
+          <div class="zf-name">Credit Unions</div>
+          <div class="zf-detail"><strong>Member-owned nonprofits.</strong> Consistently lower fees than commercial banks. Often better loan rates too. Not FDIC — but NCUA-insured for the same $250,000 protection. Find yours at <strong>mycreditunion.gov</strong>.</div>
+        </div>
+      </div>
+
+      <div class="callout gold">
+        <div class="callout-label">The One Phone Call Worth Making Right Now</div>
+        <p>Call your bank's customer service number (it's on the back of your debit card) and say: "I want to remove overdraft protection from my account." That's it. They may try to convince you to keep it — decline politely. If your balance ever goes negative, transactions will simply decline instead of processing. A declined transaction is inconvenient. A $35 overdraft fee is expensive. Choose inconvenient.</p>
+      </div>
+
+      <div class="article-footer">
+        <div class="af-nav">
+          <a href="/banking/how-to-open-a-bank-account" class="af-btn">← How to Open a Bank Account</a>
+          <a href="/banking" class="af-btn next">← All Banking Articles</a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="sidebar">
+      <div class="sb-card">
+        <div class="sb-title">In This Article</div>
+        <div class="toc-list">
+          <a href="#monthly-fees" class="toc-link"><span class="toc-num">01</span> Monthly Maintenance Fees</a>
+          <a href="#overdraft-fees" class="toc-link"><span class="toc-num">02</span> Overdraft Fees</a>
+          <a href="#atm-fees" class="toc-link"><span class="toc-num">03</span> ATM Fees</a>
+          <a href="#other-fees" class="toc-link"><span class="toc-num">04</span> Other Hidden Fees</a>
+          <a href="#zero-fee-banks" class="toc-link"><span class="toc-num">05</span> Zero-Fee Banks</a>
+        </div>
+      </div>
+
+      <div class="sb-card">
+        <div class="sb-title">Related Articles</div>
+        <a href="/banking/how-banks-work" class="related-link">
+          <span class="rl-arrow">→</span>
+          <div><div class="rl-title">How Banks Work — And How They Make Billions</div><div class="rl-meta">5 min · Free</div></div>
+        </a>
+        <a href="/banking/how-to-open-a-bank-account" class="related-link">
+          <span class="rl-arrow">→</span>
+          <div><div class="rl-title">How to Open a Bank Account — Step by Step</div><div class="rl-meta">4 min · Free</div></div>
+        </a>
+      </div>
+
+      <div class="premium-card">
+        <div class="pc-eye">Premium</div>
+        <div class="pc-title">Go deeper with Premium</div>
+        <div class="pc-desc">Unlock expert guides on high-yield savings, compound interest, and making your money work harder.</div>
+        <button class="pc-btn">Get Premium — $9/mo →</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<footer>
+  <div class="flogo">Unschool<b>Me.</b></div>
+  <div class="flinks">
+    <a href="/taxes">Taxes</a>
+    <a href="/banking">Banking</a>
+    <a href="/credit">Credit</a>
+    <a href="/government">Government</a>
+    <a href="/business">Business</a>
+    <a href="/rights">Rights</a>
+  </div>
+  <div class="fcopy">Built by someone who had to figure it all out alone. — UnschoolMe 2026 🇺🇸</div>
+  <div class="flag-b"></div>
+</footer>
+
+<script>
+// Reading progress bar
+const bar = document.getElementById('progress-bar');
+const body = document.getElementById('article-body');
+window.addEventListener('scroll', () => {
+  const total = body.offsetTop + body.offsetHeight - window.innerHeight;
+  const pct = Math.min(Math.max((window.scrollY / total) * 100, 0), 100);
+  bar.style.width = pct + '%';
+});
+
+// TOC active link on scroll
+const sections = document.querySelectorAll('h2[id]');
+const tocLinks = document.querySelectorAll('.toc-link');
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      tocLinks.forEach(l => l.classList.remove('active'));
+      const active = document.querySelector(`.toc-link[href="#${entry.target.id}"]`);
+      if (active) active.classList.add('active');
+    }
+  });
+}, { rootMargin: '-20% 0% -70% 0%' });
+sections.forEach(s => observer.observe(s));
+</script>
+
+</body>
+</html>

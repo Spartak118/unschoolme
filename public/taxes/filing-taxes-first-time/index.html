@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Filing Taxes for the First Time — UnschoolMe</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=DM+Sans:wght@300;400;500&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/main.css">
+<style>
+.article-hero{background:#0A0A1E;padding:3.5rem 3rem;position:relative;overflow:hidden;}
+.article-hero::after{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,#B22234 33%,#fff 33%,#fff 66%,#3C3B6E 66%);}
+.ah-inner{max-width:960px;margin:0 auto;}
+.article-tag{display:inline-flex;align-items:center;gap:6px;background:rgba(200,169,110,0.1);border:1px solid rgba(200,169,110,0.3);border-radius:99px;font-size:11px;color:#C8A96E;padding:4px 14px;margin-bottom:1.2rem;}
+.article-title{font-family:'Cormorant Garamond',serif;font-size:46px;font-weight:700;color:#fff;letter-spacing:-1.5px;line-height:1.1;margin-bottom:1rem;max-width:680px;}
+.article-title em{font-style:italic;color:#C8A96E;}
+.article-subtitle{font-size:15px;color:rgba(255,255,255,0.45);line-height:1.75;max-width:560px;font-weight:300;margin-bottom:1.8rem;}
+.article-meta{display:flex;align-items:center;gap:1.5rem;flex-wrap:wrap;}
+.meta-badge{font-size:10px;letter-spacing:1.5px;text-transform:uppercase;padding:3px 12px;border-radius:99px;font-weight:500;background:#E8F5E9;color:#2E7D32;}
+.meta-item{font-size:12px;color:rgba(255,255,255,0.3);}
+.meta-sep{width:3px;height:3px;border-radius:50%;background:rgba(255,255,255,0.15);display:inline-block;}
+.content-grid{display:grid;grid-template-columns:1fr 280px;gap:3rem;align-items:start;}
+.key-takeaways{background:#0A0A1E;border-radius:14px;padding:1.8rem;margin-bottom:2.5rem;}
+.kt-label{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#C8A96E;font-weight:500;margin-bottom:1rem;}
+.kt-item{color:rgba(255,255,255,0.65);font-size:13px;display:flex;gap:10px;align-items:flex-start;margin-bottom:9px;line-height:1.6;font-weight:300;}
+.kt-arrow{color:#C8A96E;flex-shrink:0;font-size:11px;margin-top:2px;}
+.kt-item:last-child{margin-bottom:0;}
+.article-body h2{font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:700;color:#1A1A1A;margin:2.5rem 0 1rem;letter-spacing:-0.5px;line-height:1.2;}
+.article-body h3{font-size:10px;letter-spacing:2.5px;text-transform:uppercase;color:#B22234;font-weight:500;margin:2rem 0 0.7rem;}
+.article-body p{font-size:15px;line-height:1.85;color:#555;margin-bottom:1.2rem;font-weight:300;}
+.article-body p strong{color:#1A1A1A;font-weight:500;}
+.article-body ul,.article-body ol{padding-left:1.5rem;margin-bottom:1.3rem;}
+.article-body li{font-size:15px;line-height:1.8;color:#555;margin-bottom:7px;font-weight:300;}
+.article-body li strong{color:#1A1A1A;font-weight:500;}
+.callout{border-left:3px solid #C8A96E;background:#FEFCF7;padding:1.2rem 1.5rem;border-radius:0 10px 10px 0;margin:1.8rem 0;}
+.callout.red{border-color:#B22234;background:#FFF8F8;}
+.callout.blue{border-color:#3C3B6E;background:#F8F8FF;}
+.callout.green{border-color:#2E7D32;background:#F2FBF2;}
+.callout p{margin-bottom:0;font-size:14px;}
+.callout-label{font-size:10px;letter-spacing:2px;text-transform:uppercase;font-weight:500;color:#C8A96E;margin-bottom:6px;}
+.callout.red .callout-label{color:#B22234;}
+.callout.blue .callout-label{color:#3C3B6E;}
+.callout.green .callout-label{color:#2E7D32;}
+.checklist{background:#F8F6F1;border:1px solid #E8E4DC;border-radius:14px;padding:1.5rem;margin:1.5rem 0;}
+.cl-label{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#888;margin-bottom:1rem;font-weight:500;}
+.cl-item{display:flex;gap:12px;align-items:flex-start;padding:8px 0;border-bottom:1px solid #E8E4DC;font-size:13px;color:#555;font-weight:300;line-height:1.5;}
+.cl-item:last-child{border-bottom:none;}
+.cl-check{width:18px;height:18px;border:1.5px solid #E8E4DC;border-radius:4px;flex-shrink:0;margin-top:1px;display:flex;align-items:center;justify-content:center;background:#fff;}
+.big-steps{display:flex;flex-direction:column;gap:0;margin:1.5rem 0;}
+.big-step{display:flex;gap:0;border-bottom:1px solid #E8E4DC;}
+.big-step:last-child{border-bottom:none;}
+.bs-num-col{display:flex;flex-direction:column;align-items:center;padding:1.5rem 1.5rem 1.5rem 0;flex-shrink:0;}
+.bs-num{width:42px;height:42px;background:#0A0A1E;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:700;color:#C8A96E;flex-shrink:0;}
+.bs-line{width:1px;background:#E8E4DC;flex:1;margin-top:6px;}
+.big-step:last-child .bs-line{display:none;}
+.bs-content{padding:1.5rem 0;}
+.bs-title{font-size:15px;font-weight:500;color:#1A1A1A;margin-bottom:6px;}
+.bs-desc{font-size:13px;color:#888;line-height:1.65;font-weight:300;}
+.bs-tag{display:inline-block;font-size:10px;letter-spacing:1px;text-transform:uppercase;background:#E8F5E9;color:#2E7D32;padding:2px 8px;border-radius:99px;margin-bottom:6px;font-weight:500;}
+.filing-options{display:flex;flex-direction:column;gap:10px;margin:1.5rem 0;}
+.option-card{background:#fff;border:1px solid #E8E4DC;border-radius:12px;padding:1.2rem 1.5rem;display:flex;gap:1rem;align-items:flex-start;}
+.option-card.best{border-color:#C8A96E;background:#FEFCF7;}
+.oc-icon{font-size:20px;flex-shrink:0;margin-top:2px;}
+.oc-name{font-size:13px;font-weight:500;color:#1A1A1A;margin-bottom:2px;}
+.oc-detail{font-size:12px;color:#888;font-weight:300;line-height:1.5;}
+.oc-badge{font-size:10px;letter-spacing:1px;text-transform:uppercase;background:#E8F5E9;color:#2E7D32;padding:2px 8px;border-radius:99px;font-weight:500;margin-left:6px;}
+.oc-badge.warn{background:#FFF3E0;color:#E65100;}
+.mistakes-list{display:flex;flex-direction:column;gap:10px;margin:1.5rem 0;}
+.mistake{display:flex;gap:12px;align-items:flex-start;background:#FFF8F8;border:1px solid rgba(178,34,52,0.1);border-radius:10px;padding:1rem 1.2rem;}
+.m-icon{color:#B22234;font-size:15px;flex-shrink:0;margin-top:1px;}
+.m-title{font-size:13px;font-weight:500;color:#1A1A1A;margin-bottom:2px;}
+.m-desc{font-size:12px;color:#888;font-weight:300;line-height:1.5;}
+.article-footer{margin-top:3rem;padding-top:2rem;border-top:1px solid #E8E4DC;}
+.af-nav{display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem;}
+.af-btn{display:inline-flex;align-items:center;gap:8px;font-size:13px;color:#888;text-decoration:none;padding:10px 16px;border:1px solid #E8E4DC;border-radius:8px;background:#fff;transition:all 0.2s;}
+.af-btn:hover{border-color:#C8A96E;color:#1A1A1A;}
+.af-btn.next{background:#0A0A1E;color:#fff;border-color:#0A0A1E;}
+.af-btn.next:hover{background:#1A1A2E;}
+.sidebar{position:sticky;top:2rem;}
+.sb-card{background:#fff;border:1px solid #E8E4DC;border-radius:14px;padding:1.5rem;margin-bottom:16px;}
+.sb-title{font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:700;color:#1A1A1A;margin-bottom:1rem;}
+.toc-list{display:flex;flex-direction:column;}
+.toc-link{font-size:12px;color:#888;padding:7px 0;border-bottom:1px solid #F0EDE8;text-decoration:none;transition:color 0.15s;display:flex;align-items:flex-start;gap:8px;font-weight:300;line-height:1.4;}
+.toc-link:last-child{border-bottom:none;}
+.toc-link.active,.toc-link:hover{color:#1A1A1A;}
+.toc-link .toc-num{font-size:10px;color:#C8A96E;flex-shrink:0;margin-top:2px;}
+.related-link{display:flex;gap:10px;align-items:flex-start;text-decoration:none;padding:10px 0;border-bottom:1px solid #F0EDE8;transition:all 0.15s;}
+.related-link:last-child{border-bottom:none;}
+.related-link:hover .rl-title{color:#C8A96E;}
+.rl-arrow{color:#C8A96E;flex-shrink:0;font-size:12px;margin-top:2px;}
+.rl-title{font-size:12px;color:#1A1A1A;line-height:1.5;font-weight:400;}
+.rl-meta{font-size:11px;color:#AAA;margin-top:3px;font-weight:300;}
+</style>
+</head>
+<body>
+
+<div class="reading-progress" id="readingProgress"></div>
+<div class="flag"></div>
+
+<nav class="nav" id="nav">
+  <a href="/" class="nav-logo">Unschool<b>Me</b></a>
+  <div class="nav-links">
+    <a href="/taxes" class="active">Taxes</a>
+    <a href="/banking">Banking</a>
+    <a href="/credit">Credit</a>
+    <a href="/government">Government</a>
+    <a href="/business">Business</a>
+    <a href="/rights">Rights</a>
+  </div>
+  <div class="nav-right">
+    <button class="btn-ghost" onclick="location.href='/login'">Log in</button>
+    <button class="btn-gold" onclick="location.href='/login'">Get Started →</button>
+  </div>
+</nav>
+
+<div class="article-hero">
+  <div class="ah-inner">
+    <div class="breadcrumb">
+      <a href="/">Home</a> → <a href="/taxes">Taxes</a> → <span>Filing for the First Time</span>
+    </div>
+    <div class="article-tag">💸 Taxes · Free Article</div>
+    <h1 class="article-title">Filing Taxes for the<br><em>First Time</em> — Step by Step</h1>
+    <p class="article-subtitle">Never filed before? This guide walks you through every step — from gathering documents to hitting submit — in plain English.</p>
+    <div class="article-meta">
+      <span class="meta-badge">Free</span>
+      <span class="meta-item">6 min read</span>
+      <span class="meta-sep"></span>
+      <span class="meta-item">UnschoolMe Editorial</span>
+      <span class="meta-sep"></span>
+      <span class="meta-item">Updated 2025</span>
+    </div>
+  </div>
+</div>
+
+<div class="content-wrap">
+  <div class="content-grid">
+
+    <div class="article-body" id="article-body">
+
+      <div class="key-takeaways">
+        <div class="kt-label">Key Takeaways</div>
+        <div class="kt-item"><span class="kt-arrow">→</span> Most people who earned income in the US must file a tax return by April 15.</div>
+        <div class="kt-item"><span class="kt-arrow">→</span> You'll need your W-2, Social Security Number, and bank account info. That's it for most people.</div>
+        <div class="kt-item"><span class="kt-arrow">→</span> You can file completely free — IRS Free File and FreeTaxUSA handle most situations at no cost.</div>
+        <div class="kt-item"><span class="kt-arrow">→</span> Filing takes 30–60 minutes if your situation is straightforward.</div>
+        <div class="kt-item"><span class="kt-arrow">→</span> Even if you can't pay what you owe, file anyway. Late filing penalties are 10× worse than late payment penalties.</div>
+      </div>
+
+      <h2 id="do-you-need-to-file">Do You Even Need to File?</h2>
+      <p>Most Americans who earned income during the year are required to file. For 2024, you must file a federal return if your gross income exceeded:</p>
+      <ul>
+        <li><strong>$14,600</strong> — Single filer, under age 65</li>
+        <li><strong>$21,900</strong> — Head of household</li>
+        <li><strong>$29,200</strong> — Married filing jointly, both under 65</li>
+        <li><strong>$1,300</strong> — If you can be claimed as someone else's dependent</li>
+      </ul>
+      <p>Even if your income was below these thresholds, you should still file if federal income tax was withheld from your paychecks — filing is the only way to get that money back as a refund.</p>
+
+      <div class="callout green">
+        <div class="callout-label">Not Sure If You Need to File?</div>
+        <p>Use the IRS's free tool: <strong>irs.gov/do-i-need-to-file</strong>. Answer a few questions and it tells you definitively. Takes under 2 minutes.</p>
+      </div>
+
+      <h2 id="what-you-need">What You Need Before You Start</h2>
+      <p>Gather these before you sit down to file. Having everything ready first makes the whole process take 30 minutes instead of 2 hours.</p>
+
+      <div class="checklist">
+        <div class="cl-label">Required for Most First-Time Filers</div>
+        <div class="cl-item"><div class="cl-check"></div><div><strong>W-2 form</strong> — From every employer you worked for this year. Should arrive by January 31st. Also check your HR portal or email.</div></div>
+        <div class="cl-item"><div class="cl-check"></div><div><strong>Social Security Number (SSN)</strong> — Or ITIN if you don't have an SSN. You'll enter this when you create your account.</div></div>
+        <div class="cl-item"><div class="cl-check"></div><div><strong>Bank account info</strong> — Routing number and account number for direct deposit of your refund. Find it on a check or in your banking app.</div></div>
+        <div class="cl-item"><div class="cl-check"></div><div><strong>Last year's AGI</strong> — If you filed before, you may need this to verify your identity. It's on line 11 of last year's Form 1040.</div></div>
+      </div>
+
+      <div class="checklist">
+        <div class="cl-label">If Any of These Apply to You</div>
+        <div class="cl-item"><div class="cl-check"></div><div><strong>1099-NEC or 1099-K</strong> — If you did freelance/contract work or sold things online. Clients paying you over $600 must send one.</div></div>
+        <div class="cl-item"><div class="cl-check"></div><div><strong>1098-E</strong> — Student loan interest statement. Up to $2,500 is deductible if you qualify.</div></div>
+        <div class="cl-item"><div class="cl-check"></div><div><strong>1098-T</strong> — Tuition statement from your college. Required to claim education tax credits.</div></div>
+        <div class="cl-item"><div class="cl-check"></div><div><strong>Health insurance records</strong> — If you bought insurance through the marketplace (Healthcare.gov), you'll get a Form 1095-A.</div></div>
+      </div>
+
+      <h2 id="how-to-file">Choose How to File — Free Options</h2>
+      <p>For a first-time filer with a straightforward situation, there is absolutely no reason to pay for tax software. Here are your best free options:</p>
+
+      <div class="filing-options">
+        <div class="option-card best">
+          <div class="oc-icon">🏆</div>
+          <div>
+            <div class="oc-name">FreeTaxUSA <span class="oc-badge">Recommended</span></div>
+            <div class="oc-detail">freefile federal return, $14.99 for state filing. Clean, straightforward interface. Handles W-2 income, student loans, freelance income, and most common situations. No income limit.</div>
+          </div>
+        </div>
+        <div class="option-card">
+          <div class="oc-icon">🏛️</div>
+          <div>
+            <div class="oc-name">IRS Free File</div>
+            <div class="oc-detail">Free if your income is $79,000 or less. Partners with multiple tax software companies. Access at freefile.irs.gov — do NOT search for it on Google, you may end up on a paid version.</div>
+          </div>
+        </div>
+        <div class="option-card">
+          <div class="oc-icon">✅</div>
+          <div>
+            <div class="oc-name">IRS Direct File</div>
+            <div class="oc-detail">Completely free, no income limit. Available in select states. Best for simple W-2 income only. Find it at directfile.irs.gov. Expanding to more states each year.</div>
+          </div>
+        </div>
+        <div class="option-card">
+          <div class="oc-icon">⚠️</div>
+          <div>
+            <div class="oc-name">TurboTax / H&R Block <span class="oc-badge warn">Avoid for Simple Returns</span></div>
+            <div class="oc-detail">These charge $50–$150+ for returns that FreeTaxUSA handles free. They advertise "free filing" but add fees at the end. Only use if your situation is genuinely complex.</div>
+          </div>
+        </div>
+      </div>
+
+      <h2 id="step-by-step">Step by Step: Filing Your Return</h2>
+      <p>Here's exactly what happens when you file using any of the free services above. The questions will vary slightly by software, but the information is the same.</p>
+
+      <div class="big-steps">
+        <div class="big-step">
+          <div class="bs-num-col"><div class="bs-num">1</div><div class="bs-line"></div></div>
+          <div class="bs-content">
+            <div class="bs-title">Choose your filing status</div>
+            <div class="bs-desc">Most first-time filers are <strong>Single</strong>. If you paid more than half the household costs for a child or qualifying person, you may be <strong>Head of Household</strong> — which gives you a larger standard deduction. The software will walk you through this.</div>
+          </div>
+        </div>
+        <div class="big-step">
+          <div class="bs-num-col"><div class="bs-num">2</div><div class="bs-line"></div></div>
+          <div class="bs-content">
+            <div class="bs-tag">Key step</div>
+            <div class="bs-title">Enter your W-2 information</div>
+            <div class="bs-desc">Enter the numbers from your W-2 exactly as printed — employer name, EIN, wages in Box 1, federal tax withheld in Box 2. The IRS has a copy from your employer; any discrepancy will flag your return. If you have multiple W-2s, enter each one separately.</div>
+          </div>
+        </div>
+        <div class="big-step">
+          <div class="bs-num-col"><div class="bs-num">3</div><div class="bs-line"></div></div>
+          <div class="bs-content">
+            <div class="bs-title">Claim the standard deduction</div>
+            <div class="bs-desc">As a first-time filer, you'll almost certainly take the <strong>standard deduction</strong> — $14,600 for single filers in 2024. This reduces your taxable income automatically. No receipts required. You only itemize deductions (track receipts, mortgage interest, etc.) if that total would exceed $14,600, which is rare for most people starting out.</div>
+          </div>
+        </div>
+        <div class="big-step">
+          <div class="bs-num-col"><div class="bs-num">4</div><div class="bs-line"></div></div>
+          <div class="bs-content">
+            <div class="bs-title">Check for credits you qualify for</div>
+            <div class="bs-desc">Unlike deductions (which reduce taxable income), credits reduce your actual tax bill dollar-for-dollar. The software will ask you questions to find them. Common ones for first-timers: <strong>Earned Income Tax Credit</strong> (for lower-to-moderate earners), <strong>American Opportunity Credit</strong> (up to $2,500 if you paid college tuition), and <strong>Saver's Credit</strong> (if you contributed to a 401k or IRA).</div>
+          </div>
+        </div>
+        <div class="big-step">
+          <div class="bs-num-col"><div class="bs-num">5</div><div class="bs-line"></div></div>
+          <div class="bs-content">
+            <div class="bs-title">Review, sign, and submit</div>
+            <div class="bs-desc">The software shows a summary: your income, deductions, tax owed, amount withheld, and your refund or amount due. Review it for typos. Enter your bank account details for direct deposit. Sign electronically with a PIN you create. Hit submit. You'll receive a confirmation email within minutes.</div>
+          </div>
+        </div>
+      </div>
+
+      <h2 id="after-you-file">After You File</h2>
+      <p>Once the IRS accepts your return (usually within 24–48 hours of submitting), you can track your refund status at <strong>irs.gov/refunds</strong>. You'll need your SSN, filing status, and exact refund amount.</p>
+      <p>Most refunds are issued within <strong>21 days</strong> when you e-file with direct deposit. If you see "still processing" after 21 days, it usually means the IRS needs to verify something — check your mail for any IRS letters.</p>
+      <p>Keep a copy of your return. Download the PDF from your tax software and save it somewhere you can find it. You'll need last year's AGI when you file next year, and your return is proof of income for loans, apartments, and immigration processes.</p>
+
+      <h2 id="common-mistakes">Common First-Timer Mistakes</h2>
+
+      <div class="mistakes-list">
+        <div class="mistake">
+          <div class="m-icon">✕</div>
+          <div><div class="m-title">Not filing at all</div><div class="m-desc">Even if you don't owe taxes, not filing means the government keeps any refund you're owed. After 3 years, you forfeit it permanently.</div></div>
+        </div>
+        <div class="mistake">
+          <div class="m-icon">✕</div>
+          <div><div class="m-title">Wrong filing status</div><div class="m-desc">"Single" vs "Head of Household" can be worth hundreds of dollars. Head of Household has a bigger standard deduction and lower tax rates.</div></div>
+        </div>
+        <div class="mistake">
+          <div class="m-icon">✕</div>
+          <div><div class="m-title">Typos in SSN or bank account numbers</div><div class="m-desc">A single wrong digit will delay your refund by weeks and may cause your return to be rejected entirely. Triple-check these.</div></div>
+        </div>
+        <div class="mistake">
+          <div class="m-icon">✕</div>
+          <div><div class="m-title">Missing the deadline without an extension</div><div class="m-desc">April 15. If you need more time, file Form 4868 before April 15 for an automatic 6-month extension. But note: an extension to file is NOT an extension to pay — any tax owed is still due April 15.</div></div>
+        </div>
+        <div class="mistake">
+          <div class="m-icon">✕</div>
+          <div><div class="m-title">Paying for software you don't need</div><div class="m-desc">Most first-time filers have simple returns. FreeTaxUSA handles it for free. Don't let TurboTax upsells convince you that you need an "expert review."</div></div>
+        </div>
+      </div>
+
+      <div class="callout">
+        <div class="callout-label">You've Got This</div>
+        <p>Filing taxes feels scary the first time, but it's genuinely a 30–60 minute process for most people. Millions of Americans do it every spring. The software walks you through every question. Once you do it once, it gets easier every year.</p>
+      </div>
+
+      <div class="article-footer">
+        <div class="af-nav">
+          <a href="/taxes/what-is-a-tax-refund" class="af-btn">← What Is a Tax Refund?</a>
+          <a href="/taxes" class="af-btn next">All Tax Articles →</a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="sidebar">
+      <div class="sb-card">
+        <div class="sb-title">In This Article</div>
+        <div class="toc-list">
+          <a href="#do-you-need-to-file" class="toc-link"><span class="toc-num">01</span> Do You Need to File?</a>
+          <a href="#what-you-need" class="toc-link"><span class="toc-num">02</span> What You Need</a>
+          <a href="#how-to-file" class="toc-link"><span class="toc-num">03</span> Free Filing Options</a>
+          <a href="#step-by-step" class="toc-link"><span class="toc-num">04</span> Step-by-Step Process</a>
+          <a href="#after-you-file" class="toc-link"><span class="toc-num">05</span> After You File</a>
+          <a href="#common-mistakes" class="toc-link"><span class="toc-num">06</span> Common Mistakes</a>
+        </div>
+      </div>
+
+      <div class="sb-card">
+        <div class="sb-title">Read First</div>
+        <a href="/taxes/how-taxes-work" class="related-link">
+          <span class="rl-arrow">→</span>
+          <div><div class="rl-title">How Taxes Work in the US — The Complete Beginner's Guide</div><div class="rl-meta">5 min · Free</div></div>
+        </a>
+        <a href="/taxes/what-is-a-tax-refund" class="related-link">
+          <span class="rl-arrow">→</span>
+          <div><div class="rl-title">What Is a Tax Refund and How Do You Get One?</div><div class="rl-meta">4 min · Free</div></div>
+        </a>
+      </div>
+
+      <div class="premium-card">
+        <div class="pc-eye">Go Deeper</div>
+        <div class="pc-title">Deductions you're missing</div>
+        <div class="pc-desc">Premium covers tax deductions most people miss — student loans, home office, work expenses, health costs — and how to claim them.</div>
+        <button class="pc-btn">Get Premium — $9/mo →</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div>
+        <div class="footer-logo">Unschool<b>Me.</b></div>
+        <div class="footer-desc">Teaching real life skills that school forgot.</div>
+      </div>
+      <div>
+        <div class="footer-col-title">Topics</div>
+        <div class="footer-links">
+          <a href="/taxes">Taxes</a>
+          <a href="/banking">Banking</a>
+          <a href="/credit">Credit</a>
+          <a href="/government">Government</a>
+          <a href="/business">Business</a>
+          <a href="/rights">Rights</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Platform</div>
+        <div class="footer-links">
+          <a href="#">About</a>
+          <a href="/upload">Upload a Lesson</a>
+          <a href="#">Premium</a>
+          <a href="#">Contact</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy">Built by someone who had to figure it all out alone. — UnschoolMe 2026 🇺🇸</div>
+    </div>
+    <div class="flag-b"></div>
+  </div>
+</footer>
+
+<script src="/js/main.js"></script>
+<script>
+const sections = document.querySelectorAll('h2[id]');
+const tocLinks = document.querySelectorAll('.toc-link');
+const tocObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      tocLinks.forEach(l => l.classList.remove('active'));
+      const active = document.querySelector(`.toc-link[href="#${entry.target.id}"]`);
+      if (active) active.classList.add('active');
+    }
+  });
+}, { rootMargin: '-20% 0% -70% 0%' });
+sections.forEach(s => tocObserver.observe(s));
+</script>
+
+</body>
+</html>

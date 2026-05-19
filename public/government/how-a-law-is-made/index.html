@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How a Law Is Made — UnschoolMe</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600;1,700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:'DM Sans',sans-serif;color:#1A1A1A;background:#F8F6F1;}
+
+.progress-bar{position:fixed;top:0;left:0;height:3px;background:#C8A96E;z-index:200;width:0%;transition:width 0.1s linear;}
+
+.flag{height:5px;background:linear-gradient(90deg,#B22234 33%,#fff 33%,#fff 66%,#3C3B6E 66%);}
+nav{display:flex;align-items:center;justify-content:space-between;padding:1rem 3rem;background:rgba(10,10,30,0.98);border-bottom:1px solid rgba(255,255,255,0.08);}
+.logo{font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:700;color:#fff;flex-shrink:0;text-decoration:none;}
+.logo b{color:#C8A96E;}
+.nav-links{display:flex;gap:2rem;margin-left:4rem;flex:1;}
+.nav-links a{font-size:11px;color:rgba(255,255,255,0.45);letter-spacing:2px;text-transform:uppercase;font-weight:500;text-decoration:none;transition:color 0.2s;}
+.nav-links a:hover,.nav-links a.active{color:#fff;}
+.nav-right{display:flex;gap:8px;flex-shrink:0;}
+.nbtn1{background:transparent;color:rgba(255,255,255,0.5);border:1px solid rgba(255,255,255,0.15);border-radius:6px;padding:7px 16px;font-size:12px;font-family:'DM Sans',sans-serif;cursor:pointer;}
+.nbtn2{background:#C8A96E;color:#0A0A1E;border:none;border-radius:6px;padding:7px 16px;font-size:12px;font-family:'DM Sans',sans-serif;font-weight:500;cursor:pointer;}
+
+.article-hero{background:#0A0A1E;padding:3.5rem 3rem;position:relative;overflow:hidden;}
+.article-hero::after{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,#B22234 33%,#fff 33%,#fff 66%,#3C3B6E 66%);}
+.ah-inner{max-width:960px;margin:0 auto;}
+.breadcrumb{font-size:11px;color:rgba(255,255,255,0.3);letter-spacing:1px;text-transform:uppercase;margin-bottom:1.5rem;}
+.breadcrumb a{color:rgba(255,255,255,0.3);text-decoration:none;transition:color 0.2s;}
+.breadcrumb a:hover{color:#C8A96E;}
+.breadcrumb span{color:#C8A96E;}
+.article-tag{display:inline-flex;align-items:center;gap:6px;background:rgba(200,169,110,0.1);border:1px solid rgba(200,169,110,0.3);border-radius:99px;font-size:11px;color:#C8A96E;padding:4px 14px;margin-bottom:1.2rem;}
+.article-title{font-family:'Cormorant Garamond',serif;font-size:46px;font-weight:700;color:#fff;letter-spacing:-1.5px;line-height:1.1;margin-bottom:1rem;max-width:680px;}
+.article-title em{font-style:italic;color:#C8A96E;}
+.article-subtitle{font-size:15px;color:rgba(255,255,255,0.45);line-height:1.75;max-width:560px;font-weight:300;margin-bottom:1.8rem;}
+.article-meta{display:flex;align-items:center;gap:1.5rem;flex-wrap:wrap;}
+.meta-badge{font-size:10px;letter-spacing:1.5px;text-transform:uppercase;padding:3px 12px;border-radius:99px;font-weight:500;background:#E8F5E9;color:#2E7D32;}
+.meta-item{font-size:12px;color:rgba(255,255,255,0.3);display:flex;align-items:center;gap:6px;}
+.meta-sep{width:3px;height:3px;border-radius:50%;background:rgba(255,255,255,0.15);}
+
+.content-wrap{max-width:960px;margin:0 auto;padding:3rem;}
+.content-grid{display:grid;grid-template-columns:1fr 280px;gap:3rem;align-items:start;}
+
+.article-body{}
+.key-takeaways{background:#0A0A1E;border-radius:14px;padding:1.8rem;margin-bottom:2.5rem;}
+.kt-label{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#C8A96E;font-weight:500;margin-bottom:1rem;}
+.kt-item{color:rgba(255,255,255,0.65);font-size:13px;display:flex;gap:10px;align-items:flex-start;margin-bottom:9px;line-height:1.6;font-weight:300;}
+.kt-arrow{color:#C8A96E;flex-shrink:0;font-size:11px;margin-top:2px;}
+.kt-item:last-child{margin-bottom:0;}
+
+.article-body h2{font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:700;color:#1A1A1A;margin:2.5rem 0 1rem;letter-spacing:-0.5px;line-height:1.2;}
+.article-body h3{font-size:10px;letter-spacing:2.5px;text-transform:uppercase;color:#B22234;font-weight:500;margin:2rem 0 0.7rem;}
+.article-body p{font-size:15px;line-height:1.85;color:#555;margin-bottom:1.2rem;font-weight:300;}
+.article-body p strong{color:#1A1A1A;font-weight:500;}
+.article-body ul,.article-body ol{padding-left:1.5rem;margin-bottom:1.3rem;}
+.article-body li{font-size:15px;line-height:1.8;color:#555;margin-bottom:7px;font-weight:300;}
+.article-body li strong{color:#1A1A1A;font-weight:500;}
+
+.callout{border-left:3px solid #C8A96E;background:#FEFCF7;padding:1.2rem 1.5rem;border-radius:0 10px 10px 0;margin:1.8rem 0;}
+.callout.red{border-color:#B22234;background:#FFF8F8;}
+.callout.blue{border-color:#3C3B6E;background:#F8F8FF;}
+.callout p{margin-bottom:0;font-size:14px;}
+.callout-label{font-size:10px;letter-spacing:2px;text-transform:uppercase;font-weight:500;color:#C8A96E;margin-bottom:6px;}
+.callout.red .callout-label{color:#B22234;}
+.callout.blue .callout-label{color:#3C3B6E;}
+
+.data-table{width:100%;border-collapse:collapse;margin:1.5rem 0;font-size:13px;border-radius:10px;overflow:hidden;}
+.data-table thead th{background:#0A0A1E;color:#C8A96E;padding:11px 16px;text-align:left;font-weight:500;letter-spacing:0.5px;font-size:11px;}
+.data-table tbody td{padding:11px 16px;border-bottom:1px solid #E8E4DC;color:#555;font-weight:300;}
+.data-table tbody tr:last-child td{border-bottom:none;}
+.data-table tbody tr:nth-child(even) td{background:#FAFAF8;}
+.data-table tbody tr.highlight td{background:rgba(200,169,110,0.08);color:#1A1A1A;font-weight:500;}
+
+.example-box{background:#F8F6F1;border:1px solid #E8E4DC;border-radius:14px;padding:1.5rem;margin:1.8rem 0;}
+.ex-label{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#888;margin-bottom:1rem;font-weight:500;}
+.ex-row{display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid #E8E4DC;font-size:13px;}
+.ex-row:last-child{border-bottom:none;font-weight:500;color:#1A1A1A;}
+.ex-row span:first-child{color:#888;font-weight:300;}
+.ex-row span:last-child{color:#1A1A1A;font-family:'Cormorant Garamond',serif;font-size:16px;font-weight:700;}
+
+.flow-box{background:#0A0A1E;border-radius:14px;padding:1.5rem;margin:1.8rem 0;}
+.flow-step{display:flex;align-items:flex-start;gap:14px;margin-bottom:16px;}
+.flow-step:last-child{margin-bottom:0;}
+.flow-num{width:28px;height:28px;border-radius:50%;background:#C8A96E;color:#0A0A1E;font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.flow-content{}
+.flow-title{font-size:13px;font-weight:500;color:#fff;margin-bottom:4px;}
+.flow-desc{font-size:12px;color:rgba(255,255,255,0.45);line-height:1.6;font-weight:300;}
+.flow-divider{border-left:1px dashed rgba(200,169,110,0.3);height:12px;margin-left:14px;margin-bottom:0;}
+
+.article-footer{margin-top:3rem;padding-top:2rem;border-top:1px solid #E8E4DC;}
+.af-nav{display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem;}
+.af-btn{display:inline-flex;align-items:center;gap:8px;font-size:13px;color:#888;text-decoration:none;padding:10px 16px;border:1px solid #E8E4DC;border-radius:8px;background:#fff;transition:all 0.2s;}
+.af-btn:hover{border-color:#C8A96E;color:#1A1A1A;}
+.af-btn.next{background:#0A0A1E;color:#fff;border-color:#0A0A1E;}
+.af-btn.next:hover{background:#1A1A2E;}
+
+.sidebar{position:sticky;top:2rem;}
+.sb-card{background:#fff;border:1px solid #E8E4DC;border-radius:14px;padding:1.5rem;margin-bottom:16px;}
+.sb-title{font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:700;color:#1A1A1A;margin-bottom:1rem;}
+.toc-list{display:flex;flex-direction:column;}
+.toc-link{font-size:12px;color:#888;padding:7px 0;border-bottom:1px solid #F0EDE8;text-decoration:none;transition:color 0.15s;display:flex;align-items:flex-start;gap:8px;font-weight:300;line-height:1.4;}
+.toc-link:last-child{border-bottom:none;}
+.toc-link.active,.toc-link:hover{color:#1A1A1A;}
+.toc-link .toc-num{font-size:10px;color:#C8A96E;flex-shrink:0;margin-top:2px;}
+.related-link{display:flex;gap:10px;align-items:flex-start;text-decoration:none;padding:10px 0;border-bottom:1px solid #F0EDE8;transition:all 0.15s;}
+.related-link:last-child{border-bottom:none;}
+.related-link:hover .rl-title{color:#C8A96E;}
+.rl-arrow{color:#C8A96E;flex-shrink:0;font-size:12px;margin-top:2px;}
+.rl-title{font-size:12px;color:#1A1A1A;line-height:1.5;font-weight:400;}
+.rl-meta{font-size:11px;color:#AAA;margin-top:3px;font-weight:300;}
+.premium-card{background:#0A0A1E;border-radius:14px;padding:1.5rem;margin-bottom:16px;}
+.pc-eye{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#C8A96E;margin-bottom:8px;}
+.pc-title{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:700;color:#fff;margin-bottom:8px;}
+.pc-desc{font-size:12px;color:rgba(255,255,255,0.4);line-height:1.6;margin-bottom:1.2rem;font-weight:300;}
+.pc-btn{width:100%;background:#C8A96E;color:#0A0A1E;border:none;border-radius:8px;padding:10px;font-size:13px;font-family:'DM Sans',sans-serif;font-weight:500;cursor:pointer;}
+
+footer{background:#060610;padding:3rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;border-top:1px solid rgba(255,255,255,0.05);}
+.flogo{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:700;color:#fff;}
+.flogo b{color:#C8A96E;}
+.flinks{display:flex;gap:2rem;flex-wrap:wrap;}
+.flinks a{font-size:10px;color:rgba(255,255,255,0.2);letter-spacing:2px;text-transform:uppercase;text-decoration:none;transition:color 0.2s;}
+.flinks a:hover{color:#fff;}
+.fcopy{font-size:11px;color:rgba(255,255,255,0.15);width:100%;margin-top:0.5rem;}
+.flag-b{height:3px;background:linear-gradient(90deg,#B22234 33%,rgba(255,255,255,0.15) 33%,rgba(255,255,255,0.15) 66%,#3C3B6E 66%);width:100%;margin-top:1.5rem;border-radius:2px;}
+</style>
+</head>
+<body>
+
+<div class="progress-bar" id="progress-bar"></div>
+<div class="flag"></div>
+
+<nav>
+  <a href="/" class="logo">Unschool<b>Me</b></a>
+  <div class="nav-links">
+    <a href="/taxes">Taxes</a>
+    <a href="/banking">Banking</a>
+    <a href="/credit">Credit</a>
+    <a href="/government" class="active">Government</a>
+    <a href="/business">Business</a>
+    <a href="/rights">Rights</a>
+  </div>
+  <div class="nav-right">
+    <button class="nbtn1">Log in</button>
+    <button class="nbtn2">Get Started →</button>
+  </div>
+</nav>
+
+<div class="article-hero">
+  <div class="ah-inner">
+    <div class="breadcrumb">
+      <a href="/">Home</a> → <a href="/government">Government</a> → <span>How a Law Is Made</span>
+    </div>
+    <div class="article-tag">🏛️ Government · Free Article</div>
+    <h1 class="article-title">How a Law Is Made —<br>From Idea to <em>Signed Bill</em></h1>
+    <p class="article-subtitle">A bill starts in Congress, gets voted on, goes to the President, and becomes law. Or gets vetoed. Every step explained clearly.</p>
+    <div class="article-meta">
+      <span class="meta-badge">Free</span>
+      <span class="meta-item">5 min read</span>
+      <span class="meta-sep"></span>
+      <span class="meta-item">UnschoolMe Editorial</span>
+      <span class="meta-sep"></span>
+      <span class="meta-item">Updated 2025</span>
+    </div>
+  </div>
+</div>
+
+<div class="content-wrap">
+  <div class="content-grid">
+
+    <div class="article-body" id="article-body">
+
+      <div class="key-takeaways">
+        <div class="kt-label">Key Takeaways</div>
+        <div class="kt-item"><span class="kt-arrow">→</span> Any member of Congress can introduce a bill — but only Members of Congress can formally do so.</div>
+        <div class="kt-item"><span class="kt-arrow">→</span> A bill must pass both the House AND Senate in identical form before going to the President.</div>
+        <div class="kt-item"><span class="kt-arrow">→</span> The President has 4 options: sign it, veto it, let it become law without signing, or pocket veto it.</div>
+        <div class="kt-item"><span class="kt-arrow">→</span> Congress can override a veto with a 2/3 majority in both chambers — which is very rare.</div>
+        <div class="kt-item"><span class="kt-arrow">→</span> Most bills never become law — fewer than 10% of introduced bills pass.</div>
+      </div>
+
+      <h2 id="what-is-a-bill">What Is a Bill — and Who Can Introduce One?</h2>
+      <p>A bill is a proposed law. Any citizen, advocacy group, corporation, or lobbyist can write a bill and ask their elected representative to introduce it. A Senator or Representative can also draft legislation themselves. But formally, <strong>only members of Congress can introduce a bill</strong> — the President cannot introduce legislation directly (though the executive branch routinely works with Congressional allies to do so).</p>
+      <p>There's one constitutional restriction on where bills can start: <strong>all revenue and tax bills must originate in the House of Representatives</strong>. The Senate can introduce virtually any other type of legislation.</p>
+      <p>Each bill gets an official identifier. <strong>H.R.</strong> (House Resolution) followed by a number for House bills. <strong>S.</strong> followed by a number for Senate bills. These designations tell you which chamber introduced the bill and allow you to track it on Congress.gov, where every bill's full text, status, and vote history is publicly available.</p>
+      <p>A typical session of Congress sees over <strong>10,000 bills introduced</strong>. Fewer than 5–10% of them become law. Understanding the gauntlet a bill must survive helps explain why.</p>
+
+      <h2 id="committee">Step 1: The Committee Process</h2>
+      <p>Once a bill is introduced, it is <strong>referred to the relevant committee</strong> — the specialized group of legislators that oversees that policy area. A bill about food safety goes to the Agriculture Committee. Banking regulation goes to the Banking Committee. Defense spending goes to the Armed Services Committee.</p>
+      <p>The committee process has several stages, and most bills die here before ever reaching a floor vote:</p>
+      <ul>
+        <li><strong>Hearings:</strong> The committee invites experts, agency officials, advocates, and affected citizens to testify. This builds the public record and informs legislators about the bill's potential impact.</li>
+        <li><strong>Markup:</strong> Committee members debate the bill line by line and propose amendments. This is where the actual legislative sausage-making happens — bills are often substantially changed here.</li>
+        <li><strong>Committee vote:</strong> Members vote on whether to "report" the bill — send it to the full chamber for consideration. A majority of committee members must vote yes.</li>
+        <li><strong>Tabling:</strong> The committee can simply choose not to schedule a hearing or vote. The bill dies quietly, with no official vote and no public accountability. This is how the majority of introduced bills end.</li>
+      </ul>
+      <p><strong>Committee chairs have enormous power.</strong> In the House, the Speaker appoints chairs. In the Senate, the majority party controls chair assignments. A committee chair can single-handedly prevent a bill from receiving a hearing, effectively killing it without a vote. This is why the same popular bills often get introduced session after session — they keep dying in committee.</p>
+
+      <div class="callout">
+        <div class="callout-label">Why Most Bills Die in Committee</div>
+        <p>Of the roughly 10,000–15,000 bills introduced each Congressional session, approximately <strong>400–500</strong> become law — about 3–5%. The majority never receive a committee hearing at all. Committee chairs, party leadership, and the legislative calendar are the real gatekeepers.</p>
+      </div>
+
+      <h2 id="floor-vote">Step 2: Floor Debate and Vote</h2>
+      <p>If a bill survives committee, it moves to the full chamber for debate and a vote. The rules differ significantly between the two chambers.</p>
+
+      <h3>In the House</h3>
+      <p>The <strong>Rules Committee</strong> sets the terms of debate before the bill reaches the floor: how many hours of debate are allowed, which amendments can be offered, and whether the bill can be changed at all. This makes the Rules Committee one of the most powerful bodies in Congress. A bill needs a simple majority — <strong>218 of 435 votes</strong> — to pass.</p>
+
+      <h3>In the Senate</h3>
+      <p>Senate debate is far more open. Any senator can speak for as long as they want — this is the <strong>filibuster</strong>. A senator (or group of senators) can talk indefinitely to delay or prevent a vote. To end a filibuster and force a vote, you need <strong>60 votes</strong> (called "cloture"). This is why most major Senate legislation requires 60 votes to pass, not 51. Once debate ends, a simple majority (51 of 100) passes the bill.</p>
+
+      <div class="callout red">
+        <div class="callout-label">The Filibuster Reality</div>
+        <p>Filibusters have become routine in the modern Senate. For most major legislation, you now need 60 votes — not 51. This means a minority of 41 senators (representing as few as 10% of the US population in the smallest states) can block most bills, which has become a major source of legislative gridlock.</p>
+      </div>
+
+      <h3>When the Two Chambers Pass Different Versions</h3>
+      <p>It's common for the House and Senate to pass different versions of the same bill — with different amendments, different funding levels, or different language. When this happens, a <strong>conference committee</strong> is formed: members from both chambers negotiate a unified version. Both chambers must then vote to approve the final reconciled text. If either chamber rejects the conference report, the process starts over or the bill dies.</p>
+
+      <h2 id="presidential-action">Step 3: The President's Four Options</h2>
+      <p>Once both chambers pass the same bill in identical form, it goes to the President. The Constitution gives the President four distinct options — and each has different consequences.</p>
+
+      <div class="flow-box">
+        <div class="flow-step">
+          <div class="flow-num">1</div>
+          <div class="flow-content">
+            <div class="flow-title">Sign the bill</div>
+            <div class="flow-desc">The bill becomes law immediately. The President can sign at any point within 10 days of receiving the bill (excluding Sundays).</div>
+          </div>
+        </div>
+        <div class="flow-divider"></div>
+        <div class="flow-step">
+          <div class="flow-num">2</div>
+          <div class="flow-content">
+            <div class="flow-title">Veto the bill</div>
+            <div class="flow-desc">The President returns the bill to Congress with objections. Congress can override with a 2/3 majority in BOTH chambers — which requires bipartisan support and is historically rare. On average, fewer than 10% of vetoes are overridden.</div>
+          </div>
+        </div>
+        <div class="flow-divider"></div>
+        <div class="flow-step">
+          <div class="flow-num">3</div>
+          <div class="flow-content">
+            <div class="flow-title">Do nothing — Congress in session</div>
+            <div class="flow-desc">If the President takes no action for 10 days while Congress is in session, the bill becomes law automatically — without the President's signature. Rare, but used to signal displeasure without a veto.</div>
+          </div>
+        </div>
+        <div class="flow-divider"></div>
+        <div class="flow-step">
+          <div class="flow-num">4</div>
+          <div class="flow-content">
+            <div class="flow-title">Pocket veto — Congress adjourned</div>
+            <div class="flow-desc">If the President does nothing for 10 days while Congress is adjourned (not in session), the bill does NOT become law. Unlike a regular veto, Congress cannot override a pocket veto — they would need to pass the bill again in the next session.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="callout">
+        <div class="callout-label">Executive Orders</div>
+        <p>The President can also issue <strong>executive orders</strong> — directives with the force of law that apply within the President's existing legal authority, without requiring Congressional approval. Courts can (and do) block executive orders that exceed presidential power. Major executive orders are published in the Federal Register and carry a presidential order number.</p>
+      </div>
+
+      <h2 id="real-example">A Real Example: How the Affordable Care Act Became Law</h2>
+      <p>The Affordable Care Act (ACA) — commonly called "Obamacare" — illustrates the entire legislative process in action, including its messiness.</p>
+      <ul>
+        <li><strong>2009:</strong> Democrats introduce healthcare reform bills in both chambers. They go through multiple committees, with extensive hearings and markup sessions lasting months.</li>
+        <li><strong>December 2009:</strong> The Senate passes its version of the ACA with exactly <strong>60 votes</strong> — the minimum needed to break a Republican filibuster. Every Democrat voted yes; every Republican voted no.</li>
+        <li><strong>January 2010:</strong> A special election in Massachusetts flips a Senate seat to Republicans, leaving Democrats with only 59 Senate votes — no longer enough to overcome a filibuster on a revised bill.</li>
+        <li><strong>March 2010:</strong> The House passes the Senate's version of the bill (without changes, so it wouldn't need to go back to the Senate for another 60-vote threshold). The House also passes a separate "reconciliation" bill with modifications, which only needed 51 Senate votes.</li>
+        <li><strong>March 23, 2010:</strong> President Obama signs the ACA into law.</li>
+        <li><strong>2012:</strong> The Supreme Court upholds the ACA's core provisions in <em>NFIB v. Sebelius</em>, in a 5-4 decision.</li>
+      </ul>
+      <p>Republicans attempted to repeal the ACA more than 70 times. All failed. The law remains in effect, demonstrating that once a law survives the full legislative and judicial gauntlet, it becomes extremely durable.</p>
+
+      <h2 id="why-slow">Why Lawmaking Is Slow — and Why That's Intentional</h2>
+      <p>The American legislative process is deliberately slow and difficult. The Framers engineered it that way. They believed fast legislation was dangerous legislation — a government that could quickly enact laws could also quickly abuse that power.</p>
+      <p>Every step in the process is a <strong>veto point</strong> — a place where a bill can be stopped:</p>
+      <ul>
+        <li>Committee in the House</li>
+        <li>The House Rules Committee</li>
+        <li>The full House vote</li>
+        <li>Committee in the Senate</li>
+        <li>The Senate filibuster threshold (60 votes)</li>
+        <li>The full Senate vote</li>
+        <li>Conference committee (if versions differ)</li>
+        <li>Presidential signature or veto</li>
+        <li>Federal court review (including the Supreme Court)</li>
+      </ul>
+      <p>A law that clears every one of these obstacles has demonstrated something: it has enough political support across enough different institutions to survive. That's a feature, not a bug.</p>
+      <p>The downside is real, too. In a genuine crisis — a pandemic, a financial collapse, a natural disaster — the normal legislative process can be far too slow to respond effectively. That's why emergency powers, executive orders, and expedited procedures exist — though they come with their own tradeoffs and legal limits.</p>
+
+      <div class="callout">
+        <div class="callout-label">Special Interests and Quiet Kills</div>
+        <p>Bills can be killed at any point — and the most effective opposition often works quietly. A well-funded interest group lobbying a single committee chair can kill legislation without a public vote, without debate, and without most voters ever knowing. This is why following a specific bill often reveals more about political power than watching floor votes.</p>
+      </div>
+
+      <div class="article-footer">
+        <div class="af-nav">
+          <a href="/government/three-branches-explained" class="af-btn">← The 3 Branches</a>
+          <a href="/government/local-government" class="af-btn next">Local Government →</a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="sidebar">
+      <div class="sb-card">
+        <div class="sb-title">In This Article</div>
+        <div class="toc-list">
+          <a href="#what-is-a-bill" class="toc-link"><span class="toc-num">01</span> What Is a Bill?</a>
+          <a href="#committee" class="toc-link"><span class="toc-num">02</span> Step 1: Committee</a>
+          <a href="#floor-vote" class="toc-link"><span class="toc-num">03</span> Step 2: Floor Vote</a>
+          <a href="#presidential-action" class="toc-link"><span class="toc-num">04</span> Step 3: The President</a>
+          <a href="#real-example" class="toc-link"><span class="toc-num">05</span> Real Example: The ACA</a>
+          <a href="#why-slow" class="toc-link"><span class="toc-num">06</span> Why Lawmaking Is Slow</a>
+        </div>
+      </div>
+
+      <div class="sb-card">
+        <div class="sb-title">Related Articles</div>
+        <a href="/government/three-branches-explained" class="related-link">
+          <span class="rl-arrow">→</span>
+          <div><div class="rl-title">The 3 Branches of Government Explained</div><div class="rl-meta">6 min · Free</div></div>
+        </a>
+        <a href="/government/local-government" class="related-link">
+          <span class="rl-arrow">→</span>
+          <div><div class="rl-title">Local Government — The One That Actually Affects You Daily</div><div class="rl-meta">4 min · Free</div></div>
+        </a>
+      </div>
+
+      <div class="premium-card">
+        <div class="pc-eye">Premium</div>
+        <div class="pc-title">Go deeper with Premium</div>
+        <div class="pc-desc">Unlock deep guides on voting, government benefits you qualify for, and your rights in dealing with government agencies.</div>
+        <button class="pc-btn">Get Premium — $9/mo →</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<footer>
+  <div class="flogo">Unschool<b>Me.</b></div>
+  <div class="flinks">
+    <a href="/taxes">Taxes</a>
+    <a href="/banking">Banking</a>
+    <a href="/credit">Credit</a>
+    <a href="/government">Government</a>
+    <a href="/business">Business</a>
+    <a href="/rights">Rights</a>
+  </div>
+  <div class="fcopy">Built by someone who had to figure it all out alone. — UnschoolMe 2026 🇺🇸</div>
+  <div class="flag-b"></div>
+</footer>
+
+<script>
+// Reading progress bar
+const bar = document.getElementById('progress-bar');
+const body = document.getElementById('article-body');
+window.addEventListener('scroll', () => {
+  const total = body.offsetTop + body.offsetHeight - window.innerHeight;
+  const pct = Math.min(Math.max((window.scrollY / total) * 100, 0), 100);
+  bar.style.width = pct + '%';
+});
+
+// TOC active link on scroll
+const sections = document.querySelectorAll('h2[id]');
+const tocLinks = document.querySelectorAll('.toc-link');
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      tocLinks.forEach(l => l.classList.remove('active'));
+      const active = document.querySelector(`.toc-link[href="#${entry.target.id}"]`);
+      if (active) active.classList.add('active');
+    }
+  });
+}, { rootMargin: '-20% 0% -70% 0%' });
+sections.forEach(s => observer.observe(s));
+</script>
+
+</body>
+</html>

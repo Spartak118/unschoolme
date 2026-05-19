@@ -1,0 +1,604 @@
+{
+  "entries": [
+    {
+      "id": 1,
+      "keywords": ["tax", "taxes", "irs", "filing", "file"],
+      "question": "How do taxes work?",
+      "answer": "Taxes are money you pay to the government from your income. Your employer automatically deducts taxes from your paycheck. Every April 15th you file a tax return. If you overpaid you get a refund."
+    },
+    {
+      "id": 2,
+      "keywords": ["refund", "tax refund", "money back"],
+      "question": "What is a tax refund?",
+      "answer": "A tax refund is money the government owes you back when you paid more taxes than you owed. File your taxes at IRS.gov for free and get your refund in about 21 days."
+    },
+    {
+      "id": 3,
+      "keywords": ["credit score", "credit", "fico", "score"],
+      "question": "What is a credit score?",
+      "answer": "A credit score is a number from 300 to 850. Above 700 is good. Above 800 is excellent. Banks use it to decide if they give you loans or credit cards. Build it by paying bills on time every month."
+    },
+    {
+      "id": 4,
+      "keywords": ["build credit", "no credit", "start credit", "secured card"],
+      "question": "How do I build credit from zero?",
+      "answer": "Get a secured credit card by depositing $200-500. Use it for small purchases only. Pay the full balance every month. After 6-12 months you will have a real credit score."
+    },
+    {
+      "id": 5,
+      "keywords": ["bank", "banks", "banking", "savings", "checking", "fdic"],
+      "question": "How do banks work?",
+      "answer": "Banks take money from savers and lend it to borrowers. They charge borrowers more interest than they pay savers — that difference is their profit. FDIC insures your money up to $250,000."
+    },
+    {
+      "id": 6,
+      "keywords": ["bank fees", "overdraft", "monthly fee", "atm fee"],
+      "question": "How do I avoid bank fees?",
+      "answer": "Use online banks like Ally or Chime — they charge zero fees. If you use a traditional bank, maintain the minimum balance and only use your bank's ATMs to avoid fees."
+    },
+    {
+      "id": 7,
+      "keywords": ["government", "president", "congress", "senate", "branches", "constitution"],
+      "question": "How does the US government work?",
+      "answer": "The US government has 3 branches. Congress makes laws. The President signs or vetoes them. The Supreme Court makes sure laws follow the Constitution. This prevents any one person from getting too much power."
+    },
+    {
+      "id": 8,
+      "keywords": ["vote", "voting", "election", "register", "ballot"],
+      "question": "How do I vote in the US?",
+      "answer": "To vote you must be a US citizen, at least 18, and registered. In California register at registertovote.ca.gov. Local elections matter most — they are often decided by just a few hundred votes."
+    },
+    {
+      "id": 9,
+      "keywords": ["business", "llc", "start business", "company", "ein"],
+      "question": "How do I start a business?",
+      "answer": "Pick a name, register an LLC with your state (costs $70 in California), get a free EIN from IRS.gov, open a business bank account. An LLC protects your personal money if the business gets sued."
+    },
+    {
+      "id": 10,
+      "keywords": ["police", "rights", "arrested", "arrest", "search", "silent"],
+      "question": "What are my rights if police stop me?",
+      "answer": "Stay calm and keep hands visible. Say 'I am invoking my right to remain silent.' Ask 'Am I free to go?' Do not consent to a search. If arrested say 'I want a lawyer' and stop talking."
+    },
+    {
+      "id": 11,
+      "keywords": ["rent", "apartment", "lease", "landlord", "tenant", "deposit"],
+      "question": "What are my rights as a tenant?",
+      "answer": "In California your landlord must give 24 hours notice before entering. They must return your security deposit within 21 days of moving out. Document everything with photos when you move in."
+    },
+    {
+      "id": 12,
+      "keywords": ["invest", "investing", "stocks", "stock market", "roth", "ira", "index fund"],
+      "question": "How do I start investing?",
+      "answer": "Open a Roth IRA at Fidelity or Vanguard for free. Buy an S&P 500 index fund like VOO. Invest small amounts regularly. Time is your biggest advantage — start as early as possible."
+    },
+    {
+      "id": 13,
+      "keywords": ["salary", "paycheck", "negotiate", "wage", "income", "taxes taken"],
+      "question": "Why is my paycheck less than my salary?",
+      "answer": "Federal and state taxes, Social Security (6.2%), and Medicare (1.45%) are deducted automatically. In California you can lose 30-40% of your gross salary. Always negotiate your salary — employers expect it."
+    },
+    {
+      "id": 14,
+      "keywords": ["insurance", "health insurance", "premium", "deductible", "copay"],
+      "question": "How does health insurance work?",
+      "answer": "You pay a monthly premium. When you use healthcare you pay a deductible first, then insurance covers most costs. In the US one hospital visit without insurance can cost $30,000. Always have health insurance."
+    },
+    {
+      "id": 15,
+      "keywords": ["college", "fafsa", "financial aid", "scholarship", "tuition", "gcc"],
+      "question": "How do I get financial aid for college?",
+      "answer": "Fill out the FAFSA form at studentaid.gov every year — it is free. You can get grants (free money), scholarships (merit-based), work-study jobs, or loans. Community college like GCC costs about $46 per unit."
+    },
+    {
+      "id": 16,
+      "keywords": ["immigration", "green card", "visa", "daca", "citizenship", "uscis"],
+      "question": "How does immigration work in the US?",
+      "answer": "A green card gives permanent residency. You can get one through family, employment, or asylum. After 5 years you can apply for citizenship. Always use official USCIS.gov — many scammers pose as immigration lawyers."
+    },
+    {
+      "id": 17,
+      "keywords": ["w2", "w-2", "form", "employer", "withholding"],
+      "question": "What is a W-2 form?",
+      "answer": "A W-2 is a form your employer sends every January showing how much you earned and how much tax was withheld. You need it to file your taxes. Employers must send it by January 31st."
+    },
+    {
+      "id": 18,
+      "keywords": ["compound interest", "interest", "savings rate", "high yield"],
+      "question": "What is compound interest?",
+      "answer": "Compound interest means you earn interest on your interest. Online banks like Ally pay 4-5% on savings while traditional banks pay almost nothing. Start saving early — even small amounts grow significantly over time."
+    },
+    {
+      "id": 19,
+      "keywords": ["minimum wage", "overtime", "work rights", "fired", "discrimination"],
+      "question": "What are my rights at work?",
+      "answer": "California minimum wage is $16/hour. Overtime over 8 hours per day must be paid at 1.5x your rate. You cannot be fired for discriminatory reasons. Report violations to the California Labor Commissioner."
+    },
+    {
+      "id": 20,
+      "keywords": ["small claims", "court", "lawyer", "lawsuit", "sue", "legal"],
+      "question": "How do I take someone to small claims court?",
+      "answer": "Small claims court in California handles disputes up to $12,500 with no lawyer needed. It costs $30-75 to file. Legal Aid Foundation of LA provides free legal help for low-income people."
+    },
+    {
+      "id": 21,
+      "keywords": ["california salary", "california taxes", "california paycheck", "ca taxes", "1000 california", "salary california", "california take home", "ca paycheck"],
+      "question": "How much is $1000 salary after taxes in California?",
+      "answer": "In California earning $1000 gross: Federal tax ~$120, Social Security ~$62, Medicare ~$14.50, California state tax ~$32. Total deductions ~$228. Your take-home pay is approximately $772. California has one of the highest state income taxes in the US."
+    },
+    {
+      "id": 22,
+      "keywords": ["texas salary", "texas taxes", "texas paycheck", "tx taxes", "1000 texas", "salary texas", "texas take home", "no state tax texas"],
+      "question": "How much is $1000 salary after taxes in Texas?",
+      "answer": "In Texas earning $1000 gross: Federal tax ~$120, Social Security ~$62, Medicare ~$14.50, Texas state tax = $0 (Texas has NO state income tax). Total deductions ~$196. Your take-home pay is approximately $804. Texas is one of 9 states with no income tax."
+    },
+    {
+      "id": 23,
+      "keywords": ["new york salary", "new york taxes", "ny taxes", "nyc taxes", "1000 new york", "salary new york", "new york take home"],
+      "question": "How much is $1000 salary after taxes in New York?",
+      "answer": "In New York earning $1000 gross: Federal tax ~$120, Social Security ~$62, Medicare ~$14.50, New York state tax ~$43, NYC local tax ~$23 (if in NYC). Total deductions ~$262. Your take-home pay is approximately $738. New York has very high combined taxes."
+    },
+    {
+      "id": 24,
+      "keywords": ["florida salary", "florida taxes", "fl taxes", "1000 florida", "salary florida", "florida take home", "no state tax florida"],
+      "question": "How much is $1000 salary after taxes in Florida?",
+      "answer": "In Florida earning $1000 gross: Federal tax ~$120, Social Security ~$62, Medicare ~$14.50, Florida state tax = $0 (Florida has NO state income tax). Total deductions ~$196. Your take-home pay is approximately $804. Florida is one of 9 states with no income tax."
+    },
+    {
+      "id": 25,
+      "keywords": ["washington salary", "washington taxes", "wa taxes", "seattle taxes", "1000 washington", "salary washington", "washington take home", "no state tax washington"],
+      "question": "How much is $1000 salary after taxes in Washington State?",
+      "answer": "In Washington State earning $1000 gross: Federal tax ~$120, Social Security ~$62, Medicare ~$14.50, Washington state tax = $0 (no state income tax). Total deductions ~$196. Your take-home pay is approximately $804. Washington has no state income tax but has high sales tax."
+    },
+    {
+      "id": 26,
+      "keywords": ["illinois salary", "illinois taxes", "il taxes", "chicago taxes", "1000 illinois", "salary illinois"],
+      "question": "How much is $1000 salary after taxes in Illinois?",
+      "answer": "In Illinois earning $1000 gross: Federal tax ~$120, Social Security ~$62, Medicare ~$14.50, Illinois flat state tax ~$49 (4.95% flat rate). Total deductions ~$245. Your take-home pay is approximately $755."
+    },
+    {
+      "id": 27,
+      "keywords": ["pennsylvania salary", "pa taxes", "pennsylvania taxes", "1000 pennsylvania", "salary pennsylvania"],
+      "question": "How much is $1000 salary after taxes in Pennsylvania?",
+      "answer": "In Pennsylvania earning $1000 gross: Federal tax ~$120, Social Security ~$62, Medicare ~$14.50, Pennsylvania flat state tax ~$30.70 (3.07% flat rate). Total deductions ~$227. Your take-home pay is approximately $773."
+    },
+    {
+      "id": 28,
+      "keywords": ["ohio salary", "ohio taxes", "1000 ohio", "salary ohio"],
+      "question": "How much is $1000 salary after taxes in Ohio?",
+      "answer": "In Ohio earning $1000 gross: Federal tax ~$120, Social Security ~$62, Medicare ~$14.50, Ohio state tax ~$25. Total deductions ~$221. Your take-home pay is approximately $779."
+    },
+    {
+      "id": 29,
+      "keywords": ["georgia salary", "georgia taxes", "ga taxes", "atlanta taxes", "1000 georgia"],
+      "question": "How much is $1000 salary after taxes in Georgia?",
+      "answer": "In Georgia earning $1000 gross: Federal tax ~$120, Social Security ~$62, Medicare ~$14.50, Georgia state tax ~$55 (5.49% flat rate). Total deductions ~$251. Your take-home pay is approximately $749."
+    },
+    {
+      "id": 30,
+      "keywords": ["north carolina salary", "nc taxes", "north carolina taxes", "1000 north carolina"],
+      "question": "How much is $1000 salary after taxes in North Carolina?",
+      "answer": "In North Carolina earning $1000 gross: Federal tax ~$120, Social Security ~$62, Medicare ~$14.50, NC state tax ~$47.50 (4.75% flat rate). Total deductions ~$244. Your take-home pay is approximately $756."
+    },
+    {
+      "id": 31,
+      "keywords": ["michigan salary", "michigan taxes", "mi taxes", "detroit taxes", "1000 michigan"],
+      "question": "How much is $1000 salary after taxes in Michigan?",
+      "answer": "In Michigan earning $1000 gross: Federal tax ~$120, Social Security ~$62, Medicare ~$14.50, Michigan flat state tax ~$42.50 (4.25%). Total deductions ~$239. Your take-home pay is approximately $761."
+    },
+    {
+      "id": 32,
+      "keywords": ["new jersey salary", "nj taxes", "new jersey taxes", "1000 new jersey"],
+      "question": "How much is $1000 salary after taxes in New Jersey?",
+      "answer": "In New Jersey earning $1000 gross: Federal tax ~$120, Social Security ~$62, Medicare ~$14.50, NJ state tax ~$14 (low at this income level). Total deductions ~$210. Your take-home pay is approximately $790."
+    },
+    {
+      "id": 33,
+      "keywords": ["virginia salary", "virginia taxes", "va taxes", "1000 virginia"],
+      "question": "How much is $1000 salary after taxes in Virginia?",
+      "answer": "In Virginia earning $1000 gross: Federal tax ~$120, Social Security ~$62, Medicare ~$14.50, Virginia state tax ~$57.50 (5.75% top rate). Total deductions ~$254. Your take-home pay is approximately $746."
+    },
+    {
+      "id": 34,
+      "keywords": ["arizona salary", "arizona taxes", "az taxes", "phoenix taxes", "1000 arizona"],
+      "question": "How much is $1000 salary after taxes in Arizona?",
+      "answer": "In Arizona earning $1000 gross: Federal tax ~$120, Social Security ~$62, Medicare ~$14.50, Arizona state tax ~$25 (2.5% flat rate). Total deductions ~$221. Your take-home pay is approximately $779. Arizona has a low flat tax rate."
+    },
+    {
+      "id": 35,
+      "keywords": ["massachusetts salary", "ma taxes", "boston taxes", "1000 massachusetts"],
+      "question": "How much is $1000 salary after taxes in Massachusetts?",
+      "answer": "In Massachusetts earning $1000 gross: Federal tax ~$120, Social Security ~$62, Medicare ~$14.50, Massachusetts flat tax ~$50 (5% flat rate). Total deductions ~$246. Your take-home pay is approximately $754."
+    },
+    {
+      "id": 36,
+      "keywords": ["tennessee salary", "tennessee taxes", "tn taxes", "nashville taxes", "1000 tennessee", "no state tax tennessee"],
+      "question": "How much is $1000 salary after taxes in Tennessee?",
+      "answer": "In Tennessee earning $1000 gross: Federal tax ~$120, Social Security ~$62, Medicare ~$14.50, Tennessee state income tax = $0 (no state income tax on wages). Total deductions ~$196. Your take-home pay is approximately $804."
+    },
+    {
+      "id": 37,
+      "keywords": ["indiana salary", "indiana taxes", "in taxes", "1000 indiana"],
+      "question": "How much is $1000 salary after taxes in Indiana?",
+      "answer": "In Indiana earning $1000 gross: Federal tax ~$120, Social Security ~$62, Medicare ~$14.50, Indiana flat tax ~$32.50 (3.23% flat rate). Total deductions ~$229. Your take-home pay is approximately $771."
+    },
+    {
+      "id": 38,
+      "keywords": ["missouri salary", "missouri taxes", "mo taxes", "1000 missouri"],
+      "question": "How much is $1000 salary after taxes in Missouri?",
+      "answer": "In Missouri earning $1000 gross: Federal tax ~$120, Social Security ~$62, Medicare ~$14.50, Missouri state tax ~$47 (4.7% top rate). Total deductions ~$243. Your take-home pay is approximately $757."
+    },
+    {
+      "id": 39,
+      "keywords": ["maryland salary", "maryland taxes", "md taxes", "baltimore taxes", "1000 maryland"],
+      "question": "How much is $1000 salary after taxes in Maryland?",
+      "answer": "In Maryland earning $1000 gross: Federal tax ~$120, Social Security ~$62, Medicare ~$14.50, Maryland state tax ~$47.50 plus county tax ~$25. Total deductions ~$269. Your take-home pay is approximately $731."
+    },
+    {
+      "id": 40,
+      "keywords": ["colorado salary", "colorado taxes", "co taxes", "denver taxes", "1000 colorado"],
+      "question": "How much is $1000 salary after taxes in Colorado?",
+      "answer": "In Colorado earning $1000 gross: Federal tax ~$120, Social Security ~$62, Medicare ~$14.50, Colorado flat tax ~$44 (4.4% flat rate). Total deductions ~$240. Your take-home pay is approximately $760."
+    },
+    {
+      "id": 41,
+      "keywords": ["minnesota salary", "minnesota taxes", "mn taxes", "minneapolis taxes", "1000 minnesota"],
+      "question": "How much is $1000 salary after taxes in Minnesota?",
+      "answer": "In Minnesota earning $1000 gross: Federal tax ~$120, Social Security ~$62, Medicare ~$14.50, Minnesota state tax ~$53. Total deductions ~$249. Your take-home pay is approximately $751. Minnesota has relatively high state taxes."
+    },
+    {
+      "id": 42,
+      "keywords": ["wisconsin salary", "wisconsin taxes", "wi taxes", "1000 wisconsin"],
+      "question": "How much is $1000 salary after taxes in Wisconsin?",
+      "answer": "In Wisconsin earning $1000 gross: Federal tax ~$120, Social Security ~$62, Medicare ~$14.50, Wisconsin state tax ~$35. Total deductions ~$231. Your take-home pay is approximately $769."
+    },
+    {
+      "id": 43,
+      "keywords": ["south carolina salary", "sc taxes", "south carolina taxes", "1000 south carolina"],
+      "question": "How much is $1000 salary after taxes in South Carolina?",
+      "answer": "In South Carolina earning $1000 gross: Federal tax ~$120, Social Security ~$62, Medicare ~$14.50, SC state tax ~$64 (6.4% top rate). Total deductions ~$260. Your take-home pay is approximately $740."
+    },
+    {
+      "id": 44,
+      "keywords": ["alabama salary", "alabama taxes", "al taxes", "1000 alabama"],
+      "question": "How much is $1000 salary after taxes in Alabama?",
+      "answer": "In Alabama earning $1000 gross: Federal tax ~$120, Social Security ~$62, Medicare ~$14.50, Alabama state tax ~$50 (5% top rate). Total deductions ~$246. Your take-home pay is approximately $754."
+    },
+    {
+      "id": 45,
+      "keywords": ["louisiana salary", "louisiana taxes", "la taxes", "new orleans taxes", "1000 louisiana"],
+      "question": "How much is $1000 salary after taxes in Louisiana?",
+      "answer": "In Louisiana earning $1000 gross: Federal tax ~$120, Social Security ~$62, Medicare ~$14.50, Louisiana state tax ~$30. Total deductions ~$226. Your take-home pay is approximately $774."
+    },
+    {
+      "id": 46,
+      "keywords": ["kentucky salary", "kentucky taxes", "ky taxes", "1000 kentucky"],
+      "question": "How much is $1000 salary after taxes in Kentucky?",
+      "answer": "In Kentucky earning $1000 gross: Federal tax ~$120, Social Security ~$62, Medicare ~$14.50, Kentucky flat tax ~$45 (4.5% flat rate). Total deductions ~$241. Your take-home pay is approximately $759."
+    },
+    {
+      "id": 47,
+      "keywords": ["oregon salary", "oregon taxes", "or taxes", "portland taxes", "1000 oregon"],
+      "question": "How much is $1000 salary after taxes in Oregon?",
+      "answer": "In Oregon earning $1000 gross: Federal tax ~$120, Social Security ~$62, Medicare ~$14.50, Oregon state tax ~$80 (up to 9.9% — one of highest in US). Total deductions ~$276. Your take-home pay is approximately $724. Oregon has very high state income tax."
+    },
+    {
+      "id": 48,
+      "keywords": ["connecticut salary", "connecticut taxes", "ct taxes", "1000 connecticut"],
+      "question": "How much is $1000 salary after taxes in Connecticut?",
+      "answer": "In Connecticut earning $1000 gross: Federal tax ~$120, Social Security ~$62, Medicare ~$14.50, Connecticut state tax ~$30. Total deductions ~$226. Your take-home pay is approximately $774."
+    },
+    {
+      "id": 49,
+      "keywords": ["nevada salary", "nevada taxes", "nv taxes", "las vegas taxes", "1000 nevada", "no state tax nevada"],
+      "question": "How much is $1000 salary after taxes in Nevada?",
+      "answer": "In Nevada earning $1000 gross: Federal tax ~$120, Social Security ~$62, Medicare ~$14.50, Nevada state income tax = $0 (no state income tax). Total deductions ~$196. Your take-home pay is approximately $804. Nevada has no state income tax."
+    },
+    {
+      "id": 50,
+      "keywords": ["iowa salary", "iowa taxes", "ia taxes", "1000 iowa"],
+      "question": "How much is $1000 salary after taxes in Iowa?",
+      "answer": "In Iowa earning $1000 gross: Federal tax ~$120, Social Security ~$62, Medicare ~$14.50, Iowa state tax ~$38.50 (3.8% flat rate starting 2025). Total deductions ~$235. Your take-home pay is approximately $765."
+    },
+    {
+      "id": 51,
+      "keywords": ["arkansas salary", "arkansas taxes", "ar taxes", "1000 arkansas"],
+      "question": "How much is $1000 salary after taxes in Arkansas?",
+      "answer": "In Arkansas earning $1000 gross: Federal tax ~$120, Social Security ~$62, Medicare ~$14.50, Arkansas state tax ~$47 (4.7% top rate). Total deductions ~$243. Your take-home pay is approximately $757."
+    },
+    {
+      "id": 52,
+      "keywords": ["mississippi salary", "mississippi taxes", "ms taxes", "1000 mississippi"],
+      "question": "How much is $1000 salary after taxes in Mississippi?",
+      "answer": "In Mississippi earning $1000 gross: Federal tax ~$120, Social Security ~$62, Medicare ~$14.50, Mississippi state tax ~$47 (4.7% flat rate). Total deductions ~$243. Your take-home pay is approximately $757."
+    },
+    {
+      "id": 53,
+      "keywords": ["kansas salary", "kansas taxes", "ks taxes", "1000 kansas"],
+      "question": "How much is $1000 salary after taxes in Kansas?",
+      "answer": "In Kansas earning $1000 gross: Federal tax ~$120, Social Security ~$62, Medicare ~$14.50, Kansas state tax ~$57 (5.7% top rate). Total deductions ~$253. Your take-home pay is approximately $747."
+    },
+    {
+      "id": 54,
+      "keywords": ["nebraska salary", "nebraska taxes", "ne taxes", "1000 nebraska"],
+      "question": "How much is $1000 salary after taxes in Nebraska?",
+      "answer": "In Nebraska earning $1000 gross: Federal tax ~$120, Social Security ~$62, Medicare ~$14.50, Nebraska state tax ~$46 (dropping to 3.99% by 2027). Total deductions ~$242. Your take-home pay is approximately $758."
+    },
+    {
+      "id": 55,
+      "keywords": ["idaho salary", "idaho taxes", "id taxes", "1000 idaho"],
+      "question": "How much is $1000 salary after taxes in Idaho?",
+      "answer": "In Idaho earning $1000 gross: Federal tax ~$120, Social Security ~$62, Medicare ~$14.50, Idaho flat tax ~$59 (5.8% flat rate). Total deductions ~$255. Your take-home pay is approximately $745."
+    },
+    {
+      "id": 56,
+      "keywords": ["utah salary", "utah taxes", "ut taxes", "salt lake taxes", "1000 utah"],
+      "question": "How much is $1000 salary after taxes in Utah?",
+      "answer": "In Utah earning $1000 gross: Federal tax ~$120, Social Security ~$62, Medicare ~$14.50, Utah flat tax ~$46 (4.55% flat rate). Total deductions ~$242. Your take-home pay is approximately $758."
+    },
+    {
+      "id": 57,
+      "keywords": ["new mexico salary", "new mexico taxes", "nm taxes", "1000 new mexico"],
+      "question": "How much is $1000 salary after taxes in New Mexico?",
+      "answer": "In New Mexico earning $1000 gross: Federal tax ~$120, Social Security ~$62, Medicare ~$14.50, New Mexico state tax ~$49 (4.9% top rate). Total deductions ~$245. Your take-home pay is approximately $755."
+    },
+    {
+      "id": 58,
+      "keywords": ["west virginia salary", "west virginia taxes", "wv taxes", "1000 west virginia"],
+      "question": "How much is $1000 salary after taxes in West Virginia?",
+      "answer": "In West Virginia earning $1000 gross: Federal tax ~$120, Social Security ~$62, Medicare ~$14.50, WV state tax ~$38 (dropping rates in 2025). Total deductions ~$234. Your take-home pay is approximately $766."
+    },
+    {
+      "id": 59,
+      "keywords": ["delaware salary", "delaware taxes", "de taxes", "1000 delaware"],
+      "question": "How much is $1000 salary after taxes in Delaware?",
+      "answer": "In Delaware earning $1000 gross: Federal tax ~$120, Social Security ~$62, Medicare ~$14.50, Delaware state tax ~$66 (6.6% top rate). Total deductions ~$262. Your take-home pay is approximately $738."
+    },
+    {
+      "id": 60,
+      "keywords": ["hawaii salary", "hawaii taxes", "hi taxes", "honolulu taxes", "1000 hawaii"],
+      "question": "How much is $1000 salary after taxes in Hawaii?",
+      "answer": "In Hawaii earning $1000 gross: Federal tax ~$120, Social Security ~$62, Medicare ~$14.50, Hawaii state tax ~$110 (up to 11% — highest in the US). Total deductions ~$306. Your take-home pay is approximately $694. Hawaii has the highest state income tax in the US."
+    },
+    {
+      "id": 61,
+      "keywords": ["alaska salary", "alaska taxes", "ak taxes", "1000 alaska", "no state tax alaska"],
+      "question": "How much is $1000 salary after taxes in Alaska?",
+      "answer": "In Alaska earning $1000 gross: Federal tax ~$120, Social Security ~$62, Medicare ~$14.50, Alaska state income tax = $0 (no state income tax). Total deductions ~$196. Your take-home pay is approximately $804. Alaska has no state income tax and pays residents an annual dividend."
+    },
+    {
+      "id": 62,
+      "keywords": ["montana salary", "montana taxes", "mt taxes", "1000 montana"],
+      "question": "How much is $1000 salary after taxes in Montana?",
+      "answer": "In Montana earning $1000 gross: Federal tax ~$120, Social Security ~$62, Medicare ~$14.50, Montana state tax ~$59 (5.9% top rate). Total deductions ~$255. Your take-home pay is approximately $745."
+    },
+    {
+      "id": 63,
+      "keywords": ["wyoming salary", "wyoming taxes", "wy taxes", "1000 wyoming", "no state tax wyoming"],
+      "question": "How much is $1000 salary after taxes in Wyoming?",
+      "answer": "In Wyoming earning $1000 gross: Federal tax ~$120, Social Security ~$62, Medicare ~$14.50, Wyoming state income tax = $0 (no state income tax). Total deductions ~$196. Your take-home pay is approximately $804."
+    },
+    {
+      "id": 64,
+      "keywords": ["north dakota salary", "north dakota taxes", "nd taxes", "1000 north dakota"],
+      "question": "How much is $1000 salary after taxes in North Dakota?",
+      "answer": "In North Dakota earning $1000 gross: Federal tax ~$120, Social Security ~$62, Medicare ~$14.50, North Dakota state tax ~$25 (2.5% top rate — very low). Total deductions ~$221. Your take-home pay is approximately $779."
+    },
+    {
+      "id": 65,
+      "keywords": ["south dakota salary", "south dakota taxes", "sd taxes", "1000 south dakota", "no state tax south dakota"],
+      "question": "How much is $1000 salary after taxes in South Dakota?",
+      "answer": "In South Dakota earning $1000 gross: Federal tax ~$120, Social Security ~$62, Medicare ~$14.50, South Dakota state income tax = $0 (no state income tax). Total deductions ~$196. Your take-home pay is approximately $804."
+    },
+    {
+      "id": 66,
+      "keywords": ["vermont salary", "vermont taxes", "vt taxes", "1000 vermont"],
+      "question": "How much is $1000 salary after taxes in Vermont?",
+      "answer": "In Vermont earning $1000 gross: Federal tax ~$120, Social Security ~$62, Medicare ~$14.50, Vermont state tax ~$66 (6.6% top rate). Total deductions ~$262. Your take-home pay is approximately $738."
+    },
+    {
+      "id": 67,
+      "keywords": ["rhode island salary", "rhode island taxes", "ri taxes", "1000 rhode island"],
+      "question": "How much is $1000 salary after taxes in Rhode Island?",
+      "answer": "In Rhode Island earning $1000 gross: Federal tax ~$120, Social Security ~$62, Medicare ~$14.50, Rhode Island state tax ~$37.50 (3.75% bottom rate). Total deductions ~$234. Your take-home pay is approximately $766."
+    },
+    {
+      "id": 68,
+      "keywords": ["new hampshire salary", "new hampshire taxes", "nh taxes", "1000 new hampshire", "no state tax new hampshire"],
+      "question": "How much is $1000 salary after taxes in New Hampshire?",
+      "answer": "In New Hampshire earning $1000 gross: Federal tax ~$120, Social Security ~$62, Medicare ~$14.50, New Hampshire state income tax on wages = $0 (no tax on wages or salary). Total deductions ~$196. Your take-home pay is approximately $804."
+    },
+    {
+      "id": 69,
+      "keywords": ["maine salary", "maine taxes", "me taxes", "1000 maine"],
+      "question": "How much is $1000 salary after taxes in Maine?",
+      "answer": "In Maine earning $1000 gross: Federal tax ~$120, Social Security ~$62, Medicare ~$14.50, Maine state tax ~$75 (7.15% top rate). Total deductions ~$271. Your take-home pay is approximately $729."
+    },
+    {
+      "id": 70,
+      "keywords": ["no state tax", "states no income tax", "which states no tax", "tax free states"],
+      "question": "Which states have no income tax?",
+      "answer": "9 states have no state income tax: Alaska, Florida, Nevada, New Hampshire, South Dakota, Tennessee, Texas, Washington, and Wyoming. Living in these states means you keep more of your paycheck. However they often make up for it with higher sales tax or property tax."
+    },
+    {
+      "id": 71,
+      "keywords": ["how much save", "saving money", "save money", "budget", "50 30 20", "budgeting"],
+      "question": "How much of my paycheck should I save?",
+      "answer": "The 50/30/20 rule is the most popular guideline. Spend 50% on needs (rent, food, utilities), 30% on wants (entertainment, dining out), and save 20%. If you earn $1000 take-home, save at least $200 every month. Even saving $50-100 a month is better than nothing — start small and increase over time."
+    },
+    {
+      "id": 72,
+      "keywords": ["emergency fund", "emergency savings", "rainy day fund", "how much emergency"],
+      "question": "How much should I have in an emergency fund?",
+      "answer": "Financial experts recommend saving 3 to 6 months of living expenses in an emergency fund. If your monthly expenses are $2000, aim for $6000 to $12000. Keep it in a high-yield savings account at an online bank earning 4-5% interest. Never invest your emergency fund in stocks."
+    },
+    {
+      "id": 73,
+      "keywords": ["401k", "retirement", "401 k", "employer match", "retire", "retirement savings"],
+      "question": "What is a 401k and should I use it?",
+      "answer": "A 401k is a retirement savings account your employer offers. You contribute pre-tax money — meaning you pay less tax now. Many employers match your contributions up to 3-6% of your salary — that is free money. Always contribute at least enough to get the full employer match. The money grows tax-deferred until retirement."
+    },
+    {
+      "id": 74,
+      "keywords": ["social security", "social security number", "ssn", "what is social security"],
+      "question": "What is Social Security and why is it taken from my paycheck?",
+      "answer": "Social Security is a government program that provides income when you retire, become disabled, or die leaving dependents. 6.2% of your paycheck goes to Social Security automatically. Your employer also pays 6.2% on your behalf. You can start collecting Social Security benefits at age 62, but waiting until 67 or 70 gives you larger monthly payments."
+    },
+    {
+      "id": 75,
+      "keywords": ["medicare", "what is medicare", "medicare tax", "medicaid difference"],
+      "question": "What is Medicare and why is it taken from my paycheck?",
+      "answer": "Medicare is government health insurance for people 65 and older. 1.45% of every paycheck goes to Medicare tax. Your employer also pays 1.45%. You become eligible for Medicare at age 65. Medicaid is different — it is health insurance for low-income people of any age."
+    },
+    {
+      "id": 76,
+      "keywords": ["credit card debt", "pay off debt", "debt", "minimum payment", "interest debt"],
+      "question": "How do I pay off credit card debt?",
+      "answer": "Two popular methods: Avalanche method — pay minimum on all cards and put extra money toward the card with highest interest rate. Saves the most money. Snowball method — pay off smallest balance first for quick wins and motivation. Never pay only the minimum — at 20% interest, $1000 debt takes 5+ years to pay off making minimums only."
+    },
+    {
+      "id": 77,
+      "keywords": ["buy car", "car loan", "finance car", "auto loan", "lease car"],
+      "question": "Should I buy or lease a car?",
+      "answer": "Buying is better long-term — you own it and build equity. Leasing has lower monthly payments but you never own it and have mileage limits. For a car loan, aim for a term of 48-60 months maximum. Never finance a car for 72-84 months — you end up paying far more than the car is worth. Put at least 20% down if possible."
+    },
+    {
+      "id": 78,
+      "keywords": ["buy house", "mortgage", "down payment", "home loan", "first home", "buying house"],
+      "question": "How do I buy a house?",
+      "answer": "Save at least a 20% down payment to avoid PMI (private mortgage insurance). Get pre-approved for a mortgage before shopping. Your monthly payment should not exceed 28% of your gross income. In Los Angeles the median home price is over $800,000 — you would need $160,000 down. Check first-time homebuyer programs in California for assistance."
+    },
+    {
+      "id": 79,
+      "keywords": ["freelance taxes", "self employed taxes", "freelancer", "gig work", "1099", "uber taxes", "doordash taxes"],
+      "question": "How do taxes work if I am self-employed or freelance?",
+      "answer": "As a freelancer you receive a 1099 form instead of a W-2. You must pay self-employment tax of 15.3% (Social Security + Medicare) on top of regular income tax. Pay quarterly estimated taxes in April, June, September, and January to avoid penalties. Track all business expenses — they are tax deductible. Consider forming an LLC to protect yourself."
+    },
+    {
+      "id": 80,
+      "keywords": ["open bank account", "bank account requirements", "what do i need bank account", "bank account documents"],
+      "question": "What do I need to open a bank account?",
+      "answer": "To open a bank account you need a government-issued photo ID (driver's license, passport, or state ID), your Social Security Number or ITIN, and sometimes an initial deposit. Online banks like Chime and Ally require no minimum deposit and charge zero fees. If you have no SSN, some banks accept an ITIN (Individual Taxpayer Identification Number)."
+    },
+    {
+      "id": 81,
+      "keywords": ["good credit score", "excellent credit", "700 credit score", "800 credit score", "credit score range"],
+      "question": "What is a good credit score?",
+      "answer": "Credit scores range from 300 to 850. Poor: 300-579. Fair: 580-669. Good: 670-739. Very Good: 740-799. Exceptional: 800-850. With a score above 740 you qualify for the best interest rates on loans and credit cards. Above 800 and you are in the top tier — lenders compete for your business."
+    },
+    {
+      "id": 82,
+      "keywords": ["how long credit", "how long build credit", "how long improve credit score", "credit score time"],
+      "question": "How long does it take to build a good credit score?",
+      "answer": "Starting from zero you can have a credit score within 3-6 months of opening your first credit account. Building a good score of 700+ typically takes 1-2 years of on-time payments. Building an excellent score of 800+ usually takes 5-7 years of responsible credit use. Negative items like missed payments stay on your report for 7 years."
+    },
+    {
+      "id": 83,
+      "keywords": ["dispute credit", "remove negative", "credit report error", "fix credit report", "wrong credit"],
+      "question": "How do I dispute an error on my credit report?",
+      "answer": "Get your free credit report at AnnualCreditReport.com (the only official free site). If you find an error, dispute it directly with the credit bureau (Equifax, Experian, or TransUnion) at their website. They must investigate within 30 days. If the error is confirmed, they must remove it. Disputing correct negative information will not help — only actual errors can be removed."
+    },
+    {
+      "id": 84,
+      "keywords": ["glendale california", "glendale taxes", "glendale salary", "live glendale"],
+      "question": "What are the taxes like living in Glendale California?",
+      "answer": "Glendale is in Los Angeles County, California. You pay: Federal income tax, California state income tax (among the highest in the US), and no additional Glendale city income tax. On $1000 gross you take home approximately $772. California sales tax in Glendale is 10.25%. Property tax is about 1.1% of assessed value per year."
+    },
+    {
+      "id": 85,
+      "keywords": ["los angeles salary", "la salary", "los angeles taxes", "la taxes", "1000 los angeles"],
+      "question": "How much is $1000 salary after taxes in Los Angeles?",
+      "answer": "In Los Angeles earning $1000 gross: Federal tax ~$120, Social Security ~$62, Medicare ~$14.50, California state tax ~$32, SDI (State Disability Insurance) ~$9. Total deductions ~$237. Your take-home pay is approximately $763. LA has no additional city income tax unlike New York City."
+    },
+    {
+      "id": 86,
+      "keywords": ["minimum wage california", "california minimum wage", "ca minimum wage 2024", "california hourly"],
+      "question": "What is the minimum wage in California?",
+      "answer": "California minimum wage is $16.50 per hour as of 2025 — one of the highest in the US. Fast food workers have a higher minimum of $20/hour. Some cities like San Francisco have even higher minimums. At $16.50/hour working 40 hours a week you earn $660 before taxes, approximately $550-580 take-home."
+    },
+    {
+      "id": 87,
+      "keywords": ["itin", "itin number", "no social security", "undocumented taxes", "without ssn taxes"],
+      "question": "Can I work and pay taxes without a Social Security Number?",
+      "answer": "Yes. You can apply for an ITIN (Individual Taxpayer Identification Number) from the IRS. An ITIN lets you file taxes and open bank accounts but does not authorize work or provide Social Security benefits. To get an ITIN fill out Form W-7 at IRS.gov. Many immigrants use ITINs to build credit and financial history in the US."
+    },
+    {
+      "id": 88,
+      "keywords": ["how much rent", "afford rent", "rent rule", "how much should i pay rent", "rent income ratio"],
+      "question": "How much should I spend on rent?",
+      "answer": "The 30% rule says spend no more than 30% of your gross income on rent. If you earn $3000/month gross, keep rent at $900 or less. In Los Angeles and Glendale average rent is $2000-2500 for a 1-bedroom, which is very high relative to incomes. Consider roommates, living further from downtown, or looking in Burbank, Pasadena, or San Bernardino for lower rents."
+    },
+    {
+      "id": 89,
+      "keywords": ["w4", "w-4", "withholding form", "allowances", "tax withholding"],
+      "question": "What is a W-4 form?",
+      "answer": "A W-4 is a form you fill out when starting a new job telling your employer how much tax to withhold from your paycheck. If you claim too many allowances, too little is withheld and you owe taxes in April. If you claim too few, too much is withheld and you get a refund. For most single people with one job, following the standard W-4 instructions works fine."
+    },
+    {
+      "id": 90,
+      "keywords": ["529 plan", "education savings", "college savings", "save for college"],
+      "question": "What is a 529 plan?",
+      "answer": "A 529 plan is a tax-advantaged savings account specifically for education expenses. Your money grows tax-free and withdrawals for qualified education expenses (tuition, books, room and board) are also tax-free. Many states offer additional tax deductions for contributions. You can use it for college, vocational school, or even K-12 private school tuition up to $10,000 per year."
+    },
+    {
+      "id": 91,
+      "keywords": ["what is inflation", "inflation", "prices going up", "why things cost more"],
+      "question": "What is inflation and how does it affect me?",
+      "answer": "Inflation means prices increase over time so your money buys less. The US Federal Reserve targets 2% annual inflation. When inflation is high (like 8% in 2022) your savings lose value fast. To beat inflation your money needs to grow faster than the inflation rate. Savings accounts at 4-5% currently beat inflation. Keeping cash under a mattress is the worst option — it loses value every year."
+    },
+    {
+      "id": 92,
+      "keywords": ["federal reserve", "fed", "interest rates", "fed rate", "why interest rates high"],
+      "question": "What is the Federal Reserve and why does it matter?",
+      "answer": "The Federal Reserve (the Fed) is the US central bank. It controls interest rates to manage inflation and unemployment. When inflation is high the Fed raises rates making borrowing more expensive — this slows the economy. When the economy is slow the Fed lowers rates making borrowing cheaper to stimulate growth. Fed rate decisions affect your mortgage, car loan, credit card rates, and savings account interest."
+    },
+    {
+      "id": 93,
+      "keywords": ["eviction", "landlord evict", "evicted", "how long eviction", "eviction process"],
+      "question": "How does eviction work in California?",
+      "answer": "In California a landlord must give written notice before evicting: 3 days for non-payment of rent, 30 days for month-to-month tenants (60 days if you lived there 1+ year). The landlord must then file in court if you do not leave. You have the right to fight the eviction in court. The entire process takes 1-3 months minimum. Document everything and contact a tenant rights organization if threatened with eviction."
+    },
+    {
+      "id": 94,
+      "keywords": ["daca", "dreamer", "daca work", "daca taxes", "daca rights"],
+      "question": "What are the rights and benefits of DACA?",
+      "answer": "DACA (Deferred Action for Childhood Arrivals) allows eligible undocumented immigrants who came to the US as children to receive a 2-year renewable work permit and protection from deportation. DACA recipients can get a Social Security Number, driver's license, and work legally. DACA does not provide a path to citizenship. Renew your DACA before it expires — do not wait until the last minute. Use official USCIS.gov only."
+    },
+    {
+      "id": 95,
+      "keywords": ["start llc", "llc cost", "how to llc", "form llc", "llc california cost"],
+      "question": "How much does it cost to start an LLC in California?",
+      "answer": "In California an LLC costs: $70 filing fee to the Secretary of State, plus $800 annual franchise tax (minimum, due every year even if you make no money), plus $20 for a Statement of Information due within 90 days of forming. Total first year cost approximately $890. After that the $800 annual tax continues every year. Use bizfile.sos.ca.gov to file online."
+    },
+    {
+      "id": 96,
+      "keywords": ["ein number", "get ein", "employer identification number", "business tax id", "free ein"],
+      "question": "How do I get an EIN number for my business?",
+      "answer": "An EIN (Employer Identification Number) is your business tax ID from the IRS. It is completely free at IRS.gov/ein. The online application takes about 10 minutes and you get your EIN immediately. You need it to open a business bank account, hire employees, and file business taxes. Never pay anyone to get you an EIN — it is always free directly from the IRS."
+    },
+    {
+      "id": 97,
+      "keywords": ["student loan", "student debt", "pay student loans", "student loan forgiveness", "income driven repayment"],
+      "question": "How do student loans work?",
+      "answer": "Federal student loans have fixed interest rates and flexible repayment options. Income-Driven Repayment (IDR) plans cap your payments at 5-10% of your discretionary income. Public Service Loan Forgiveness (PSLF) forgives remaining debt after 10 years if you work for government or non-profits. Never miss payments — it destroys your credit. Always choose federal loans over private loans which have fewer protections."
+    },
+    {
+      "id": 98,
+      "keywords": ["check credit score free", "free credit score", "credit karma", "annual credit report"],
+      "question": "How do I check my credit score for free?",
+      "answer": "You can check your credit score free in several ways: Credit Karma (free, shows TransUnion and Equifax scores), your bank or credit card app (many show your score for free), AnnualCreditReport.com (free full credit reports from all 3 bureaus). Never pay for your credit score. Checking your own score does NOT hurt your credit — only hard inquiries from applications affect it."
+    },
+    {
+      "id": 99,
+      "keywords": ["what is apr", "apr", "annual percentage rate", "interest rate difference", "apr vs interest"],
+      "question": "What is APR?",
+      "answer": "APR stands for Annual Percentage Rate. It is the true yearly cost of borrowing money including fees and interest. A credit card with 20% APR charges about 1.67% per month on your balance. A mortgage with 7% APR means you pay 7% per year on the remaining balance. Always compare APR not just the interest rate when comparing loans — the APR includes all costs."
+    },
+    {
+      "id": 100,
+      "keywords": ["what is deductible", "tax deductible", "deduct expenses", "business deductions", "write off"],
+      "question": "What does tax deductible mean?",
+      "answer": "Tax deductible means an expense reduces your taxable income. If you earn $50,000 and have $5,000 in deductions, you only pay tax on $45,000. Common deductions: student loan interest, home mortgage interest, charitable donations, business expenses. Self-employed people can deduct home office, car mileage, phone, and equipment used for work. Keep receipts for everything you plan to deduct."
+    }
+  ]
+}
