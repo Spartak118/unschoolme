@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<title>My Profile — UnschoolMe</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=DM+Sans:wght@300;400;500&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+
+<div class="flag"></div>
+
+<nav class="nav" id="nav">
+  <a href="/" class="nav-logo">Unschool<b>Me</b></a>
+  <div class="nav-links">
+    <a href="/taxes">Taxes</a>
+    <a href="/banking">Banking</a>
+    <a href="/credit">Credit</a>
+    <a href="/government">Government</a>
+    <a href="/business">Business</a>
+    <a href="/rights">Rights</a>
+      <a href="/healthcare">Health</a>
+  </div>
+  <div class="nav-right">
+    <button class="btn-ghost" onclick="location.href='/login'">Log in</button>
+    <button class="btn-gold" onclick="location.href='/login'">Get Started →</button>
+  </div>
+</nav>
+
+<div class="profile-page">
+  <div class="profile-hero">
+    <div class="profile-avatar-big" id="profileAvatar"></div>
+    <div class="profile-name" id="profileName"></div>
+    <div class="profile-role-badge" id="profileRole"></div>
+    <div class="profile-member-since" id="profileSince"></div>
+  </div>
+
+  <div class="profile-content">
+    <div class="profile-stats">
+      <div class="profile-stat">
+        <div class="ps-num" id="statArticles">0</div>
+        <div class="ps-label">Articles Read</div>
+      </div>
+      <div class="profile-stat">
+        <div class="ps-num" id="statTopics">0</div>
+        <div class="ps-label">Topics Explored</div>
+      </div>
+      <div class="profile-stat">
+        <div class="ps-num" id="statDays">0</div>
+        <div class="ps-label">Days Learning</div>
+      </div>
+    </div>
+
+    <div class="profile-section">
+      <div class="profile-section-title">📚 Learning Progress</div>
+      <div class="progress-topics" id="progressTopics"></div>
+    </div>
+
+    <div class="profile-section">
+      <div class="profile-section-title">🔖 Saved Articles</div>
+      <div class="bookmarks-list" id="bookmarksList"></div>
+    </div>
+
+    <div class="profile-section">
+      <button class="btn-logout-profile" onclick="logout()">Log Out</button>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div>
+        <div class="footer-logo">Unschool<b>Me.</b></div>
+        <div class="footer-desc">Teaching real life skills that school forgot.</div>
+      </div>
+      <div>
+        <div class="footer-col-title">Topics</div>
+        <div class="footer-links">
+          <a href="/taxes">Taxes</a>
+          <a href="/banking">Banking</a>
+          <a href="/credit">Credit</a>
+          <a href="/government">Government</a>
+          <a href="/business">Business</a>
+          <a href="/rights">Rights</a>
+        <a href="/healthcare">Health</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Platform</div>
+        <div class="footer-links">
+          <a href="/chat">Ask Anything</a>
+          <a href="/upload">Upload a Lesson</a>
+          <a href="/#pricing">Premium</a>
+          <a href="/chat" data-contact-link>Contact</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy">Built by someone who had to figure it all out alone. — UnschoolMe 2026 🇺🇸</div>
+    </div>
+    <div class="flag-b"></div>
+  </div>
+</footer>
+
+<script src="/js/config.js"></script>
+<script src="/js/main.js"></script>
+<script>
+const TOPIC_TOTALS = {
+  taxes: 3, banking: 3, credit: 3, government: 3, business: 3, rights: 3,
+  investing: 1, salary: 1, voting: 1, immigration: 1, legal: 1,
+  housing: 1, college: 1, freelancing: 1, 'grow-business': 1,
+  healthcare: 5, 'scams-safety': 3
+};
+
+const profileUser = getUser();
+if (!profileUser) {
+  window.location.href = '/login';
+} else {
+  renderProfile(profileUser);
+}
+
+function renderProfile(user) {
+  const initials = user.name ? user.name.split(' ').map(n => n[0]).join('').toUpperCase().slice(0, 2) : 'U';
+  document.getElementById('profileAvatar').textContent = initials;
+  document.getElementById('profileName').textContent = user.name || 'UnschoolMe Learner';
+  document.getElementById('profileRole').textContent = user.role === 'creator' ? 'Creator' : 'Learner';
+
+  const createdAt = user.created_at ? new Date(user.created_at) : new Date();
+  document.getElementById('profileSince').textContent = 'Member since ' + createdAt.toLocaleDateString('en-US', { month: 'long', year: 'numeric' });
+
+  const days = Math.max(1, Math.floor((Date.now() - createdAt.getTime()) / (1000 * 60 * 60 * 24)));
+  document.getElementById('statDays').textContent = days;
+
+  const progress = JSON.parse(localStorage.getItem('um_progress') || '{}');
+  const topics = Object.keys(progress);
+  const articlesRead = topics.reduce((sum, t) => sum + progress[t].length, 0);
+  document.getElementById('statArticles').textContent = articlesRead;
+  document.getElementById('statTopics').textContent = topics.length;
+
+  const progressEl = document.getElementById('progressTopics');
+  if (topics.length === 0) {
+    progressEl.innerHTML = '<div class="empty-state">You haven\'t started learning yet. Pick a topic and dive in!</div>';
+  } else {
+    progressEl.innerHTML = topics.map(topic => {
+      const readCount = progress[topic].length;
+      const total = TOPIC_TOTALS[topic] || readCount;
+      const pct = Math.min(100, Math.round((readCount / total) * 100));
+      const label = topic.charAt(0).toUpperCase() + topic.slice(1).replace(/-/g, ' ');
+      return `
+        <div class="progress-topic-item">
+          <span>${label}</span>
+          <div style="display:flex;align-items:center;gap:10px;">
+            <div class="progress-bar-wrap"><div class="progress-bar-fill" style="width:${pct}%"></div></div>
+            <span style="color:#888;font-size:12px;">${readCount}/${total}</span>
+          </div>
+        </div>
+      `;
+    }).join('');
+  }
+
+  const bookmarks = JSON.parse(localStorage.getItem('um_bookmarks') || '[]');
+  const bookmarksEl = document.getElementById('bookmarksList');
+  if (bookmarks.length === 0) {
+    bookmarksEl.innerHTML = '<div class="empty-state">No saved articles yet. Click "Save Article" on any lesson to bookmark it.</div>';
+  } else {
+    bookmarksEl.innerHTML = bookmarks.map(b => `
+      <div class="bookmark-item">
+        <a href="${b.url}" class="bookmark-link">${b.title}</a>
+      </div>
+    `).join('');
+  }
+}
+</script>
+
+</body>
+</html>

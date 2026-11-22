@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<title>DACA Explained — UnschoolMe</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=DM+Sans:wght@300;400;500&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/main.css">
+<style>
+.article-hero{background:#0A0A1E;padding:3.5rem 3rem;position:relative;overflow:hidden;}
+.article-hero::after{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,#B22234 33%,#fff 33%,#fff 66%,#3C3B6E 66%);}
+.ah-inner{max-width:960px;margin:0 auto;}
+.article-tag{display:inline-flex;align-items:center;gap:6px;background:rgba(200,169,110,0.1);border:1px solid rgba(200,169,110,0.3);border-radius:99px;font-size:11px;color:#C8A96E;padding:4px 14px;margin-bottom:1.2rem;}
+.article-title{font-family:'Cormorant Garamond',serif;font-size:46px;font-weight:700;color:#fff;letter-spacing:-1.5px;line-height:1.1;margin-bottom:1rem;max-width:680px;}
+.article-title em{font-style:italic;color:#C8A96E;}
+.article-subtitle{font-size:15px;color:rgba(255,255,255,0.45);line-height:1.75;max-width:560px;font-weight:300;margin-bottom:1.8rem;}
+.article-meta{display:flex;align-items:center;gap:1.5rem;flex-wrap:wrap;}
+.meta-badge{font-size:10px;letter-spacing:1.5px;text-transform:uppercase;padding:3px 12px;border-radius:99px;font-weight:500;background:#E8F5E9;color:#2E7D32;}
+.meta-item{font-size:12px;color:rgba(255,255,255,0.3);}
+.meta-sep{width:3px;height:3px;border-radius:50%;background:rgba(255,255,255,0.15);display:inline-block;}
+.content-grid{display:grid;grid-template-columns:1fr 280px;gap:3rem;align-items:start;}
+.key-takeaways{background:#0A0A1E;border-radius:14px;padding:1.8rem;margin-bottom:2.5rem;}
+.kt-label{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#C8A96E;font-weight:500;margin-bottom:1rem;}
+.kt-item{color:rgba(255,255,255,0.65);font-size:13px;display:flex;gap:10px;align-items:flex-start;margin-bottom:9px;line-height:1.6;font-weight:300;}
+.kt-arrow{color:#C8A96E;flex-shrink:0;font-size:11px;margin-top:2px;}
+.kt-item:last-child{margin-bottom:0;}
+.article-body h2{font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:700;color:#1A1A1A;margin:2.5rem 0 1rem;letter-spacing:-0.5px;line-height:1.2;}
+.article-body h3{font-size:10px;letter-spacing:2.5px;text-transform:uppercase;color:#B22234;font-weight:500;margin:2rem 0 0.7rem;}
+.article-body p{font-size:15px;line-height:1.85;color:#555;margin-bottom:1.2rem;font-weight:300;}
+.article-body p strong{color:#1A1A1A;font-weight:500;}
+.article-body ul,.article-body ol{padding-left:1.5rem;margin-bottom:1.3rem;}
+.article-body li{font-size:15px;line-height:1.8;color:#555;margin-bottom:7px;font-weight:300;}
+.article-body li strong{color:#1A1A1A;font-weight:500;}
+.callout{border-left:3px solid #C8A96E;background:#FEFCF7;padding:1.2rem 1.5rem;border-radius:0 10px 10px 0;margin:1.8rem 0;}
+.callout.red{border-color:#B22234;background:#FFF8F8;}
+.callout.blue{border-color:#3C3B6E;background:#F8F8FF;}
+.callout p{margin-bottom:0;font-size:14px;}
+.callout-label{font-size:10px;letter-spacing:2px;text-transform:uppercase;font-weight:500;color:#C8A96E;margin-bottom:6px;}
+.callout.red .callout-label{color:#B22234;}
+.callout.blue .callout-label{color:#3C3B6E;}
+.data-table{width:100%;border-collapse:collapse;margin:1.5rem 0;font-size:13px;border-radius:10px;overflow:hidden;}
+.data-table thead th{background:#0A0A1E;color:#C8A96E;padding:11px 16px;text-align:left;font-weight:500;letter-spacing:0.5px;font-size:11px;}
+.data-table tbody td{padding:11px 16px;border-bottom:1px solid #E8E4DC;color:#555;font-weight:300;}
+.data-table tbody tr:last-child td{border-bottom:none;}
+.data-table tbody tr:nth-child(even) td{background:#FAFAF8;}
+.data-table tbody tr.highlight td{background:rgba(200,169,110,0.08);color:#1A1A1A;font-weight:500;}
+.article-footer{margin-top:3rem;padding-top:2rem;border-top:1px solid #E8E4DC;}
+.af-nav{display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem;}
+.af-btn{display:inline-flex;align-items:center;gap:8px;font-size:13px;color:#888;text-decoration:none;padding:10px 16px;border:1px solid #E8E4DC;border-radius:8px;background:#fff;transition:all 0.2s;}
+.af-btn:hover{border-color:#C8A96E;color:#1A1A1A;}
+.af-btn.next{background:#0A0A1E;color:#fff;border-color:#0A0A1E;}
+.af-btn.next:hover{background:#1A1A2E;}
+.sidebar{position:sticky;top:2rem;}
+.sb-card{background:#fff;border:1px solid #E8E4DC;border-radius:14px;padding:1.5rem;margin-bottom:16px;}
+.sb-title{font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:700;color:#1A1A1A;margin-bottom:1rem;}
+.toc-list{display:flex;flex-direction:column;}
+.toc-link{font-size:12px;color:#888;padding:7px 0;border-bottom:1px solid #F0EDE8;text-decoration:none;transition:color 0.15s;display:flex;align-items:flex-start;gap:8px;font-weight:300;line-height:1.4;}
+.toc-link:last-child{border-bottom:none;}
+.toc-link.active,.toc-link:hover{color:#1A1A1A;}
+.toc-link .toc-num{font-size:10px;color:#C8A96E;flex-shrink:0;margin-top:2px;}
+.related-link{display:flex;gap:10px;align-items:flex-start;text-decoration:none;padding:10px 0;border-bottom:1px solid #F0EDE8;transition:all 0.15s;}
+.related-link:last-child{border-bottom:none;}
+.related-link:hover .rl-title{color:#C8A96E;}
+.rl-arrow{color:#C8A96E;flex-shrink:0;font-size:12px;margin-top:2px;}
+.rl-title{font-size:12px;color:#1A1A1A;line-height:1.5;font-weight:400;}
+.rl-meta{font-size:11px;color:#AAA;margin-top:3px;font-weight:300;}
+</style>
+</head>
+<body>
+
+<div style="position:fixed;top:0;left:0;height:3px;background:#C8A96E;z-index:9999;transition:width 0.1s" id="readingProgress"></div>
+<div class="flag"></div>
+
+<nav class="nav" id="nav">
+  <a href="/" class="nav-logo">Unschool<b>Me</b></a>
+  <div class="nav-links">
+    <a href="/taxes">Taxes</a>
+    <a href="/banking">Banking</a>
+    <a href="/credit">Credit</a>
+    <a href="/government">Government</a>
+    <a href="/business">Business</a>
+    <a href="/rights">Rights</a>
+      <a href="/healthcare">Health</a>
+  </div>
+  <div class="nav-right">
+    <button class="btn-ghost" onclick="location.href='/login'">Log in</button>
+    <button class="btn-gold" onclick="location.href='/login'">Get Started →</button>
+  </div>
+</nav>
+
+<div class="article-hero">
+  <div class="ah-inner">
+    <div class="breadcrumb">
+      <a href="/">Home</a> → <a href="/immigration">Immigration</a> → <span>DACA Explained</span>
+    </div>
+    <div class="article-tag">🌎 Immigration · Free Article</div>
+    <h1 class="article-title">DACA Explained —<br>What It Is, Who <em>Qualifies</em>, and What It Gives You</h1>
+    <p class="article-subtitle">DACA protects hundreds of thousands of young immigrants from deportation and lets them work legally. Here's what it does, what it doesn't do, and how to keep it current.</p>
+    <div class="article-meta">
+      <span class="meta-badge">Free</span>
+      <span class="meta-item">6 min read</span>
+      <span class="meta-sep"></span>
+      <span class="meta-item">UnschoolMe Editorial</span>
+      <span class="meta-sep"></span>
+      <span class="meta-item">Updated 2025</span>
+    </div>
+  </div>
+</div>
+
+<div class="content-wrap">
+  <div class="content-grid">
+
+    <div class="article-body" id="article-body">
+
+      <div class="key-takeaways">
+        <div class="kt-label">Key Takeaways</div>
+        <div class="kt-item"><span class="kt-arrow">→</span> DACA gives eligible immigrants a 2-year renewable work permit and protection from deportation — not a green card or citizenship.</div>
+        <div class="kt-item"><span class="kt-arrow">→</span> DACA recipients can get a Social Security Number, driver's license, open bank accounts, and work legally.</div>
+        <div class="kt-item"><span class="kt-arrow">→</span> Renewals must be filed before expiration — do not wait for the last minute.</div>
+        <div class="kt-item"><span class="kt-arrow">→</span> Only use official USCIS.gov. Never pay an unauthorized person or "notario" to file for you.</div>
+        <div class="kt-item"><span class="kt-arrow">→</span> DACA's legal status is currently in active litigation — stay informed through official sources.</div>
+      </div>
+
+      <h2 id="what-is-daca">What Is DACA?</h2>
+      <p>DACA stands for <strong>Deferred Action for Childhood Arrivals</strong>. It is a federal policy created by executive action in June 2012 that allows certain undocumented immigrants who came to the United States as children to receive protection from deportation and the ability to work legally in the US.</p>
+      <p>The program does not provide lawful immigration status, a green card, or any path to citizenship. It is a <em>deferral</em> — meaning the government agrees to postpone deportation proceedings for approved applicants for a 2-year period, which can be renewed indefinitely.</p>
+      <p>As of 2025, approximately 530,000 people hold active DACA status. They are sometimes called "Dreamers," a reference to the DREAM Act legislation that was proposed but never passed by Congress.</p>
+
+      <h2 id="eligibility">Who Qualifies for DACA?</h2>
+      <p>To be eligible, you must meet all of the following requirements as established by USCIS:</p>
+      <ul>
+        <li><strong>Age of entry:</strong> You must have come to the US before your 16th birthday</li>
+        <li><strong>Continuous residence:</strong> You must have continuously resided in the US since June 15, 2007</li>
+        <li><strong>Physical presence:</strong> You must have been physically present in the US on June 15, 2012, and at the time of filing</li>
+        <li><strong>No lawful status:</strong> You must have been without lawful immigration status on June 15, 2012</li>
+        <li><strong>Age:</strong> You must have been under age 31 on June 15, 2012</li>
+        <li><strong>Education or military:</strong> You must be in school, have graduated high school or earned a GED, or have been honorably discharged from the military</li>
+        <li><strong>No serious criminal record:</strong> You must not have been convicted of a felony, significant misdemeanor, or three or more misdemeanors</li>
+      </ul>
+
+      <div class="callout red">
+        <div class="callout-label">New Applicants</div>
+        <p>Due to ongoing court litigation, USCIS is currently only accepting renewal applications from existing DACA recipients — not new initial applications from people who never had DACA before. This situation is subject to change. Check uscis.gov/DACA for current status.</p>
+      </div>
+
+      <h2 id="what-daca-gives">What DACA Actually Gives You</h2>
+      <p>When approved, DACA gives you a physical document called an <strong>Employment Authorization Document (EAD)</strong>, sometimes called a work permit. With an active EAD, you can:</p>
+
+      <table class="data-table">
+        <thead>
+          <tr><th>Benefit</th><th>Details</th></tr>
+        </thead>
+        <tbody>
+          <tr class="highlight"><td>Work legally</td><td>Any employer, any job, any state</td></tr>
+          <tr><td>Social Security Number</td><td>Issued with your EAD — can build credit history</td></tr>
+          <tr><td>Driver's license</td><td>Available in all 50 states for DACA holders</td></tr>
+          <tr><td>Open bank accounts</td><td>Checking, savings, credit cards</td></tr>
+          <tr><td>Pay taxes</td><td>File with SSN or ITIN; builds Social Security credits</td></tr>
+          <tr><td>In-state college tuition</td><td>Available in most states; check state-specific rules</td></tr>
+          <tr><td>Travel (advance parole)</td><td>Possible with separate advance parole application</td></tr>
+        </tbody>
+      </table>
+
+      <p>DACA does NOT give you: lawful permanent resident status, a path to citizenship, the ability to vote, or protection from all immigration enforcement. If you travel internationally without advance parole approval from USCIS, you risk being unable to return.</p>
+
+      <h2 id="applying">How to Apply or Renew</h2>
+      <p>All DACA applications are handled by USCIS (US Citizenship and Immigration Services). The only official website is <strong>uscis.gov</strong>. Do not use any other website claiming to process DACA applications.</p>
+
+      <h3>What You File</h3>
+      <p>To apply or renew DACA, you submit:</p>
+      <ol>
+        <li><strong>Form I-821D</strong> — Consideration of Deferred Action for Childhood Arrivals</li>
+        <li><strong>Form I-765</strong> — Application for Employment Authorization</li>
+        <li><strong>Form I-765WS</strong> — Worksheet supporting the I-765</li>
+        <li><strong>Filing fee: $495</strong> (covers both forms — no fee waiver available for renewals)</li>
+        <li>Supporting documents: identity, arrival in US, continuous residence, education/military status</li>
+      </ol>
+
+      <h3>When to Renew</h3>
+      <p>USCIS recommends filing your renewal application <strong>150–120 days before your current DACA expires</strong>. Do not wait until 90 days or less — processing times can exceed 90 days. If your DACA expires before you receive your renewal, your work authorization also expires, and you must stop working until you receive the new EAD.</p>
+
+      <div class="callout">
+        <div class="callout-label">Check Processing Times</div>
+        <p>USCIS processing times for DACA renewals vary. Check the current processing times at egov.uscis.gov/processing-times. You can also check your case status online with your receipt number after filing.</p>
+      </div>
+
+      <h2 id="protect-yourself">Protect Yourself: Notario Fraud</h2>
+      <p>In many Latin American countries, a "notario" (notary) is a trained legal professional. In the United States, a notary public is simply someone authorized to witness signatures — they are NOT attorneys and cannot give immigration legal advice or file immigration applications on your behalf.</p>
+      <p>Notario fraud is widespread in immigrant communities. People pay hundreds or thousands of dollars to unauthorized "immigration consultants" who file incorrect paperwork, steal fees, or never file at all — leaving applicants worse off than before, sometimes with a deportation order.</p>
+      <p>Only work with:</p>
+      <ul>
+        <li>A licensed immigration attorney (find one at ilrc.org or aila.org)</li>
+        <li>An accredited representative at a recognized nonprofit organization</li>
+        <li>USCIS directly (free) at uscis.gov</li>
+      </ul>
+
+      <div class="callout blue">
+        <div class="callout-label">Free or Low-Cost Legal Help</div>
+        <p>Many nonprofit organizations offer free or sliding-scale DACA assistance. Search for "DACA legal help near me" or visit the Immigrant Legal Resource Center at ilrc.org to find accredited organizations in your area. Do not pay for help you can get free from a nonprofit.</p>
+      </div>
+
+      <div class="article-footer">
+        <div class="af-nav">
+          <a href="/immigration" class="af-btn">← Back to Immigration</a>
+          <a href="/rights/police-stop" class="af-btn next">Next: Your Rights During a Police Stop →</a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="sidebar">
+      <div class="sb-card">
+        <div class="sb-title">In This Article</div>
+        <div class="toc-list">
+          <a href="#what-is-daca" class="toc-link"><span class="toc-num">01</span> What Is DACA?</a>
+          <a href="#eligibility" class="toc-link"><span class="toc-num">02</span> Who Qualifies</a>
+          <a href="#what-daca-gives" class="toc-link"><span class="toc-num">03</span> What DACA Gives You</a>
+          <a href="#applying" class="toc-link"><span class="toc-num">04</span> Applying & Renewing</a>
+          <a href="#protect-yourself" class="toc-link"><span class="toc-num">05</span> Notario Fraud Warning</a>
+        </div>
+      </div>
+
+      <div class="sb-card">
+        <div class="sb-title">Related Articles</div>
+        <a href="/rights/police-stop" class="related-link">
+          <span class="rl-arrow">→</span>
+          <div><div class="rl-title">Your Rights During a Police Stop</div><div class="rl-meta">4 min · Free</div></div>
+        </a>
+        <a href="/taxes/how-taxes-work" class="related-link">
+          <span class="rl-arrow">→</span>
+          <div><div class="rl-title">How Taxes Work in the US</div><div class="rl-meta">5 min · Free</div></div>
+        </a>
+      </div>
+
+      <div class="premium-card">
+        <div class="pc-eye">Premium</div>
+        <div class="pc-title">Go deeper with Premium</div>
+        <div class="pc-desc">Unlock deep-dives on green card paths, visa categories, citizenship applications, and immigration law basics.</div>
+        <button class="pc-btn">Get Premium — $9/mo →</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div>
+        <div class="footer-logo">Unschool<b>Me.</b></div>
+        <div class="footer-desc">Teaching real life skills that school forgot.</div>
+      </div>
+      <div>
+        <div class="footer-col-title">Topics</div>
+        <div class="footer-links">
+          <a href="/taxes">Taxes</a>
+          <a href="/banking">Banking</a>
+          <a href="/credit">Credit</a>
+          <a href="/government">Government</a>
+          <a href="/business">Business</a>
+          <a href="/rights">Rights</a>
+        <a href="/healthcare">Health</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Platform</div>
+        <div class="footer-links">
+          <a href="/#how">About</a>
+          <a href="/upload">Upload a Lesson</a>
+          <a href="/#pricing">Premium</a>
+          <a href="/chat" data-contact-link>Contact</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy">Built by someone who had to figure it all out alone. — UnschoolMe 2026 🇺🇸</div>
+    </div>
+    <div class="flag-b"></div>
+  </div>
+</footer>
+
+<script src="/js/config.js"></script>
+<script src="/js/main.js"></script>
+<script>
+window.addEventListener('scroll', () => {
+  const el = document.getElementById('readingProgress');
+  if (!el) return;
+  const scrollTop = window.scrollY;
+  const docHeight = document.body.scrollHeight - window.innerHeight;
+  el.style.width = (scrollTop / docHeight * 100) + '%';
+});
+const sections = document.querySelectorAll('h2[id]');
+const tocLinks = document.querySelectorAll('.toc-link');
+const tocObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      tocLinks.forEach(l => l.classList.remove('active'));
+      const active = document.querySelector(`.toc-link[href="#${entry.target.id}"]`);
+      if (active) active.classList.add('active');
+    }
+  });
+}, { rootMargin: '-20% 0% -70% 0%' });
+sections.forEach(s => tocObserver.observe(s));
+</script>
+
+</body>
+</html>

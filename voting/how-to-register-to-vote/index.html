@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<title>How to Register to Vote — UnschoolMe</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=DM+Sans:wght@300;400;500&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/main.css">
+<style>
+.article-hero{background:#0A0A1E;padding:3.5rem 3rem;position:relative;overflow:hidden;}
+.article-hero::after{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,#B22234 33%,#fff 33%,#fff 66%,#3C3B6E 66%);}
+.ah-inner{max-width:960px;margin:0 auto;}
+.article-tag{display:inline-flex;align-items:center;gap:6px;background:rgba(200,169,110,0.1);border:1px solid rgba(200,169,110,0.3);border-radius:99px;font-size:11px;color:#C8A96E;padding:4px 14px;margin-bottom:1.2rem;}
+.article-title{font-family:'Cormorant Garamond',serif;font-size:46px;font-weight:700;color:#fff;letter-spacing:-1.5px;line-height:1.1;margin-bottom:1rem;max-width:680px;}
+.article-title em{font-style:italic;color:#C8A96E;}
+.article-subtitle{font-size:15px;color:rgba(255,255,255,0.45);line-height:1.75;max-width:560px;font-weight:300;margin-bottom:1.8rem;}
+.article-meta{display:flex;align-items:center;gap:1.5rem;flex-wrap:wrap;}
+.meta-badge{font-size:10px;letter-spacing:1.5px;text-transform:uppercase;padding:3px 12px;border-radius:99px;font-weight:500;background:#E8F5E9;color:#2E7D32;}
+.meta-item{font-size:12px;color:rgba(255,255,255,0.3);}
+.meta-sep{width:3px;height:3px;border-radius:50%;background:rgba(255,255,255,0.15);display:inline-block;}
+.content-grid{display:grid;grid-template-columns:1fr 280px;gap:3rem;align-items:start;}
+.key-takeaways{background:#0A0A1E;border-radius:14px;padding:1.8rem;margin-bottom:2.5rem;}
+.kt-label{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#C8A96E;font-weight:500;margin-bottom:1rem;}
+.kt-item{color:rgba(255,255,255,0.65);font-size:13px;display:flex;gap:10px;align-items:flex-start;margin-bottom:9px;line-height:1.6;font-weight:300;}
+.kt-arrow{color:#C8A96E;flex-shrink:0;font-size:11px;margin-top:2px;}
+.kt-item:last-child{margin-bottom:0;}
+.article-body h2{font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:700;color:#1A1A1A;margin:2.5rem 0 1rem;letter-spacing:-0.5px;line-height:1.2;}
+.article-body h3{font-size:10px;letter-spacing:2.5px;text-transform:uppercase;color:#B22234;font-weight:500;margin:2rem 0 0.7rem;}
+.article-body p{font-size:15px;line-height:1.85;color:#555;margin-bottom:1.2rem;font-weight:300;}
+.article-body p strong{color:#1A1A1A;font-weight:500;}
+.article-body ul,.article-body ol{padding-left:1.5rem;margin-bottom:1.3rem;}
+.article-body li{font-size:15px;line-height:1.8;color:#555;margin-bottom:7px;font-weight:300;}
+.article-body li strong{color:#1A1A1A;font-weight:500;}
+.callout{border-left:3px solid #C8A96E;background:#FEFCF7;padding:1.2rem 1.5rem;border-radius:0 10px 10px 0;margin:1.8rem 0;}
+.callout.red{border-color:#B22234;background:#FFF8F8;}
+.callout.blue{border-color:#3C3B6E;background:#F8F8FF;}
+.callout p{margin-bottom:0;font-size:14px;}
+.callout-label{font-size:10px;letter-spacing:2px;text-transform:uppercase;font-weight:500;color:#C8A96E;margin-bottom:6px;}
+.callout.red .callout-label{color:#B22234;}
+.callout.blue .callout-label{color:#3C3B6E;}
+.data-table{width:100%;border-collapse:collapse;margin:1.5rem 0;font-size:13px;border-radius:10px;overflow:hidden;}
+.data-table thead th{background:#0A0A1E;color:#C8A96E;padding:11px 16px;text-align:left;font-weight:500;letter-spacing:0.5px;font-size:11px;}
+.data-table tbody td{padding:11px 16px;border-bottom:1px solid #E8E4DC;color:#555;font-weight:300;}
+.data-table tbody tr:last-child td{border-bottom:none;}
+.data-table tbody tr:nth-child(even) td{background:#FAFAF8;}
+.data-table tbody tr.highlight td{background:rgba(200,169,110,0.08);color:#1A1A1A;font-weight:500;}
+.example-box{background:#F8F6F1;border:1px solid #E8E4DC;border-radius:14px;padding:1.5rem;margin:1.8rem 0;}
+.ex-label{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#888;margin-bottom:1rem;font-weight:500;}
+.ex-row{display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid #E8E4DC;font-size:13px;}
+.ex-row:last-child{border-bottom:none;font-weight:500;color:#1A1A1A;}
+.ex-row span:first-child{color:#888;font-weight:300;}
+.ex-row span:last-child{color:#1A1A1A;font-family:'Cormorant Garamond',serif;font-size:16px;font-weight:700;}
+.article-footer{margin-top:3rem;padding-top:2rem;border-top:1px solid #E8E4DC;}
+.af-nav{display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem;}
+.af-btn{display:inline-flex;align-items:center;gap:8px;font-size:13px;color:#888;text-decoration:none;padding:10px 16px;border:1px solid #E8E4DC;border-radius:8px;background:#fff;transition:all 0.2s;}
+.af-btn:hover{border-color:#C8A96E;color:#1A1A1A;}
+.af-btn.next{background:#0A0A1E;color:#fff;border-color:#0A0A1E;}
+.af-btn.next:hover{background:#1A1A2E;}
+.sidebar{position:sticky;top:2rem;}
+.sb-card{background:#fff;border:1px solid #E8E4DC;border-radius:14px;padding:1.5rem;margin-bottom:16px;}
+.sb-title{font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:700;color:#1A1A1A;margin-bottom:1rem;}
+.toc-list{display:flex;flex-direction:column;}
+.toc-link{font-size:12px;color:#888;padding:7px 0;border-bottom:1px solid #F0EDE8;text-decoration:none;transition:color 0.15s;display:flex;align-items:flex-start;gap:8px;font-weight:300;line-height:1.4;}
+.toc-link:last-child{border-bottom:none;}
+.toc-link.active,.toc-link:hover{color:#1A1A1A;}
+.toc-link .toc-num{font-size:10px;color:#C8A96E;flex-shrink:0;margin-top:2px;}
+.related-link{display:flex;gap:10px;align-items:flex-start;text-decoration:none;padding:10px 0;border-bottom:1px solid #F0EDE8;transition:all 0.15s;}
+.related-link:last-child{border-bottom:none;}
+.related-link:hover .rl-title{color:#C8A96E;}
+.rl-arrow{color:#C8A96E;flex-shrink:0;font-size:12px;margin-top:2px;}
+.rl-title{font-size:12px;color:#1A1A1A;line-height:1.5;font-weight:400;}
+.rl-meta{font-size:11px;color:#AAA;margin-top:3px;font-weight:300;}
+</style>
+</head>
+<body>
+
+<div style="position:fixed;top:0;left:0;height:3px;background:#C8A96E;z-index:9999;transition:width 0.1s" id="readingProgress"></div>
+<div class="flag"></div>
+
+<nav class="nav" id="nav">
+  <a href="/" class="nav-logo">Unschool<b>Me</b></a>
+  <div class="nav-links">
+    <a href="/taxes">Taxes</a>
+    <a href="/banking">Banking</a>
+    <a href="/credit">Credit</a>
+    <a href="/government">Government</a>
+    <a href="/business">Business</a>
+    <a href="/rights">Rights</a>
+      <a href="/healthcare">Health</a>
+  </div>
+  <div class="nav-right">
+    <button class="btn-ghost" onclick="location.href='/login'">Log in</button>
+    <button class="btn-gold" onclick="location.href='/login'">Get Started →</button>
+  </div>
+</nav>
+
+<div class="article-hero">
+  <div class="ah-inner">
+    <div class="breadcrumb">
+      <a href="/">Home</a> → <a href="/voting">Voting</a> → <span>How to Register to Vote</span>
+    </div>
+    <div class="article-tag">🗳️ Voting · Free Article</div>
+    <h1 class="article-title">How to Register to Vote —<br>A <em>Step-by-Step</em> Guide</h1>
+    <p class="article-subtitle">Registration takes 5 minutes online. Here's everything you need to know — who can register, how, when, and what to bring on Election Day.</p>
+    <div class="article-meta">
+      <span class="meta-badge">Free</span>
+      <span class="meta-item">5 min read</span>
+      <span class="meta-sep"></span>
+      <span class="meta-item">UnschoolMe Editorial</span>
+      <span class="meta-sep"></span>
+      <span class="meta-item">Updated 2025</span>
+    </div>
+  </div>
+</div>
+
+<div class="content-wrap">
+  <div class="content-grid">
+
+    <div class="article-body" id="article-body">
+
+      <div class="key-takeaways">
+        <div class="kt-label">Key Takeaways</div>
+        <div class="kt-item"><span class="kt-arrow">→</span> You must be a US citizen, at least 18 years old, and a state resident to register to vote.</div>
+        <div class="kt-item"><span class="kt-arrow">→</span> Most states have a registration deadline 15–30 days before Election Day — some allow same-day registration.</div>
+        <div class="kt-item"><span class="kt-arrow">→</span> You can register online at vote.gov in most states in under 5 minutes.</div>
+        <div class="kt-item"><span class="kt-arrow">→</span> You need to re-register if you move to a new address or change your name.</div>
+        <div class="kt-item"><span class="kt-arrow">→</span> Registering with a party is optional — independents can still vote in most elections.</div>
+      </div>
+
+      <h2 id="who-can-vote">Who Can Register to Vote?</h2>
+      <p>To register to vote in the United States, you must meet three basic requirements:</p>
+      <ul>
+        <li><strong>US citizenship:</strong> You must be a US citizen by birth or naturalization. Permanent residents (green card holders), DACA recipients, and visa holders cannot register to vote.</li>
+        <li><strong>Age:</strong> You must be at least 18 years old by Election Day. Several states allow 17-year-olds to register if they will be 18 by the general election date.</li>
+        <li><strong>State residency:</strong> You must be a resident of the state where you register. You don't need to own property — a current address is sufficient.</li>
+      </ul>
+      <p>Some states also have rules about felony convictions. Most states restore voting rights after you complete your sentence. A few (like Maine and Vermont) allow voting even while incarcerated. Check your state's specific rules at usa.gov/voter-registration.</p>
+
+      <h2 id="how-to-register">How to Register — 3 Ways</h2>
+
+      <h3>Option 1: Online (Fastest)</h3>
+      <p>Most states offer online voter registration through their official state website. The federal site <strong>vote.gov</strong> will direct you to your state's registration portal. You'll need:</p>
+      <ul>
+        <li>Your state driver's license or state ID number</li>
+        <li>Your Social Security number (or last 4 digits)</li>
+        <li>Your current residential address</li>
+        <li>Your date of birth</li>
+      </ul>
+      <p>The process takes about 5 minutes. You'll receive a confirmation email or letter when your registration is processed.</p>
+
+      <h3>Option 2: By Mail</h3>
+      <p>Download the National Mail Voter Registration Form from eac.gov. Fill it out, sign it, and mail it to your county election office. The address is listed on the form instructions for each state. Use this if you don't have a state ID or prefer not to register online.</p>
+
+      <h3>Option 3: In Person</h3>
+      <p>Register at your county election office, DMV, public library, or military recruitment office. When you get a new driver's license or state ID, you're typically offered voter registration at the same time — this is called Motor Voter (the National Voter Registration Act of 1993).</p>
+
+      <h2 id="deadlines">Registration Deadlines</h2>
+      <p>Registration deadlines vary by state and election type. Missing the deadline means you cannot vote in that election, even if you're eligible. Check your state's deadline well in advance.</p>
+
+      <table class="data-table">
+        <thead>
+          <tr><th>State</th><th>Registration Deadline</th><th>Same-Day Registration?</th></tr>
+        </thead>
+        <tbody>
+          <tr class="highlight"><td>California</td><td>15 days before election</td><td>Yes (conditional vote)</td></tr>
+          <tr><td>Texas</td><td>30 days before election</td><td>No</td></tr>
+          <tr><td>Florida</td><td>29 days before election</td><td>No</td></tr>
+          <tr><td>New York</td><td>25 days before election</td><td>No</td></tr>
+          <tr><td>Colorado</td><td>Election Day</td><td>Yes</td></tr>
+          <tr><td>Wisconsin</td><td>Election Day</td><td>Yes</td></tr>
+          <tr><td>North Dakota</td><td>No registration required</td><td>N/A</td></tr>
+        </tbody>
+      </table>
+
+      <div class="callout">
+        <div class="callout-label">Check Your Registration Status</div>
+        <p>Already registered? Your registration can lapse if you haven't voted in several elections or if you moved. Always verify your registration status before an election at <strong>vote.gov</strong> — it takes 30 seconds and shows your polling location too.</p>
+      </div>
+
+      <h2 id="party">Choosing a Party — Or Not</h2>
+      <p>When you register, most states ask you to declare a party affiliation: Democrat, Republican, Green, Libertarian, or No Party Preference (independent). This is optional in some states and required for primary elections in others.</p>
+      <p>In <strong>closed primary</strong> states (like California for some primaries), you can only vote in your party's primary if registered with that party. In <strong>open primary</strong> states, you can vote in any party's primary regardless of registration. In the general election, party registration never restricts who you can vote for — you can vote for any candidate on the ballot.</p>
+      <p>You can change your party registration at any time through your state's voter registration portal.</p>
+
+      <h2 id="election-day">What Happens on Election Day</h2>
+      <p>Polls are typically open from 6 AM to 8 PM (some states vary). If you're in line before polls close, you have the right to vote — they must let you finish. Here's what to bring:</p>
+      <ul>
+        <li><strong>Photo ID</strong> (required in some states): driver's license, passport, or state ID</li>
+        <li><strong>Your polling location address</strong> (look it up at vote.gov beforehand)</li>
+        <li>A sample ballot if you want to review candidates in advance</li>
+      </ul>
+
+      <div class="callout blue">
+        <div class="callout-label">Voter ID Requirements Vary by State</div>
+        <p>Some states require photo ID; others accept a utility bill or allow you to sign an affidavit. If you don't have ID, do not skip voting — ask poll workers about your options. In many states you can cast a provisional ballot that is counted after your eligibility is verified.</p>
+      </div>
+
+      <h2 id="absentee">Voting by Mail (Absentee Ballot)</h2>
+      <p>You don't have to vote in person. All states allow some form of mail-in or absentee voting. In many states (including California, Colorado, Washington, and Oregon), every registered voter automatically receives a mail ballot.</p>
+      <p>To request an absentee ballot in other states, contact your county election office or visit their website at least 2 weeks before the election. Return your ballot by the deadline — many states require it to be received by Election Day, not just postmarked.</p>
+
+      <div class="callout red">
+        <div class="callout-label">Move? Re-Register.</div>
+        <p>If you move to a new address — even within the same county — you must update your voter registration. You cannot use your old address to vote at your old polling place. Update your registration at vote.gov as soon as you move.</p>
+      </div>
+
+      <div class="article-footer">
+        <div class="af-nav">
+          <a href="/voting" class="af-btn">← Back to Voting</a>
+          <a href="/government/three-branches-explained" class="af-btn next">Next: The Three Branches →</a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="sidebar">
+      <div class="sb-card">
+        <div class="sb-title">In This Article</div>
+        <div class="toc-list">
+          <a href="#who-can-vote" class="toc-link"><span class="toc-num">01</span> Who Can Register</a>
+          <a href="#how-to-register" class="toc-link"><span class="toc-num">02</span> How to Register</a>
+          <a href="#deadlines" class="toc-link"><span class="toc-num">03</span> Deadlines by State</a>
+          <a href="#party" class="toc-link"><span class="toc-num">04</span> Party Registration</a>
+          <a href="#election-day" class="toc-link"><span class="toc-num">05</span> Election Day</a>
+          <a href="#absentee" class="toc-link"><span class="toc-num">06</span> Voting by Mail</a>
+        </div>
+      </div>
+
+      <div class="sb-card">
+        <div class="sb-title">Related Articles</div>
+        <a href="/government/three-branches-explained" class="related-link">
+          <span class="rl-arrow">→</span>
+          <div><div class="rl-title">The Three Branches of Government</div><div class="rl-meta">5 min · Free</div></div>
+        </a>
+        <a href="/rights/police-stop" class="related-link">
+          <span class="rl-arrow">→</span>
+          <div><div class="rl-title">Your Rights During a Police Stop</div><div class="rl-meta">4 min · Free</div></div>
+        </a>
+      </div>
+
+      <div class="premium-card">
+        <div class="pc-eye">Premium</div>
+        <div class="pc-title">Go deeper with Premium</div>
+        <div class="pc-desc">Unlock deep-dives on how elections work, the Electoral College, and how laws are actually made.</div>
+        <button class="pc-btn">Get Premium — $9/mo →</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div>
+        <div class="footer-logo">Unschool<b>Me.</b></div>
+        <div class="footer-desc">Teaching real life skills that school forgot.</div>
+      </div>
+      <div>
+        <div class="footer-col-title">Topics</div>
+        <div class="footer-links">
+          <a href="/taxes">Taxes</a>
+          <a href="/banking">Banking</a>
+          <a href="/credit">Credit</a>
+          <a href="/government">Government</a>
+          <a href="/business">Business</a>
+          <a href="/rights">Rights</a>
+        <a href="/healthcare">Health</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Platform</div>
+        <div class="footer-links">
+          <a href="/#how">About</a>
+          <a href="/upload">Upload a Lesson</a>
+          <a href="/#pricing">Premium</a>
+          <a href="/chat" data-contact-link>Contact</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy">Built by someone who had to figure it all out alone. — UnschoolMe 2026 🇺🇸</div>
+    </div>
+    <div class="flag-b"></div>
+  </div>
+</footer>
+
+<script src="/js/config.js"></script>
+<script src="/js/main.js"></script>
+<script>
+window.addEventListener('scroll', () => {
+  const el = document.getElementById('readingProgress');
+  if (!el) return;
+  const scrollTop = window.scrollY;
+  const docHeight = document.body.scrollHeight - window.innerHeight;
+  el.style.width = (scrollTop / docHeight * 100) + '%';
+});
+const sections = document.querySelectorAll('h2[id]');
+const tocLinks = document.querySelectorAll('.toc-link');
+const tocObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      tocLinks.forEach(l => l.classList.remove('active'));
+      const active = document.querySelector(`.toc-link[href="#${entry.target.id}"]`);
+      if (active) active.classList.add('active');
+    }
+  });
+}, { rootMargin: '-20% 0% -70% 0%' });
+sections.forEach(s => tocObserver.observe(s));
+</script>
+
+</body>
+</html>

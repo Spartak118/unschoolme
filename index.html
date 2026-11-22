@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<title>UnschoolMe — Learn Real Life</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=DM+Sans:wght@300;400;500&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+
+<div class="flag"></div>
+
+<nav class="nav" id="nav">
+  <a href="/" class="nav-logo">Unschool<b>Me</b></a>
+  <div class="nav-links">
+    <a href="/taxes">Taxes</a>
+    <a href="/banking">Banking</a>
+    <a href="/credit">Credit</a>
+    <a href="/government">Government</a>
+    <a href="/business">Business</a>
+    <a href="/rights">Rights</a>
+      <a href="/healthcare">Health</a>
+  </div>
+  <div class="nav-right">
+    <button class="btn-ghost">Log in</button>
+    <button class="btn-gold">Get Started →</button>
+  </div>
+</nav>
+
+<div class="hero">
+  <div class="hero-bg" id="heroBg"></div>
+  <div class="hero-grad"></div>
+  <div class="hero-accent"></div>
+  <div class="hero-content">
+    <div class="hero-eyebrow">Free forever — built for America</div>
+    <h1>What school<br>forgot to<br><em>teach <span>you.</span></em></h1>
+    <p class="hero-sub">Articles, guides, and videos teaching you everything about taxes, banks, credit, government, and real life. Written by real experts.</p>
+    <div class="hero-btns">
+      <button class="btn-white" onclick="document.getElementById('topics').scrollIntoView({behavior:'smooth'})">Start Learning →</button>
+      <button class="btn-outline" onclick="document.getElementById('how').scrollIntoView({behavior:'smooth'})">How it works</button>
+      <button class="btn-red">Upload a Lesson ↑</button>
+      <a href="/chat" class="btn-outline" style="text-decoration:none">💬 Ask Anything</a>
+    </div>
+  </div>
+  <div class="hero-cards">
+    <div class="hero-card"><div class="hc-num gold">Free</div><div class="hc-label">Always free basics</div></div>
+    <div class="hero-card"><div class="hc-num red">$9</div><div class="hc-label">Premium per month</div></div>
+    <div class="hero-card"><div class="hc-num">Open</div><div class="hc-label">Anyone can teach</div></div>
+  </div>
+  <div class="scroll-indicator">
+    <span>Scroll</span>
+    <span>↓</span>
+  </div>
+</div>
+
+<div class="parent-banner" id="parentBanner">
+  <span class="parent-banner-text">👋 <strong>For Parents</strong> — Give your teen a head start.</span>
+  <a href="/#pricing" class="parent-banner-link">Gift a Premium subscription →</a>
+  <button class="parent-banner-close" id="parentBannerClose" aria-label="Dismiss">×</button>
+</div>
+
+<div class="stats-bar">
+  <div class="stats-inner">
+    <div class="stat-item"><div class="stat-num blue" data-count="17">0</div><div class="stat-label">Core topics</div></div>
+    <div class="stat-item"><div class="stat-num red">Free</div><div class="stat-label">To get started</div></div>
+    <div class="stat-item"><div class="stat-num">Open</div><div class="stat-label">Platform</div></div>
+    <div class="stat-item"><div class="stat-num blue">Real</div><div class="stat-label">Life skills</div></div>
+  </div>
+</div>
+
+<div class="category-section" id="topics">
+  <div class="category-inner">
+    <div class="section-eye">Browse topics</div>
+    <div class="section-title">What do you want to learn?</div>
+    <div class="section-sub">Pick a category — then explore the topics inside.</div>
+    <div class="category-cards">
+
+      <!-- CATEGORY 1: Finance & Money -->
+      <div class="category-card">
+        <div class="category-header">
+          <div class="category-header-left">
+            <span class="category-emoji">💰</span>
+            <div>
+              <div class="category-title">Finance &amp; Money</div>
+              <div class="category-desc">Taxes, banking, credit, investing, and understanding your paycheck</div>
+            </div>
+          </div>
+          <span class="category-arrow">›</span>
+        </div>
+        <div class="category-body">
+          <a class="sub-tile" href="/taxes">
+            <div class="sub-tile-icon">💸</div>
+            <div class="sub-tile-name">Taxes</div>
+            <div class="sub-tile-desc">How to file, refunds, deductions, W-2 forms</div>
+          </a>
+          <a class="sub-tile" href="/banking">
+            <div class="sub-tile-icon">🏦</div>
+            <div class="sub-tile-name">Banking</div>
+            <div class="sub-tile-desc">Accounts, fees, savings, interest rates</div>
+          </a>
+          <a class="sub-tile" href="/credit">
+            <div class="sub-tile-icon">📊</div>
+            <div class="sub-tile-name">Credit Score</div>
+            <div class="sub-tile-desc">Build it, protect it, use it</div>
+          </a>
+          <a class="sub-tile" href="/investing">
+            <div class="sub-tile-icon">💵</div>
+            <div class="sub-tile-name">Investing</div>
+            <div class="sub-tile-desc">Stocks, Roth IRA, index funds</div>
+          </a>
+          <a class="sub-tile" href="/salary">
+            <div class="sub-tile-icon">💵</div>
+            <div class="sub-tile-name">Salary &amp; Budgeting</div>
+            <div class="sub-tile-desc">Paychecks, budgeting, saving</div>
+          </a>
+        </div>
+      </div>
+
+      <!-- CATEGORY 2: Government & Rights -->
+      <div class="category-card">
+        <div class="category-header">
+          <div class="category-header-left">
+            <span class="category-emoji">🏛️</span>
+            <div>
+              <div class="category-title">Government &amp; Rights</div>
+              <div class="category-desc">How the system works, your constitutional rights, voting, and the law</div>
+            </div>
+          </div>
+          <span class="category-arrow">›</span>
+        </div>
+        <div class="category-body">
+          <a class="sub-tile" href="/government">
+            <div class="sub-tile-icon">🏛️</div>
+            <div class="sub-tile-name">Government</div>
+            <div class="sub-tile-desc">3 branches, laws, elections</div>
+          </a>
+          <a class="sub-tile" href="/rights">
+            <div class="sub-tile-icon">⚖️</div>
+            <div class="sub-tile-name">Your Rights</div>
+            <div class="sub-tile-desc">Police, courts, Constitution</div>
+          </a>
+          <a class="sub-tile" href="/voting">
+            <div class="sub-tile-icon">🗳️</div>
+            <div class="sub-tile-name">Voting</div>
+            <div class="sub-tile-desc">How to register, why it matters</div>
+          </a>
+          <a class="sub-tile" href="/immigration">
+            <div class="sub-tile-icon">🌎</div>
+            <div class="sub-tile-name">Immigration</div>
+            <div class="sub-tile-desc">Green card, DACA, citizenship</div>
+          </a>
+          <a class="sub-tile" href="/legal">
+            <div class="sub-tile-icon">📋</div>
+            <div class="sub-tile-name">Legal</div>
+            <div class="sub-tile-desc">Contracts, small claims, lawyers</div>
+          </a>
+        </div>
+      </div>
+
+      <!-- CATEGORY 3: Business & Career -->
+      <div class="category-card">
+        <div class="category-header">
+          <div class="category-header-left">
+            <span class="category-emoji">💼</span>
+            <div>
+              <div class="category-title">Business &amp; Career</div>
+              <div class="category-desc">Start a business, freelance, navigate college, and rent your first home</div>
+            </div>
+          </div>
+          <span class="category-arrow">›</span>
+        </div>
+        <div class="category-body">
+          <a class="sub-tile" href="/business">
+            <div class="sub-tile-icon">🏢</div>
+            <div class="sub-tile-name">Start a Business</div>
+            <div class="sub-tile-desc">LLC, EIN, registration</div>
+          </a>
+          <a class="sub-tile" href="/grow-business">
+            <div class="sub-tile-icon">📈</div>
+            <div class="sub-tile-name">Grow a Business</div>
+            <div class="sub-tile-desc">Marketing, customers, revenue</div>
+          </a>
+          <a class="sub-tile" href="/freelancing">
+            <div class="sub-tile-icon">💻</div>
+            <div class="sub-tile-name">Freelancing</div>
+            <div class="sub-tile-desc">1099, self-employment, clients</div>
+          </a>
+          <a class="sub-tile" href="/college">
+            <div class="sub-tile-icon">🎓</div>
+            <div class="sub-tile-name">College &amp; Education</div>
+            <div class="sub-tile-desc">FAFSA, scholarships, loans</div>
+          </a>
+          <a class="sub-tile" href="/housing">
+            <div class="sub-tile-icon">🏠</div>
+            <div class="sub-tile-name">Renting &amp; Housing</div>
+            <div class="sub-tile-desc">Leases, tenant rights, buying</div>
+          </a>
+        </div>
+      </div>
+
+      <!-- CATEGORY 4: Health & Safety -->
+      <div class="category-card">
+        <div class="category-header">
+          <div class="category-header-left">
+            <span class="category-emoji">🩺</span>
+            <div>
+              <div class="category-title">Health &amp; Safety</div>
+              <div class="category-desc">Insurance basics, finding care, and spotting scams before they cost you</div>
+            </div>
+          </div>
+          <span class="category-arrow">›</span>
+        </div>
+        <div class="category-body">
+          <a class="sub-tile" href="/healthcare">
+            <div class="sub-tile-icon">🩺</div>
+            <div class="sub-tile-name">Healthcare</div>
+            <div class="sub-tile-desc">Insurance, urgent care vs ER, finding a doctor</div>
+          </a>
+          <a class="sub-tile" href="/scams-safety">
+            <div class="sub-tile-icon">🛡️</div>
+            <div class="sub-tile-name">Scams &amp; Safety</div>
+            <div class="sub-tile-desc">Phishing, fake jobs, crypto and romance scams</div>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div class="how-section" id="how">
+  <div class="section-inner">
+    <div class="section-eye" style="color:var(--gold)">How it works</div>
+    <div class="section-title" style="color:#fff">Simple. Open. Free.</div>
+    <div class="how-grid">
+      <div class="how-card fade-up">
+        <div class="how-num">01</div>
+        <div class="how-title">Pick a topic</div>
+        <div class="how-desc">Choose from taxes, banking, credit, government, business, or your rights. Each topic has articles and videos.</div>
+      </div>
+      <div class="how-card fade-up">
+        <div class="how-num">02</div>
+        <div class="how-title">Read or watch</div>
+        <div class="how-desc">Free articles explain the basics. Premium members get deep guides, video lessons, and real examples.</div>
+      </div>
+      <div class="how-card fade-up">
+        <div class="how-num">03</div>
+        <div class="how-title">Teach others</div>
+        <div class="how-desc">Know something well? Upload a video lesson. Help others learn what school never taught them.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="pricing-section" id="pricing">
+  <div class="pricing-inner">
+    <div class="section-eye" style="color:var(--gold);text-align:center">Pricing</div>
+    <div class="section-title" style="color:#fff;text-align:center;font-size:42px;">Simple and fair.</div>
+    <div class="section-sub" style="color:rgba(255,255,255,0.4);text-align:center">Start free. Upgrade when you want more.</div>
+    <div class="plans plans-3">
+      <div class="plan fade-up">
+        <div class="plan-name">Free</div>
+        <div class="plan-price">$0 <span>/ forever</span></div>
+        <div class="plan-desc">Everything you need to get started with real life education.</div>
+        <div class="plan-features">
+          <div class="plan-feature">Access to all 17 topics</div>
+          <div class="plan-feature">Basic articles on every topic</div>
+          <div class="plan-feature">Community video lessons</div>
+          <div class="plan-feature">Ask questions</div>
+        </div>
+        <button class="plan-btn free">Get Started Free</button>
+      </div>
+      <div class="plan fade-up">
+        <div class="plan-name">Starter Pack</div>
+        <div class="plan-price">$19 <span>/ one-time</span></div>
+        <div class="plan-desc">Lifetime access to all core guides — no subscription, pay once.</div>
+        <div class="plan-features">
+          <div class="plan-feature">Everything in Free</div>
+          <div class="plan-feature">Lifetime access to all core guides</div>
+          <div class="plan-feature">No recurring subscription</div>
+          <div class="plan-feature">One-time payment, yours forever</div>
+        </div>
+        <button class="plan-btn free">Get Starter Pack</button>
+      </div>
+      <div class="plan premium fade-up">
+        <div class="plan-name">Premium</div>
+        <div class="plan-price">$9 <span>/ month</span></div>
+        <div class="plan-desc">Deep dives, expert videos, and guides for people who want to master real life.</div>
+        <div class="plan-features">
+          <div class="plan-feature">Everything in Free</div>
+          <div class="plan-feature">Deep expert guides</div>
+          <div class="plan-feature">Full video library</div>
+          <div class="plan-feature">Real life templates</div>
+          <div class="plan-feature">Priority support</div>
+        </div>
+        <button class="plan-btn gold">Go Premium →</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div>
+        <div class="footer-logo">Unschool<b>Me.</b></div>
+        <div class="footer-desc">Teaching real life skills that school forgot. Free forever for the basics.</div>
+      </div>
+      <div>
+        <div class="footer-col-title">Topics</div>
+        <div class="footer-links">
+          <a href="/taxes">Taxes</a>
+          <a href="/banking">Banking</a>
+          <a href="/credit">Credit</a>
+          <a href="/government">Government</a>
+          <a href="/business">Business</a>
+          <a href="/rights">Rights</a>
+        <a href="/healthcare">Health</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Platform</div>
+        <div class="footer-links">
+          <a href="/#how">About</a>
+          <a href="/upload">Upload a Lesson</a>
+          <a href="/#pricing">Premium</a>
+          <a href="/chat" data-contact-link>Contact</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy">Built by someone who had to figure it all out alone. — UnschoolMe 2026 🇺🇸</div>
+    </div>
+    <div class="flag-b"></div>
+  </div>
+</footer>
+
+<script src="/js/config.js"></script>
+<script src="/js/main.js"></script>
+</body>
+</html>

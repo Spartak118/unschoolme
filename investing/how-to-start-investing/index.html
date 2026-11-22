@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<title>How to Start Investing — UnschoolMe</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=DM+Sans:wght@300;400;500&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/main.css">
+<style>
+.article-hero{background:#0A0A1E;padding:3.5rem 3rem;position:relative;overflow:hidden;}
+.article-hero::after{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,#B22234 33%,#fff 33%,#fff 66%,#3C3B6E 66%);}
+.ah-inner{max-width:960px;margin:0 auto;}
+.article-tag{display:inline-flex;align-items:center;gap:6px;background:rgba(200,169,110,0.1);border:1px solid rgba(200,169,110,0.3);border-radius:99px;font-size:11px;color:#C8A96E;padding:4px 14px;margin-bottom:1.2rem;}
+.article-title{font-family:'Cormorant Garamond',serif;font-size:46px;font-weight:700;color:#fff;letter-spacing:-1.5px;line-height:1.1;margin-bottom:1rem;max-width:680px;}
+.article-title em{font-style:italic;color:#C8A96E;}
+.article-subtitle{font-size:15px;color:rgba(255,255,255,0.45);line-height:1.75;max-width:560px;font-weight:300;margin-bottom:1.8rem;}
+.article-meta{display:flex;align-items:center;gap:1.5rem;flex-wrap:wrap;}
+.meta-badge{font-size:10px;letter-spacing:1.5px;text-transform:uppercase;padding:3px 12px;border-radius:99px;font-weight:500;background:#E8F5E9;color:#2E7D32;}
+.meta-item{font-size:12px;color:rgba(255,255,255,0.3);}
+.meta-sep{width:3px;height:3px;border-radius:50%;background:rgba(255,255,255,0.15);display:inline-block;}
+.content-grid{display:grid;grid-template-columns:1fr 280px;gap:3rem;align-items:start;}
+.key-takeaways{background:#0A0A1E;border-radius:14px;padding:1.8rem;margin-bottom:2.5rem;}
+.kt-label{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#C8A96E;font-weight:500;margin-bottom:1rem;}
+.kt-item{color:rgba(255,255,255,0.65);font-size:13px;display:flex;gap:10px;align-items:flex-start;margin-bottom:9px;line-height:1.6;font-weight:300;}
+.kt-arrow{color:#C8A96E;flex-shrink:0;font-size:11px;margin-top:2px;}
+.kt-item:last-child{margin-bottom:0;}
+.article-body h2{font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:700;color:#1A1A1A;margin:2.5rem 0 1rem;letter-spacing:-0.5px;line-height:1.2;}
+.article-body h3{font-size:10px;letter-spacing:2.5px;text-transform:uppercase;color:#B22234;font-weight:500;margin:2rem 0 0.7rem;}
+.article-body p{font-size:15px;line-height:1.85;color:#555;margin-bottom:1.2rem;font-weight:300;}
+.article-body p strong{color:#1A1A1A;font-weight:500;}
+.article-body ul,.article-body ol{padding-left:1.5rem;margin-bottom:1.3rem;}
+.article-body li{font-size:15px;line-height:1.8;color:#555;margin-bottom:7px;font-weight:300;}
+.article-body li strong{color:#1A1A1A;font-weight:500;}
+.callout{border-left:3px solid #C8A96E;background:#FEFCF7;padding:1.2rem 1.5rem;border-radius:0 10px 10px 0;margin:1.8rem 0;}
+.callout.red{border-color:#B22234;background:#FFF8F8;}
+.callout.blue{border-color:#3C3B6E;background:#F8F8FF;}
+.callout p{margin-bottom:0;font-size:14px;}
+.callout-label{font-size:10px;letter-spacing:2px;text-transform:uppercase;font-weight:500;color:#C8A96E;margin-bottom:6px;}
+.callout.red .callout-label{color:#B22234;}
+.callout.blue .callout-label{color:#3C3B6E;}
+.data-table{width:100%;border-collapse:collapse;margin:1.5rem 0;font-size:13px;border-radius:10px;overflow:hidden;}
+.data-table thead th{background:#0A0A1E;color:#C8A96E;padding:11px 16px;text-align:left;font-weight:500;letter-spacing:0.5px;font-size:11px;}
+.data-table tbody td{padding:11px 16px;border-bottom:1px solid #E8E4DC;color:#555;font-weight:300;}
+.data-table tbody tr:last-child td{border-bottom:none;}
+.data-table tbody tr:nth-child(even) td{background:#FAFAF8;}
+.data-table tbody tr.highlight td{background:rgba(200,169,110,0.08);color:#1A1A1A;font-weight:500;}
+.example-box{background:#F8F6F1;border:1px solid #E8E4DC;border-radius:14px;padding:1.5rem;margin:1.8rem 0;}
+.ex-label{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#888;margin-bottom:1rem;font-weight:500;}
+.ex-row{display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid #E8E4DC;font-size:13px;}
+.ex-row:last-child{border-bottom:none;font-weight:500;color:#1A1A1A;}
+.ex-row span:first-child{color:#888;font-weight:300;}
+.ex-row span:last-child{color:#1A1A1A;font-family:'Cormorant Garamond',serif;font-size:16px;font-weight:700;}
+.article-footer{margin-top:3rem;padding-top:2rem;border-top:1px solid #E8E4DC;}
+.af-nav{display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem;}
+.af-btn{display:inline-flex;align-items:center;gap:8px;font-size:13px;color:#888;text-decoration:none;padding:10px 16px;border:1px solid #E8E4DC;border-radius:8px;background:#fff;transition:all 0.2s;}
+.af-btn:hover{border-color:#C8A96E;color:#1A1A1A;}
+.af-btn.next{background:#0A0A1E;color:#fff;border-color:#0A0A1E;}
+.af-btn.next:hover{background:#1A1A2E;}
+.sidebar{position:sticky;top:2rem;}
+.sb-card{background:#fff;border:1px solid #E8E4DC;border-radius:14px;padding:1.5rem;margin-bottom:16px;}
+.sb-title{font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:700;color:#1A1A1A;margin-bottom:1rem;}
+.toc-list{display:flex;flex-direction:column;}
+.toc-link{font-size:12px;color:#888;padding:7px 0;border-bottom:1px solid #F0EDE8;text-decoration:none;transition:color 0.15s;display:flex;align-items:flex-start;gap:8px;font-weight:300;line-height:1.4;}
+.toc-link:last-child{border-bottom:none;}
+.toc-link.active,.toc-link:hover{color:#1A1A1A;}
+.toc-link .toc-num{font-size:10px;color:#C8A96E;flex-shrink:0;margin-top:2px;}
+.related-link{display:flex;gap:10px;align-items:flex-start;text-decoration:none;padding:10px 0;border-bottom:1px solid #F0EDE8;transition:all 0.15s;}
+.related-link:last-child{border-bottom:none;}
+.related-link:hover .rl-title{color:#C8A96E;}
+.rl-arrow{color:#C8A96E;flex-shrink:0;font-size:12px;margin-top:2px;}
+.rl-title{font-size:12px;color:#1A1A1A;line-height:1.5;font-weight:400;}
+.rl-meta{font-size:11px;color:#AAA;margin-top:3px;font-weight:300;}
+</style>
+</head>
+<body>
+
+<div style="position:fixed;top:0;left:0;height:3px;background:#C8A96E;z-index:9999;transition:width 0.1s" id="readingProgress"></div>
+<div class="flag"></div>
+
+<nav class="nav" id="nav">
+  <a href="/" class="nav-logo">Unschool<b>Me</b></a>
+  <div class="nav-links">
+    <a href="/taxes">Taxes</a>
+    <a href="/banking">Banking</a>
+    <a href="/credit">Credit</a>
+    <a href="/government">Government</a>
+    <a href="/business">Business</a>
+    <a href="/rights">Rights</a>
+      <a href="/healthcare">Health</a>
+  </div>
+  <div class="nav-right">
+    <button class="btn-ghost" onclick="location.href='/login'">Log in</button>
+    <button class="btn-gold" onclick="location.href='/login'">Get Started →</button>
+  </div>
+</nav>
+
+<div class="article-hero">
+  <div class="ah-inner">
+    <div class="breadcrumb">
+      <a href="/">Home</a> → <a href="/investing">Investing</a> → <span>How to Start Investing</span>
+    </div>
+    <div class="article-tag">📈 Investing · Free Article</div>
+    <h1 class="article-title">How to Start Investing —<br>The <em>Beginner's</em> Complete Guide</h1>
+    <p class="article-subtitle">You don't need to be rich to invest. You need to start early. Here's exactly how to open an account, pick your first fund, and let compound interest do the work.</p>
+    <div class="article-meta">
+      <span class="meta-badge">Free</span>
+      <span class="meta-item">7 min read</span>
+      <span class="meta-sep"></span>
+      <span class="meta-item">UnschoolMe Editorial</span>
+      <span class="meta-sep"></span>
+      <span class="meta-item">Updated 2025</span>
+    </div>
+  </div>
+</div>
+
+<div class="content-wrap">
+  <div class="content-grid">
+
+    <div class="article-body" id="article-body">
+
+      <div class="key-takeaways">
+        <div class="kt-label">Key Takeaways</div>
+        <div class="kt-item"><span class="kt-arrow">→</span> Starting at 22 instead of 32 can mean an extra $300,000+ at retirement — time matters more than the amount you invest.</div>
+        <div class="kt-item"><span class="kt-arrow">→</span> Index funds (like VOO or VTI) let you own tiny pieces of hundreds of companies at once, with very low fees.</div>
+        <div class="kt-item"><span class="kt-arrow">→</span> A Roth IRA is the best first account for most people — your money grows tax-free forever.</div>
+        <div class="kt-item"><span class="kt-arrow">→</span> You can open a brokerage account at Fidelity, Vanguard, or Schwab with $0 minimum.</div>
+        <div class="kt-item"><span class="kt-arrow">→</span> The biggest mistake is waiting until you "know enough." You already know enough to start.</div>
+      </div>
+
+      <h2 id="why-invest">Why Investing Is Not Optional</h2>
+      <p>Inflation eats money. Every year, the average price of goods rises roughly 2–3%. If your savings account earns 0.01% (what most big bank accounts paid until recently), you're actually losing purchasing power every year you sit on cash.</p>
+      <p>Investing is how ordinary people build wealth. Not by getting lucky on stocks, not by timing the market — but by consistently putting money into assets that grow over time. The stock market, as measured by the S&P 500, has returned an average of about <strong>10% per year</strong> over the past century. That includes crashes, recessions, two World Wars, and every other disaster. It has always recovered and gone higher.</p>
+      <p>The secret weapon isn't picking winners — it's <strong>compound interest</strong>. Your gains generate gains. Your returns earn returns. Over decades, this creates a snowball effect that can turn modest contributions into serious wealth.</p>
+
+      <div class="example-box">
+        <div class="ex-label">The Power of Starting Early — Same $200/month, 7% return</div>
+        <div class="ex-row"><span>Start at age 22, invest until 65</span><span>$525,000+</span></div>
+        <div class="ex-row"><span>Start at age 32, invest until 65</span><span>$243,000+</span></div>
+        <div class="ex-row"><span>Start at age 42, invest until 65</span><span>$107,000+</span></div>
+        <div class="ex-row"><span>10 extra years = extra wealth</span><span>$282,000</span></div>
+      </div>
+
+      <p>The person who started at 22 invested only $25,680 more than the person who started at 32 — but ended up with over $280,000 more. That gap comes entirely from time.</p>
+
+      <h2 id="accounts">The Two Accounts You Need to Know</h2>
+
+      <h3>Roth IRA — Start Here</h3>
+      <p>A Roth IRA (Individual Retirement Account) is the most powerful account available to most Americans. You contribute money you've already paid taxes on, it grows <strong>completely tax-free</strong>, and you pay zero taxes when you withdraw it in retirement.</p>
+      <p>The 2025 contribution limit is <strong>$7,000 per year</strong> ($8,000 if you're 50 or older). To contribute, you must have earned income, and your income must be below $161,000 (single) or $240,000 (married) to contribute the full amount.</p>
+      <p>You can withdraw your original contributions (not earnings) at any time without penalty. This makes it flexible as an emergency fallback — though ideally you leave it untouched until retirement.</p>
+
+      <h3>Brokerage Account — For Beyond the IRA</h3>
+      <p>Once you've maxed your Roth IRA, a regular taxable brokerage account has no limits and no restrictions. You can invest as much as you want, withdraw whenever you want, and use it for goals shorter than retirement. The downside: you pay capital gains tax when you sell investments for a profit.</p>
+
+      <div class="callout blue">
+        <div class="callout-label">If Your Employer Offers a 401(k) Match</div>
+        <p>Always contribute enough to get the full employer match first — before opening a Roth IRA. A 100% match is an instant 100% return on your money. That beats everything else. After the match, open a Roth IRA, then come back and contribute more to the 401(k).</p>
+      </div>
+
+      <h2 id="index-funds">What to Actually Invest In</h2>
+      <p>Forget trying to pick individual stocks. Even professional fund managers fail to beat the market over 15+ year periods. The evidence is overwhelming and consistent: <strong>index funds beat active stock picking</strong> for the vast majority of long-term investors.</p>
+      <p>An index fund is a collection of stocks that tracks a market index. When you buy one share of VOO (Vanguard S&P 500 ETF), you own a tiny slice of all 500 companies in the S&P 500 — Apple, Microsoft, Amazon, Google, Berkshire Hathaway, and 495 more — in one purchase.</p>
+
+      <table class="data-table">
+        <thead>
+          <tr><th>Fund</th><th>What It Tracks</th><th>Expense Ratio</th><th>Where to Buy</th></tr>
+        </thead>
+        <tbody>
+          <tr class="highlight"><td>VOO</td><td>S&P 500 (500 largest US companies)</td><td>0.03%</td><td>Any broker</td></tr>
+          <tr><td>VTI</td><td>Total US stock market (~4,000 companies)</td><td>0.03%</td><td>Any broker</td></tr>
+          <tr><td>FXAIX</td><td>S&P 500 (Fidelity version)</td><td>0.015%</td><td>Fidelity only</td></tr>
+          <tr><td>VXUS</td><td>International stocks (ex-US)</td><td>0.07%</td><td>Any broker</td></tr>
+          <tr><td>BND</td><td>US bond market</td><td>0.03%</td><td>Any broker</td></tr>
+        </tbody>
+      </table>
+
+      <p>The expense ratio is the annual fee — VOO charges just 0.03%, meaning on $10,000 invested you pay $3 per year. Compare that to actively managed funds that charge 1%+ ($100/year) and typically underperform anyway.</p>
+
+      <h2 id="open-account">How to Open Your First Account</h2>
+      <p>The three best brokerages for beginners are <strong>Fidelity</strong>, <strong>Vanguard</strong>, and <strong>Charles Schwab</strong>. All three have $0 account minimums, $0 trading commissions, and strong customer service. Any of them is an excellent choice.</p>
+
+      <h3>Step-by-Step: Opening a Roth IRA at Fidelity</h3>
+      <ol>
+        <li>Go to <strong>fidelity.com</strong> and click "Open an Account"</li>
+        <li>Select "Roth IRA" under Retirement accounts</li>
+        <li>Enter your personal info: name, SSN, address, date of birth</li>
+        <li>Link your bank account (routing and account number)</li>
+        <li>Fund the account — even $50 to start is fine</li>
+        <li>Search for VOO or FXAIX and click "Buy"</li>
+        <li>Set up automatic monthly contributions if you can</li>
+      </ol>
+
+      <p>The whole process takes about 15 minutes. Your money won't be available to invest until the bank transfer clears (typically 2–5 business days), but the account itself opens instantly.</p>
+
+      <div class="callout">
+        <div class="callout-label">How Much to Invest</div>
+        <p>Start with whatever you can afford consistently — even $25 or $50 a month. The habit matters more than the amount when you're starting out. Many people set up automatic transfers on payday so they never have to think about it. Increase the amount as your income grows.</p>
+      </div>
+
+      <h2 id="what-not-to-do">What Not to Do</h2>
+      <p>Most investing mistakes come from trying to be clever. The boring strategy — buy broad index funds, keep buying every month, never sell during a crash — beats almost everything else over 20+ years.</p>
+      <ul>
+        <li><strong>Don't try to time the market.</strong> "Waiting for a dip" costs most people more than just buying. Studies show time in the market beats timing the market consistently.</li>
+        <li><strong>Don't buy individual stocks until you understand them.</strong> Even if your friend's AMC stock tripled, that's gambling, not investing. Most individual stocks underperform the index.</li>
+        <li><strong>Don't panic sell during crashes.</strong> Every major crash in history has fully recovered. Selling locks in losses permanently. Staying invested through crashes is how you capture the recovery.</li>
+        <li><strong>Don't pay high fees.</strong> A 1% annual fee vs 0.03% sounds small, but over 30 years it can cost you 20–30% of your final portfolio value due to compounding.</li>
+        <li><strong>Don't invest money you need within 5 years.</strong> The market can be down significantly in any given 1–3 year period. Investing is for long-term money only.</li>
+      </ul>
+
+      <div class="callout red">
+        <div class="callout-label">Crypto Warning</div>
+        <p>Cryptocurrency is speculative and highly volatile — not investing in the traditional sense. Bitcoin lost 77% of its value in 2022. It may go up, it may not. Never put money you can't afford to lose into crypto, and never make it your primary investment strategy. Build your index fund foundation first.</p>
+      </div>
+
+      <h2 id="automation">The One Move That Changes Everything</h2>
+      <p>Automate it. Set up an automatic transfer from your checking account to your investment account on the same day you get paid — before you can spend it. This strategy, called "pay yourself first," is the reason most wealth is built not by high earners but by consistent investors.</p>
+      <p>If you invest $300/month starting at age 25 in an S&P 500 index fund averaging 10% annually, you'll have approximately <strong>$1.6 million by age 65</strong>. That's on a $144,000 total contribution. The rest — over $1.4 million — is compound growth doing the work.</p>
+      <p>You don't need a financial advisor. You don't need to understand earnings reports. You need an account, an index fund, and a recurring deposit. That's it. The time to start is now.</p>
+
+      <div class="article-footer">
+        <div class="af-nav">
+          <a href="/investing" class="af-btn">← Back to Investing</a>
+          <a href="/salary/how-to-read-your-paycheck" class="af-btn next">Next: Read Your Paycheck →</a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="sidebar">
+      <div class="sb-card">
+        <div class="sb-title">In This Article</div>
+        <div class="toc-list">
+          <a href="#why-invest" class="toc-link"><span class="toc-num">01</span> Why Investing Matters</a>
+          <a href="#accounts" class="toc-link"><span class="toc-num">02</span> Roth IRA vs Brokerage</a>
+          <a href="#index-funds" class="toc-link"><span class="toc-num">03</span> What to Invest In</a>
+          <a href="#open-account" class="toc-link"><span class="toc-num">04</span> Opening Your Account</a>
+          <a href="#what-not-to-do" class="toc-link"><span class="toc-num">05</span> Mistakes to Avoid</a>
+          <a href="#automation" class="toc-link"><span class="toc-num">06</span> Automate It</a>
+        </div>
+      </div>
+
+      <div class="sb-card">
+        <div class="sb-title">Related Articles</div>
+        <a href="/salary/how-to-read-your-paycheck" class="related-link">
+          <span class="rl-arrow">→</span>
+          <div><div class="rl-title">How to Read Your Paycheck</div><div class="rl-meta">5 min · Free</div></div>
+        </a>
+        <a href="/taxes/how-taxes-work" class="related-link">
+          <span class="rl-arrow">→</span>
+          <div><div class="rl-title">How Taxes Work in the US</div><div class="rl-meta">5 min · Free</div></div>
+        </a>
+      </div>
+
+      <div class="premium-card">
+        <div class="pc-eye">Premium</div>
+        <div class="pc-title">Go deeper with Premium</div>
+        <div class="pc-desc">Unlock deep-dives on portfolio allocation, tax-loss harvesting, and building a retirement plan from scratch.</div>
+        <button class="pc-btn">Get Premium — $9/mo →</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div>
+        <div class="footer-logo">Unschool<b>Me.</b></div>
+        <div class="footer-desc">Teaching real life skills that school forgot.</div>
+      </div>
+      <div>
+        <div class="footer-col-title">Topics</div>
+        <div class="footer-links">
+          <a href="/taxes">Taxes</a>
+          <a href="/banking">Banking</a>
+          <a href="/credit">Credit</a>
+          <a href="/government">Government</a>
+          <a href="/business">Business</a>
+          <a href="/rights">Rights</a>
+        <a href="/healthcare">Health</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Platform</div>
+        <div class="footer-links">
+          <a href="/#how">About</a>
+          <a href="/upload">Upload a Lesson</a>
+          <a href="/#pricing">Premium</a>
+          <a href="/chat" data-contact-link>Contact</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy">Built by someone who had to figure it all out alone. — UnschoolMe 2026 🇺🇸</div>
+    </div>
+    <div class="flag-b"></div>
+  </div>
+</footer>
+
+<script src="/js/config.js"></script>
+<script src="/js/main.js"></script>
+<script>
+window.addEventListener('scroll', () => {
+  const el = document.getElementById('readingProgress');
+  if (!el) return;
+  const scrollTop = window.scrollY;
+  const docHeight = document.body.scrollHeight - window.innerHeight;
+  el.style.width = (scrollTop / docHeight * 100) + '%';
+});
+const sections = document.querySelectorAll('h2[id]');
+const tocLinks = document.querySelectorAll('.toc-link');
+const tocObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      tocLinks.forEach(l => l.classList.remove('active'));
+      const active = document.querySelector(`.toc-link[href="#${entry.target.id}"]`);
+      if (active) active.classList.add('active');
+    }
+  });
+}, { rootMargin: '-20% 0% -70% 0%' });
+sections.forEach(s => tocObserver.observe(s));
+</script>
+
+</body>
+</html>

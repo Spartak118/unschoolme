@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<title>How Taxes Work in the US — UnschoolMe</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=DM+Sans:wght@300;400;500&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/main.css">
+<style>
+.article-hero{background:#0A0A1E;padding:3.5rem 3rem;position:relative;overflow:hidden;}
+.article-hero::after{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,#B22234 33%,#fff 33%,#fff 66%,#3C3B6E 66%);}
+.ah-inner{max-width:960px;margin:0 auto;}
+.article-tag{display:inline-flex;align-items:center;gap:6px;background:rgba(200,169,110,0.1);border:1px solid rgba(200,169,110,0.3);border-radius:99px;font-size:11px;color:#C8A96E;padding:4px 14px;margin-bottom:1.2rem;}
+.article-title{font-family:'Cormorant Garamond',serif;font-size:46px;font-weight:700;color:#fff;letter-spacing:-1.5px;line-height:1.1;margin-bottom:1rem;max-width:680px;}
+.article-title em{font-style:italic;color:#C8A96E;}
+.article-subtitle{font-size:15px;color:rgba(255,255,255,0.45);line-height:1.75;max-width:560px;font-weight:300;margin-bottom:1.8rem;}
+.article-meta{display:flex;align-items:center;gap:1.5rem;flex-wrap:wrap;}
+.meta-badge{font-size:10px;letter-spacing:1.5px;text-transform:uppercase;padding:3px 12px;border-radius:99px;font-weight:500;background:#E8F5E9;color:#2E7D32;}
+.meta-item{font-size:12px;color:rgba(255,255,255,0.3);}
+.meta-sep{width:3px;height:3px;border-radius:50%;background:rgba(255,255,255,0.15);display:inline-block;}
+.content-grid{display:grid;grid-template-columns:1fr 280px;gap:3rem;align-items:start;}
+.key-takeaways{background:#0A0A1E;border-radius:14px;padding:1.8rem;margin-bottom:2.5rem;}
+.kt-label{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#C8A96E;font-weight:500;margin-bottom:1rem;}
+.kt-item{color:rgba(255,255,255,0.65);font-size:13px;display:flex;gap:10px;align-items:flex-start;margin-bottom:9px;line-height:1.6;font-weight:300;}
+.kt-arrow{color:#C8A96E;flex-shrink:0;font-size:11px;margin-top:2px;}
+.kt-item:last-child{margin-bottom:0;}
+.article-body h2{font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:700;color:#1A1A1A;margin:2.5rem 0 1rem;letter-spacing:-0.5px;line-height:1.2;}
+.article-body h3{font-size:10px;letter-spacing:2.5px;text-transform:uppercase;color:#B22234;font-weight:500;margin:2rem 0 0.7rem;}
+.article-body p{font-size:15px;line-height:1.85;color:#555;margin-bottom:1.2rem;font-weight:300;}
+.article-body p strong{color:#1A1A1A;font-weight:500;}
+.article-body ul,.article-body ol{padding-left:1.5rem;margin-bottom:1.3rem;}
+.article-body li{font-size:15px;line-height:1.8;color:#555;margin-bottom:7px;font-weight:300;}
+.article-body li strong{color:#1A1A1A;font-weight:500;}
+.callout{border-left:3px solid #C8A96E;background:#FEFCF7;padding:1.2rem 1.5rem;border-radius:0 10px 10px 0;margin:1.8rem 0;}
+.callout.red{border-color:#B22234;background:#FFF8F8;}
+.callout.blue{border-color:#3C3B6E;background:#F8F8FF;}
+.callout p{margin-bottom:0;font-size:14px;}
+.callout-label{font-size:10px;letter-spacing:2px;text-transform:uppercase;font-weight:500;color:#C8A96E;margin-bottom:6px;}
+.callout.red .callout-label{color:#B22234;}
+.callout.blue .callout-label{color:#3C3B6E;}
+.data-table{width:100%;border-collapse:collapse;margin:1.5rem 0;font-size:13px;border-radius:10px;overflow:hidden;}
+.data-table thead th{background:#0A0A1E;color:#C8A96E;padding:11px 16px;text-align:left;font-weight:500;letter-spacing:0.5px;font-size:11px;}
+.data-table tbody td{padding:11px 16px;border-bottom:1px solid #E8E4DC;color:#555;font-weight:300;}
+.data-table tbody tr:last-child td{border-bottom:none;}
+.data-table tbody tr:nth-child(even) td{background:#FAFAF8;}
+.data-table tbody tr.highlight td{background:rgba(200,169,110,0.08);color:#1A1A1A;font-weight:500;}
+.example-box{background:#F8F6F1;border:1px solid #E8E4DC;border-radius:14px;padding:1.5rem;margin:1.8rem 0;}
+.ex-label{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#888;margin-bottom:1rem;font-weight:500;}
+.ex-row{display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid #E8E4DC;font-size:13px;}
+.ex-row:last-child{border-bottom:none;font-weight:500;color:#1A1A1A;}
+.ex-row span:first-child{color:#888;font-weight:300;}
+.ex-row span:last-child{color:#1A1A1A;font-family:'Cormorant Garamond',serif;font-size:16px;font-weight:700;}
+.article-footer{margin-top:3rem;padding-top:2rem;border-top:1px solid #E8E4DC;}
+.af-nav{display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem;}
+.af-btn{display:inline-flex;align-items:center;gap:8px;font-size:13px;color:#888;text-decoration:none;padding:10px 16px;border:1px solid #E8E4DC;border-radius:8px;background:#fff;transition:all 0.2s;}
+.af-btn:hover{border-color:#C8A96E;color:#1A1A1A;}
+.af-btn.next{background:#0A0A1E;color:#fff;border-color:#0A0A1E;}
+.af-btn.next:hover{background:#1A1A2E;}
+.sidebar{position:sticky;top:2rem;}
+.sb-card{background:#fff;border:1px solid #E8E4DC;border-radius:14px;padding:1.5rem;margin-bottom:16px;}
+.sb-title{font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:700;color:#1A1A1A;margin-bottom:1rem;}
+.toc-list{display:flex;flex-direction:column;}
+.toc-link{font-size:12px;color:#888;padding:7px 0;border-bottom:1px solid #F0EDE8;text-decoration:none;transition:color 0.15s;display:flex;align-items:flex-start;gap:8px;font-weight:300;line-height:1.4;}
+.toc-link:last-child{border-bottom:none;}
+.toc-link.active,.toc-link:hover{color:#1A1A1A;}
+.toc-link .toc-num{font-size:10px;color:#C8A96E;flex-shrink:0;margin-top:2px;}
+.related-link{display:flex;gap:10px;align-items:flex-start;text-decoration:none;padding:10px 0;border-bottom:1px solid #F0EDE8;transition:all 0.15s;}
+.related-link:last-child{border-bottom:none;}
+.related-link:hover .rl-title{color:#C8A96E;}
+.rl-arrow{color:#C8A96E;flex-shrink:0;font-size:12px;margin-top:2px;}
+.rl-title{font-size:12px;color:#1A1A1A;line-height:1.5;font-weight:400;}
+.rl-meta{font-size:11px;color:#AAA;margin-top:3px;font-weight:300;}
+</style>
+</head>
+<body>
+
+<div class="reading-progress" id="readingProgress"></div>
+<div class="flag"></div>
+
+<nav class="nav" id="nav">
+  <a href="/" class="nav-logo">Unschool<b>Me</b></a>
+  <div class="nav-links">
+    <a href="/taxes" class="active">Taxes</a>
+    <a href="/banking">Banking</a>
+    <a href="/credit">Credit</a>
+    <a href="/government">Government</a>
+    <a href="/business">Business</a>
+    <a href="/rights">Rights</a>
+      <a href="/healthcare">Health</a>
+  </div>
+  <div class="nav-right">
+    <button class="btn-ghost" onclick="location.href='/login'">Log in</button>
+    <button class="btn-gold" onclick="location.href='/login'">Get Started →</button>
+  </div>
+</nav>
+
+<div class="article-hero">
+  <div class="ah-inner">
+    <div class="breadcrumb">
+      <a href="/">Home</a> → <a href="/taxes">Taxes</a> → <span>How Taxes Work</span>
+    </div>
+    <div class="article-tag">💸 Taxes · Free Article</div>
+    <h1 class="article-title">How Taxes Work in the US —<br>The <em>Complete</em> Beginner's Guide</h1>
+    <p class="article-subtitle">You earn money, the government takes a cut. But how much, exactly? And why? Everything explained from scratch — no accountant needed.</p>
+    <div class="article-meta">
+      <span class="meta-badge">Free</span>
+      <span class="meta-item">5 min read</span>
+      <span class="meta-sep"></span>
+      <span class="meta-item">UnschoolMe Editorial</span>
+      <span class="meta-sep"></span>
+      <span class="meta-item">Updated 2025</span>
+    </div>
+  </div>
+</div>
+
+<div class="content-wrap">
+  <div class="content-grid">
+
+    <div class="article-body" id="article-body">
+
+      <div class="key-takeaways">
+        <div class="kt-label">Key Takeaways</div>
+        <div class="kt-item"><span class="kt-arrow">→</span> You pay taxes to three levels of government: federal, state, and sometimes local.</div>
+        <div class="kt-item"><span class="kt-arrow">→</span> The US uses progressive tax brackets — higher income is taxed at higher rates, but only on the portion above each threshold.</div>
+        <div class="kt-item"><span class="kt-arrow">→</span> Your employer withholds taxes from every paycheck and sends the money to the IRS on your behalf.</div>
+        <div class="kt-item"><span class="kt-arrow">→</span> At tax time, you file a return to settle up — you'll either get a refund or owe the difference.</div>
+        <div class="kt-item"><span class="kt-arrow">→</span> Not filing is almost always worse than filing late. The IRS already knows what you earned.</div>
+      </div>
+
+      <h2 id="what-are-taxes">What Are Taxes, Really?</h2>
+      <p>Taxes are mandatory payments collected by the government — federal, state, and local — to fund public services. Every road you drive on, every public school, the military, Medicare, Social Security, emergency services, courts — all of it is funded by tax revenue.</p>
+      <p>You pay taxes whether you realize it or not. They come out of every paycheck. They're added to your grocery bill. If you sell a house or inherit money, taxes apply there too. The system touches nearly every financial transaction in your life.</p>
+      <p>Most Americans accept this without understanding the rules — which means they often overpay, miss deductions they're entitled to, or panic about situations that aren't actually a problem. Understanding how the system works puts you in control.</p>
+
+      <h2 id="types-of-taxes">The 4 Main Taxes Americans Pay</h2>
+
+      <h3>Federal Income Tax</h3>
+      <p>This is what most people mean when they say "taxes." It's a percentage of your income that goes to the U.S. federal government. The exact amount depends on how much you earn — more on that below.</p>
+
+      <h3>Payroll Tax (FICA)</h3>
+      <p>Every paycheck, your employer automatically withholds two things: <strong>Social Security (6.2%)</strong> and <strong>Medicare (1.45%)</strong>. Your employer matches these amounts, so the government collects 15.3% of your wages toward these programs. If you're self-employed, you pay both sides yourself — all 15.3%.</p>
+
+      <h3>State Income Tax</h3>
+      <p>Most states charge their own income tax on top of federal. Rates vary wildly: California's top rate is 13.3%. But Texas, Florida, Nevada, Washington, and four other states charge <strong>zero state income tax</strong>. Where you live matters financially.</p>
+
+      <h3>Sales Tax</h3>
+      <p>The percentage added to purchases at the register. Ranges from 0% in Oregon and Montana to over 10% in some cities when state and local taxes are combined. You pay this every time you buy something, automatically — there's no form to file.</p>
+
+      <h2 id="how-income-tax-works">How Federal Income Tax Is Actually Calculated</h2>
+      <p>The US uses a <strong>progressive tax system</strong> — higher income is taxed at higher rates, but only on the portion that falls into each bracket. This is the part most people get wrong.</p>
+
+      <div class="callout">
+        <div class="callout-label">Common Misconception</div>
+        <p>Being in the "22% tax bracket" does NOT mean you pay 22% on all your income. You only pay 22% on the dollars that fall <em>above</em> the 12% bracket threshold. Your overall rate is almost always lower than your bracket.</p>
+      </div>
+
+      <p>Here are the 2024 federal tax brackets for a single filer:</p>
+
+      <table class="data-table">
+        <thead>
+          <tr><th>Bracket</th><th>Rate</th><th>You Pay On This Portion</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>$0 – $11,600</td><td>10%</td><td>Up to $1,160</td></tr>
+          <tr><td>$11,601 – $47,150</td><td>12%</td><td>Up to $4,266</td></tr>
+          <tr class="highlight"><td>$47,151 – $100,525</td><td>22%</td><td>Up to $11,742</td></tr>
+          <tr><td>$100,526 – $191,950</td><td>24%</td><td>Up to $21,960</td></tr>
+          <tr><td>$191,951 – $243,725</td><td>32%</td><td>Up to $16,563</td></tr>
+          <tr><td>$243,726 – $609,350</td><td>35%</td><td>Up to $127,963</td></tr>
+          <tr><td>Over $609,350</td><td>37%</td><td>On every dollar above</td></tr>
+        </tbody>
+      </table>
+
+      <p>Here's how it plays out for someone earning $50,000 a year:</p>
+
+      <div class="example-box">
+        <div class="ex-label">Example: $50,000 Income · Single Filer · 2024</div>
+        <div class="ex-row"><span>10% on first $11,600</span><span>$1,160</span></div>
+        <div class="ex-row"><span>12% on $11,601–$47,150</span><span>$4,266</span></div>
+        <div class="ex-row"><span>22% on $47,151–$50,000</span><span>$627</span></div>
+        <div class="ex-row"><span>Total federal income tax</span><span>$6,053</span></div>
+        <div class="ex-row"><span>Effective tax rate</span><span>12.1%</span></div>
+      </div>
+
+      <p>Even though this person is "in the 22% bracket," they only pay 22% on $2,850 — the small slice above the 12% threshold. Their effective rate is 12.1%, not 22%.</p>
+      <p>This is why you should never turn down a raise because "it'll put me in a higher bracket." More income always means more money, even after taxes.</p>
+
+      <h2 id="withholding">How Your Employer Handles Your Taxes</h2>
+      <p>Most employees never write a check directly to the IRS. Instead, your employer withholds taxes from every single paycheck and sends that money to the federal and state governments on your behalf — automatically.</p>
+      <p>When you start a new job, you fill out a <strong>W-4 form</strong>. This tells your employer how much federal income tax to withhold per paycheck. If you fill it out accurately, your withholding should roughly match what you'll owe for the year.</p>
+      <p>At the end of January each year, your employer sends you a <strong>W-2 form</strong>. This is your official statement showing:</p>
+      <ul>
+        <li>How much you earned that calendar year</li>
+        <li>How much federal income tax was withheld</li>
+        <li>How much state income tax was withheld</li>
+        <li>How much FICA (Social Security + Medicare) was withheld</li>
+      </ul>
+      <p>Your W-2 is the key document you need to file your taxes. Guard it carefully — and note that the IRS receives a copy directly from your employer, so the numbers must match exactly what you report.</p>
+
+      <div class="callout blue">
+        <div class="callout-label">If You're a Freelancer or Self-Employed</div>
+        <p>No employer withholds taxes for you. You're responsible for paying <strong>quarterly estimated taxes</strong> (four times a year, in April, June, September, and January). Clients who pay you over $600 in a year should send you a <strong>1099-NEC form</strong> instead of a W-2.</p>
+      </div>
+
+      <h2 id="filing">Filing a Tax Return</h2>
+      <p>Every year, between January 1 and <strong>April 15</strong>, most Americans must file a tax return — a document (called Form 1040) where you officially report your income, deductions, and what you owe.</p>
+      <p>The IRS then compares:</p>
+      <ul>
+        <li>What you <em>actually owe</em> based on your real income and deductions</li>
+        <li>What was <em>already withheld</em> from your paychecks throughout the year</li>
+      </ul>
+      <p>If you paid <strong>too much</strong> → you get a refund. If you paid <strong>too little</strong> → you owe the difference. If your withholding was perfect → you break even (rare, but the ideal outcome).</p>
+
+      <div class="callout">
+        <div class="callout-label">The Standard Deduction</div>
+        <p>Before calculating your tax, the IRS lets you subtract a standard amount from your income first. For 2024, it's <strong>$14,600 for single filers</strong> and $29,200 for married couples filing jointly. Most people take this — no receipts required.</p>
+      </div>
+
+      <h2 id="what-if-you-dont-file">What Happens If You Don't File?</h2>
+      <p>If you had income above the threshold and skip filing, the IRS doesn't forget. They received copies of your W-2 from your employer and already know roughly what you earned.</p>
+      <p>The consequences of not filing when you owe taxes:</p>
+      <ul>
+        <li><strong>Failure-to-file penalty:</strong> 5% of unpaid taxes per month, up to 25%</li>
+        <li><strong>Failure-to-pay penalty:</strong> 0.5% per month on unpaid taxes</li>
+        <li><strong>Interest:</strong> Compounds daily on the unpaid balance</li>
+        <li>Eventually: liens on property, wage garnishment, in rare cases criminal charges</li>
+      </ul>
+
+      <div class="callout red">
+        <div class="callout-label">Important</div>
+        <p>If you're owed a refund, there's no penalty for filing late — but you have exactly <strong>3 years</strong> to claim it. After that, the IRS keeps your money. File. Always file.</p>
+      </div>
+
+      <p>Can't pay what you owe? <strong>Still file.</strong> The failure-to-file penalty (5%/month) is 10× worse than the failure-to-pay penalty (0.5%/month). File first, then work out a payment plan with the IRS. They have options, and they're less scary to deal with than most people think.</p>
+
+      <div class="article-footer">
+        <div class="af-nav">
+          <a href="/taxes" class="af-btn">← Back to Taxes</a>
+          <a href="/taxes/what-is-a-tax-refund" class="af-btn next">Next: What Is a Tax Refund? →</a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="sidebar">
+      <div class="sb-card">
+        <div class="sb-title">In This Article</div>
+        <div class="toc-list">
+          <a href="#what-are-taxes" class="toc-link"><span class="toc-num">01</span> What Are Taxes?</a>
+          <a href="#types-of-taxes" class="toc-link"><span class="toc-num">02</span> The 4 Main Types</a>
+          <a href="#how-income-tax-works" class="toc-link"><span class="toc-num">03</span> How Income Tax Works</a>
+          <a href="#withholding" class="toc-link"><span class="toc-num">04</span> Withholding & W-2</a>
+          <a href="#filing" class="toc-link"><span class="toc-num">05</span> Filing a Return</a>
+          <a href="#what-if-you-dont-file" class="toc-link"><span class="toc-num">06</span> What If You Don't File?</a>
+        </div>
+      </div>
+
+      <div class="sb-card">
+        <div class="sb-title">Up Next</div>
+        <a href="/taxes/what-is-a-tax-refund" class="related-link">
+          <span class="rl-arrow">→</span>
+          <div><div class="rl-title">What Is a Tax Refund and How Do You Get One?</div><div class="rl-meta">4 min · Free</div></div>
+        </a>
+        <a href="/taxes/filing-taxes-first-time" class="related-link">
+          <span class="rl-arrow">→</span>
+          <div><div class="rl-title">Filing Taxes for the First Time — Step by Step</div><div class="rl-meta">6 min · Free</div></div>
+        </a>
+      </div>
+
+      <div class="premium-card">
+        <div class="pc-eye">Premium</div>
+        <div class="pc-title">Go deeper with Premium</div>
+        <div class="pc-desc">Unlock expert deep-dives on deductions, tax brackets, self-employment taxes, and real-life templates.</div>
+        <button class="pc-btn">Get Premium — $9/mo →</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div>
+        <div class="footer-logo">Unschool<b>Me.</b></div>
+        <div class="footer-desc">Teaching real life skills that school forgot.</div>
+      </div>
+      <div>
+        <div class="footer-col-title">Topics</div>
+        <div class="footer-links">
+          <a href="/taxes">Taxes</a>
+          <a href="/banking">Banking</a>
+          <a href="/credit">Credit</a>
+          <a href="/government">Government</a>
+          <a href="/business">Business</a>
+          <a href="/rights">Rights</a>
+        <a href="/healthcare">Health</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Platform</div>
+        <div class="footer-links">
+          <a href="/#how">About</a>
+          <a href="/upload">Upload a Lesson</a>
+          <a href="/#pricing">Premium</a>
+          <a href="/chat" data-contact-link>Contact</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy">Built by someone who had to figure it all out alone. — UnschoolMe 2026 🇺🇸</div>
+    </div>
+    <div class="flag-b"></div>
+  </div>
+</footer>
+
+<script src="/js/config.js"></script>
+<script src="/js/main.js"></script>
+<script>
+const sections = document.querySelectorAll('h2[id]');
+const tocLinks = document.querySelectorAll('.toc-link');
+const tocObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      tocLinks.forEach(l => l.classList.remove('active'));
+      const active = document.querySelector(`.toc-link[href="#${entry.target.id}"]`);
+      if (active) active.classList.add('active');
+    }
+  });
+}, { rootMargin: '-20% 0% -70% 0%' });
+sections.forEach(s => tocObserver.observe(s));
+</script>
+
+</body>
+</html>

@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<title>What is a Credit Score — UnschoolMe</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=DM+Sans:wght@300;400;500&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/main.css">
+<style>
+.article-hero{background:#0A0A1E;padding:3.5rem 3rem;position:relative;overflow:hidden;}
+.article-hero::after{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,#B22234 33%,#fff 33%,#fff 66%,#3C3B6E 66%);}
+.hero-inner{max-width:960px;margin:0 auto;}
+.article-tag{display:inline-flex;align-items:center;gap:6px;background:rgba(200,169,110,0.1);border:1px solid rgba(200,169,110,0.3);border-radius:99px;font-size:11px;color:#C8A96E;padding:4px 14px;margin-bottom:1.2rem;letter-spacing:1px;text-transform:uppercase;}
+.article-title{font-family:'Cormorant Garamond',serif;font-size:46px;font-weight:700;color:#fff;letter-spacing:-1.5px;line-height:1.1;margin-bottom:1.2rem;}
+.article-title em{font-style:italic;color:#C8A96E;}
+.article-meta{display:flex;align-items:center;gap:1.5rem;flex-wrap:wrap;}
+.meta-item{font-size:12px;color:rgba(255,255,255,0.35);}
+.meta-dot{width:4px;height:4px;border-radius:50%;background:rgba(255,255,255,0.2);display:inline-block;vertical-align:middle;margin:0 4px;}
+.article-wrap{max-width:960px;margin:0 auto;padding:3rem;}
+.key-takeaways{background:#0A0A1E;border-radius:14px;padding:1.8rem;margin-bottom:2.5rem;}
+.kt-eye{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#C8A96E;margin-bottom:1rem;font-weight:500;}
+.kt-title{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:700;color:#fff;margin-bottom:1.2rem;}
+.kt-list{display:flex;flex-direction:column;gap:10px;}
+.kt-item{display:flex;align-items:flex-start;gap:10px;font-size:13px;color:rgba(255,255,255,0.6);line-height:1.6;font-weight:300;}
+.kt-check{color:#C8A96E;font-size:14px;flex-shrink:0;margin-top:1px;}
+.content-grid{display:grid;grid-template-columns:1fr 280px;gap:3rem;align-items:start;}
+.article-body h2{font-family:'Cormorant Garamond',serif;font-size:30px;font-weight:700;color:#1A1A1A;letter-spacing:-0.5px;margin:2.5rem 0 1rem;padding-top:0.5rem;}
+.article-body h3{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:700;color:#1A1A1A;margin:1.8rem 0 0.8rem;}
+.article-body p{font-size:15px;color:#444;line-height:1.85;font-weight:300;margin-bottom:1.2rem;}
+.article-body ul,.article-body ol{margin:1rem 0 1.2rem 1.5rem;}
+.article-body li{font-size:15px;color:#444;line-height:1.8;font-weight:300;margin-bottom:6px;}
+.callout{border-left:3px solid #C8A96E;background:#FEFCF7;padding:1.2rem 1.5rem;border-radius:0 10px 10px 0;margin:1.5rem 0;}
+.callout.red{border-color:#B22234;background:#FFF8F8;}
+.callout.blue{border-color:#3C3B6E;background:#F8F8FF;}
+.callout p{margin:0;font-size:14px;color:#555;line-height:1.7;}
+.callout strong{color:#1A1A1A;}
+.score-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin:1.5rem 0;}
+.score-box{border-radius:10px;padding:1rem;text-align:center;}
+.score-box .range{font-family:'Cormorant Garamond',serif;font-size:16px;font-weight:700;margin-bottom:4px;}
+.score-box .label{font-size:11px;font-weight:500;letter-spacing:0.5px;}
+.score-box.poor{background:#FFF0F0;color:#C0392B;}.score-box.poor .label{color:#C0392B;}
+.score-box.fair{background:#FFF8F0;color:#E67E22;}.score-box.fair .label{color:#E67E22;}
+.score-box.good{background:#F0FFF4;color:#27AE60;}.score-box.good .label{color:#27AE60;}
+.score-box.vgood{background:#E8F5E9;color:#1E8449;}.score-box.vgood .label{color:#1E8449;}
+.score-box.exc{background:#E3F2FD;color:#1565C0;}.score-box.exc .label{color:#1565C0;}
+.who-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:1.5rem 0;}
+.who-card{background:#fff;border:1px solid #E8E4DC;border-radius:10px;padding:1.2rem;}
+.who-icon{font-size:22px;margin-bottom:8px;}
+.who-title{font-family:'Cormorant Garamond',serif;font-size:17px;font-weight:700;color:#1A1A1A;margin-bottom:6px;}
+.who-desc{font-size:13px;color:#888;line-height:1.6;font-weight:300;}
+.stat-highlight{background:#0A0A1E;border-radius:12px;padding:1.5rem;margin:1.5rem 0;display:flex;align-items:center;gap:1.5rem;}
+.stat-number{font-family:'Cormorant Garamond',serif;font-size:52px;font-weight:700;color:#C8A96E;line-height:1;white-space:nowrap;}
+.stat-text{font-size:13px;color:rgba(255,255,255,0.5);line-height:1.7;font-weight:300;}
+.free-check{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin:1.5rem 0;}
+.fc-card{background:#fff;border:1px solid #E8E4DC;border-radius:10px;padding:1.2rem;text-align:center;}
+.fc-name{font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:700;color:#1A1A1A;margin-bottom:4px;}
+.fc-site{font-size:12px;color:#C8A96E;margin-bottom:8px;}
+.fc-desc{font-size:12px;color:#888;line-height:1.5;font-weight:300;}
+.sidebar{position:sticky;top:2rem;}
+.toc-card{background:#fff;border:1px solid #E8E4DC;border-radius:14px;padding:1.5rem;margin-bottom:16px;}
+.toc-title{font-family:'Cormorant Garamond',serif;font-size:16px;font-weight:700;color:#1A1A1A;margin-bottom:1rem;}
+.toc-link{display:block;font-size:12px;color:#888;text-decoration:none;padding:6px 0;border-bottom:1px solid #F0EDE6;line-height:1.4;transition:color 0.15s;font-weight:300;}
+.toc-link:last-child{border-bottom:none;}
+.toc-link:hover,.toc-link.active{color:#C8A96E;font-weight:500;}
+.teach-card{background:#F8F6F1;border:1px solid #E8E4DC;border-radius:14px;padding:1.5rem;}
+.tc-title{font-family:'Cormorant Garamond',serif;font-size:16px;font-weight:700;color:#1A1A1A;margin-bottom:6px;}
+.tc-desc{font-size:12px;color:#888;line-height:1.6;margin-bottom:1rem;font-weight:300;}
+.tc-btn{width:100%;background:#1A1A1A;color:#fff;border:none;border-radius:8px;padding:10px;font-size:13px;font-family:'DM Sans',sans-serif;font-weight:500;cursor:pointer;}
+.article-nav{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:3rem;padding-top:2rem;border-top:1px solid #E8E4DC;}
+.nav-card{background:#fff;border:1px solid #E8E4DC;border-radius:12px;padding:1.2rem;text-decoration:none;transition:all 0.2s;}
+.nav-card:hover{border-color:#C8A96E;transform:translateY(-2px);}
+.nav-dir{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#AAA;margin-bottom:6px;}
+.nav-title{font-family:'Cormorant Garamond',serif;font-size:17px;font-weight:700;color:#1A1A1A;line-height:1.3;}
+.nav-card.next{text-align:right;}
+</style>
+</head>
+<body>
+<div class="reading-progress" id="readingProgress"></div>
+<div class="flag"></div>
+<nav class="nav" id="nav">
+  <a href="/" class="nav-logo">Unschool<b>Me</b></a>
+  <div class="nav-links">
+    <a href="/taxes">Taxes</a>
+    <a href="/banking">Banking</a>
+    <a href="/credit" class="active">Credit</a>
+    <a href="/government">Government</a>
+    <a href="/business">Business</a>
+    <a href="/rights">Rights</a>
+      <a href="/healthcare">Health</a>
+  </div>
+  <div class="nav-right">
+    <button class="btn-ghost" onclick="location.href='/login'">Log in</button>
+    <button class="btn-gold" onclick="location.href='/login'">Get Started →</button>
+  </div>
+</nav>
+<div class="article-hero">
+  <div class="hero-inner">
+    <div class="breadcrumb"><a href="/">Home</a> → <a href="/credit">Credit</a> → <span>What is a Credit Score</span></div>
+    <div class="article-tag">📊 Credit Score · Free Article</div>
+    <div class="article-title">What is a Credit Score —<br>And <em>Why It Controls Your Life</em></div>
+    <div class="article-meta">
+      <span class="meta-item">5 min read</span>
+      <span class="meta-dot"></span>
+      <span class="meta-item">UnschoolMe Editorial</span>
+      <span class="meta-dot"></span>
+      <span class="meta-item">Updated May 2026</span>
+    </div>
+  </div>
+</div>
+<div class="article-wrap">
+  <div class="key-takeaways">
+    <div class="kt-eye">Key Takeaways</div>
+    <div class="kt-title">What you'll know after reading this</div>
+    <div class="kt-list">
+      <div class="kt-item"><span class="kt-check">✓</span>Your credit score is a number from 300–850 that signals your financial trustworthiness to lenders, landlords, and employers</div>
+      <div class="kt-item"><span class="kt-check">✓</span>FICO and VantageScore are the two main models — both use the same data, slightly different formulas</div>
+      <div class="kt-item"><span class="kt-check">✓</span>Banks, credit card companies, landlords, phone carriers, and even some employers check your score</div>
+      <div class="kt-item"><span class="kt-check">✓</span>You can check your score for free every week at AnnualCreditReport.com, Credit Karma, or your bank</div>
+    </div>
+  </div>
+  <div class="content-grid">
+    <div class="article-body" id="article-body">
+
+      <h2 id="what-is-it">What is a credit score?</h2>
+      <p>A credit score is a three-digit number that tells lenders how likely you are to repay money you borrow. It's calculated using your credit history — loans you've had, credit cards, on-time payments, missed payments, and how much debt you currently carry.</p>
+      <p>Think of it as a report card for your financial life. A high score means you've been responsible with borrowed money. A low score means lenders see you as a risk — and they'll charge you more for it, or refuse you entirely.</p>
+
+      <div class="stat-highlight">
+        <div class="stat-number">758</div>
+        <div class="stat-text">The average American credit score in 2025 (FICO). Anything above 740 gets you the best interest rates on mortgages, car loans, and credit cards.</div>
+      </div>
+
+      <p>Scores range from 300 to 850. Nobody actually has 300 (it would require a catastrophic credit history), and fewer than 1.5% of people hit 850. Most people fall somewhere in the 580–780 range.</p>
+
+      <h2 id="score-ranges">Score ranges — what they mean</h2>
+      <p>Here's how lenders actually think about your score:</p>
+
+      <div class="score-grid">
+        <div class="score-box poor"><div class="range">300–579</div><div class="label">Poor</div></div>
+        <div class="score-box fair"><div class="range">580–669</div><div class="label">Fair</div></div>
+        <div class="score-box good"><div class="range">670–739</div><div class="label">Good</div></div>
+        <div class="score-box vgood"><div class="range">740–799</div><div class="label">Very Good</div></div>
+        <div class="score-box exc"><div class="range">800–850</div><div class="label">Exceptional</div></div>
+      </div>
+
+      <p><strong>Poor (300–579):</strong> You'll be denied most credit cards and loans. If approved, interest rates will be very high. Landlords may require extra deposits or co-signers. Some employers won't hire you.</p>
+      <p><strong>Fair (580–669):</strong> You can get approved for basic cards and some loans, but you'll pay higher interest. A subprime car loan at 18% vs. 5% on a $25,000 car costs you $13,000 more over 5 years.</p>
+      <p><strong>Good (670–739):</strong> Most lenders will approve you. You'll get decent rates. This is where most Americans aim to be.</p>
+      <p><strong>Very Good / Exceptional (740–850):</strong> The best rates on everything. Mortgage lenders will compete for your business. This is the zone worth building toward.</p>
+
+      <div class="callout">
+        <p><strong>Real example:</strong> On a $300,000 mortgage at a "Fair" score (620), you might pay 7.5% interest — $2,098/month. At an "Exceptional" score (780), the same loan at 6.0% costs $1,799/month. That's $299/month difference — $107,640 over 30 years, just because of your score.</p>
+      </div>
+
+      <h2 id="who-checks">Who checks your credit score?</h2>
+      <p>More people check your credit than you think. This is why it matters even if you're not taking out a loan right now.</p>
+
+      <div class="who-grid">
+        <div class="who-card">
+          <div class="who-icon">🏦</div>
+          <div class="who-title">Banks & Lenders</div>
+          <div class="who-desc">Mortgages, car loans, personal loans. Your score determines if you're approved and what interest rate you pay.</div>
+        </div>
+        <div class="who-card">
+          <div class="who-icon">💳</div>
+          <div class="who-title">Credit Card Companies</div>
+          <div class="who-desc">Every card application triggers a credit check. Better score = better cards, lower APR, higher limits, better rewards.</div>
+        </div>
+        <div class="who-card">
+          <div class="who-icon">🏠</div>
+          <div class="who-title">Landlords</div>
+          <div class="who-desc">Most landlords run credit checks on applicants. Below 620 and you may need a larger deposit or co-signer — or get rejected.</div>
+        </div>
+        <div class="who-card">
+          <div class="who-icon">📱</div>
+          <div class="who-title">Phone Carriers</div>
+          <div class="who-desc">Verizon, AT&T, T-Mobile all check credit for postpaid plans. Low score means prepaid-only or a large deposit.</div>
+        </div>
+        <div class="who-card">
+          <div class="who-icon">💼</div>
+          <div class="who-title">Some Employers</div>
+          <div class="who-desc">Jobs in finance, government, or with access to sensitive data often require a credit check. (They need your permission.)</div>
+        </div>
+        <div class="who-card">
+          <div class="who-icon">🚗</div>
+          <div class="who-title">Car Insurance</div>
+          <div class="who-desc">In most states, insurers use your credit score to set your premium. Better credit = lower insurance cost.</div>
+        </div>
+      </div>
+
+      <h2 id="fico-vs-vantage">FICO vs VantageScore — what's the difference?</h2>
+      <p>Two companies dominate the credit scoring world: FICO (Fair Isaac Corporation) and VantageScore. Both use your credit report data and output a 300–850 score. The difference is in their formulas.</p>
+
+      <div class="callout blue">
+        <p><strong>FICO:</strong> Used by 90%+ of lenders for actual lending decisions. Requires at least 6 months of credit history to generate a score. The industry standard.<br><br>
+        <strong>VantageScore:</strong> Can score you with as little as 1 month of history. More commonly shown on free apps like Credit Karma, Experian, and your bank's app. Great for tracking your progress — but your lender probably uses FICO.</p>
+      </div>
+
+      <p>Your VantageScore and FICO score will usually be within 20–30 points of each other. When you see your score on an app, note which model they're showing. If you're applying for a mortgage, ask the lender which FICO version they use — there are dozens of FICO versions for different loan types.</p>
+
+      <h2 id="check-free">How to check your score for free</h2>
+      <p>You no longer have to pay to see your credit score. Here are the three best free options:</p>
+
+      <div class="free-check">
+        <div class="fc-card">
+          <div class="fc-name">AnnualCreditReport</div>
+          <div class="fc-site">annualcreditreport.com</div>
+          <div class="fc-desc">The official federally mandated site. Free full credit <em>reports</em> (not scores) from all 3 bureaus weekly.</div>
+        </div>
+        <div class="fc-card">
+          <div class="fc-name">Credit Karma</div>
+          <div class="fc-site">creditkarma.com</div>
+          <div class="fc-desc">Free VantageScore from Equifax and TransUnion. Updated weekly. Good for tracking trends over time.</div>
+        </div>
+        <div class="fc-card">
+          <div class="fc-name">Your Bank</div>
+          <div class="fc-site">Check your bank app</div>
+          <div class="fc-desc">Most major banks (Chase, Wells Fargo, Bank of America, Capital One) now show your FICO score for free.</div>
+        </div>
+      </div>
+
+      <div class="callout red">
+        <p><strong>Warning:</strong> Checking your own credit score never hurts your score — this is called a "soft inquiry." Only when a lender checks your credit during an application does it cause a small, temporary dip ("hard inquiry"). Check your score as often as you want.</p>
+      </div>
+
+      <div class="article-nav">
+        <a href="/credit" class="nav-card">
+          <div class="nav-dir">← Back to</div>
+          <div class="nav-title">All Credit Articles</div>
+        </a>
+        <a href="/credit/build-credit-from-zero" class="nav-card next">
+          <div class="nav-dir">Next →</div>
+          <div class="nav-title">How to Build Credit From Zero</div>
+        </a>
+      </div>
+    </div>
+    <div class="sidebar">
+      <div class="toc-card">
+        <div class="toc-title">In this article</div>
+        <a href="#what-is-it" class="toc-link active">What is a credit score?</a>
+        <a href="#score-ranges" class="toc-link">Score ranges explained</a>
+        <a href="#who-checks" class="toc-link">Who checks your credit</a>
+        <a href="#fico-vs-vantage" class="toc-link">FICO vs VantageScore</a>
+        <a href="#check-free" class="toc-link">Check your score free</a>
+      </div>
+      <div class="premium-card">
+        <div class="pc-eye">Premium</div>
+        <div class="pc-title">Raise your score 100 points</div>
+        <div class="pc-desc">The exact strategies — dispute errors, reduce utilization, become an authorized user. With timelines.</div>
+        <button class="pc-btn">Unlock Premium — $9/mo →</button>
+      </div>
+      <div class="teach-card">
+        <div class="tc-title">Work in finance?</div>
+        <div class="tc-desc">Share your credit expertise and help others build better financial lives.</div>
+        <button class="tc-btn">Upload a Lesson ↑</button>
+      </div>
+    </div>
+  </div>
+</div>
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div>
+        <div class="footer-logo">Unschool<b>Me.</b></div>
+        <div class="footer-desc">Teaching real life skills that school forgot.</div>
+      </div>
+      <div>
+        <div class="footer-col-title">Topics</div>
+        <div class="footer-links">
+          <a href="/taxes">Taxes</a>
+          <a href="/banking">Banking</a>
+          <a href="/credit">Credit</a>
+          <a href="/government">Government</a>
+          <a href="/business">Business</a>
+          <a href="/rights">Rights</a>
+        <a href="/healthcare">Health</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Platform</div>
+        <div class="footer-links">
+          <a href="/#how">About</a>
+          <a href="/upload">Upload a Lesson</a>
+          <a href="/#pricing">Premium</a>
+          <a href="/chat" data-contact-link>Contact</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy">Built by someone who had to figure it all out alone. — UnschoolMe 2026 🇺🇸</div>
+    </div>
+    <div class="flag-b"></div>
+  </div>
+</footer>
+<script src="/js/config.js"></script>
+<script src="/js/main.js"></script>
+<script>
+const sections = document.querySelectorAll('h2[id]');
+const tocLinks = document.querySelectorAll('.toc-link');
+const tocObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      tocLinks.forEach(l => l.classList.remove('active'));
+      const active = document.querySelector(`.toc-link[href="#${entry.target.id}"]`);
+      if (active) active.classList.add('active');
+    }
+  });
+}, { rootMargin: '-20% 0% -70% 0%' });
+sections.forEach(s => tocObserver.observe(s));
+</script>
+</body>
+</html>

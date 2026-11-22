@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<title>Local Government — UnschoolMe</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600;1,700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/main.css">
+<style>
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:'DM Sans',sans-serif;color:#1A1A1A;background:#F8F6F1;}
+
+.progress-bar{position:fixed;top:0;left:0;height:3px;background:#C8A96E;z-index:200;width:0%;transition:width 0.1s linear;}
+
+.flag{height:5px;background:linear-gradient(90deg,#B22234 33%,#fff 33%,#fff 66%,#3C3B6E 66%);}
+nav{display:flex;align-items:center;justify-content:space-between;padding:1rem 3rem;background:rgba(10,10,30,0.98);border-bottom:1px solid rgba(255,255,255,0.08);}
+.logo{font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:700;color:#fff;flex-shrink:0;text-decoration:none;}
+.logo b{color:#C8A96E;}
+.nav-links{display:flex;gap:2rem;margin-left:4rem;flex:1;}
+.nav-links a{font-size:11px;color:rgba(255,255,255,0.45);letter-spacing:2px;text-transform:uppercase;font-weight:500;text-decoration:none;transition:color 0.2s;}
+.nav-links a:hover,.nav-links a.active{color:#fff;}
+.nav-right{display:flex;gap:8px;flex-shrink:0;}
+.nbtn1{background:transparent;color:rgba(255,255,255,0.5);border:1px solid rgba(255,255,255,0.15);border-radius:6px;padding:7px 16px;font-size:12px;font-family:'DM Sans',sans-serif;cursor:pointer;}
+.nbtn2{background:#C8A96E;color:#0A0A1E;border:none;border-radius:6px;padding:7px 16px;font-size:12px;font-family:'DM Sans',sans-serif;font-weight:500;cursor:pointer;}
+
+.article-hero{background:#0A0A1E;padding:3.5rem 3rem;position:relative;overflow:hidden;}
+.article-hero::after{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,#B22234 33%,#fff 33%,#fff 66%,#3C3B6E 66%);}
+.ah-inner{max-width:960px;margin:0 auto;}
+.breadcrumb{font-size:11px;color:rgba(255,255,255,0.3);letter-spacing:1px;text-transform:uppercase;margin-bottom:1.5rem;}
+.breadcrumb a{color:rgba(255,255,255,0.3);text-decoration:none;transition:color 0.2s;}
+.breadcrumb a:hover{color:#C8A96E;}
+.breadcrumb span{color:#C8A96E;}
+.article-tag{display:inline-flex;align-items:center;gap:6px;background:rgba(200,169,110,0.1);border:1px solid rgba(200,169,110,0.3);border-radius:99px;font-size:11px;color:#C8A96E;padding:4px 14px;margin-bottom:1.2rem;}
+.article-title{font-family:'Cormorant Garamond',serif;font-size:46px;font-weight:700;color:#fff;letter-spacing:-1.5px;line-height:1.1;margin-bottom:1rem;max-width:680px;}
+.article-title em{font-style:italic;color:#C8A96E;}
+.article-subtitle{font-size:15px;color:rgba(255,255,255,0.45);line-height:1.75;max-width:560px;font-weight:300;margin-bottom:1.8rem;}
+.article-meta{display:flex;align-items:center;gap:1.5rem;flex-wrap:wrap;}
+.meta-badge{font-size:10px;letter-spacing:1.5px;text-transform:uppercase;padding:3px 12px;border-radius:99px;font-weight:500;background:#E8F5E9;color:#2E7D32;}
+.meta-item{font-size:12px;color:rgba(255,255,255,0.3);display:flex;align-items:center;gap:6px;}
+.meta-sep{width:3px;height:3px;border-radius:50%;background:rgba(255,255,255,0.15);}
+
+.content-wrap{max-width:960px;margin:0 auto;padding:3rem;}
+.content-grid{display:grid;grid-template-columns:1fr 280px;gap:3rem;align-items:start;}
+
+.article-body{}
+.key-takeaways{background:#0A0A1E;border-radius:14px;padding:1.8rem;margin-bottom:2.5rem;}
+.kt-label{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#C8A96E;font-weight:500;margin-bottom:1rem;}
+.kt-item{color:rgba(255,255,255,0.65);font-size:13px;display:flex;gap:10px;align-items:flex-start;margin-bottom:9px;line-height:1.6;font-weight:300;}
+.kt-arrow{color:#C8A96E;flex-shrink:0;font-size:11px;margin-top:2px;}
+.kt-item:last-child{margin-bottom:0;}
+
+.article-body h2{font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:700;color:#1A1A1A;margin:2.5rem 0 1rem;letter-spacing:-0.5px;line-height:1.2;}
+.article-body h3{font-size:10px;letter-spacing:2.5px;text-transform:uppercase;color:#B22234;font-weight:500;margin:2rem 0 0.7rem;}
+.article-body p{font-size:15px;line-height:1.85;color:#555;margin-bottom:1.2rem;font-weight:300;}
+.article-body p strong{color:#1A1A1A;font-weight:500;}
+.article-body ul,.article-body ol{padding-left:1.5rem;margin-bottom:1.3rem;}
+.article-body li{font-size:15px;line-height:1.8;color:#555;margin-bottom:7px;font-weight:300;}
+.article-body li strong{color:#1A1A1A;font-weight:500;}
+
+.callout{border-left:3px solid #C8A96E;background:#FEFCF7;padding:1.2rem 1.5rem;border-radius:0 10px 10px 0;margin:1.8rem 0;}
+.callout.red{border-color:#B22234;background:#FFF8F8;}
+.callout.blue{border-color:#3C3B6E;background:#F8F8FF;}
+.callout p{margin-bottom:0;font-size:14px;}
+.callout-label{font-size:10px;letter-spacing:2px;text-transform:uppercase;font-weight:500;color:#C8A96E;margin-bottom:6px;}
+.callout.red .callout-label{color:#B22234;}
+.callout.blue .callout-label{color:#3C3B6E;}
+
+.data-table{width:100%;border-collapse:collapse;margin:1.5rem 0;font-size:13px;border-radius:10px;overflow:hidden;}
+.data-table thead th{background:#0A0A1E;color:#C8A96E;padding:11px 16px;text-align:left;font-weight:500;letter-spacing:0.5px;font-size:11px;}
+.data-table tbody td{padding:11px 16px;border-bottom:1px solid #E8E4DC;color:#555;font-weight:300;}
+.data-table tbody tr:last-child td{border-bottom:none;}
+.data-table tbody tr:nth-child(even) td{background:#FAFAF8;}
+.data-table tbody tr.highlight td{background:rgba(200,169,110,0.08);color:#1A1A1A;font-weight:500;}
+
+.example-box{background:#F8F6F1;border:1px solid #E8E4DC;border-radius:14px;padding:1.5rem;margin:1.8rem 0;}
+.ex-label{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#888;margin-bottom:1rem;font-weight:500;}
+.ex-row{display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid #E8E4DC;font-size:13px;}
+.ex-row:last-child{border-bottom:none;font-weight:500;color:#1A1A1A;}
+.ex-row span:first-child{color:#888;font-weight:300;}
+.ex-row span:last-child{color:#1A1A1A;font-family:'Cormorant Garamond',serif;font-size:16px;font-weight:700;}
+
+.steps-list{list-style:none;padding:0;margin:1.5rem 0;}
+.steps-list li{display:flex;gap:14px;align-items:flex-start;padding:12px 0;border-bottom:1px solid #E8E4DC;}
+.steps-list li:last-child{border-bottom:none;}
+.step-num{width:24px;height:24px;border-radius:50%;background:#0A0A1E;color:#C8A96E;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px;}
+.step-text{font-size:14px;color:#555;line-height:1.7;font-weight:300;}
+.step-text strong{color:#1A1A1A;font-weight:500;}
+
+.article-footer{margin-top:3rem;padding-top:2rem;border-top:1px solid #E8E4DC;}
+.af-nav{display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem;}
+.af-btn{display:inline-flex;align-items:center;gap:8px;font-size:13px;color:#888;text-decoration:none;padding:10px 16px;border:1px solid #E8E4DC;border-radius:8px;background:#fff;transition:all 0.2s;}
+.af-btn:hover{border-color:#C8A96E;color:#1A1A1A;}
+.af-btn.next{background:#0A0A1E;color:#fff;border-color:#0A0A1E;}
+.af-btn.next:hover{background:#1A1A2E;}
+
+.sidebar{position:sticky;top:2rem;}
+.sb-card{background:#fff;border:1px solid #E8E4DC;border-radius:14px;padding:1.5rem;margin-bottom:16px;}
+.sb-title{font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:700;color:#1A1A1A;margin-bottom:1rem;}
+.toc-list{display:flex;flex-direction:column;}
+.toc-link{font-size:12px;color:#888;padding:7px 0;border-bottom:1px solid #F0EDE8;text-decoration:none;transition:color 0.15s;display:flex;align-items:flex-start;gap:8px;font-weight:300;line-height:1.4;}
+.toc-link:last-child{border-bottom:none;}
+.toc-link.active,.toc-link:hover{color:#1A1A1A;}
+.toc-link .toc-num{font-size:10px;color:#C8A96E;flex-shrink:0;margin-top:2px;}
+.related-link{display:flex;gap:10px;align-items:flex-start;text-decoration:none;padding:10px 0;border-bottom:1px solid #F0EDE8;transition:all 0.15s;}
+.related-link:last-child{border-bottom:none;}
+.related-link:hover .rl-title{color:#C8A96E;}
+.rl-arrow{color:#C8A96E;flex-shrink:0;font-size:12px;margin-top:2px;}
+.rl-title{font-size:12px;color:#1A1A1A;line-height:1.5;font-weight:400;}
+.rl-meta{font-size:11px;color:#AAA;margin-top:3px;font-weight:300;}
+.premium-card{background:#0A0A1E;border-radius:14px;padding:1.5rem;margin-bottom:16px;}
+.pc-eye{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#C8A96E;margin-bottom:8px;}
+.pc-title{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:700;color:#fff;margin-bottom:8px;}
+.pc-desc{font-size:12px;color:rgba(255,255,255,0.4);line-height:1.6;margin-bottom:1.2rem;font-weight:300;}
+.pc-btn{width:100%;background:#C8A96E;color:#0A0A1E;border:none;border-radius:8px;padding:10px;font-size:13px;font-family:'DM Sans',sans-serif;font-weight:500;cursor:pointer;}
+
+footer{background:#060610;padding:3rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;border-top:1px solid rgba(255,255,255,0.05);}
+.flogo{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:700;color:#fff;}
+.flogo b{color:#C8A96E;}
+.flinks{display:flex;gap:2rem;flex-wrap:wrap;}
+.flinks a{font-size:10px;color:rgba(255,255,255,0.2);letter-spacing:2px;text-transform:uppercase;text-decoration:none;transition:color 0.2s;}
+.flinks a:hover{color:#fff;}
+.fcopy{font-size:11px;color:rgba(255,255,255,0.15);width:100%;margin-top:0.5rem;}
+.flag-b{height:3px;background:linear-gradient(90deg,#B22234 33%,rgba(255,255,255,0.15) 33%,rgba(255,255,255,0.15) 66%,#3C3B6E 66%);width:100%;margin-top:1.5rem;border-radius:2px;}
+</style>
+</head>
+<body>
+
+<div class="progress-bar" id="progress-bar"></div>
+<div class="flag"></div>
+
+<nav id="nav">
+  <a href="/" class="logo">Unschool<b>Me</b></a>
+  <div class="nav-links">
+    <a href="/taxes">Taxes</a>
+    <a href="/banking">Banking</a>
+    <a href="/credit">Credit</a>
+    <a href="/government" class="active">Government</a>
+    <a href="/business">Business</a>
+    <a href="/rights">Rights</a>
+      <a href="/healthcare">Health</a>
+  </div>
+  <div class="nav-right">
+    <button class="nbtn1">Log in</button>
+    <button class="nbtn2">Get Started →</button>
+  </div>
+</nav>
+
+<div class="article-hero">
+  <div class="ah-inner">
+    <div class="breadcrumb">
+      <a href="/">Home</a> → <a href="/government">Government</a> → <span>Local Government</span>
+    </div>
+    <div class="article-tag">🏛️ Government · Free Article</div>
+    <h1 class="article-title">Local Government —<br>The One That <em>Actually Affects You</em> Daily</h1>
+    <p class="article-subtitle">Your mayor, city council, and school board make decisions about your streets, schools, police, and zoning. And most Americans never vote for them.</p>
+    <div class="article-meta">
+      <span class="meta-badge">Free</span>
+      <span class="meta-item">4 min read</span>
+      <span class="meta-sep"></span>
+      <span class="meta-item">UnschoolMe Editorial</span>
+      <span class="meta-sep"></span>
+      <span class="meta-item">Updated 2025</span>
+    </div>
+  </div>
+</div>
+
+<div class="content-wrap">
+  <div class="content-grid">
+
+    <div class="article-body" id="article-body">
+
+      <div class="key-takeaways">
+        <div class="kt-label">Key Takeaways</div>
+        <div class="kt-item"><span class="kt-arrow">→</span> Local government affects your daily life more directly than federal: roads, schools, police, trash, zoning, parks.</div>
+        <div class="kt-item"><span class="kt-arrow">→</span> Mayor and city council make policy decisions for your city or town.</div>
+        <div class="kt-item"><span class="kt-arrow">→</span> Property taxes — your city's primary revenue — fund schools, police, and fire departments.</div>
+        <div class="kt-item"><span class="kt-arrow">→</span> Local elections are often decided by hundreds of votes — your vote matters enormously.</div>
+        <div class="kt-item"><span class="kt-arrow">→</span> You can speak directly to your local officials at public meetings, usually held monthly.</div>
+      </div>
+
+      <h2 id="what-is-local">What Local Government Actually Is</h2>
+      <p>The United States has three distinct levels of government: federal (Washington, DC), state (your state capitol), and local. Most people pay attention to the first two. The third one runs your daily life.</p>
+      <p>Local government includes several types of entities that often overlap geographically:</p>
+      <ul>
+        <li><strong>Cities and towns</strong> — run by mayors and city councils, handling most urban services.</li>
+        <li><strong>Counties</strong> — run by county boards of supervisors or commissioners, covering unincorporated areas and many regional services.</li>
+        <li><strong>School districts</strong> — run by elected school boards, often crossing city and county lines.</li>
+        <li><strong>Special districts</strong> — single-purpose entities governing water, fire protection, transit, mosquito control, or other specific services.</li>
+      </ul>
+      <p>Most of what you physically interact with day to day is controlled at the local level:</p>
+      <ul>
+        <li>Roads and potholes — repaired or ignored by your city or county public works department</li>
+        <li>Police and fire departments — funded by your local budget, policies set by local elected officials</li>
+        <li>Public schools — curriculum, funding levels, teacher contracts, and school openings/closures</li>
+        <li>Zoning — what can be built where in your neighborhood (apartments, businesses, factories)</li>
+        <li>Permits — construction permits, business licenses, event permits</li>
+        <li>Parks and libraries — their hours, condition, and existence depend on local budget decisions</li>
+        <li>Trash and recycling collection schedules and policies</li>
+        <li>Local courts — traffic violations, small claims, housing court</li>
+      </ul>
+      <p>Federal policy sets broad national rules. State law sets the framework. But local government is where the rubber meets the road — literally and figuratively.</p>
+
+      <h2 id="mayor-and-council">The Mayor and City Council — Your Most Accessible Government</h2>
+      <p>The <strong>mayor</strong> is the chief executive of the city. In most cities, the mayor is directly elected by voters. In some cities (called "council-manager" governments), the city council hires a professional city manager to handle day-to-day operations, and the mayor is a largely ceremonial role elected by the council. Knowing your city's structure matters.</p>
+      <p>In a typical "strong mayor" system, the mayor:</p>
+      <ul>
+        <li>Oversees all city departments — police, fire, parks, public works, planning</li>
+        <li>Proposes the annual city budget</li>
+        <li>Enforces local ordinances (city laws)</li>
+        <li>Appoints department heads (often with council approval)</li>
+        <li>Serves as the public face of the city in crises</li>
+      </ul>
+      <p>The <strong>city council</strong> (also called the board of aldermen, board of supervisors, or board of trustees depending on your city) is the local legislative body. It:</p>
+      <ul>
+        <li>Makes local laws called <strong>ordinances</strong> — rules about noise, parking, business licenses, building codes</li>
+        <li>Approves the city budget — determining how much goes to police, parks, libraries, and roads</li>
+        <li>Sets local tax rates (within state-imposed limits)</li>
+        <li>Approves major development and zoning changes</li>
+        <li>Provides oversight of the mayor and city departments</li>
+      </ul>
+      <p>Most city councils have 5–15 members, elected either by district (each member represents a specific geographic area) or at-large (members represent the entire city). City council meetings are <strong>open to the public by law</strong> and typically happen 2–4 times per month.</p>
+
+      <div class="callout">
+        <div class="callout-label">Public Comment</div>
+        <p>At every city council meeting, there is a period for <strong>public comment</strong> — any resident can walk up to a microphone and address their elected representatives directly for 2–3 minutes. Most people never do. Those who do tend to have disproportionate influence on how council members think about issues. Your city council member represents roughly 20,000–100,000 people. Unlike a senator serving millions, they have time to actually respond to you.</p>
+      </div>
+
+      <h2 id="school-board">The School Board — More Power Than Most People Know</h2>
+      <p>School boards govern public school districts. They operate largely independently of city government — a district may cover multiple cities, or a single city may have multiple school districts. School boards are elected directly by voters in most states, and they wield considerable power over public education:</p>
+      <ul>
+        <li><strong>Hire and fire the superintendent</strong> — the top executive who runs the district's schools day to day.</li>
+        <li><strong>Set curriculum standards</strong> — what gets taught, which textbooks are used, what is or isn't included in the curriculum.</li>
+        <li><strong>Approve the school budget</strong> — which programs get funded, class sizes, teacher pay scales, facility improvements.</li>
+        <li><strong>Determine school policies</strong> — discipline procedures, dress codes, extracurricular activities, start times.</li>
+        <li><strong>Decide which schools open or close</strong> — a decision with enormous impact on neighborhoods and property values.</li>
+      </ul>
+      <p>School board elections often see <strong>turnout below 10%</strong> — sometimes below 5% in off-year elections. In a district of 50,000 people, an election decided by 800 votes is common. Board members who shape what 10,000 students are taught every day are sometimes chosen by a few hundred voters.</p>
+      <p>This is not a hypothetical problem. School board elections have become flashpoints for national debates about curriculum content, library books, LGBTQ policies, and pandemic responses — with national groups pouring money into local races that most residents don't even know are happening.</p>
+
+      <h2 id="property-taxes">Property Taxes — How Local Government Gets Paid</h2>
+      <p>Unlike the federal government, local governments cannot print money and cannot run large deficits indefinitely. Their primary revenue source is the <strong>property tax</strong> — an annual levy on real property (land and buildings).</p>
+      <p>Here's how it works: local governments assess the value of every piece of property in their jurisdiction. Property owners pay a percentage of that assessed value each year. Typical rates range from <strong>0.5% to 2.5% of property value per year</strong>, varying widely by state and municipality.</p>
+
+      <div class="example-box">
+        <div class="ex-label">Property Tax Example · $400,000 Home · 1.2% Rate</div>
+        <div class="ex-row"><span>Home assessed value</span><span>$400,000</span></div>
+        <div class="ex-row"><span>Property tax rate</span><span>1.2%</span></div>
+        <div class="ex-row"><span>Annual property tax bill</span><span>$4,800</span></div>
+        <div class="ex-row"><span>Monthly (in escrow with mortgage)</span><span>$400/mo</span></div>
+      </div>
+
+      <p>Where does that money go? Local governments use property tax revenue to fund:</p>
+      <ul>
+        <li><strong>K-12 public schools</strong> — typically the single largest share, often 40–60% of property tax revenue</li>
+        <li><strong>Police and fire departments</strong></li>
+        <li><strong>Roads and infrastructure maintenance</strong></li>
+        <li><strong>Local courts and jails</strong></li>
+        <li><strong>Parks, libraries, and recreation</strong></li>
+        <li><strong>Social services and public health</strong></li>
+      </ul>
+      <p>This funding structure has a significant consequence: <strong>school quality is tied to local property wealth</strong>. A district in a wealthy area with high property values collects far more tax revenue per student than a district in a low-income area, even at the same tax rate. This is one of the primary drivers of educational inequality in the United States, and it's a deliberate feature of how the system was designed, not an accident.</p>
+      <p>If you rent rather than own, you still pay property taxes — they're built into your rent. When property taxes go up, landlords typically raise rent to cover the cost.</p>
+
+      <h2 id="how-to-participate">How to Actually Participate in Local Government</h2>
+      <p>Local government is the easiest level of government to actually engage with. The barriers are low and the impact is high. Here's how:</p>
+
+      <ul class="steps-list">
+        <li>
+          <div class="step-num">1</div>
+          <div class="step-text"><strong>Register to vote at your current address.</strong> Local elections are tied to your precinct — you must be registered in the jurisdiction whose elections you want to vote in. Check your registration at vote.gov.</div>
+        </li>
+        <li>
+          <div class="step-num">2</div>
+          <div class="step-text"><strong>Research candidates before elections.</strong> Your county election website lists every race and every candidate. Local races often have no incumbent, no campaign ads, and no name recognition — a small amount of research makes you more informed than 90% of voters.</div>
+        </li>
+        <li>
+          <div class="step-num">3</div>
+          <div class="step-text"><strong>Attend a city council or school board meeting.</strong> Find the schedule on your city or district website. Show up. During public comment, you can speak directly to elected officials for 2–3 minutes about any issue. Most seats are empty. You will be noticed.</div>
+        </li>
+        <li>
+          <div class="step-num">4</div>
+          <div class="step-text"><strong>Email or call your council member directly.</strong> At this level, elected officials often respond personally or have a small staff that does. Your senator represents millions; your council member represents tens of thousands. Your email is not lost in a pile.</div>
+        </li>
+        <li>
+          <div class="step-num">5</div>
+          <div class="step-text"><strong>Consider running for office.</strong> School board, city council, water district — many local positions have no experience requirements, no filing fees, and often go uncontested. You do not need to be a professional politician. You need enough signatures to get on the ballot (often 25–100) and the willingness to campaign.</div>
+        </li>
+        <li>
+          <div class="step-num">6</div>
+          <div class="step-text"><strong>Vote in every election, including off-year and special elections.</strong> These low-turnout elections are where local government is shaped. A primary with 8% turnout elects people who then govern you for four years.</div>
+        </li>
+      </ul>
+
+      <div class="callout">
+        <div class="callout-label">Find Your Local Officials</div>
+        <p>Go to <strong>usa.gov/elected-officials</strong> and enter your ZIP code. You'll see everyone from your city council member to your state legislators, with contact information. This takes 60 seconds and most Americans have never done it.</p>
+      </div>
+
+      <h2 id="why-turnout-is-low">Why Turnout Is Low — and Why That Gives You More Power</h2>
+      <p>Presidential elections attract 55–65% of eligible voters. Congressional midterms: 40–50%. Local elections: 10–25%. School board elections: sometimes under 5%.</p>
+      <p>Do the math. In a school district of 60,000 adults, a 5% turnout election is decided by 3,000 votes. If two candidates split that evenly, the winner gets 1,500 votes. A single motivated person who organizes 50 friends, neighbors, and coworkers to vote has just influenced 3% of the outcome of an election that determines what 15,000 children are taught.</p>
+
+      <table class="data-table">
+        <thead>
+          <tr><th>Election Type</th><th>Typical Turnout</th><th>Impact of 100 Votes</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Presidential election</td><td>55–65%</td><td>Minimal — millions vote</td></tr>
+          <tr><td>Congressional midterm</td><td>40–50%</td><td>Small — still millions vote</td></tr>
+          <tr><td>State/local general</td><td>20–35%</td><td>Moderate</td></tr>
+          <tr class="highlight"><td>Local off-year election</td><td>10–20%</td><td>Significant — can be decisive</td></tr>
+          <tr class="highlight"><td>School board election</td><td>3–10%</td><td>Very high — can win the race</td></tr>
+          <tr class="highlight"><td>Special election / primary</td><td>3–8%</td><td>Potentially decisive</td></tr>
+        </tbody>
+      </table>
+
+      <p>Low turnout is not a problem to be solved — it's an opportunity to be seized. The people who understand this and show up consistently for local elections exercise political power far beyond what their numbers suggest.</p>
+      <p>Local officials who set policing policy, school curriculum, zoning rules, and property tax rates are chosen by tiny electorates. The neighborhood association that shows up to every city council meeting. The religious group that organizes school board voters. The landlord association that follows zoning decisions closely. These are the groups that currently shape local governance.</p>
+      <p>They're not more powerful because they have more money or better ideas. They're more powerful because they show up when most people don't.</p>
+
+      <div class="callout">
+        <div class="callout-label">Your City Council Member</div>
+        <p>Your city council member's contact info is on your city's website. They represent approximately 20,000–100,000 people. Unlike a senator representing millions, they actually have time to respond to constituents — and often do.</p>
+      </div>
+
+      <div class="article-footer">
+        <div class="af-nav">
+          <a href="/government/how-a-law-is-made" class="af-btn">← How a Law Is Made</a>
+          <a href="/government" class="af-btn next">All Government Articles →</a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="sidebar">
+      <div class="sb-card">
+        <div class="sb-title">In This Article</div>
+        <div class="toc-list">
+          <a href="#what-is-local" class="toc-link"><span class="toc-num">01</span> What Local Government Is</a>
+          <a href="#mayor-and-council" class="toc-link"><span class="toc-num">02</span> Mayor &amp; City Council</a>
+          <a href="#school-board" class="toc-link"><span class="toc-num">03</span> The School Board</a>
+          <a href="#property-taxes" class="toc-link"><span class="toc-num">04</span> Property Taxes</a>
+          <a href="#how-to-participate" class="toc-link"><span class="toc-num">05</span> How to Participate</a>
+          <a href="#why-turnout-is-low" class="toc-link"><span class="toc-num">06</span> Why Low Turnout = Your Power</a>
+        </div>
+      </div>
+
+      <div class="sb-card">
+        <div class="sb-title">Related Articles</div>
+        <a href="/government/three-branches-explained" class="related-link">
+          <span class="rl-arrow">→</span>
+          <div><div class="rl-title">The 3 Branches of Government Explained</div><div class="rl-meta">6 min · Free</div></div>
+        </a>
+        <a href="/government/how-a-law-is-made" class="related-link">
+          <span class="rl-arrow">→</span>
+          <div><div class="rl-title">How a Law Is Made — From Idea to Signed Bill</div><div class="rl-meta">5 min · Free</div></div>
+        </a>
+      </div>
+
+      <div class="premium-card">
+        <div class="pc-eye">Premium</div>
+        <div class="pc-title">Go deeper with Premium</div>
+        <div class="pc-desc">Unlock deep guides on voting, government benefits you qualify for, and your rights in dealing with government agencies.</div>
+        <button class="pc-btn">Get Premium — $9/mo →</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<footer>
+  <div class="flogo">Unschool<b>Me.</b></div>
+  <div class="flinks">
+    <a href="/taxes">Taxes</a>
+    <a href="/banking">Banking</a>
+    <a href="/credit">Credit</a>
+    <a href="/government">Government</a>
+    <a href="/business">Business</a>
+    <a href="/rights">Rights</a>
+  </div>
+  <div class="fcopy">Built by someone who had to figure it all out alone. — UnschoolMe 2026 🇺🇸</div>
+  <div class="flag-b"></div>
+</footer>
+
+<script>
+// Reading progress bar
+const bar = document.getElementById('progress-bar');
+const body = document.getElementById('article-body');
+window.addEventListener('scroll', () => {
+  const total = body.offsetTop + body.offsetHeight - window.innerHeight;
+  const pct = Math.min(Math.max((window.scrollY / total) * 100, 0), 100);
+  bar.style.width = pct + '%';
+});
+
+// TOC active link on scroll
+const sections = document.querySelectorAll('h2[id]');
+const tocLinks = document.querySelectorAll('.toc-link');
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      tocLinks.forEach(l => l.classList.remove('active'));
+      const active = document.querySelector(`.toc-link[href="#${entry.target.id}"]`);
+      if (active) active.classList.add('active');
+    }
+  });
+}, { rootMargin: '-20% 0% -70% 0%' });
+sections.forEach(s => observer.observe(s));
+</script>
+
+<script src="/js/config.js"></script>
+<script src="/js/main.js"></script>
+</body>
+</html>

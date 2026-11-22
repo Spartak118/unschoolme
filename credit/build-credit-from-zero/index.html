@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<title>Build Credit From Zero — UnschoolMe</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=DM+Sans:wght@300;400;500&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/main.css">
+<style>
+.article-hero{background:#0A0A1E;padding:3.5rem 3rem;position:relative;overflow:hidden;}
+.article-hero::after{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,#B22234 33%,#fff 33%,#fff 66%,#3C3B6E 66%);}
+.hero-inner{max-width:960px;margin:0 auto;}
+.article-tag{display:inline-flex;align-items:center;gap:6px;background:rgba(200,169,110,0.1);border:1px solid rgba(200,169,110,0.3);border-radius:99px;font-size:11px;color:#C8A96E;padding:4px 14px;margin-bottom:1.2rem;letter-spacing:1px;text-transform:uppercase;}
+.article-title{font-family:'Cormorant Garamond',serif;font-size:46px;font-weight:700;color:#fff;letter-spacing:-1.5px;line-height:1.1;margin-bottom:1.2rem;}
+.article-title em{font-style:italic;color:#C8A96E;}
+.article-meta{display:flex;align-items:center;gap:1.5rem;flex-wrap:wrap;}
+.meta-item{font-size:12px;color:rgba(255,255,255,0.35);}
+.meta-dot{width:4px;height:4px;border-radius:50%;background:rgba(255,255,255,0.2);display:inline-block;vertical-align:middle;margin:0 4px;}
+.article-wrap{max-width:960px;margin:0 auto;padding:3rem;}
+.key-takeaways{background:#0A0A1E;border-radius:14px;padding:1.8rem;margin-bottom:2.5rem;}
+.kt-eye{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#C8A96E;margin-bottom:1rem;font-weight:500;}
+.kt-title{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:700;color:#fff;margin-bottom:1.2rem;}
+.kt-list{display:flex;flex-direction:column;gap:10px;}
+.kt-item{display:flex;align-items:flex-start;gap:10px;font-size:13px;color:rgba(255,255,255,0.6);line-height:1.6;font-weight:300;}
+.kt-check{color:#C8A96E;font-size:14px;flex-shrink:0;margin-top:1px;}
+.content-grid{display:grid;grid-template-columns:1fr 280px;gap:3rem;align-items:start;}
+.article-body h2{font-family:'Cormorant Garamond',serif;font-size:30px;font-weight:700;color:#1A1A1A;letter-spacing:-0.5px;margin:2.5rem 0 1rem;padding-top:0.5rem;}
+.article-body h3{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:700;color:#1A1A1A;margin:1.8rem 0 0.8rem;}
+.article-body p{font-size:15px;color:#444;line-height:1.85;font-weight:300;margin-bottom:1.2rem;}
+.article-body ul,.article-body ol{margin:1rem 0 1.2rem 1.5rem;}
+.article-body li{font-size:15px;color:#444;line-height:1.8;font-weight:300;margin-bottom:6px;}
+.callout{border-left:3px solid #C8A96E;background:#FEFCF7;padding:1.2rem 1.5rem;border-radius:0 10px 10px 0;margin:1.5rem 0;}
+.callout.red{border-color:#B22234;background:#FFF8F8;}
+.callout.green{border-color:#27AE60;background:#F0FFF4;}
+.callout p{margin:0;font-size:14px;color:#555;line-height:1.7;}
+.callout strong{color:#1A1A1A;}
+.method-steps{display:flex;flex-direction:column;gap:0;margin:1.5rem 0;}
+.method-step{display:flex;gap:1.2rem;align-items:flex-start;padding:1.5rem;background:#fff;border:1px solid #E8E4DC;border-radius:0;border-bottom:none;}
+.method-step:first-child{border-radius:12px 12px 0 0;}
+.method-step:last-child{border-radius:0 0 12px 12px;border-bottom:1px solid #E8E4DC;}
+.step-num{width:36px;height:36px;border-radius:50%;background:#0A0A1E;color:#C8A96E;font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.step-title{font-family:'Cormorant Garamond',serif;font-size:19px;font-weight:700;color:#1A1A1A;margin-bottom:6px;}
+.step-desc{font-size:13px;color:#666;line-height:1.7;font-weight:300;}
+.timeline{margin:1.5rem 0;}
+.tl-row{display:grid;grid-template-columns:100px 1fr;gap:1rem;margin-bottom:12px;align-items:start;}
+.tl-month{font-size:11px;letter-spacing:1px;text-transform:uppercase;color:#C8A96E;font-weight:500;padding-top:3px;}
+.tl-card{background:#fff;border:1px solid #E8E4DC;border-radius:10px;padding:1rem 1.2rem;}
+.tl-title{font-weight:500;font-size:14px;color:#1A1A1A;margin-bottom:4px;}
+.tl-desc{font-size:13px;color:#888;line-height:1.5;font-weight:300;}
+.options-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin:1.5rem 0;}
+.opt-card{background:#fff;border:1px solid #E8E4DC;border-radius:12px;padding:1.3rem;}
+.opt-badge{font-size:10px;letter-spacing:1px;text-transform:uppercase;font-weight:500;padding:3px 8px;border-radius:99px;display:inline-block;margin-bottom:8px;}
+.opt-badge.best{background:#E8F5E9;color:#2E7D32;}
+.opt-badge.good{background:#E3F2FD;color:#1565C0;}
+.opt-badge.easy{background:rgba(200,169,110,0.1);color:#C8A96E;}
+.opt-title{font-family:'Cormorant Garamond',serif;font-size:17px;font-weight:700;color:#1A1A1A;margin-bottom:6px;}
+.opt-desc{font-size:12px;color:#888;line-height:1.5;font-weight:300;}
+.sidebar{position:sticky;top:2rem;}
+.toc-card{background:#fff;border:1px solid #E8E4DC;border-radius:14px;padding:1.5rem;margin-bottom:16px;}
+.toc-title{font-family:'Cormorant Garamond',serif;font-size:16px;font-weight:700;color:#1A1A1A;margin-bottom:1rem;}
+.toc-link{display:block;font-size:12px;color:#888;text-decoration:none;padding:6px 0;border-bottom:1px solid #F0EDE6;line-height:1.4;transition:color 0.15s;font-weight:300;}
+.toc-link:last-child{border-bottom:none;}
+.toc-link:hover,.toc-link.active{color:#C8A96E;font-weight:500;}
+.teach-card{background:#F8F6F1;border:1px solid #E8E4DC;border-radius:14px;padding:1.5rem;}
+.tc-title{font-family:'Cormorant Garamond',serif;font-size:16px;font-weight:700;color:#1A1A1A;margin-bottom:6px;}
+.tc-desc{font-size:12px;color:#888;line-height:1.6;margin-bottom:1rem;font-weight:300;}
+.tc-btn{width:100%;background:#1A1A1A;color:#fff;border:none;border-radius:8px;padding:10px;font-size:13px;font-family:'DM Sans',sans-serif;font-weight:500;cursor:pointer;}
+.article-nav{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:3rem;padding-top:2rem;border-top:1px solid #E8E4DC;}
+.nav-card{background:#fff;border:1px solid #E8E4DC;border-radius:12px;padding:1.2rem;text-decoration:none;transition:all 0.2s;}
+.nav-card:hover{border-color:#C8A96E;transform:translateY(-2px);}
+.nav-dir{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#AAA;margin-bottom:6px;}
+.nav-title{font-family:'Cormorant Garamond',serif;font-size:17px;font-weight:700;color:#1A1A1A;line-height:1.3;}
+.nav-card.next{text-align:right;}
+</style>
+</head>
+<body>
+<div class="reading-progress" id="readingProgress"></div>
+<div class="flag"></div>
+<nav class="nav" id="nav">
+  <a href="/" class="nav-logo">Unschool<b>Me</b></a>
+  <div class="nav-links">
+    <a href="/taxes">Taxes</a>
+    <a href="/banking">Banking</a>
+    <a href="/credit" class="active">Credit</a>
+    <a href="/government">Government</a>
+    <a href="/business">Business</a>
+    <a href="/rights">Rights</a>
+      <a href="/healthcare">Health</a>
+  </div>
+  <div class="nav-right">
+    <button class="btn-ghost" onclick="location.href='/login'">Log in</button>
+    <button class="btn-gold" onclick="location.href='/login'">Get Started →</button>
+  </div>
+</nav>
+<div class="article-hero">
+  <div class="hero-inner">
+    <div class="breadcrumb"><a href="/">Home</a> → <a href="/credit">Credit</a> → <span>Build Credit From Zero</span></div>
+    <div class="article-tag">📊 Credit Score · Free Article</div>
+    <div class="article-title">How to Build Credit<br><em>From Zero</em> — The Complete Guide</div>
+    <div class="article-meta">
+      <span class="meta-item">6 min read</span>
+      <span class="meta-dot"></span>
+      <span class="meta-item">UnschoolMe Editorial</span>
+      <span class="meta-dot"></span>
+      <span class="meta-item">Updated May 2026</span>
+    </div>
+  </div>
+</div>
+<div class="article-wrap">
+  <div class="key-takeaways">
+    <div class="kt-eye">Key Takeaways</div>
+    <div class="kt-title">What you'll know after reading this</div>
+    <div class="kt-list">
+      <div class="kt-item"><span class="kt-check">✓</span>A secured credit card is the fastest and safest way to start building credit from scratch</div>
+      <div class="kt-item"><span class="kt-check">✓</span>Becoming an authorized user on someone else's card can instantly add credit history to your file</div>
+      <div class="kt-item"><span class="kt-check">✓</span>Credit-builder loans are designed specifically for people with no credit history</div>
+      <div class="kt-item"><span class="kt-check">✓</span>Most people can reach a "Good" credit score (670+) within 12–18 months by following these steps</div>
+    </div>
+  </div>
+  <div class="content-grid">
+    <div class="article-body" id="article-body">
+
+      <h2 id="why-you-need-it">Why you need credit — even if you hate debt</h2>
+      <p>No credit history is not the same as good credit. To credit bureaus, you're invisible — and invisible people get rejected or pay more for almost everything: apartments, loans, phone plans, even some jobs.</p>
+      <p>Building credit doesn't mean going into debt. The goal is to create a track record that proves you can borrow responsibly. You can do this spending as little as $10–20 per month.</p>
+
+      <div class="callout">
+        <p><strong>The catch-22 of credit:</strong> You need credit history to get credit — but you can't build history without credit. That's exactly why this guide exists. The three methods below break that cycle.</p>
+      </div>
+
+      <h2 id="secured-card">Step 1 — Get a secured credit card</h2>
+      <p>A secured credit card works like a regular credit card, but you put down a refundable deposit (usually $200–$500) that becomes your credit limit. The card reports to all three credit bureaus — Equifax, Experian, and TransUnion — and builds your history month by month.</p>
+
+      <div class="method-steps">
+        <div class="method-step">
+          <div class="step-num">1</div>
+          <div class="step-content">
+            <div class="step-title">Apply for a secured card (no credit check required)</div>
+            <div class="step-desc">Good options: Discover it® Secured, Capital One Platinum Secured, or OpenSky® Secured Visa. OpenSky doesn't even require a bank account or credit check.</div>
+          </div>
+        </div>
+        <div class="method-step">
+          <div class="step-num">2</div>
+          <div class="step-content">
+            <div class="step-title">Deposit $200–$500 to open the account</div>
+            <div class="step-desc">This deposit is refundable when you close the account or graduate to a regular card. Think of it as collateral, not a fee.</div>
+          </div>
+        </div>
+        <div class="method-step">
+          <div class="step-num">3</div>
+          <div class="step-content">
+            <div class="step-title">Use it for small, regular purchases</div>
+            <div class="step-desc">Put one small recurring bill on it — Netflix, groceries, gas. Keep your spending under 30% of your limit (under 10% is ideal).</div>
+          </div>
+        </div>
+        <div class="method-step">
+          <div class="step-num">4</div>
+          <div class="step-content">
+            <div class="step-title">Pay the full balance every month, on time</div>
+            <div class="step-desc">Set up autopay for the full statement balance. This avoids interest charges and maximizes your payment history score — the most important factor.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="callout green">
+        <p><strong>Pro tip:</strong> After 6–12 months of on-time payments, many secured cards automatically "graduate" you to an unsecured card and refund your deposit. Discover it® Secured reviews your account every 7 months. Capital One reviews after 5 months.</p>
+      </div>
+
+      <h2 id="authorized-user">Step 2 — Become an authorized user</h2>
+      <p>If you have a family member or trusted friend with good credit, ask them to add you as an authorized user on their credit card. You don't even need to use the card — their positive payment history immediately appears on your credit report.</p>
+
+      <div class="options-grid">
+        <div class="opt-card">
+          <span class="opt-badge best">Best Option</span>
+          <div class="opt-title">Parent's card</div>
+          <div class="opt-desc">If they have 5+ years of history and low utilization, this adds instant credibility to your thin file.</div>
+        </div>
+        <div class="opt-card">
+          <span class="opt-badge good">Works Well</span>
+          <div class="opt-title">Spouse/partner</div>
+          <div class="opt-desc">Common strategy for building credit as a couple when one person has better history than the other.</div>
+        </div>
+        <div class="opt-card">
+          <span class="opt-badge easy">Low Risk</span>
+          <div class="opt-title">Trusted friend</div>
+          <div class="opt-desc">They can add you without giving you a physical card. Their account history appears on your report at no risk to them.</div>
+        </div>
+      </div>
+
+      <div class="callout red">
+        <p><strong>Important:</strong> If the person you piggyback on has bad credit — late payments, high balances — it will hurt your score too. Only become an authorized user on accounts with a clean history.</p>
+      </div>
+
+      <h2 id="credit-builder">Step 3 — Open a credit-builder loan</h2>
+      <p>A credit-builder loan is specifically designed for people with no credit. Instead of getting money upfront, you make monthly payments into a locked savings account. When the loan is paid off, you get the money. The lender reports your payments to all three bureaus, building your history.</p>
+      <p>Self (self.inc) is the most popular option — they offer $25–$150/month plans. Credit unions often offer them too for $500–$1,500 over 12–24 months.</p>
+      <p>The benefit: you build credit <em>and</em> forced savings at the same time. After 12 months you get your money back (minus a small fee).</p>
+
+      <h2 id="habits">The habits that matter</h2>
+      <p>The method you choose matters less than the habits you build around it. These four habits determine 90% of your score trajectory:</p>
+      <ul>
+        <li><strong>Never miss a payment.</strong> Even one 30-day-late payment can drop your score 100 points and stays on your report 7 years. Set autopay.</li>
+        <li><strong>Keep utilization under 30%.</strong> If your limit is $500, never let your balance exceed $150. Under 10% is ideal for a great score.</li>
+        <li><strong>Don't close old accounts.</strong> Length of credit history counts. Keep your oldest card open even if you rarely use it.</li>
+        <li><strong>Don't apply for multiple cards at once.</strong> Each application is a hard inquiry and slightly dips your score. Space applications 6 months apart.</li>
+      </ul>
+
+      <h2 id="timeline">Your 12-month timeline</h2>
+      <p>Here's a realistic timeline for someone starting from zero:</p>
+
+      <div class="timeline">
+        <div class="tl-row">
+          <div class="tl-month">Month 1</div>
+          <div class="tl-card">
+            <div class="tl-title">Open your secured card</div>
+            <div class="tl-desc">Apply for Discover it® Secured or Capital One Platinum Secured. Deposit $200–$300. Set up autopay for full balance.</div>
+          </div>
+        </div>
+        <div class="tl-row">
+          <div class="tl-month">Month 2–3</div>
+          <div class="tl-card">
+            <div class="tl-title">Your first score appears</div>
+            <div class="tl-desc">After 1–2 billing cycles reporting to bureaus, you'll have a score. Usually 620–650 to start — don't panic, this is normal.</div>
+          </div>
+        </div>
+        <div class="tl-row">
+          <div class="tl-month">Month 4–6</div>
+          <div class="tl-card">
+            <div class="tl-title">Add a credit-builder loan</div>
+            <div class="tl-desc">Open a Self credit-builder account ($25/month plan). Now you have two accounts building history simultaneously.</div>
+          </div>
+        </div>
+        <div class="tl-row">
+          <div class="tl-month">Month 6–8</div>
+          <div class="tl-card">
+            <div class="tl-title">Score reaches "Fair" range (580–669)</div>
+            <div class="tl-desc">With consistent on-time payments and low utilization, most people cross 600 here. Some landlords and basic cards become accessible.</div>
+          </div>
+        </div>
+        <div class="tl-row">
+          <div class="tl-month">Month 10–12</div>
+          <div class="tl-card">
+            <div class="tl-title">Score reaches "Good" range (670+)</div>
+            <div class="tl-desc">You may be offered a card upgrade or credit limit increase. Apply for one unsecured card to add a second line of credit.</div>
+          </div>
+        </div>
+        <div class="tl-row">
+          <div class="tl-month">Month 18–24</div>
+          <div class="tl-card">
+            <div class="tl-title">Score reaches "Very Good" (740+)</div>
+            <div class="tl-desc">At this point, you qualify for the best rates on car loans, apartments, and most credit cards. The foundation is built.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="article-nav">
+        <a href="/credit/what-is-a-credit-score" class="nav-card">
+          <div class="nav-dir">← Previous</div>
+          <div class="nav-title">What is a Credit Score?</div>
+        </a>
+        <a href="/credit/5-factors-credit-score" class="nav-card next">
+          <div class="nav-dir">Next →</div>
+          <div class="nav-title">The 5 Factors of Your Credit Score</div>
+        </a>
+      </div>
+    </div>
+    <div class="sidebar">
+      <div class="toc-card">
+        <div class="toc-title">In this article</div>
+        <a href="#why-you-need-it" class="toc-link active">Why you need credit</a>
+        <a href="#secured-card" class="toc-link">Step 1: Secured card</a>
+        <a href="#authorized-user" class="toc-link">Step 2: Authorized user</a>
+        <a href="#credit-builder" class="toc-link">Step 3: Credit-builder loan</a>
+        <a href="#habits" class="toc-link">Habits that matter</a>
+        <a href="#timeline" class="toc-link">12-month timeline</a>
+      </div>
+      <div class="premium-card">
+        <div class="pc-eye">Premium</div>
+        <div class="pc-title">Raise your score 100 points</div>
+        <div class="pc-desc">Dispute errors, reduce utilization strategically, become an authorized user the right way. With exact timelines.</div>
+        <button class="pc-btn">Unlock Premium — $9/mo →</button>
+      </div>
+      <div class="teach-card">
+        <div class="tc-title">Work in finance?</div>
+        <div class="tc-desc">Share your credit expertise and help others build better financial lives.</div>
+        <button class="tc-btn">Upload a Lesson ↑</button>
+      </div>
+    </div>
+  </div>
+</div>
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div>
+        <div class="footer-logo">Unschool<b>Me.</b></div>
+        <div class="footer-desc">Teaching real life skills that school forgot.</div>
+      </div>
+      <div>
+        <div class="footer-col-title">Topics</div>
+        <div class="footer-links">
+          <a href="/taxes">Taxes</a>
+          <a href="/banking">Banking</a>
+          <a href="/credit">Credit</a>
+          <a href="/government">Government</a>
+          <a href="/business">Business</a>
+          <a href="/rights">Rights</a>
+        <a href="/healthcare">Health</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Platform</div>
+        <div class="footer-links">
+          <a href="/#how">About</a>
+          <a href="/upload">Upload a Lesson</a>
+          <a href="/#pricing">Premium</a>
+          <a href="/chat" data-contact-link>Contact</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy">Built by someone who had to figure it all out alone. — UnschoolMe 2026 🇺🇸</div>
+    </div>
+    <div class="flag-b"></div>
+  </div>
+</footer>
+<script src="/js/config.js"></script>
+<script src="/js/main.js"></script>
+<script>
+const sections = document.querySelectorAll('h2[id]');
+const tocLinks = document.querySelectorAll('.toc-link');
+const tocObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      tocLinks.forEach(l => l.classList.remove('active'));
+      const active = document.querySelector(`.toc-link[href="#${entry.target.id}"]`);
+      if (active) active.classList.add('active');
+    }
+  });
+}, { rootMargin: '-20% 0% -70% 0%' });
+sections.forEach(s => tocObserver.observe(s));
+</script>
+</body>
+</html>

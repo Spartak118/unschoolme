@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<title>How FAFSA Works — UnschoolMe</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=DM+Sans:wght@300;400;500&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/main.css">
+<style>
+.article-hero{background:#0A0A1E;padding:3.5rem 3rem;position:relative;overflow:hidden;}
+.article-hero::after{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,#B22234 33%,#fff 33%,#fff 66%,#3C3B6E 66%);}
+.ah-inner{max-width:960px;margin:0 auto;}
+.article-tag{display:inline-flex;align-items:center;gap:6px;background:rgba(200,169,110,0.1);border:1px solid rgba(200,169,110,0.3);border-radius:99px;font-size:11px;color:#C8A96E;padding:4px 14px;margin-bottom:1.2rem;}
+.article-title{font-family:'Cormorant Garamond',serif;font-size:46px;font-weight:700;color:#fff;letter-spacing:-1.5px;line-height:1.1;margin-bottom:1rem;max-width:680px;}
+.article-title em{font-style:italic;color:#C8A96E;}
+.article-subtitle{font-size:15px;color:rgba(255,255,255,0.45);line-height:1.75;max-width:560px;font-weight:300;margin-bottom:1.8rem;}
+.article-meta{display:flex;align-items:center;gap:1.5rem;flex-wrap:wrap;}
+.meta-badge{font-size:10px;letter-spacing:1.5px;text-transform:uppercase;padding:3px 12px;border-radius:99px;font-weight:500;background:#E8F5E9;color:#2E7D32;}
+.meta-item{font-size:12px;color:rgba(255,255,255,0.3);}
+.meta-sep{width:3px;height:3px;border-radius:50%;background:rgba(255,255,255,0.15);display:inline-block;}
+.content-grid{display:grid;grid-template-columns:1fr 280px;gap:3rem;align-items:start;}
+.key-takeaways{background:#0A0A1E;border-radius:14px;padding:1.8rem;margin-bottom:2.5rem;}
+.kt-label{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#C8A96E;font-weight:500;margin-bottom:1rem;}
+.kt-item{color:rgba(255,255,255,0.65);font-size:13px;display:flex;gap:10px;align-items:flex-start;margin-bottom:9px;line-height:1.6;font-weight:300;}
+.kt-arrow{color:#C8A96E;flex-shrink:0;font-size:11px;margin-top:2px;}
+.kt-item:last-child{margin-bottom:0;}
+.article-body h2{font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:700;color:#1A1A1A;margin:2.5rem 0 1rem;letter-spacing:-0.5px;line-height:1.2;}
+.article-body h3{font-size:10px;letter-spacing:2.5px;text-transform:uppercase;color:#B22234;font-weight:500;margin:2rem 0 0.7rem;}
+.article-body p{font-size:15px;line-height:1.85;color:#555;margin-bottom:1.2rem;font-weight:300;}
+.article-body p strong{color:#1A1A1A;font-weight:500;}
+.article-body ul,.article-body ol{padding-left:1.5rem;margin-bottom:1.3rem;}
+.article-body li{font-size:15px;line-height:1.8;color:#555;margin-bottom:7px;font-weight:300;}
+.article-body li strong{color:#1A1A1A;font-weight:500;}
+.callout{border-left:3px solid #C8A96E;background:#FEFCF7;padding:1.2rem 1.5rem;border-radius:0 10px 10px 0;margin:1.8rem 0;}
+.callout.red{border-color:#B22234;background:#FFF8F8;}
+.callout.blue{border-color:#3C3B6E;background:#F8F8FF;}
+.callout p{margin-bottom:0;font-size:14px;}
+.callout-label{font-size:10px;letter-spacing:2px;text-transform:uppercase;font-weight:500;color:#C8A96E;margin-bottom:6px;}
+.callout.red .callout-label{color:#B22234;}
+.callout.blue .callout-label{color:#3C3B6E;}
+.article-footer{margin-top:3rem;padding-top:2rem;border-top:1px solid #E8E4DC;}
+.af-nav{display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem;}
+.af-btn{display:inline-flex;align-items:center;gap:8px;font-size:13px;color:#888;text-decoration:none;padding:10px 16px;border:1px solid #E8E4DC;border-radius:8px;background:#fff;transition:all 0.2s;}
+.af-btn:hover{border-color:#C8A96E;color:#1A1A1A;}
+.sidebar{position:sticky;top:2rem;}
+.sb-card{background:#fff;border:1px solid #E8E4DC;border-radius:14px;padding:1.5rem;margin-bottom:16px;}
+.sb-title{font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:700;color:#1A1A1A;margin-bottom:1rem;}
+.toc-list{display:flex;flex-direction:column;}
+.toc-link{font-size:12px;color:#888;padding:7px 0;border-bottom:1px solid #F0EDE8;text-decoration:none;transition:color 0.15s;display:flex;align-items:flex-start;gap:8px;font-weight:300;line-height:1.4;}
+.toc-link:last-child{border-bottom:none;}
+.toc-link.active,.toc-link:hover{color:#1A1A1A;}
+.toc-link .toc-num{font-size:10px;color:#C8A96E;flex-shrink:0;margin-top:2px;}
+</style>
+</head>
+<body>
+
+<div style="position:fixed;top:0;left:0;height:3px;background:#C8A96E;z-index:9999;transition:width 0.1s" id="readingProgress"></div>
+<div class="flag"></div>
+
+<nav class="nav" id="nav">
+  <a href="/" class="nav-logo">Unschool<b>Me</b></a>
+  <div class="nav-links">
+    <a href="/taxes">Taxes</a>
+    <a href="/banking">Banking</a>
+    <a href="/credit">Credit</a>
+    <a href="/government">Government</a>
+    <a href="/business">Business</a>
+    <a href="/rights">Rights</a>
+      <a href="/healthcare">Health</a>
+  </div>
+  <div class="nav-right">
+    <button class="btn-ghost" onclick="location.href='/login'">Log in</button>
+    <button class="btn-gold" onclick="location.href='/login'">Get Started →</button>
+  </div>
+</nav>
+
+<div class="article-hero">
+  <div class="ah-inner">
+    <div class="breadcrumb">
+      <a href="/">Home</a> → <a href="/college">College</a> → <span>How FAFSA Works</span>
+    </div>
+    <div class="article-tag">🎓 College · Free Article</div>
+    <h1 class="article-title">How <em>FAFSA</em> Works and Why Everyone Should File It</h1>
+    <p class="article-subtitle">The Free Application for Federal Student Aid unlocks grants, loans, and work-study. Students leave millions in free money unclaimed every year simply by not filing.</p>
+    <div class="article-meta">
+      <span class="meta-badge">Free</span>
+      <span class="meta-item">6 min read</span>
+      <span class="meta-sep"></span>
+      <span class="meta-item">UnschoolMe Editorial</span>
+      <span class="meta-sep"></span>
+      <span class="meta-item">Updated 2026</span>
+    </div>
+  </div>
+</div>
+
+<div class="content-wrap">
+  <div class="content-grid">
+
+    <div class="article-body" id="article-body">
+
+      <div class="key-takeaways">
+        <div class="kt-label">Key Takeaways</div>
+        <div class="kt-item"><span class="kt-arrow">→</span> FAFSA opens October 1 every year — file as early as possible since much aid is first-come, first-served.</div>
+        <div class="kt-item"><span class="kt-arrow">→</span> File every year even if you think you earn too much — eligibility rules change and many scholarships require a FAFSA on file.</div>
+        <div class="kt-item"><span class="kt-arrow">→</span> The Pell Grant gives up to $7,395 per year that never has to be repaid.</div>
+        <div class="kt-item"><span class="kt-arrow">→</span> Subsidized loans don't accrue interest while you're in school — unsubsidized loans start charging interest immediately.</div>
+        <div class="kt-item"><span class="kt-arrow">→</span> Always compare full financial aid offers from multiple schools before deciding — the sticker price is rarely the real price.</div>
+      </div>
+
+      <h2 id="what-is-fafsa">What FAFSA Is</h2>
+      <p>FAFSA stands for the <strong>Free Application for Federal Student Aid</strong>. It's the single form the US government and nearly every college uses to determine how much financial aid you qualify for — including grants, federal student loans, and work-study jobs. Filing FAFSA costs nothing. If anyone asks you to pay to file it, you're on the wrong website — the only official site is <strong>studentaid.gov</strong>.</p>
+      <p>Millions of dollars in grants go unclaimed every year because students assume they won't qualify and never file. You should file FAFSA even if you're certain your family earns "too much," because eligibility formulas change yearly, some aid isn't purely need-based, and many scholarships — both from your school and outside organizations — require a FAFSA on file as a prerequisite, regardless of what aid it actually produces.</p>
+
+      <h2 id="fsa-id">Getting Your FSA ID</h2>
+      <p>Before you can file, you need an <strong>FSA ID</strong> — your username and password for the federal student aid system, created at studentaid.gov. Both the student and, if the student is a dependent, one parent need their own separate FSA ID. Verification (matching it to your Social Security Number) can take <strong>1-3 days</strong>, so create your FSA ID well before you plan to file, not the night of the deadline.</p>
+
+      <h2 id="documents-needed">Documents You'll Need</h2>
+      <p>Gather these before you start the application so you're not stopped halfway through:</p>
+      <ul>
+        <li><strong>Social Security Number</strong> for the student (and parent, if a dependent student)</li>
+        <li><strong>Prior-prior year tax returns</strong> — FAFSA now uses tax information from two years before the school year, which can often be imported directly from the IRS</li>
+        <li><strong>Bank account balances</strong> as of the day you file</li>
+        <li><strong>Records of investments</strong>, such as stocks, bonds, or real estate beyond your primary home</li>
+        <li><strong>List of schools</strong> you want your FAFSA results sent to</li>
+      </ul>
+
+      <h2 id="subsidized-vs-unsubsidized">Subsidized vs. Unsubsidized Loans</h2>
+      <p>FAFSA determines which types of federal loans you're offered. The distinction matters more than most students realize:</p>
+      <p><strong>Subsidized loans:</strong> The government pays the interest while you're enrolled at least half-time. Your loan balance doesn't grow while you're in school. These are only available to students who demonstrate financial need.</p>
+      <p><strong>Unsubsidized loans:</strong> Interest starts accruing the moment the loan is disbursed, even while you're still in school. If you don't pay the interest as it accrues, it gets added to your principal balance (capitalized) after graduation, meaning you end up paying interest on interest.</p>
+      <p>Always accept subsidized loans before unsubsidized ones, and unsubsidized federal loans before any private student loan.</p>
+
+      <h2 id="pell-grant">What the Pell Grant Is</h2>
+      <p>The <strong>Pell Grant</strong> is need-based federal grant money that never has to be repaid — the closest thing to free money available for college. The maximum award is <strong>$7,395 per year</strong> (2024-25 figures, adjusted periodically for inflation). Eligibility is calculated using your FAFSA answers, primarily your family's income, assets, and household size. Not everyone qualifies, but the only way to find out is to file.</p>
+
+      <h2 id="efc">How Your Expected Family Contribution Is Calculated</h2>
+      <p>FAFSA uses your financial information to calculate what's now called the <strong>Student Aid Index (SAI)</strong> — previously known as the Expected Family Contribution (EFC). This number estimates how much your family can reasonably be expected to contribute toward college costs, based on income, assets, family size, and number of family members in college at once. Colleges then subtract this number from their total cost of attendance to determine your <strong>financial need</strong>, which drives how much grant and subsidized loan aid they offer you.</p>
+
+      <div class="callout">
+        <div class="callout-label">File Early — October 1</div>
+        <p>FAFSA opens on October 1 for the following school year. Many state grant programs and individual colleges award aid on a <strong>first-come, first-served</strong> basis until funds run out. Filing in October or November instead of March can be the difference between receiving a grant and receiving nothing, even with identical financial circumstances.</p>
+      </div>
+
+      <h2 id="common-mistakes">5 Common FAFSA Mistakes That Cost Students Money</h2>
+      <ol>
+        <li><strong>Filing late.</strong> Waiting until close to the deadline means missing first-come, first-served aid pools entirely.</li>
+        <li><strong>Not filing every year.</strong> FAFSA must be resubmitted annually — aid does not automatically continue.</li>
+        <li><strong>Skipping it because "we make too much."</strong> Some aid isn't purely income-based, and many scholarships require a FAFSA on file regardless of the result.</li>
+        <li><strong>Leaving the school list incomplete.</strong> List every school you're considering — you can add more later, but each one needs your FAFSA data sent directly.</li>
+        <li><strong>Guessing at financial figures.</strong> Use the IRS data retrieval option when available to avoid errors that delay processing or trigger verification requests.</li>
+      </ol>
+
+      <h2 id="after-filing">After You File — Comparing Offers</h2>
+      <p>After submitting FAFSA, you'll receive a <strong>Student Aid Report (SAR)</strong> summarizing your information. Each school on your list then builds its own financial aid offer using your SAR, combining grants, loans, and work-study into a package. These offers can vary enormously between schools, even for students with identical FAFSA results, because each college has different institutional aid to distribute. Always compare the <strong>net price</strong> (total cost minus grants and scholarships, not loans) across every offer before deciding — a school with a higher sticker price can end up cheaper than one with a lower sticker price once actual aid is factored in.</p>
+
+      <div class="article-footer">
+        <div class="af-nav">
+          <a href="/college" class="af-btn">← Back to College</a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="sidebar">
+      <div class="sb-card">
+        <div class="sb-title">In This Article</div>
+        <div class="toc-list">
+          <a href="#what-is-fafsa" class="toc-link"><span class="toc-num">01</span> What FAFSA Is</a>
+          <a href="#fsa-id" class="toc-link"><span class="toc-num">02</span> Getting Your FSA ID</a>
+          <a href="#documents-needed" class="toc-link"><span class="toc-num">03</span> Documents Needed</a>
+          <a href="#subsidized-vs-unsubsidized" class="toc-link"><span class="toc-num">04</span> Subsidized vs Unsubsidized</a>
+          <a href="#pell-grant" class="toc-link"><span class="toc-num">05</span> The Pell Grant</a>
+          <a href="#efc" class="toc-link"><span class="toc-num">06</span> How SAI/EFC Works</a>
+          <a href="#common-mistakes" class="toc-link"><span class="toc-num">07</span> Common Mistakes</a>
+          <a href="#after-filing" class="toc-link"><span class="toc-num">08</span> Comparing Offers</a>
+        </div>
+      </div>
+
+      <div class="premium-card">
+        <div class="pc-eye">Premium</div>
+        <div class="pc-title">Go deeper with Premium</div>
+        <div class="pc-desc">Unlock full FAFSA walkthroughs, scholarship databases, and financial aid comparison tools.</div>
+        <button class="pc-btn">Get Premium — $9/mo →</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div>
+        <div class="footer-logo">Unschool<b>Me.</b></div>
+        <div class="footer-desc">Teaching real life skills that school forgot.</div>
+      </div>
+      <div>
+        <div class="footer-col-title">Topics</div>
+        <div class="footer-links">
+          <a href="/taxes">Taxes</a>
+          <a href="/banking">Banking</a>
+          <a href="/credit">Credit</a>
+          <a href="/government">Government</a>
+          <a href="/business">Business</a>
+          <a href="/rights">Rights</a>
+        <a href="/healthcare">Health</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Platform</div>
+        <div class="footer-links">
+          <a href="/#how">About</a>
+          <a href="/upload">Upload a Lesson</a>
+          <a href="/#pricing">Premium</a>
+          <a href="/chat" data-contact-link>Contact</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy">Built by someone who had to figure it all out alone. — UnschoolMe 2026 🇺🇸</div>
+    </div>
+    <div class="flag-b"></div>
+  </div>
+</footer>
+
+<script src="/js/config.js"></script>
+<script src="/js/main.js"></script>
+<script>
+window.addEventListener('scroll', () => {
+  const el = document.getElementById('readingProgress');
+  if (!el) return;
+  const scrollTop = window.scrollY;
+  const docHeight = document.body.scrollHeight - window.innerHeight;
+  el.style.width = (scrollTop / docHeight * 100) + '%';
+});
+const sections = document.querySelectorAll('h2[id]');
+const tocLinks = document.querySelectorAll('.toc-link');
+const tocObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      tocLinks.forEach(l => l.classList.remove('active'));
+      const active = document.querySelector(`.toc-link[href="#${entry.target.id}"]`);
+      if (active) active.classList.add('active');
+    }
+  });
+}, { rootMargin: '-20% 0% -70% 0%' });
+sections.forEach(s => tocObserver.observe(s));
+</script>
+
+</body>
+</html>

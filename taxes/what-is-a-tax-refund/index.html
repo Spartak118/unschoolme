@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<title>What Is a Tax Refund? — UnschoolMe</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=DM+Sans:wght@300;400;500&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/main.css">
+<style>
+.article-hero{background:#0A0A1E;padding:3.5rem 3rem;position:relative;overflow:hidden;}
+.article-hero::after{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,#B22234 33%,#fff 33%,#fff 66%,#3C3B6E 66%);}
+.ah-inner{max-width:960px;margin:0 auto;}
+.article-tag{display:inline-flex;align-items:center;gap:6px;background:rgba(200,169,110,0.1);border:1px solid rgba(200,169,110,0.3);border-radius:99px;font-size:11px;color:#C8A96E;padding:4px 14px;margin-bottom:1.2rem;}
+.article-title{font-family:'Cormorant Garamond',serif;font-size:46px;font-weight:700;color:#fff;letter-spacing:-1.5px;line-height:1.1;margin-bottom:1rem;max-width:680px;}
+.article-title em{font-style:italic;color:#C8A96E;}
+.article-subtitle{font-size:15px;color:rgba(255,255,255,0.45);line-height:1.75;max-width:560px;font-weight:300;margin-bottom:1.8rem;}
+.article-meta{display:flex;align-items:center;gap:1.5rem;flex-wrap:wrap;}
+.meta-badge{font-size:10px;letter-spacing:1.5px;text-transform:uppercase;padding:3px 12px;border-radius:99px;font-weight:500;background:#E8F5E9;color:#2E7D32;}
+.meta-item{font-size:12px;color:rgba(255,255,255,0.3);}
+.meta-sep{width:3px;height:3px;border-radius:50%;background:rgba(255,255,255,0.15);display:inline-block;}
+.content-grid{display:grid;grid-template-columns:1fr 280px;gap:3rem;align-items:start;}
+.key-takeaways{background:#0A0A1E;border-radius:14px;padding:1.8rem;margin-bottom:2.5rem;}
+.kt-label{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#C8A96E;font-weight:500;margin-bottom:1rem;}
+.kt-item{color:rgba(255,255,255,0.65);font-size:13px;display:flex;gap:10px;align-items:flex-start;margin-bottom:9px;line-height:1.6;font-weight:300;}
+.kt-arrow{color:#C8A96E;flex-shrink:0;font-size:11px;margin-top:2px;}
+.kt-item:last-child{margin-bottom:0;}
+.article-body h2{font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:700;color:#1A1A1A;margin:2.5rem 0 1rem;letter-spacing:-0.5px;line-height:1.2;}
+.article-body h3{font-size:10px;letter-spacing:2.5px;text-transform:uppercase;color:#B22234;font-weight:500;margin:2rem 0 0.7rem;}
+.article-body p{font-size:15px;line-height:1.85;color:#555;margin-bottom:1.2rem;font-weight:300;}
+.article-body p strong{color:#1A1A1A;font-weight:500;}
+.article-body ul,.article-body ol{padding-left:1.5rem;margin-bottom:1.3rem;}
+.article-body li{font-size:15px;line-height:1.8;color:#555;margin-bottom:7px;font-weight:300;}
+.article-body li strong{color:#1A1A1A;font-weight:500;}
+.callout{border-left:3px solid #C8A96E;background:#FEFCF7;padding:1.2rem 1.5rem;border-radius:0 10px 10px 0;margin:1.8rem 0;}
+.callout.red{border-color:#B22234;background:#FFF8F8;}
+.callout.blue{border-color:#3C3B6E;background:#F8F8FF;}
+.callout p{margin-bottom:0;font-size:14px;}
+.callout-label{font-size:10px;letter-spacing:2px;text-transform:uppercase;font-weight:500;color:#C8A96E;margin-bottom:6px;}
+.callout.red .callout-label{color:#B22234;}
+.callout.blue .callout-label{color:#3C3B6E;}
+.stat-row{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:#E8E4DC;border-radius:14px;overflow:hidden;margin:1.8rem 0;}
+.stat-box{background:#fff;padding:1.5rem;text-align:center;}
+.stat-num{font-family:'Cormorant Garamond',serif;font-size:36px;font-weight:700;color:#0A0A1E;line-height:1;}
+.stat-num.gold{color:#C8A96E;}
+.stat-lab{font-size:11px;color:#AAA;margin-top:5px;letter-spacing:0.5px;font-weight:300;}
+.steps-list{display:flex;flex-direction:column;gap:0;margin:1.5rem 0;}
+.step{display:flex;gap:1.2rem;align-items:flex-start;padding:1.2rem 0;border-bottom:1px solid #E8E4DC;}
+.step:last-child{border-bottom:none;}
+.step-num{font-family:'Cormorant Garamond',serif;font-size:32px;font-weight:700;color:#E8E4DC;line-height:1;flex-shrink:0;width:40px;}
+.step-title{font-size:14px;font-weight:500;color:#1A1A1A;margin-bottom:4px;}
+.step-desc{font-size:13px;color:#888;line-height:1.6;font-weight:300;}
+.speed-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:1.5rem 0;}
+.speed-card{background:#F8F6F1;border:1px solid #E8E4DC;border-radius:12px;padding:1.2rem;}
+.sc-method{font-size:12px;font-weight:500;color:#1A1A1A;margin-bottom:4px;}
+.sc-time{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:700;color:#C8A96E;margin-bottom:4px;}
+.sc-note{font-size:11px;color:#AAA;font-weight:300;}
+.article-footer{margin-top:3rem;padding-top:2rem;border-top:1px solid #E8E4DC;}
+.af-nav{display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem;}
+.af-btn{display:inline-flex;align-items:center;gap:8px;font-size:13px;color:#888;text-decoration:none;padding:10px 16px;border:1px solid #E8E4DC;border-radius:8px;background:#fff;transition:all 0.2s;}
+.af-btn:hover{border-color:#C8A96E;color:#1A1A1A;}
+.af-btn.next{background:#0A0A1E;color:#fff;border-color:#0A0A1E;}
+.af-btn.next:hover{background:#1A1A2E;}
+.sidebar{position:sticky;top:2rem;}
+.sb-card{background:#fff;border:1px solid #E8E4DC;border-radius:14px;padding:1.5rem;margin-bottom:16px;}
+.sb-title{font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:700;color:#1A1A1A;margin-bottom:1rem;}
+.toc-list{display:flex;flex-direction:column;}
+.toc-link{font-size:12px;color:#888;padding:7px 0;border-bottom:1px solid #F0EDE8;text-decoration:none;transition:color 0.15s;display:flex;align-items:flex-start;gap:8px;font-weight:300;line-height:1.4;}
+.toc-link:last-child{border-bottom:none;}
+.toc-link.active,.toc-link:hover{color:#1A1A1A;}
+.toc-link .toc-num{font-size:10px;color:#C8A96E;flex-shrink:0;margin-top:2px;}
+.related-link{display:flex;gap:10px;align-items:flex-start;text-decoration:none;padding:10px 0;border-bottom:1px solid #F0EDE8;transition:all 0.15s;}
+.related-link:last-child{border-bottom:none;}
+.related-link:hover .rl-title{color:#C8A96E;}
+.rl-arrow{color:#C8A96E;flex-shrink:0;font-size:12px;margin-top:2px;}
+.rl-title{font-size:12px;color:#1A1A1A;line-height:1.5;font-weight:400;}
+.rl-meta{font-size:11px;color:#AAA;margin-top:3px;font-weight:300;}
+</style>
+</head>
+<body>
+
+<div class="reading-progress" id="readingProgress"></div>
+<div class="flag"></div>
+
+<nav class="nav" id="nav">
+  <a href="/" class="nav-logo">Unschool<b>Me</b></a>
+  <div class="nav-links">
+    <a href="/taxes" class="active">Taxes</a>
+    <a href="/banking">Banking</a>
+    <a href="/credit">Credit</a>
+    <a href="/government">Government</a>
+    <a href="/business">Business</a>
+    <a href="/rights">Rights</a>
+      <a href="/healthcare">Health</a>
+  </div>
+  <div class="nav-right">
+    <button class="btn-ghost" onclick="location.href='/login'">Log in</button>
+    <button class="btn-gold" onclick="location.href='/login'">Get Started →</button>
+  </div>
+</nav>
+
+<div class="article-hero">
+  <div class="ah-inner">
+    <div class="breadcrumb">
+      <a href="/">Home</a> → <a href="/taxes">Taxes</a> → <span>What Is a Tax Refund?</span>
+    </div>
+    <div class="article-tag">💸 Taxes · Free Article</div>
+    <h1 class="article-title">What Is a Tax Refund<br>and How Do You <em>Get One?</em></h1>
+    <p class="article-subtitle">Millions of Americans receive refunds every spring. But most don't know what it actually is — or why a massive refund isn't always the win it feels like.</p>
+    <div class="article-meta">
+      <span class="meta-badge">Free</span>
+      <span class="meta-item">4 min read</span>
+      <span class="meta-sep"></span>
+      <span class="meta-item">UnschoolMe Editorial</span>
+      <span class="meta-sep"></span>
+      <span class="meta-item">Updated 2025</span>
+    </div>
+  </div>
+</div>
+
+<div class="content-wrap">
+  <div class="content-grid">
+
+    <div class="article-body" id="article-body">
+
+      <div class="key-takeaways">
+        <div class="kt-label">Key Takeaways</div>
+        <div class="kt-item"><span class="kt-arrow">→</span> A tax refund is your own money being returned to you — not a gift from the government.</div>
+        <div class="kt-item"><span class="kt-arrow">→</span> You get a refund when more tax was withheld from your paychecks than you actually owed.</div>
+        <div class="kt-item"><span class="kt-arrow">→</span> You claim it by filing your annual tax return — no separate form needed.</div>
+        <div class="kt-item"><span class="kt-arrow">→</span> Direct deposit is the fastest way to get your money — usually within 21 days of filing.</div>
+        <div class="kt-item"><span class="kt-arrow">→</span> A very large refund means you gave the government an interest-free loan all year.</div>
+      </div>
+
+      <h2 id="not-free-money">A Refund Is Not Free Money</h2>
+      <p>Here's the truth that surprises most people: <strong>a tax refund is your own money coming back to you.</strong> You overpaid taxes throughout the year — your employer withheld too much from your paychecks — and the government is returning the excess.</p>
+      <p>Think of it like this: you paid $1,000 into an account all year. At the end of the year, someone checks and says "you only owed $700." They return $300. That $300 isn't a bonus — it was yours the whole time.</p>
+      <p>A big refund feels like a windfall, but financially it means you let the government hold extra money all year at 0% interest. That money could have been in your savings account, your emergency fund, or paying down debt.</p>
+
+      <div class="stat-row">
+        <div class="stat-box">
+          <div class="stat-num gold">$3,170</div>
+          <div class="stat-lab">Average 2024 refund</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-num">21</div>
+          <div class="stat-lab">Days to get it (avg)</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-num gold">$0</div>
+          <div class="stat-lab">The ideal refund size</div>
+        </div>
+      </div>
+
+      <h2 id="how-it-works">How the Refund System Works</h2>
+      <p>All year long, your employer estimates how much federal income tax you'll owe and withholds that amount from each paycheck. The estimate is based on your W-4 form — the form you fill out when you start a job.</p>
+      <p>This is just an estimate. Life changes: you might have gotten a second job, had a baby, started a side business, or made a charitable donation. Any of these affect what you actually owe.</p>
+      <p>When you file your tax return in the spring, the IRS does the final calculation:</p>
+      <ul>
+        <li><strong>Your actual tax owed</strong> — based on real income, real deductions, real credits</li>
+        <li><strong>vs. what was withheld</strong> — the running total your employer sent in all year</li>
+      </ul>
+      <p>If withholding was greater than what you owed → <strong>refund</strong>.<br>
+      If withholding was less than what you owed → <strong>you pay the difference</strong>.</p>
+
+      <div class="callout">
+        <div class="callout-label">The Perfect Outcome</div>
+        <p>The ideal tax situation is <strong>breaking even</strong> — owing nothing, getting nothing back. This means your W-4 was calibrated correctly and you kept your own money all year. Use the <a href="https://www.irs.gov/individuals/tax-withholding-estimator" style="color:#C8A96E;">IRS Withholding Estimator</a> to get closer to zero.</p>
+      </div>
+
+      <h2 id="how-to-claim">How to Claim Your Refund</h2>
+      <p>You claim your refund automatically when you file your annual tax return. There is no separate refund form. No extra step. You just file your return and indicate where to send the money.</p>
+
+      <div class="steps-list">
+        <div class="step">
+          <div class="step-num">01</div>
+          <div class="step-content">
+            <div class="step-title">Gather your documents</div>
+            <div class="step-desc">Your W-2 from every employer (available by Jan 31). Any 1099s for other income. SSN and bank account info.</div>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">02</div>
+          <div class="step-content">
+            <div class="step-title">File your tax return</div>
+            <div class="step-desc">Use IRS Free File (free if income under $79K), FreeTaxUSA, or your tax software of choice. This takes 30–60 minutes for a simple return.</div>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">03</div>
+          <div class="step-content">
+            <div class="step-title">Choose direct deposit</div>
+            <div class="step-desc">Enter your bank routing number and account number. Direct deposit gets money to you in 1–3 weeks. Paper checks take 6–8 weeks.</div>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">04</div>
+          <div class="step-content">
+            <div class="step-title">Track your refund</div>
+            <div class="step-desc">Once you've filed, go to irs.gov/refunds and enter your SSN, filing status, and exact refund amount. Updates within 24 hours of e-filing.</div>
+          </div>
+        </div>
+      </div>
+
+      <h2 id="how-fast">How Fast Will You Get It?</h2>
+      <p>Speed depends mostly on how you file and how you choose to receive your refund:</p>
+
+      <div class="speed-grid">
+        <div class="speed-card">
+          <div class="sc-method">E-file + Direct Deposit</div>
+          <div class="sc-time">1–3 weeks</div>
+          <div class="sc-note">Fastest option. Most common.</div>
+        </div>
+        <div class="speed-card">
+          <div class="sc-method">E-file + Paper Check</div>
+          <div class="sc-time">4–6 weeks</div>
+          <div class="sc-note">Avoid if possible.</div>
+        </div>
+        <div class="speed-card">
+          <div class="sc-method">Paper return + Direct Deposit</div>
+          <div class="sc-time">6–8 weeks</div>
+          <div class="sc-note">IRS must process paper first.</div>
+        </div>
+        <div class="speed-card">
+          <div class="sc-method">Paper return + Paper Check</div>
+          <div class="sc-time">8–12 weeks</div>
+          <div class="sc-note">Slowest. Not recommended.</div>
+        </div>
+      </div>
+
+      <div class="callout blue">
+        <div class="callout-label">File Early</div>
+        <p>The IRS processes returns in order. Filing in January or February instead of April can get your refund weeks faster — and reduces your risk of tax identity theft, where someone files a fraudulent return in your name before you do.</p>
+      </div>
+
+      <h2 id="no-refund">When You Won't Get a Refund</h2>
+      <p>A refund isn't automatic. You won't get one if:</p>
+      <ul>
+        <li><strong>You're self-employed</strong> and didn't make quarterly estimated payments — you likely owe money instead</li>
+        <li><strong>You had extra income</strong> from freelance work, selling investments, or renting property that wasn't covered by withholding</li>
+        <li><strong>Your W-4 underwitheld</strong> — maybe you claimed too many allowances, or your income jumped mid-year</li>
+        <li><strong>You owe back taxes or debts</strong> — the IRS can apply your refund to past-due federal taxes, child support, or student loans</li>
+      </ul>
+
+      <div class="callout red">
+        <div class="callout-label">Owing Taxes Is Not a Crisis</div>
+        <p>Owing $500 at tax time isn't a failure — it means your withholding was close to accurate and you kept your own money all year. The problem is owing a large amount <em>and</em> not having it saved. Keep a buffer of your estimated tax liability if you're self-employed or have variable income.</p>
+      </div>
+
+      <div class="article-footer">
+        <div class="af-nav">
+          <a href="/taxes/how-taxes-work" class="af-btn">← How Taxes Work</a>
+          <a href="/taxes/filing-taxes-first-time" class="af-btn next">Next: Filing for the First Time →</a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="sidebar">
+      <div class="sb-card">
+        <div class="sb-title">In This Article</div>
+        <div class="toc-list">
+          <a href="#not-free-money" class="toc-link"><span class="toc-num">01</span> A Refund Is Not Free Money</a>
+          <a href="#how-it-works" class="toc-link"><span class="toc-num">02</span> How the System Works</a>
+          <a href="#how-to-claim" class="toc-link"><span class="toc-num">03</span> How to Claim It</a>
+          <a href="#how-fast" class="toc-link"><span class="toc-num">04</span> How Fast You'll Get It</a>
+          <a href="#no-refund" class="toc-link"><span class="toc-num">05</span> When You Won't Get One</a>
+        </div>
+      </div>
+
+      <div class="sb-card">
+        <div class="sb-title">Related Articles</div>
+        <a href="/taxes/how-taxes-work" class="related-link">
+          <span class="rl-arrow">→</span>
+          <div><div class="rl-title">How Taxes Work in the US — The Complete Beginner's Guide</div><div class="rl-meta">5 min · Free</div></div>
+        </a>
+        <a href="/taxes/filing-taxes-first-time" class="related-link">
+          <span class="rl-arrow">→</span>
+          <div><div class="rl-title">Filing Taxes for the First Time — Step by Step</div><div class="rl-meta">6 min · Free</div></div>
+        </a>
+      </div>
+
+      <div class="premium-card">
+        <div class="pc-eye">Premium</div>
+        <div class="pc-title">Maximize your refund</div>
+        <div class="pc-desc">Learn every deduction and credit available to you. Premium members get expert guides on reducing their tax bill legally.</div>
+        <button class="pc-btn">Get Premium — $9/mo →</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div>
+        <div class="footer-logo">Unschool<b>Me.</b></div>
+        <div class="footer-desc">Teaching real life skills that school forgot.</div>
+      </div>
+      <div>
+        <div class="footer-col-title">Topics</div>
+        <div class="footer-links">
+          <a href="/taxes">Taxes</a>
+          <a href="/banking">Banking</a>
+          <a href="/credit">Credit</a>
+          <a href="/government">Government</a>
+          <a href="/business">Business</a>
+          <a href="/rights">Rights</a>
+        <a href="/healthcare">Health</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Platform</div>
+        <div class="footer-links">
+          <a href="/#how">About</a>
+          <a href="/upload">Upload a Lesson</a>
+          <a href="/#pricing">Premium</a>
+          <a href="/chat" data-contact-link>Contact</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy">Built by someone who had to figure it all out alone. — UnschoolMe 2026 🇺🇸</div>
+    </div>
+    <div class="flag-b"></div>
+  </div>
+</footer>
+
+<script src="/js/config.js"></script>
+<script src="/js/main.js"></script>
+<script>
+const sections = document.querySelectorAll('h2[id]');
+const tocLinks = document.querySelectorAll('.toc-link');
+const tocObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      tocLinks.forEach(l => l.classList.remove('active'));
+      const active = document.querySelector(`.toc-link[href="#${entry.target.id}"]`);
+      if (active) active.classList.add('active');
+    }
+  });
+}, { rootMargin: '-20% 0% -70% 0%' });
+sections.forEach(s => tocObserver.observe(s));
+</script>
+
+</body>
+</html>

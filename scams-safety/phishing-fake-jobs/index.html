@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<title>Phishing and Fake Job Offer Scams — UnschoolMe</title>
+<meta name="description" content="How phishing texts, emails, and fake job offers actually trick people — and how to spot them, based on FTC consumer guidance.">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=DM+Sans:wght@300;400;500&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/main.css">
+<style>
+.article-hero{background:#0A0A1E;padding:3.5rem 3rem;position:relative;overflow:hidden;}
+.article-hero::after{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,#B22234 33%,#fff 33%,#fff 66%,#3C3B6E 66%);}
+.ah-inner{max-width:960px;margin:0 auto;}
+.article-tag{display:inline-flex;align-items:center;gap:6px;background:rgba(200,169,110,0.1);border:1px solid rgba(200,169,110,0.3);border-radius:99px;font-size:11px;color:#C8A96E;padding:4px 14px;margin-bottom:1.2rem;}
+.article-title{font-family:'Cormorant Garamond',serif;font-size:46px;font-weight:700;color:#fff;letter-spacing:-1.5px;line-height:1.1;margin-bottom:1rem;max-width:680px;}
+.article-title em{font-style:italic;color:#C8A96E;}
+.article-subtitle{font-size:15px;color:rgba(255,255,255,0.45);line-height:1.75;max-width:560px;font-weight:300;margin-bottom:1.8rem;}
+.article-meta{display:flex;align-items:center;gap:1.5rem;flex-wrap:wrap;}
+.meta-badge{font-size:10px;letter-spacing:1.5px;text-transform:uppercase;padding:3px 12px;border-radius:99px;font-weight:500;background:#E8F5E9;color:#2E7D32;}
+.meta-item{font-size:12px;color:rgba(255,255,255,0.3);}
+.meta-sep{width:3px;height:3px;border-radius:50%;background:rgba(255,255,255,0.15);display:inline-block;}
+.content-grid{display:grid;grid-template-columns:1fr 280px;gap:3rem;align-items:start;}
+.key-takeaways{background:#0A0A1E;border-radius:14px;padding:1.8rem;margin-bottom:2.5rem;}
+.kt-label{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#C8A96E;font-weight:500;margin-bottom:1rem;}
+.kt-item{color:rgba(255,255,255,0.65);font-size:13px;display:flex;gap:10px;align-items:flex-start;margin-bottom:9px;line-height:1.6;font-weight:300;}
+.kt-arrow{color:#C8A96E;flex-shrink:0;font-size:11px;margin-top:2px;}
+.kt-item:last-child{margin-bottom:0;}
+.article-body h2{font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:700;color:#1A1A1A;margin:2.5rem 0 1rem;letter-spacing:-0.5px;line-height:1.2;}
+.article-body h3{font-size:10px;letter-spacing:2.5px;text-transform:uppercase;color:#B22234;font-weight:500;margin:2rem 0 0.7rem;}
+.article-body p{font-size:15px;line-height:1.85;color:#555;margin-bottom:1.2rem;font-weight:300;}
+.article-body p strong{color:#1A1A1A;font-weight:500;}
+.article-body ul,.article-body ol{padding-left:1.5rem;margin-bottom:1.3rem;}
+.article-body li{font-size:15px;line-height:1.8;color:#555;margin-bottom:7px;font-weight:300;}
+.article-body li strong{color:#1A1A1A;font-weight:500;}
+.callout{border-left:3px solid #C8A96E;background:#FEFCF7;padding:1.2rem 1.5rem;border-radius:0 10px 10px 0;margin:1.8rem 0;}
+.callout.red{border-color:#B22234;background:#FFF8F8;}
+.callout.blue{border-color:#3C3B6E;background:#F8F8FF;}
+.callout p{margin-bottom:0;font-size:14px;}
+.callout-label{font-size:10px;letter-spacing:2px;text-transform:uppercase;font-weight:500;color:#C8A96E;margin-bottom:6px;}
+.callout.red .callout-label{color:#B22234;}
+.callout.blue .callout-label{color:#3C3B6E;}
+.sources-block{background:#F8F6F1;border:1px solid #E8E4DC;border-radius:14px;padding:1.5rem 1.8rem;margin:2rem 0;}
+.sources-title{font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:700;color:#1A1A1A;margin-bottom:0.8rem;}
+.sources-block ul{margin-bottom:0;padding-left:1.2rem;}
+.sources-block li{font-size:13px;color:#555;margin-bottom:5px;}
+.sources-block a{color:#C8A96E;text-decoration:none;}
+.sources-block a:hover{text-decoration:underline;}
+.disclaimer{font-size:12px;color:#999;font-style:italic;margin-top:1.5rem;line-height:1.6;}
+.article-footer{margin-top:3rem;padding-top:2rem;border-top:1px solid #E8E4DC;}
+.af-nav{display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem;}
+.af-btn{display:inline-flex;align-items:center;gap:8px;font-size:13px;color:#888;text-decoration:none;padding:10px 16px;border:1px solid #E8E4DC;border-radius:8px;background:#fff;transition:all 0.2s;}
+.af-btn:hover{border-color:#C8A96E;color:#1A1A1A;}
+.sidebar{position:sticky;top:2rem;}
+.sb-card{background:#fff;border:1px solid #E8E4DC;border-radius:14px;padding:1.5rem;margin-bottom:16px;}
+.sb-title{font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:700;color:#1A1A1A;margin-bottom:1rem;}
+.toc-list{display:flex;flex-direction:column;}
+.toc-link{font-size:12px;color:#888;padding:7px 0;border-bottom:1px solid #F0EDE8;text-decoration:none;transition:color 0.15s;display:flex;align-items:flex-start;gap:8px;font-weight:300;line-height:1.4;}
+.toc-link:last-child{border-bottom:none;}
+.toc-link.active,.toc-link:hover{color:#1A1A1A;}
+.toc-link .toc-num{font-size:10px;color:#C8A96E;flex-shrink:0;margin-top:2px;}
+</style>
+</head>
+<body>
+
+<div style="position:fixed;top:0;left:0;height:3px;background:#C8A96E;z-index:9999;transition:width 0.1s" id="readingProgress"></div>
+<div class="flag"></div>
+
+<nav class="nav" id="nav">
+  <a href="/" class="nav-logo">Unschool<b>Me</b></a>
+  <div class="nav-links">
+    <a href="/taxes">Taxes</a>
+    <a href="/banking">Banking</a>
+    <a href="/credit">Credit</a>
+    <a href="/government">Government</a>
+    <a href="/business">Business</a>
+    <a href="/rights">Rights</a>
+    <a href="/healthcare">Health</a>
+  </div>
+  <div class="nav-right">
+    <button class="btn-ghost" onclick="location.href='/login'">Log in</button>
+    <button class="btn-gold" onclick="location.href='/login'">Get Started →</button>
+  </div>
+</nav>
+
+<div class="article-hero">
+  <div class="ah-inner">
+    <div class="breadcrumb">
+      <a href="/">Home</a> → <a href="/scams-safety">Scams &amp; Safety</a> → <span>Phishing &amp; Fake Jobs</span>
+    </div>
+    <div class="article-tag">🛡️ Scams &amp; Safety · Free Article</div>
+    <h1 class="article-title">Phishing and Fake Job Offer Scams — <em>How to Spot Them</em> Before You Get Burned</h1>
+    <p class="article-subtitle">Fake job offers, texts pretending to be your bank, DMs promising easy remote work. Here's how they're built to fool you, straight from FTC guidance.</p>
+    <div class="article-meta">
+      <span class="meta-badge">Free</span>
+      <span class="meta-item">5 min read</span>
+      <span class="meta-sep"></span>
+      <span class="meta-item">UnschoolMe Editorial</span>
+      <span class="meta-sep"></span>
+      <span class="meta-item">Updated 2026</span>
+    </div>
+  </div>
+</div>
+
+<div class="content-wrap">
+  <div class="content-grid">
+
+    <div class="article-body" id="article-body">
+
+      <div class="key-takeaways">
+        <div class="kt-label">Key Takeaways</div>
+        <div class="kt-item"><span class="kt-arrow">→</span> Real companies and banks never ask for your password, SSN, or a one-time login code by text or email.</div>
+        <div class="kt-item"><span class="kt-arrow">→</span> No legitimate employer — including the federal government — will ever ask you to pay for your own job.</div>
+        <div class="kt-item"><span class="kt-arrow">→</span> Unexpected job offers over text, WhatsApp, or Telegram from strangers are a major red flag per the FTC.</div>
+        <div class="kt-item"><span class="kt-arrow">→</span> If a message pressures you to act immediately, that urgency is itself a warning sign, not a coincidence.</div>
+        <div class="kt-item"><span class="kt-arrow">→</span> Report scams at ReportFraud.ftc.gov, and forward suspicious texts to 7726 (SPAM).</div>
+      </div>
+
+      <h2 id="what-is-phishing">What Phishing Actually Is</h2>
+      <p>According to the Federal Trade Commission (FTC), phishing is when scammers use email or text messages designed to trick you into handing over personal or financial information — passwords, card numbers, Social Security numbers, or login codes. The message usually pretends to be from a source you trust: your bank, a delivery service, your school, or even a coworker.</p>
+      <p>Phishing and fake job scams are grouped together in this article because they share the same underlying mechanism: a message engineered to look legitimate enough that you act before questioning it. Once you can recognize that pattern, it applies whether the message is pretending to be your bank or pretending to be a recruiter.</p>
+      <p>The goal isn't always to get you to reply directly. Often the message contains a link to a fake website that looks nearly identical to the real one. If you type your username and password into that fake site, the scammer now has it.</p>
+
+      <h2 id="warning-signs">Warning Signs the FTC Points To</h2>
+      <ul>
+        <li><strong>Requests for personal or financial information</strong> — legitimate companies generally don't ask you to confirm sensitive details by text or email.</li>
+        <li><strong>A sense of urgency</strong> — "your account will be suspended," "verify now or lose access." Scammers create pressure specifically so you don't stop to think.</li>
+        <li><strong>Unexpected texts asking you to click a link</strong> — the FTC specifically warns that if you get a text message you weren't expecting asking for personal or financial information, don't click any links in it.</li>
+        <li><strong>A link that looks almost right but isn't</strong> — small misspellings or extra characters in a web address are a common trick.</li>
+      </ul>
+
+      <div class="callout red">
+        <div class="callout-label">What To Do Instead</div>
+        <p>If a text or email claims to be from a company you actually do business with, don't click the link or reply. Instead, contact the company directly using a phone number or website you already know is real — not anything provided in the suspicious message itself.</p>
+      </div>
+
+      <h2 id="fake-jobs">How Fake Job Offer Scams Work</h2>
+      <p>Job scams follow a few common patterns the FTC has documented. Some scammers text or message job seekers out of nowhere — the FTC specifically warns that legitimate recruiters typically don't reach out over text, WhatsApp, or Telegram, and that these unsolicited messages should be treated with suspicion. Others post fake listings for real-sounding remote jobs, run a very easy "interview," and then ask the new hire to pay for their own equipment, software, or background check before starting.</p>
+      <p>A related version: you're sent a check to deposit as part of "onboarding," then asked to wire part of it back for training materials or supplies. The check later turns out to be fraudulent, and you're left owing the bank the money you already wired out — because the check bounced after you'd already spent the funds.</p>
+
+      <h2 id="job-red-flags">Job Scam Red Flags</h2>
+      <ul>
+        <li>You're asked to pay anything upfront — for training, equipment, background checks, or "processing." The FTC is explicit: legitimate employers, including the federal government, will never ask you to pay to get a job.</li>
+        <li>You're hired with little or no real interview process.</li>
+        <li>The recruiter uses a personal email address rather than an official company domain.</li>
+        <li>You're asked to receive money and forward part of it elsewhere before doing any verifiable work.</li>
+        <li>The job contacted you first, out of nowhere, over text or social media.</li>
+      </ul>
+      <p>The FTC also recommends a simple check before engaging further: search the company's name plus the word "scam" or "review" to see what others have reported.</p>
+
+      <h2 id="smishing">Smishing — Phishing by Text Message</h2>
+      <p>The FTC's phishing guidance covers text-based scams too, sometimes called "smishing" (a mix of SMS and phishing). The mechanics are the same as email phishing — a message impersonating a bank, delivery service, or government agency, pushing you to click a link and enter sensitive information — just delivered by text instead of email. Because people tend to read and react to texts quickly, this format is especially effective at creating the kind of urgency scammers rely on. The same FTC advice applies: don't click links in unexpected texts, and if you think a message might be genuinely from a company you deal with, contact them directly through a number or app you already know is real.</p>
+
+      <h2 id="after-a-scam">If You Already Gave Out Information or Paid Money</h2>
+      <p>Act quickly, and don't let embarrassment slow you down — reporting fast genuinely improves your options. Change the password on any account you may have exposed, and turn on two-factor authentication if it isn't already active. If you shared banking or card details, call your bank or card issuer directly to flag potential fraud and consider a card freeze or replacement. If you paid a job scammer for equipment or training, contact your bank or the payment platform you used to ask about reversing the charge — success isn't guaranteed, but it's always worth attempting quickly rather than not trying.</p>
+
+      <div class="callout blue">
+        <div class="callout-label">Watch for "Recovery" Follow-Up Scams</div>
+        <p>The FTC has specifically warned that people who've already been scammed once are frequently targeted a second time by "recovery scams" — someone claiming they can get your lost money back, but only if you pay an upfront fee first. According to the FTC, real government agencies and legitimate organizations never charge a fee to help you recover lost money, and never guarantee they can get it back. If you get a follow-up call or message like this after reporting a scam, treat it with the same suspicion as the original one.</p>
+      </div>
+
+      <h2 id="proactive-protection">Protecting Yourself Before It Happens</h2>
+      <p>A few habits make you a much harder target regardless of how convincing a phishing attempt is. Use a unique password for every important account (a password manager makes this realistic) so that one leaked password doesn't compromise everything else you use. Turn on two-factor authentication wherever it's offered, especially for email, banking, and social media — this means a stolen password alone usually isn't enough for a scammer to get in. And build the habit of typing a company's web address directly into your browser rather than clicking links in emails or texts, even ones that look legitimate.</p>
+
+      <h2 id="reporting">What to Do If You Spot One — or Fall For One</h2>
+      <p>Report phishing attempts and job scams at <strong>ReportFraud.ftc.gov</strong>. For suspicious text messages specifically, you can also forward the message to <strong>7726 (SPAM)</strong>, which reports it to your mobile carrier. If you already gave out sensitive information, change any exposed passwords immediately and contact your bank or card issuer if financial information was involved.</p>
+
+      <div class="sources-block">
+        <div class="sources-title">Sources &amp; Further Reading</div>
+        <ul>
+          <li><a href="https://consumer.ftc.gov/articles/how-recognize-avoid-phishing-scams" target="_blank" rel="noopener">FTC Consumer Advice — How to Recognize and Avoid Phishing Scams</a></li>
+          <li><a href="https://consumer.ftc.gov/all-scams/job-scams" target="_blank" rel="noopener">FTC Consumer Advice — Job Scams</a></li>
+          <li><a href="https://consumer.ftc.gov/articles/refund-and-recovery-scams" target="_blank" rel="noopener">FTC Consumer Advice — Refund and Recovery Scams</a></li>
+          <li><a href="https://reportfraud.ftc.gov/" target="_blank" rel="noopener">ReportFraud.ftc.gov — Report a Scam</a></li>
+        </ul>
+      </div>
+      <p class="disclaimer">This is general information, not legal or medical advice — for your specific situation, consult a licensed professional.</p>
+
+      <div class="article-footer">
+        <div class="af-nav">
+          <a href="/scams-safety" class="af-btn">← Back to Scams & Safety</a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="sidebar">
+      <div class="sb-card">
+        <div class="sb-title">In This Article</div>
+        <div class="toc-list">
+          <a href="#what-is-phishing" class="toc-link"><span class="toc-num">01</span> What Phishing Is</a>
+          <a href="#warning-signs" class="toc-link"><span class="toc-num">02</span> Warning Signs</a>
+          <a href="#fake-jobs" class="toc-link"><span class="toc-num">03</span> How Fake Jobs Work</a>
+          <a href="#job-red-flags" class="toc-link"><span class="toc-num">04</span> Job Scam Red Flags</a>
+          <a href="#smishing" class="toc-link"><span class="toc-num">05</span> Smishing (Text Phishing)</a>
+          <a href="#after-a-scam" class="toc-link"><span class="toc-num">06</span> If You've Been Scammed</a>
+          <a href="#proactive-protection" class="toc-link"><span class="toc-num">07</span> Protecting Yourself</a>
+          <a href="#reporting" class="toc-link"><span class="toc-num">08</span> Reporting</a>
+        </div>
+      </div>
+
+      <div class="premium-card">
+        <div class="pc-eye">Premium</div>
+        <div class="pc-title">Go deeper with Premium</div>
+        <div class="pc-desc">Unlock the full victim-response playbook and scam scripts to recognize.</div>
+        <button class="pc-btn">Get Premium — $9/mo →</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div>
+        <div class="footer-logo">Unschool<b>Me.</b></div>
+        <div class="footer-desc">Teaching real life skills that school forgot.</div>
+      </div>
+      <div>
+        <div class="footer-col-title">Topics</div>
+        <div class="footer-links">
+          <a href="/taxes">Taxes</a>
+          <a href="/banking">Banking</a>
+          <a href="/credit">Credit</a>
+          <a href="/government">Government</a>
+          <a href="/business">Business</a>
+          <a href="/rights">Rights</a>
+          <a href="/healthcare">Health</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Platform</div>
+        <div class="footer-links">
+          <a href="/#how">About</a>
+          <a href="/upload">Upload a Lesson</a>
+          <a href="/#pricing">Premium</a>
+          <a href="/chat" data-contact-link>Contact</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy">Built by someone who had to figure it all out alone. — UnschoolMe 2026 🇺🇸</div>
+    </div>
+    <div class="flag-b"></div>
+  </div>
+</footer>
+
+<script src="/js/config.js"></script>
+<script src="/js/main.js"></script>
+<script>
+window.addEventListener('scroll', () => {
+  const el = document.getElementById('readingProgress');
+  if (!el) return;
+  const scrollTop = window.scrollY;
+  const docHeight = document.body.scrollHeight - window.innerHeight;
+  el.style.width = (scrollTop / docHeight * 100) + '%';
+});
+const sections = document.querySelectorAll('h2[id]');
+const tocLinks = document.querySelectorAll('.toc-link');
+const tocObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      tocLinks.forEach(l => l.classList.remove('active'));
+      const active = document.querySelector(`.toc-link[href="#${entry.target.id}"]`);
+      if (active) active.classList.add('active');
+    }
+  });
+}, { rootMargin: '-20% 0% -70% 0%' });
+sections.forEach(s => tocObserver.observe(s));
+</script>
+
+</body>
+</html>

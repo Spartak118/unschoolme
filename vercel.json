@@ -3,13 +3,20 @@
   "builds": [
     {
       "src": "server.js",
-      "use": "@vercel/node"
+      "use": "@vercel/node",
+      "config": {
+        "includeFiles": [
+          "index.html",
+          "404.html",
+          "favicon.svg",
+          "*/index.html",
+          "*/*/index.html",
+          "css/**",
+          "js/**",
+          "data/knowledge.json"
+        ]
+      }
     }
   ],
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "server.js"
-    }
-  ]
+  "routes": [{ "src": "/(.*)", "dest": "server.js" }]
 }

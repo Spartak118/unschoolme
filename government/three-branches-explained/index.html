@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<title>How the US Government Works — UnschoolMe</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600;1,700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/main.css">
+<style>
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:'DM Sans',sans-serif;color:#1A1A1A;background:#F8F6F1;}
+
+.progress-bar{position:fixed;top:0;left:0;height:3px;background:#C8A96E;z-index:200;width:0%;transition:width 0.1s linear;}
+
+.flag{height:5px;background:linear-gradient(90deg,#B22234 33%,#fff 33%,#fff 66%,#3C3B6E 66%);}
+nav{display:flex;align-items:center;justify-content:space-between;padding:1rem 3rem;background:rgba(10,10,30,0.98);border-bottom:1px solid rgba(255,255,255,0.08);}
+.logo{font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:700;color:#fff;flex-shrink:0;text-decoration:none;}
+.logo b{color:#C8A96E;}
+.nav-links{display:flex;gap:2rem;margin-left:4rem;flex:1;}
+.nav-links a{font-size:11px;color:rgba(255,255,255,0.45);letter-spacing:2px;text-transform:uppercase;font-weight:500;text-decoration:none;transition:color 0.2s;}
+.nav-links a:hover,.nav-links a.active{color:#fff;}
+.nav-right{display:flex;gap:8px;flex-shrink:0;}
+.nbtn1{background:transparent;color:rgba(255,255,255,0.5);border:1px solid rgba(255,255,255,0.15);border-radius:6px;padding:7px 16px;font-size:12px;font-family:'DM Sans',sans-serif;cursor:pointer;}
+.nbtn2{background:#C8A96E;color:#0A0A1E;border:none;border-radius:6px;padding:7px 16px;font-size:12px;font-family:'DM Sans',sans-serif;font-weight:500;cursor:pointer;}
+
+.article-hero{background:#0A0A1E;padding:3.5rem 3rem;position:relative;overflow:hidden;}
+.article-hero::after{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,#B22234 33%,#fff 33%,#fff 66%,#3C3B6E 66%);}
+.ah-inner{max-width:960px;margin:0 auto;}
+.breadcrumb{font-size:11px;color:rgba(255,255,255,0.3);letter-spacing:1px;text-transform:uppercase;margin-bottom:1.5rem;}
+.breadcrumb a{color:rgba(255,255,255,0.3);text-decoration:none;transition:color 0.2s;}
+.breadcrumb a:hover{color:#C8A96E;}
+.breadcrumb span{color:#C8A96E;}
+.article-tag{display:inline-flex;align-items:center;gap:6px;background:rgba(200,169,110,0.1);border:1px solid rgba(200,169,110,0.3);border-radius:99px;font-size:11px;color:#C8A96E;padding:4px 14px;margin-bottom:1.2rem;}
+.article-title{font-family:'Cormorant Garamond',serif;font-size:46px;font-weight:700;color:#fff;letter-spacing:-1.5px;line-height:1.1;margin-bottom:1rem;max-width:680px;}
+.article-title em{font-style:italic;color:#C8A96E;}
+.article-subtitle{font-size:15px;color:rgba(255,255,255,0.45);line-height:1.75;max-width:560px;font-weight:300;margin-bottom:1.8rem;}
+.article-meta{display:flex;align-items:center;gap:1.5rem;flex-wrap:wrap;}
+.meta-badge{font-size:10px;letter-spacing:1.5px;text-transform:uppercase;padding:3px 12px;border-radius:99px;font-weight:500;background:#E8F5E9;color:#2E7D32;}
+.meta-item{font-size:12px;color:rgba(255,255,255,0.3);display:flex;align-items:center;gap:6px;}
+.meta-sep{width:3px;height:3px;border-radius:50%;background:rgba(255,255,255,0.15);}
+
+.content-wrap{max-width:960px;margin:0 auto;padding:3rem;}
+.content-grid{display:grid;grid-template-columns:1fr 280px;gap:3rem;align-items:start;}
+
+.article-body{}
+.key-takeaways{background:#0A0A1E;border-radius:14px;padding:1.8rem;margin-bottom:2.5rem;}
+.kt-label{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#C8A96E;font-weight:500;margin-bottom:1rem;}
+.kt-item{color:rgba(255,255,255,0.65);font-size:13px;display:flex;gap:10px;align-items:flex-start;margin-bottom:9px;line-height:1.6;font-weight:300;}
+.kt-arrow{color:#C8A96E;flex-shrink:0;font-size:11px;margin-top:2px;}
+.kt-item:last-child{margin-bottom:0;}
+
+.article-body h2{font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:700;color:#1A1A1A;margin:2.5rem 0 1rem;letter-spacing:-0.5px;line-height:1.2;}
+.article-body h3{font-size:10px;letter-spacing:2.5px;text-transform:uppercase;color:#B22234;font-weight:500;margin:2rem 0 0.7rem;}
+.article-body p{font-size:15px;line-height:1.85;color:#555;margin-bottom:1.2rem;font-weight:300;}
+.article-body p strong{color:#1A1A1A;font-weight:500;}
+.article-body ul,.article-body ol{padding-left:1.5rem;margin-bottom:1.3rem;}
+.article-body li{font-size:15px;line-height:1.8;color:#555;margin-bottom:7px;font-weight:300;}
+.article-body li strong{color:#1A1A1A;font-weight:500;}
+
+.callout{border-left:3px solid #C8A96E;background:#FEFCF7;padding:1.2rem 1.5rem;border-radius:0 10px 10px 0;margin:1.8rem 0;}
+.callout.red{border-color:#B22234;background:#FFF8F8;}
+.callout.blue{border-color:#3C3B6E;background:#F8F8FF;}
+.callout p{margin-bottom:0;font-size:14px;}
+.callout-label{font-size:10px;letter-spacing:2px;text-transform:uppercase;font-weight:500;color:#C8A96E;margin-bottom:6px;}
+.callout.red .callout-label{color:#B22234;}
+.callout.blue .callout-label{color:#3C3B6E;}
+
+.data-table{width:100%;border-collapse:collapse;margin:1.5rem 0;font-size:13px;border-radius:10px;overflow:hidden;}
+.data-table thead th{background:#0A0A1E;color:#C8A96E;padding:11px 16px;text-align:left;font-weight:500;letter-spacing:0.5px;font-size:11px;}
+.data-table tbody td{padding:11px 16px;border-bottom:1px solid #E8E4DC;color:#555;font-weight:300;}
+.data-table tbody tr:last-child td{border-bottom:none;}
+.data-table tbody tr:nth-child(even) td{background:#FAFAF8;}
+.data-table tbody tr.highlight td{background:rgba(200,169,110,0.08);color:#1A1A1A;font-weight:500;}
+
+.example-box{background:#F8F6F1;border:1px solid #E8E4DC;border-radius:14px;padding:1.5rem;margin:1.8rem 0;}
+.ex-label{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#888;margin-bottom:1rem;font-weight:500;}
+.ex-row{display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid #E8E4DC;font-size:13px;}
+.ex-row:last-child{border-bottom:none;font-weight:500;color:#1A1A1A;}
+.ex-row span:first-child{color:#888;font-weight:300;}
+.ex-row span:last-child{color:#1A1A1A;font-family:'Cormorant Garamond',serif;font-size:16px;font-weight:700;}
+
+.checks-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:1.5rem 0;}
+.check-card{background:#fff;border:1px solid #E8E4DC;border-radius:10px;padding:1.2rem;}
+.check-card-title{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#B22234;font-weight:500;margin-bottom:10px;}
+.check-item{font-size:12px;color:#555;line-height:1.6;display:flex;gap:8px;align-items:flex-start;margin-bottom:8px;font-weight:300;}
+.check-item:last-child{margin-bottom:0;}
+.check-bullet{color:#C8A96E;flex-shrink:0;font-size:11px;margin-top:2px;}
+
+.article-footer{margin-top:3rem;padding-top:2rem;border-top:1px solid #E8E4DC;}
+.af-nav{display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem;}
+.af-btn{display:inline-flex;align-items:center;gap:8px;font-size:13px;color:#888;text-decoration:none;padding:10px 16px;border:1px solid #E8E4DC;border-radius:8px;background:#fff;transition:all 0.2s;}
+.af-btn:hover{border-color:#C8A96E;color:#1A1A1A;}
+.af-btn.next{background:#0A0A1E;color:#fff;border-color:#0A0A1E;}
+.af-btn.next:hover{background:#1A1A2E;}
+
+.sidebar{position:sticky;top:2rem;}
+.sb-card{background:#fff;border:1px solid #E8E4DC;border-radius:14px;padding:1.5rem;margin-bottom:16px;}
+.sb-title{font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:700;color:#1A1A1A;margin-bottom:1rem;}
+.toc-list{display:flex;flex-direction:column;}
+.toc-link{font-size:12px;color:#888;padding:7px 0;border-bottom:1px solid #F0EDE8;text-decoration:none;transition:color 0.15s;display:flex;align-items:flex-start;gap:8px;font-weight:300;line-height:1.4;}
+.toc-link:last-child{border-bottom:none;}
+.toc-link.active,.toc-link:hover{color:#1A1A1A;}
+.toc-link .toc-num{font-size:10px;color:#C8A96E;flex-shrink:0;margin-top:2px;}
+.related-link{display:flex;gap:10px;align-items:flex-start;text-decoration:none;padding:10px 0;border-bottom:1px solid #F0EDE8;transition:all 0.15s;}
+.related-link:last-child{border-bottom:none;}
+.related-link:hover .rl-title{color:#C8A96E;}
+.rl-arrow{color:#C8A96E;flex-shrink:0;font-size:12px;margin-top:2px;}
+.rl-title{font-size:12px;color:#1A1A1A;line-height:1.5;font-weight:400;}
+.rl-meta{font-size:11px;color:#AAA;margin-top:3px;font-weight:300;}
+.premium-card{background:#0A0A1E;border-radius:14px;padding:1.5rem;margin-bottom:16px;}
+.pc-eye{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#C8A96E;margin-bottom:8px;}
+.pc-title{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:700;color:#fff;margin-bottom:8px;}
+.pc-desc{font-size:12px;color:rgba(255,255,255,0.4);line-height:1.6;margin-bottom:1.2rem;font-weight:300;}
+.pc-btn{width:100%;background:#C8A96E;color:#0A0A1E;border:none;border-radius:8px;padding:10px;font-size:13px;font-family:'DM Sans',sans-serif;font-weight:500;cursor:pointer;}
+
+footer{background:#060610;padding:3rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;border-top:1px solid rgba(255,255,255,0.05);}
+.flogo{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:700;color:#fff;}
+.flogo b{color:#C8A96E;}
+.flinks{display:flex;gap:2rem;flex-wrap:wrap;}
+.flinks a{font-size:10px;color:rgba(255,255,255,0.2);letter-spacing:2px;text-transform:uppercase;text-decoration:none;transition:color 0.2s;}
+.flinks a:hover{color:#fff;}
+.fcopy{font-size:11px;color:rgba(255,255,255,0.15);width:100%;margin-top:0.5rem;}
+.flag-b{height:3px;background:linear-gradient(90deg,#B22234 33%,rgba(255,255,255,0.15) 33%,rgba(255,255,255,0.15) 66%,#3C3B6E 66%);width:100%;margin-top:1.5rem;border-radius:2px;}
+</style>
+</head>
+<body>
+
+<div class="progress-bar" id="progress-bar"></div>
+<div class="flag"></div>
+
+<nav id="nav">
+  <a href="/" class="logo">Unschool<b>Me</b></a>
+  <div class="nav-links">
+    <a href="/taxes">Taxes</a>
+    <a href="/banking">Banking</a>
+    <a href="/credit">Credit</a>
+    <a href="/government" class="active">Government</a>
+    <a href="/business">Business</a>
+    <a href="/rights">Rights</a>
+      <a href="/healthcare">Health</a>
+  </div>
+  <div class="nav-right">
+    <button class="nbtn1">Log in</button>
+    <button class="nbtn2">Get Started →</button>
+  </div>
+</nav>
+
+<div class="article-hero">
+  <div class="ah-inner">
+    <div class="breadcrumb">
+      <a href="/">Home</a> → <a href="/government">Government</a> → <span>The 3 Branches</span>
+    </div>
+    <div class="article-tag">🏛️ Government · Free Article</div>
+    <h1 class="article-title">How the US Government Works —<br>The <em>3 Branches</em> Explained</h1>
+    <p class="article-subtitle">Congress makes laws, the President executes them, the Supreme Court interprets them. Here's how they check each other — and why it was designed this way.</p>
+    <div class="article-meta">
+      <span class="meta-badge">Free</span>
+      <span class="meta-item">6 min read</span>
+      <span class="meta-sep"></span>
+      <span class="meta-item">UnschoolMe Editorial</span>
+      <span class="meta-sep"></span>
+      <span class="meta-item">Updated 2025</span>
+    </div>
+  </div>
+</div>
+
+<div class="content-wrap">
+  <div class="content-grid">
+
+    <div class="article-body" id="article-body">
+
+      <div class="key-takeaways">
+        <div class="kt-label">Key Takeaways</div>
+        <div class="kt-item"><span class="kt-arrow">→</span> The US has 3 branches of government: Legislative (Congress), Executive (President), Judicial (Supreme Court).</div>
+        <div class="kt-item"><span class="kt-arrow">→</span> Each branch has powers to limit the other two — called "checks and balances."</div>
+        <div class="kt-item"><span class="kt-arrow">→</span> Congress has 100 Senators (2 per state) and 435 Representatives (based on state population).</div>
+        <div class="kt-item"><span class="kt-arrow">→</span> The Supreme Court has 9 justices with lifetime appointments — and can strike down any law.</div>
+        <div class="kt-item"><span class="kt-arrow">→</span> This system was designed to prevent any one person or group from gaining too much power.</div>
+      </div>
+
+      <h2 id="why-three">Why Three Branches — The Philosophy of Separated Power</h2>
+      <p>The Founding Fathers feared concentrated power. They had lived under the authority of a British monarchy and had seen what unchecked power looked like up close. Their solution was radical for its time: deliberately split governmental power into three competing institutions, each capable of limiting the others.</p>
+      <p>James Madison articulated it clearly in Federalist No. 51: <strong>"If men were angels, no government would be necessary. If angels were to govern men, neither external nor internal controls on government would be necessary."</strong> Since neither condition holds, the Constitution engineers a system where ambition checks ambition.</p>
+      <p>The core idea has two parts. First, <strong>separation of powers</strong>: the authority to make laws, enforce laws, and interpret laws is held by three distinct institutions — Congress, the President, and the courts. No single branch does all three. Second, <strong>checks and balances</strong>: each branch has specific tools to constrain the other two, creating a web of mutual accountability that requires cooperation to govern effectively.</p>
+      <p>This was not accidental. It was the central design choice of the Constitution, and it shapes every political outcome in the United States to this day.</p>
+
+      <h2 id="legislative">Branch 1: The Legislative Branch — Congress</h2>
+      <p>Congress is the lawmaking branch of the federal government. It is <strong>bicameral</strong> — meaning it is split into two separate chambers, each with different rules, different terms, and different powers. Both chambers must agree on identical legislation before it can become law.</p>
+
+      <h3>The Senate</h3>
+      <p>The Senate has <strong>100 senators — exactly 2 per state</strong>, regardless of population. Wyoming (576,000 people) has the same Senate representation as California (39 million). This was a deliberate compromise at the Constitutional Convention, giving smaller states equal footing in one chamber.</p>
+      <p>Senators serve <strong>6-year terms</strong>, staggered so that only one-third of the Senate is up for election every two years. This creates stability — even in a wave election year, the Senate can only change by a third. The Senate has exclusive powers not shared with the House: it <strong>confirms presidential appointments</strong> (Cabinet members, Supreme Court justices, federal judges, ambassadors) and <strong>ratifies treaties</strong> by a two-thirds vote.</p>
+
+      <h3>The House of Representatives</h3>
+      <p>The House has <strong>435 members</strong>, allocated to states based on population. California has 52 representatives. Wyoming, Montana, Vermont, and Alaska each have just 1. Representatives serve <strong>2-year terms</strong> — every single member is up for election every two years, making the House the most directly responsive to public opinion.</p>
+      <p>The House has one exclusive constitutional power: <strong>all revenue and tax bills must originate in the House</strong>. It also has the sole power of impeachment — it is the House (not the Senate) that votes to formally charge a president or judge with impeachable offenses.</p>
+
+      <table class="data-table">
+        <thead>
+          <tr><th>Feature</th><th>Senate</th><th>House of Representatives</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Total seats</td><td>100</td><td>435</td></tr>
+          <tr><td>Seats per state</td><td>2 (equal regardless of population)</td><td>Based on state population</td></tr>
+          <tr><td>Term length</td><td>6 years</td><td>2 years</td></tr>
+          <tr class="highlight"><td>Special power</td><td>Confirms appointments, ratifies treaties</td><td>All tax/revenue bills originate here</td></tr>
+          <tr><td>Impeachment role</td><td>Holds the trial, votes to convict</td><td>Votes to impeach (charge)</td></tr>
+          <tr><td>Filibuster?</td><td>Yes — requires 60 votes to end debate</td><td>No — simple majority debate rules</td></tr>
+        </tbody>
+      </table>
+
+      <p>To pass a federal law, a bill must pass both chambers in <strong>identical form</strong>. If the Senate and House pass different versions, a conference committee reconciles them, and both chambers must vote again on the unified text.</p>
+
+      <h2 id="executive">Branch 2: The Executive Branch — The President</h2>
+      <p>The President is the head of the executive branch — responsible for carrying out and enforcing the laws that Congress passes. The President is elected every four years, not by popular vote, but by the <strong>Electoral College</strong> (more on that below). The <strong>22nd Amendment</strong> limits the presidency to two terms.</p>
+      <p>The executive branch is massive. Beyond the President and Vice President, it includes the <strong>Cabinet</strong> — 15 department heads (Secretary of State, Secretary of the Treasury, Secretary of Defense, Attorney General, etc.) — plus dozens of federal agencies, commissions, and roughly <strong>4 million federal civilian employees</strong> who implement policy day to day.</p>
+
+      <h3>Key Presidential Powers</h3>
+      <ul>
+        <li><strong>Signs bills into law</strong> — or vetoes them, sending them back to Congress.</li>
+        <li><strong>Commander-in-Chief</strong> of the US military. Only Congress can formally declare war, but the President commands the armed forces.</li>
+        <li><strong>Nominates</strong> Supreme Court justices, federal judges, Cabinet members, and ambassadors (all subject to Senate confirmation).</li>
+        <li><strong>Negotiates treaties</strong> with foreign governments (requires Senate ratification by two-thirds).</li>
+        <li><strong>Issues executive orders</strong> — directives with the force of law that apply within existing legal authority, without requiring Congressional approval. Courts can block executive orders that exceed presidential power.</li>
+        <li><strong>Pardons</strong> federal criminals — the President can pardon anyone convicted of a federal crime, with no requirement for Congressional approval.</li>
+      </ul>
+
+      <div class="callout">
+        <div class="callout-label">The Electoral College</div>
+        <p>The President is elected by the Electoral College — not the national popular vote. Each state gets electoral votes equal to its total Congressional representation (Senators + Representatives). California has 54 electoral votes; Wyoming has 3. There are 538 total. <strong>270 electoral votes wins the presidency.</strong> It's possible — and has happened — to win the presidency while losing the popular vote.</p>
+      </div>
+
+      <h2 id="judicial">Branch 3: The Judicial Branch — The Supreme Court</h2>
+      <p>The Supreme Court sits at the top of the federal judiciary and holds the ultimate authority to interpret the Constitution and federal law. Its most powerful tool is <strong>judicial review</strong> — the ability to declare any law or executive action unconstitutional, rendering it void and unenforceable. This power isn't explicitly written in the Constitution; it was established by the landmark 1803 case <em>Marbury v. Madison</em>.</p>
+      <p>The Court has <strong>9 justices</strong>: one Chief Justice and eight Associate Justices. They are <strong>appointed by the President, confirmed by the Senate, and serve for life</strong> — or until they resign, retire, or are removed through impeachment. Life tenure insulates them from political pressure; a justice appointed today may shape constitutional law for 30+ years.</p>
+
+      <h3>Famous Supreme Court Decisions</h3>
+      <ul>
+        <li><strong>Brown v. Board of Education (1954)</strong> — Racial segregation in public schools is unconstitutional. Overturned Plessy v. Ferguson (1896).</li>
+        <li><strong>Miranda v. Arizona (1966)</strong> — Police must inform suspects of their rights before custodial questioning. Origin of the "Miranda warning."</li>
+        <li><strong>Roe v. Wade (1973)</strong> — Established constitutional right to abortion. Overturned by Dobbs v. Jackson (2022), returning the issue to states.</li>
+        <li><strong>Obergefell v. Hodges (2015)</strong> — Same-sex marriage is a constitutional right nationwide.</li>
+      </ul>
+
+      <p>Below the Supreme Court, the federal judiciary includes <strong>13 Circuit Courts of Appeals</strong> (which hear appeals from lower courts) and <strong>94 District Courts</strong> (the trial-level federal courts where most federal cases begin).</p>
+
+      <div class="callout blue">
+        <div class="callout-label">Constitutional Amendment</div>
+        <p>The Constitution can be amended — but the bar is extremely high. It requires a two-thirds vote in <strong>both</strong> chambers of Congress, followed by ratification by <strong>three-quarters of all states</strong> (38 states). Only <strong>27 amendments</strong> have ever passed in over 230 years. This is entirely intentional.</p>
+      </div>
+
+      <h2 id="checks-and-balances">How the Three Branches Check Each Other</h2>
+      <p>The system's genius is that no branch can act unilaterally on the most important decisions. Each branch holds specific tools to constrain the others, requiring negotiation and compromise to govern.</p>
+
+      <div class="checks-grid">
+        <div class="check-card">
+          <div class="check-card-title">Congress checks the President</div>
+          <div class="check-item"><span class="check-bullet">→</span> Can override a presidential veto with a 2/3 majority in both chambers</div>
+          <div class="check-item"><span class="check-bullet">→</span> Controls the federal budget — the President cannot spend money Congress hasn't approved</div>
+          <div class="check-item"><span class="check-bullet">→</span> Can impeach and remove the President (House impeaches, Senate convicts with 2/3 vote)</div>
+        </div>
+        <div class="check-card">
+          <div class="check-card-title">Congress checks the Judiciary</div>
+          <div class="check-item"><span class="check-bullet">→</span> Senate confirms (or rejects) Supreme Court nominees</div>
+          <div class="check-item"><span class="check-bullet">→</span> Can impeach and remove federal judges</div>
+          <div class="check-item"><span class="check-bullet">→</span> Can propose constitutional amendments to override Court decisions</div>
+        </div>
+        <div class="check-card">
+          <div class="check-card-title">President checks Congress</div>
+          <div class="check-item"><span class="check-bullet">→</span> Vetoes legislation — Congress must override with 2/3 majority in both chambers</div>
+          <div class="check-item"><span class="check-bullet">→</span> Can call Congress into special session</div>
+          <div class="check-item"><span class="check-bullet">→</span> Pardons federal criminals, limiting Congressional intent in criminal law</div>
+        </div>
+        <div class="check-card">
+          <div class="check-card-title">President checks the Judiciary</div>
+          <div class="check-item"><span class="check-bullet">→</span> Nominates all Supreme Court justices and federal judges</div>
+          <div class="check-item"><span class="check-bullet">→</span> Shapes the ideological direction of the courts over decades through nominations</div>
+        </div>
+        <div class="check-card">
+          <div class="check-card-title">Judiciary checks Congress</div>
+          <div class="check-item"><span class="check-bullet">→</span> Can declare any law unconstitutional and void</div>
+          <div class="check-item"><span class="check-bullet">→</span> Decision stands unless overturned by a future Court or constitutional amendment</div>
+        </div>
+        <div class="check-card">
+          <div class="check-card-title">Judiciary checks the President</div>
+          <div class="check-item"><span class="check-bullet">→</span> Can strike down executive orders and presidential actions as unconstitutional</div>
+          <div class="check-item"><span class="check-bullet">→</span> Courts have blocked multiple presidential executive orders throughout US history</div>
+        </div>
+      </div>
+
+      <h2 id="why-it-matters">Why This Matters to You Right Now</h2>
+      <p>Every law that directly affects your daily life — tax rates, healthcare rules, minimum wage, drug laws, immigration policy, environmental standards — flows through this three-branch system. The structure isn't abstract civics; it produces the concrete outcomes you live with.</p>
+      <p>When a president issues an executive order and courts immediately block it, that's not dysfunction — that's the system operating exactly as the Founders designed. When Congress can't agree on a budget and the government partially shuts down, that's deliberate gridlock: the Framers believed the danger of fast, unchecked lawmaking was greater than the cost of slow, contested lawmaking.</p>
+      <p>Understanding the structure lets you:</p>
+      <ul>
+        <li><strong>Know who is actually responsible</strong> for specific outcomes — presidents often get blamed or credited for things Congress controls, and vice versa.</li>
+        <li><strong>Understand why change is slow</strong> — it requires majorities in two chambers plus presidential signature (or a 2/3 override), each representing different constituencies with different electoral timelines.</li>
+        <li><strong>Recognize when the system is under stress</strong> — when one branch overreaches and the others fail to check it, the safeguards built into the Constitution are what stand between ordinary governance and something much more dangerous.</li>
+      </ul>
+
+      <div class="callout">
+        <div class="callout-label">The Electoral College</div>
+        <p>The Electoral College — not the popular vote — elects the President. Each state gets electoral votes equal to Senators (2) + Representatives. California has 54, Wyoming has 3. <strong>270 of 538 total electoral votes wins.</strong> In 2000 and 2016, the winner of the popular vote did not win the presidency.</p>
+      </div>
+
+      <div class="article-footer">
+        <div class="af-nav">
+          <span></span>
+          <a href="/government/how-a-law-is-made" class="af-btn next">How a Law Is Made →</a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="sidebar">
+      <div class="sb-card">
+        <div class="sb-title">In This Article</div>
+        <div class="toc-list">
+          <a href="#why-three" class="toc-link"><span class="toc-num">01</span> Why Three Branches?</a>
+          <a href="#legislative" class="toc-link"><span class="toc-num">02</span> The Legislative Branch</a>
+          <a href="#executive" class="toc-link"><span class="toc-num">03</span> The Executive Branch</a>
+          <a href="#judicial" class="toc-link"><span class="toc-num">04</span> The Judicial Branch</a>
+          <a href="#checks-and-balances" class="toc-link"><span class="toc-num">05</span> Checks &amp; Balances</a>
+          <a href="#why-it-matters" class="toc-link"><span class="toc-num">06</span> Why It Matters</a>
+        </div>
+      </div>
+
+      <div class="sb-card">
+        <div class="sb-title">Up Next</div>
+        <a href="/government/how-a-law-is-made" class="related-link">
+          <span class="rl-arrow">→</span>
+          <div><div class="rl-title">How a Law Is Made — From Idea to Signed Bill</div><div class="rl-meta">5 min · Free</div></div>
+        </a>
+        <a href="/government/local-government" class="related-link">
+          <span class="rl-arrow">→</span>
+          <div><div class="rl-title">Local Government — The One That Actually Affects You Daily</div><div class="rl-meta">4 min · Free</div></div>
+        </a>
+      </div>
+
+      <div class="premium-card">
+        <div class="pc-eye">Premium</div>
+        <div class="pc-title">Go deeper with Premium</div>
+        <div class="pc-desc">Unlock deep guides on voting, government benefits you qualify for, and your rights in dealing with government agencies.</div>
+        <button class="pc-btn">Get Premium — $9/mo →</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<footer>
+  <div class="flogo">Unschool<b>Me.</b></div>
+  <div class="flinks">
+    <a href="/taxes">Taxes</a>
+    <a href="/banking">Banking</a>
+    <a href="/credit">Credit</a>
+    <a href="/government">Government</a>
+    <a href="/business">Business</a>
+    <a href="/rights">Rights</a>
+  </div>
+  <div class="fcopy">Built by someone who had to figure it all out alone. — UnschoolMe 2026 🇺🇸</div>
+  <div class="flag-b"></div>
+</footer>
+
+<script>
+// Reading progress bar
+const bar = document.getElementById('progress-bar');
+const body = document.getElementById('article-body');
+window.addEventListener('scroll', () => {
+  const total = body.offsetTop + body.offsetHeight - window.innerHeight;
+  const pct = Math.min(Math.max((window.scrollY / total) * 100, 0), 100);
+  bar.style.width = pct + '%';
+});
+
+// TOC active link on scroll
+const sections = document.querySelectorAll('h2[id]');
+const tocLinks = document.querySelectorAll('.toc-link');
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      tocLinks.forEach(l => l.classList.remove('active'));
+      const active = document.querySelector(`.toc-link[href="#${entry.target.id}"]`);
+      if (active) active.classList.add('active');
+    }
+  });
+}, { rootMargin: '-20% 0% -70% 0%' });
+sections.forEach(s => observer.observe(s));
+</script>
+
+<script src="/js/config.js"></script>
+<script src="/js/main.js"></script>
+</body>
+</html>

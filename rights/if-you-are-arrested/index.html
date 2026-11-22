@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<title>If You're Arrested — UnschoolMe</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600;1,700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/main.css">
+<style>
+.article-hero{background:#0A0A1E;padding:3.5rem 3rem;position:relative;overflow:hidden;}
+.article-hero::after{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,#B22234 33%,#fff 33%,#fff 66%,#3C3B6E 66%);}
+.hero-inner{max-width:960px;margin:0 auto;}
+.article-tag{display:inline-flex;align-items:center;gap:6px;background:rgba(200,169,110,0.1);border:1px solid rgba(200,169,110,0.3);border-radius:99px;font-size:11px;color:#C8A96E;padding:4px 14px;margin-bottom:1.2rem;letter-spacing:1px;text-transform:uppercase;}
+.article-title{font-family:'Cormorant Garamond',serif;font-size:46px;font-weight:700;color:#fff;letter-spacing:-1.5px;line-height:1.1;margin-bottom:1.2rem;}
+.article-title em{font-style:italic;color:#C8A96E;}
+.article-meta{display:flex;align-items:center;gap:1.5rem;flex-wrap:wrap;}
+.meta-item{font-size:12px;color:rgba(255,255,255,0.35);}
+.meta-dot{width:4px;height:4px;border-radius:50%;background:rgba(255,255,255,0.2);display:inline-block;margin:0 4px;vertical-align:middle;}
+.article-wrap{max-width:960px;margin:0 auto;padding:3rem;}
+.key-takeaways{background:#0A0A1E;border-radius:14px;padding:1.8rem;margin-bottom:2.5rem;}
+.kt-eye{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#C8A96E;margin-bottom:1rem;font-weight:500;}
+.kt-title{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:700;color:#fff;margin-bottom:1.2rem;}
+.kt-list{display:flex;flex-direction:column;gap:10px;}
+.kt-item{display:flex;align-items:flex-start;gap:10px;font-size:13px;color:rgba(255,255,255,0.6);line-height:1.6;font-weight:300;}
+.kt-check{color:#C8A96E;font-size:14px;flex-shrink:0;margin-top:1px;}
+.content-grid{display:grid;grid-template-columns:1fr 280px;gap:3rem;align-items:start;}
+.article-body h2{font-family:'Cormorant Garamond',serif;font-size:30px;font-weight:700;color:#1A1A1A;letter-spacing:-0.5px;margin:2.5rem 0 1rem;padding-top:0.5rem;}
+.article-body p{font-size:15px;color:#444;line-height:1.85;font-weight:300;margin-bottom:1.2rem;}
+.article-body ul{margin:1rem 0 1.2rem 1.5rem;}
+.article-body li{font-size:15px;color:#444;line-height:1.8;font-weight:300;margin-bottom:6px;}
+.callout{border-left:3px solid #C8A96E;background:#FEFCF7;padding:1.2rem 1.5rem;border-radius:0 10px 10px 0;margin:1.5rem 0;}
+.callout.red{border-color:#B22234;background:#FFF8F8;}
+.callout p{margin:0;font-size:14px;color:#555;line-height:1.7;}
+.callout strong{color:#1A1A1A;}
+.miranda-box{background:#0A0A1E;border-radius:14px;padding:2rem;margin:1.5rem 0;}
+.miranda-label{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#C8A96E;margin-bottom:1rem;font-weight:500;}
+.miranda-text{font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:600;color:#fff;line-height:1.8;font-style:italic;}
+.rule-box{background:#B22234;border-radius:12px;padding:1.5rem;margin:1.5rem 0;text-align:center;}
+.rule-text{font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:700;color:#fff;line-height:1.3;}
+.rule-sub{font-size:13px;color:rgba(255,255,255,0.7);margin-top:8px;font-weight:300;}
+.process-steps{display:flex;flex-direction:column;gap:0;margin:1.5rem 0;}
+.proc-step{display:grid;grid-template-columns:40px 1fr;gap:1rem;padding:1.2rem;background:#fff;border:1px solid #E8E4DC;border-bottom:none;align-items:flex-start;}
+.proc-step:first-child{border-radius:12px 12px 0 0;}
+.proc-step:last-child{border-radius:0 0 12px 12px;border-bottom:1px solid #E8E4DC;}
+.proc-num{width:32px;height:32px;border-radius:50%;background:#F8F6F1;border:1px solid #E8E4DC;display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-size:16px;font-weight:700;color:#1A1A1A;flex-shrink:0;}
+.proc-title{font-weight:500;font-size:14px;color:#1A1A1A;margin-bottom:4px;}
+.proc-desc{font-size:13px;color:#666;line-height:1.6;font-weight:300;}
+.bail-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:1.5rem 0;}
+.bail-card{background:#fff;border:1px solid #E8E4DC;border-radius:10px;padding:1.2rem;}
+.bail-title{font-family:'Cormorant Garamond',serif;font-size:17px;font-weight:700;color:#1A1A1A;margin-bottom:8px;}
+.bail-desc{font-size:13px;color:#666;line-height:1.6;font-weight:300;}
+.sidebar{position:sticky;top:2rem;}
+.toc-card{background:#fff;border:1px solid #E8E4DC;border-radius:14px;padding:1.5rem;margin-bottom:16px;}
+.toc-title{font-family:'Cormorant Garamond',serif;font-size:16px;font-weight:700;color:#1A1A1A;margin-bottom:1rem;}
+.toc-link{display:block;font-size:12px;color:#888;text-decoration:none;padding:6px 0;border-bottom:1px solid #F0EDE6;line-height:1.4;transition:color 0.15s;font-weight:300;}
+.toc-link:last-child{border-bottom:none;}
+.toc-link:hover,.toc-link.active{color:#C8A96E;font-weight:500;}
+.teach-card{background:#F8F6F1;border:1px solid #E8E4DC;border-radius:14px;padding:1.5rem;}
+.tc-title{font-family:'Cormorant Garamond',serif;font-size:16px;font-weight:700;color:#1A1A1A;margin-bottom:6px;}
+.tc-desc{font-size:12px;color:#888;line-height:1.6;margin-bottom:1rem;font-weight:300;}
+.tc-btn{width:100%;background:#1A1A1A;color:#fff;border:none;border-radius:8px;padding:10px;font-size:13px;font-family:'DM Sans',sans-serif;font-weight:500;cursor:pointer;}
+.article-nav{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:3rem;padding-top:2rem;border-top:1px solid #E8E4DC;}
+.nav-card{background:#fff;border:1px solid #E8E4DC;border-radius:12px;padding:1.2rem;text-decoration:none;transition:all 0.2s;}
+.nav-card:hover{border-color:#C8A96E;transform:translateY(-2px);}
+.nav-dir{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#AAA;margin-bottom:6px;}
+.nav-title{font-family:'Cormorant Garamond',serif;font-size:17px;font-weight:700;color:#1A1A1A;line-height:1.3;}
+.nav-card.next{text-align:right;}
+</style>
+</head>
+<body>
+<div class="reading-progress" id="readingProgress"></div>
+<nav class="nav" id="nav">
+  <a href="/" class="nav-logo">Unschool<b>Me</b></a>
+  <div class="nav-links">
+    <a href="/taxes">Taxes</a>
+    <a href="/banking">Banking</a>
+    <a href="/credit">Credit</a>
+    <a href="/government">Government</a>
+    <a href="/business">Business</a>
+    <a href="/rights" class="active">Rights</a>
+      <a href="/healthcare">Health</a>
+  </div>
+  <div class="nav-actions">
+    <button class="btn-ghost" onclick="location.href='/login'">Log in</button>
+    <button class="btn-gold" onclick="location.href='/login'">Get Started →</button>
+  </div>
+</nav>
+<div class="article-hero">
+  <div class="hero-inner">
+    <div class="breadcrumb"><a href="/">Home</a> → <a href="/rights">Rights</a> → <span>If You're Arrested</span></div>
+    <div class="article-tag">⚖️ Your Rights · Free Article</div>
+    <div class="article-title">If You're Arrested —<br><em>Your Rights and What to Do</em></div>
+    <div class="article-meta">
+      <span class="meta-item">5 min read</span>
+      <span class="meta-dot"></span>
+      <span class="meta-item">UnschoolMe Editorial</span>
+      <span class="meta-dot"></span>
+      <span class="meta-item">Updated May 2026</span>
+    </div>
+  </div>
+</div>
+<div class="article-wrap">
+  <div class="key-takeaways">
+    <div class="kt-eye">Key Takeaways</div>
+    <div class="kt-title">What you'll know after reading this</div>
+    <div class="kt-list">
+      <div class="kt-item"><span class="kt-check">✓</span>The only thing you should say after arrest: "I want a lawyer." Then stop talking completely.</div>
+      <div class="kt-item"><span class="kt-check">✓</span>Miranda rights must be read before police can use your statements in court — but not before arrest</div>
+      <div class="kt-item"><span class="kt-check">✓</span>You have the right to a free public defender if you can't afford a private attorney</div>
+      <div class="kt-item"><span class="kt-check">✓</span>Booking, bail, and arraignment — what each step looks like and how long each takes</div>
+    </div>
+  </div>
+  <div class="content-grid">
+    <div class="article-body" id="article-body">
+
+      <h2 id="first-thing">The only thing to say</h2>
+      <p>If you are ever arrested, there is one sentence that protects you more than anything else you can say or do:</p>
+
+      <div class="rule-box">
+        <div class="rule-text">"I want a lawyer."</div>
+        <div class="rule-sub">Say it clearly. Then stop talking completely. Do not answer any questions until your attorney is present.</div>
+      </div>
+
+      <p>Every seasoned criminal defense attorney will tell you the same thing: the vast majority of people who hurt their own cases did it by talking. Police are professionally trained to ask questions that sound friendly or casual but are designed to get incriminating statements. You are not required to respond. The moment you say "I want a lawyer," all questioning must stop by law.</p>
+
+      <h2 id="miranda">Miranda rights explained</h2>
+      <p>You've heard them on every TV show: "You have the right to remain silent..." This is the Miranda warning, required by the Supreme Court case <em>Miranda v. Arizona</em> (1966).</p>
+
+      <div class="miranda-box">
+        <div class="miranda-label">The Miranda Warning</div>
+        <div class="miranda-text">"You have the right to remain silent. Anything you say can and will be used against you in a court of law. You have the right to an attorney. If you cannot afford an attorney, one will be appointed for you."</div>
+      </div>
+
+      <p>Critical facts about Miranda:</p>
+      <ul>
+        <li><strong>Police must read it before custodial interrogation</strong> — not before arrest. They can arrest you, handcuff you, and put you in a car without reading your rights. They only need to read them before asking you questions while in custody.</li>
+        <li><strong>If they interrogate you without reading Miranda,</strong> any statements you make can be thrown out of court — but the arrest itself still stands.</li>
+        <li><strong>You must actively invoke your rights.</strong> Just staying silent isn't enough. You must say: "I am invoking my right to remain silent" and "I want a lawyer."</li>
+      </ul>
+
+      <div class="callout red">
+        <p><strong>Common trap:</strong> After invoking your right to remain silent, officers sometimes continue talking — asking casual questions, being friendly, acting like you're chatting. Any answer you give can still be used against you. Invoke your rights and then say nothing. Zero words.</p>
+      </div>
+
+      <h2 id="right-to-attorney">Your right to an attorney</h2>
+      <p>The 6th Amendment guarantees your right to legal representation. This means:</p>
+      <ul>
+        <li>You have the right to an attorney from the moment you're arrested</li>
+        <li>Police must stop questioning you the moment you ask for a lawyer</li>
+        <li>If you can't afford a lawyer, the court must appoint one for free (a public defender)</li>
+        <li>You should not make any decisions or sign anything before speaking to an attorney</li>
+      </ul>
+      <p>If you can make a phone call, use it to call an attorney first — not family. An attorney can advise you on your situation and can often help make calls on your behalf.</p>
+
+      <h2 id="booking">The booking process</h2>
+      <p>After arrest, you'll go through booking — an administrative intake process at the police station or jail. Here's what happens:</p>
+
+      <div class="process-steps">
+        <div class="proc-step">
+          <div class="proc-num">1</div>
+          <div>
+            <div class="proc-title">Search and inventory</div>
+            <div class="proc-desc">Your belongings are searched and catalogued. Personal items like wallet, phone, and keys are held until release.</div>
+          </div>
+        </div>
+        <div class="proc-step">
+          <div class="proc-num">2</div>
+          <div>
+            <div class="proc-title">Fingerprinting and photos</div>
+            <div class="proc-desc">Standard procedure. Your fingerprints and mugshot are recorded. You are required to comply with this part.</div>
+          </div>
+        </div>
+        <div class="proc-step">
+          <div class="proc-num">3</div>
+          <div>
+            <div class="proc-title">Charges are filed</div>
+            <div class="proc-desc">The officer or prosecutor formally files charges. You'll be told what you're charged with — listen carefully and remember.</div>
+          </div>
+        </div>
+        <div class="proc-step">
+          <div class="proc-num">4</div>
+          <div>
+            <div class="proc-title">Phone call</div>
+            <div class="proc-desc">You are typically entitled to at least one phone call. Use it to contact an attorney if possible. Jail calls are recorded — don't discuss your case on the phone.</div>
+          </div>
+        </div>
+        <div class="proc-step">
+          <div class="proc-num">5</div>
+          <div>
+            <div class="proc-title">Arraignment (within 48–72 hours)</div>
+            <div class="proc-desc">Your first court appearance. You're formally charged, enter a plea (almost always "not guilty" at this stage), and bail is set. This is when you meet your public defender if you have one.</div>
+          </div>
+        </div>
+      </div>
+
+      <h2 id="bail">Understanding bail</h2>
+      <p>Bail is money paid to the court as a guarantee you'll return for trial. If you show up for court, you get it back. If you don't, you forfeit it.</p>
+
+      <div class="bail-grid">
+        <div class="bail-card">
+          <div class="bail-title">Pay bail yourself</div>
+          <div class="bail-desc">If you or family can pay the full amount, you're released and get the money back after the case ends — regardless of outcome.</div>
+        </div>
+        <div class="bail-card">
+          <div class="bail-title">Bail bondsman</div>
+          <div class="bail-desc">A bondsman posts bail for you for a non-refundable fee (usually 10%). You pay $500 for $5,000 bail — but you don't get that $500 back.</div>
+        </div>
+        <div class="bail-card">
+          <div class="bail-title">Own recognizance (OR)</div>
+          <div class="bail-desc">Judge releases you without bail based on your ties to the community, criminal history, and charge severity. No money required.</div>
+        </div>
+        <div class="bail-card">
+          <div class="bail-title">Bail denied</div>
+          <div class="bail-desc">For serious charges or flight risks, judge may deny bail. You remain in custody until trial. Your attorney can request a bail hearing to challenge this.</div>
+        </div>
+      </div>
+
+      <h2 id="public-defender">Public defenders — what to know</h2>
+      <p>If you qualify for a public defender (based on income), you'll be appointed one. Public defenders are real, licensed attorneys — but they carry extremely heavy caseloads. You may get less individual attention than with a private attorney.</p>
+      <ul>
+        <li>Be honest and cooperative with your public defender — they're on your side</li>
+        <li>Share everything relevant, even if it's embarrassing — attorney-client privilege protects it</li>
+        <li>If you're unhappy with your representation, you can request a new public defender, though this isn't always granted</li>
+        <li>You can also represent yourself ("pro se"), but this is almost never advisable for anything beyond minor infractions</li>
+      </ul>
+
+      <div class="article-nav">
+        <a href="/rights/police-stop" class="nav-card">
+          <div class="nav-dir">← Previous</div>
+          <div class="nav-title">If Police Stop You</div>
+        </a>
+        <a href="/rights/tenant-rights-california" class="nav-card next">
+          <div class="nav-dir">Next →</div>
+          <div class="nav-title">Tenant Rights in California</div>
+        </a>
+      </div>
+    </div>
+    <div class="sidebar">
+      <div class="toc-card">
+        <div class="toc-title">In this article</div>
+        <a href="#first-thing" class="toc-link active">The only thing to say</a>
+        <a href="#miranda" class="toc-link">Miranda rights explained</a>
+        <a href="#right-to-attorney" class="toc-link">Right to an attorney</a>
+        <a href="#booking" class="toc-link">The booking process</a>
+        <a href="#bail" class="toc-link">Understanding bail</a>
+        <a href="#public-defender" class="toc-link">Public defenders</a>
+      </div>
+      <div class="premium-card">
+        <div class="pc-eye">Premium</div>
+        <div class="pc-title">Know all your rights</div>
+        <div class="pc-desc">Workplace rights, immigration rights, Bill of Rights explained, and real situation walkthroughs from legal experts.</div>
+        <button class="pc-btn">Unlock Premium — $9/mo →</button>
+      </div>
+      <div class="teach-card">
+        <div class="tc-title">Are you a lawyer?</div>
+        <div class="tc-desc">Share your legal expertise and help people protect themselves before it's too late.</div>
+        <button class="tc-btn" onclick="location.href='/upload'">Upload a Lesson ↑</button>
+      </div>
+    </div>
+  </div>
+</div>
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-col">
+        <div class="footer-logo">Unschool<b>Me</b></div>
+        <p class="footer-tagline">Real life skills they forgot to teach you.</p>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Learn</div>
+        <a href="/taxes" class="footer-link">Taxes</a>
+        <a href="/banking" class="footer-link">Banking</a>
+        <a href="/credit" class="footer-link">Credit</a>
+        <a href="/government" class="footer-link">Government</a>
+        <a href="/business" class="footer-link">Business</a>
+        <a href="/rights" class="footer-link">Rights</a>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Platform</div>
+        <a href="/upload" class="footer-link">Teach a Lesson</a>
+        <a href="/login" class="footer-link">Log In</a>
+        <a href="/login" class="footer-link">Get Started</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 UnschoolMe. Built by someone who had to figure it all out alone.</span>
+    </div>
+  </div>
+  <div class="flag-b"></div>
+</footer>
+<script src="/js/config.js"></script>
+<script src="/js/main.js"></script>
+<script>
+const sections = document.querySelectorAll('h2[id]');
+const tocLinks = document.querySelectorAll('.toc-link');
+const tocObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      tocLinks.forEach(l => l.classList.remove('active'));
+      const active = document.querySelector(`.toc-link[href="#${entry.target.id}"]`);
+      if (active) active.classList.add('active');
+    }
+  });
+}, { rootMargin: '-20% 0% -70% 0%' });
+sections.forEach(s => tocObserver.observe(s));
+</script>
+</body>
+</html>

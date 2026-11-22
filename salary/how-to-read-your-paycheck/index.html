@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<title>How to Read Your Paycheck — UnschoolMe</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=DM+Sans:wght@300;400;500&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/main.css">
+<style>
+.article-hero{background:#0A0A1E;padding:3.5rem 3rem;position:relative;overflow:hidden;}
+.article-hero::after{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,#B22234 33%,#fff 33%,#fff 66%,#3C3B6E 66%);}
+.ah-inner{max-width:960px;margin:0 auto;}
+.article-tag{display:inline-flex;align-items:center;gap:6px;background:rgba(200,169,110,0.1);border:1px solid rgba(200,169,110,0.3);border-radius:99px;font-size:11px;color:#C8A96E;padding:4px 14px;margin-bottom:1.2rem;}
+.article-title{font-family:'Cormorant Garamond',serif;font-size:46px;font-weight:700;color:#fff;letter-spacing:-1.5px;line-height:1.1;margin-bottom:1rem;max-width:680px;}
+.article-title em{font-style:italic;color:#C8A96E;}
+.article-subtitle{font-size:15px;color:rgba(255,255,255,0.45);line-height:1.75;max-width:560px;font-weight:300;margin-bottom:1.8rem;}
+.article-meta{display:flex;align-items:center;gap:1.5rem;flex-wrap:wrap;}
+.meta-badge{font-size:10px;letter-spacing:1.5px;text-transform:uppercase;padding:3px 12px;border-radius:99px;font-weight:500;background:#E8F5E9;color:#2E7D32;}
+.meta-item{font-size:12px;color:rgba(255,255,255,0.3);}
+.meta-sep{width:3px;height:3px;border-radius:50%;background:rgba(255,255,255,0.15);display:inline-block;}
+.content-grid{display:grid;grid-template-columns:1fr 280px;gap:3rem;align-items:start;}
+.key-takeaways{background:#0A0A1E;border-radius:14px;padding:1.8rem;margin-bottom:2.5rem;}
+.kt-label{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#C8A96E;font-weight:500;margin-bottom:1rem;}
+.kt-item{color:rgba(255,255,255,0.65);font-size:13px;display:flex;gap:10px;align-items:flex-start;margin-bottom:9px;line-height:1.6;font-weight:300;}
+.kt-arrow{color:#C8A96E;flex-shrink:0;font-size:11px;margin-top:2px;}
+.kt-item:last-child{margin-bottom:0;}
+.article-body h2{font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:700;color:#1A1A1A;margin:2.5rem 0 1rem;letter-spacing:-0.5px;line-height:1.2;}
+.article-body h3{font-size:10px;letter-spacing:2.5px;text-transform:uppercase;color:#B22234;font-weight:500;margin:2rem 0 0.7rem;}
+.article-body p{font-size:15px;line-height:1.85;color:#555;margin-bottom:1.2rem;font-weight:300;}
+.article-body p strong{color:#1A1A1A;font-weight:500;}
+.article-body ul,.article-body ol{padding-left:1.5rem;margin-bottom:1.3rem;}
+.article-body li{font-size:15px;line-height:1.8;color:#555;margin-bottom:7px;font-weight:300;}
+.article-body li strong{color:#1A1A1A;font-weight:500;}
+.callout{border-left:3px solid #C8A96E;background:#FEFCF7;padding:1.2rem 1.5rem;border-radius:0 10px 10px 0;margin:1.8rem 0;}
+.callout.red{border-color:#B22234;background:#FFF8F8;}
+.callout.blue{border-color:#3C3B6E;background:#F8F8FF;}
+.callout p{margin-bottom:0;font-size:14px;}
+.callout-label{font-size:10px;letter-spacing:2px;text-transform:uppercase;font-weight:500;color:#C8A96E;margin-bottom:6px;}
+.callout.red .callout-label{color:#B22234;}
+.callout.blue .callout-label{color:#3C3B6E;}
+.data-table{width:100%;border-collapse:collapse;margin:1.5rem 0;font-size:13px;border-radius:10px;overflow:hidden;}
+.data-table thead th{background:#0A0A1E;color:#C8A96E;padding:11px 16px;text-align:left;font-weight:500;letter-spacing:0.5px;font-size:11px;}
+.data-table tbody td{padding:11px 16px;border-bottom:1px solid #E8E4DC;color:#555;font-weight:300;}
+.data-table tbody tr:last-child td{border-bottom:none;}
+.data-table tbody tr:nth-child(even) td{background:#FAFAF8;}
+.data-table tbody tr.highlight td{background:rgba(200,169,110,0.08);color:#1A1A1A;font-weight:500;}
+.example-box{background:#F8F6F1;border:1px solid #E8E4DC;border-radius:14px;padding:1.5rem;margin:1.8rem 0;}
+.ex-label{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#888;margin-bottom:1rem;font-weight:500;}
+.ex-row{display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid #E8E4DC;font-size:13px;}
+.ex-row:last-child{border-bottom:none;font-weight:500;color:#1A1A1A;}
+.ex-row span:first-child{color:#888;font-weight:300;}
+.ex-row span:last-child{color:#1A1A1A;font-family:'Cormorant Garamond',serif;font-size:16px;font-weight:700;}
+.article-footer{margin-top:3rem;padding-top:2rem;border-top:1px solid #E8E4DC;}
+.af-nav{display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem;}
+.af-btn{display:inline-flex;align-items:center;gap:8px;font-size:13px;color:#888;text-decoration:none;padding:10px 16px;border:1px solid #E8E4DC;border-radius:8px;background:#fff;transition:all 0.2s;}
+.af-btn:hover{border-color:#C8A96E;color:#1A1A1A;}
+.af-btn.next{background:#0A0A1E;color:#fff;border-color:#0A0A1E;}
+.af-btn.next:hover{background:#1A1A2E;}
+.sidebar{position:sticky;top:2rem;}
+.sb-card{background:#fff;border:1px solid #E8E4DC;border-radius:14px;padding:1.5rem;margin-bottom:16px;}
+.sb-title{font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:700;color:#1A1A1A;margin-bottom:1rem;}
+.toc-list{display:flex;flex-direction:column;}
+.toc-link{font-size:12px;color:#888;padding:7px 0;border-bottom:1px solid #F0EDE8;text-decoration:none;transition:color 0.15s;display:flex;align-items:flex-start;gap:8px;font-weight:300;line-height:1.4;}
+.toc-link:last-child{border-bottom:none;}
+.toc-link.active,.toc-link:hover{color:#1A1A1A;}
+.toc-link .toc-num{font-size:10px;color:#C8A96E;flex-shrink:0;margin-top:2px;}
+.related-link{display:flex;gap:10px;align-items:flex-start;text-decoration:none;padding:10px 0;border-bottom:1px solid #F0EDE8;transition:all 0.15s;}
+.related-link:last-child{border-bottom:none;}
+.related-link:hover .rl-title{color:#C8A96E;}
+.rl-arrow{color:#C8A96E;flex-shrink:0;font-size:12px;margin-top:2px;}
+.rl-title{font-size:12px;color:#1A1A1A;line-height:1.5;font-weight:400;}
+.rl-meta{font-size:11px;color:#AAA;margin-top:3px;font-weight:300;}
+</style>
+</head>
+<body>
+
+<div style="position:fixed;top:0;left:0;height:3px;background:#C8A96E;z-index:9999;transition:width 0.1s" id="readingProgress"></div>
+<div class="flag"></div>
+
+<nav class="nav" id="nav">
+  <a href="/" class="nav-logo">Unschool<b>Me</b></a>
+  <div class="nav-links">
+    <a href="/taxes">Taxes</a>
+    <a href="/banking">Banking</a>
+    <a href="/credit">Credit</a>
+    <a href="/government">Government</a>
+    <a href="/business">Business</a>
+    <a href="/rights">Rights</a>
+      <a href="/healthcare">Health</a>
+  </div>
+  <div class="nav-right">
+    <button class="btn-ghost" onclick="location.href='/login'">Log in</button>
+    <button class="btn-gold" onclick="location.href='/login'">Get Started →</button>
+  </div>
+</nav>
+
+<div class="article-hero">
+  <div class="ah-inner">
+    <div class="breadcrumb">
+      <a href="/">Home</a> → <a href="/salary">Salary</a> → <span>How to Read Your Paycheck</span>
+    </div>
+    <div class="article-tag">💵 Salary · Free Article</div>
+    <h1 class="article-title">How to Read Your Paycheck —<br>Every <em>Line Explained</em></h1>
+    <p class="article-subtitle">Your gross pay and your take-home pay are very different numbers. Here's exactly what every deduction on your pay stub means and how to verify you're being paid correctly.</p>
+    <div class="article-meta">
+      <span class="meta-badge">Free</span>
+      <span class="meta-item">5 min read</span>
+      <span class="meta-sep"></span>
+      <span class="meta-item">UnschoolMe Editorial</span>
+      <span class="meta-sep"></span>
+      <span class="meta-item">Updated 2025</span>
+    </div>
+  </div>
+</div>
+
+<div class="content-wrap">
+  <div class="content-grid">
+
+    <div class="article-body" id="article-body">
+
+      <div class="key-takeaways">
+        <div class="kt-label">Key Takeaways</div>
+        <div class="kt-item"><span class="kt-arrow">→</span> Gross pay is what you're promised. Net pay (take-home) is what actually hits your bank — often 25–35% less.</div>
+        <div class="kt-item"><span class="kt-arrow">→</span> FICA (Social Security + Medicare) is always 7.65% of your gross pay — no exceptions for most employees.</div>
+        <div class="kt-item"><span class="kt-arrow">→</span> Pre-tax deductions like 401(k) and health insurance reduce your taxable income — they're a benefit, not a loss.</div>
+        <div class="kt-item"><span class="kt-arrow">→</span> Your pay stub is a legal document. Errors do happen — always verify your hours and deductions.</div>
+        <div class="kt-item"><span class="kt-arrow">→</span> Year-to-date (YTD) columns show your running totals — useful for tax planning and verifying your W-2.</div>
+      </div>
+
+      <h2 id="gross-vs-net">Gross Pay vs. Net Pay</h2>
+      <p>The first thing to understand is the difference between what you're owed and what you receive. Your <strong>gross pay</strong> is your total earnings before anything is taken out. If you make $20/hour and work 80 hours in a two-week pay period, your gross pay is $1,600.</p>
+      <p>Your <strong>net pay</strong> — also called take-home pay — is what actually gets deposited in your bank account after all deductions. For most Americans, net pay is 65–75% of gross pay. That gap surprises a lot of people getting their first paycheck.</p>
+
+      <div class="example-box">
+        <div class="ex-label">Sample Paycheck — $50,000/year Employee in California</div>
+        <div class="ex-row"><span>Gross pay (bi-weekly)</span><span>$1,923</span></div>
+        <div class="ex-row"><span>Federal income tax withheld</span><span>−$173</span></div>
+        <div class="ex-row"><span>Social Security (6.2%)</span><span>−$119</span></div>
+        <div class="ex-row"><span>Medicare (1.45%)</span><span>−$28</span></div>
+        <div class="ex-row"><span>California state income tax</span><span>−$68</span></div>
+        <div class="ex-row"><span>SDI (CA disability insurance, 0.9%)</span><span>−$17</span></div>
+        <div class="ex-row"><span>Health insurance premium</span><span>−$85</span></div>
+        <div class="ex-row"><span>Net pay deposited</span><span>$1,433</span></div>
+      </div>
+
+      <p>That's $490 in deductions per paycheck — $12,740 per year — on a $50,000 salary. Not a scam, just the reality of how American compensation works.</p>
+
+      <h2 id="earnings">The Earnings Section</h2>
+      <p>Most pay stubs start with an earnings section listing everything you were paid this period. This may include:</p>
+      <ul>
+        <li><strong>Regular pay:</strong> Your base hourly or salary earnings</li>
+        <li><strong>Overtime pay:</strong> Hours beyond 40 per week, paid at 1.5× your regular rate (federal law requires this for non-exempt employees)</li>
+        <li><strong>Bonus or commission:</strong> Variable compensation, taxed as regular income</li>
+        <li><strong>Holiday pay or PTO:</strong> Paid time off used during the period</li>
+        <li><strong>Reimbursements:</strong> Expense reimbursements (usually not taxed)</li>
+      </ul>
+
+      <h2 id="taxes">The Tax Deductions — What Each One Is</h2>
+
+      <h3>Federal Income Tax</h3>
+      <p>The amount withheld depends on your W-4 form (filed when you started the job) and how much you've already earned year-to-date. Your employer uses IRS withholding tables to estimate how much you'll owe for the year, then withholds that amount gradually across each paycheck.</p>
+
+      <h3>Social Security (6.2%)</h3>
+      <p>Social Security funds retirement and disability benefits. Every employee pays exactly <strong>6.2%</strong> of their gross wages up to a cap — in 2025, the cap is $176,100. Above that, no more Social Security is withheld for the rest of the year. Your employer pays another 6.2% on top, so the total going to Social Security on your behalf is 12.4%.</p>
+
+      <h3>Medicare (1.45%)</h3>
+      <p>Medicare funds health coverage for Americans over 65. The rate is a flat <strong>1.45%</strong> with no income cap. High earners (over $200,000) pay an additional 0.9%. Your employer also matches your 1.45%.</p>
+
+      <div class="callout blue">
+        <div class="callout-label">Combined FICA = 7.65%</div>
+        <p>Social Security (6.2%) + Medicare (1.45%) = <strong>7.65%</strong> of every paycheck, no matter what. This is called the FICA tax. On $50,000/year, that's $3,825 per year going to these programs — automatically, before you see a dollar.</p>
+      </div>
+
+      <h3>State Income Tax</h3>
+      <p>Depends on where you live. California's income tax ranges from 1% to 13.3% depending on income. Texas, Florida, Nevada, and six other states charge zero state income tax — residents there keep significantly more of their paycheck.</p>
+
+      <h2 id="pre-tax">Pre-Tax Deductions — These Actually Help You</h2>
+      <p>Pre-tax deductions are amounts taken from your gross pay <em>before</em> income taxes are calculated. This reduces your taxable income, which means you pay less in taxes. These are a benefit, not just a cost.</p>
+
+      <table class="data-table">
+        <thead>
+          <tr><th>Deduction</th><th>What It Is</th><th>Tax Benefit</th></tr>
+        </thead>
+        <tbody>
+          <tr class="highlight"><td>401(k) contribution</td><td>Retirement savings withheld pre-tax</td><td>Reduces federal + state taxable income</td></tr>
+          <tr><td>Health insurance premium</td><td>Your share of employer health plan</td><td>Reduces federal + state taxable income</td></tr>
+          <tr><td>Dental/Vision insurance</td><td>Supplemental coverage premiums</td><td>Reduces federal + state taxable income</td></tr>
+          <tr><td>FSA/HSA contribution</td><td>Medical/dependent care savings</td><td>Reduces federal + state taxable income</td></tr>
+          <tr><td>Commuter benefits</td><td>Transit/parking pre-tax</td><td>Up to $315/mo federal tax-free (2025)</td></tr>
+        </tbody>
+      </table>
+
+      <p>If you contribute $200/month to a 401(k) and your marginal tax rate is 22%, you're saving $44 in taxes per month just from that contribution. The 401(k) contribution doesn't cost you the full $200 — it costs you about $156 out of pocket because the tax savings offset the rest.</p>
+
+      <h2 id="post-tax">Post-Tax Deductions</h2>
+      <p>Post-tax deductions come out after taxes are calculated. You get no tax benefit from these, but they're still valid deductions your employer may take out:</p>
+      <ul>
+        <li><strong>Roth 401(k) contributions:</strong> You pay taxes now so withdrawals in retirement are tax-free</li>
+        <li><strong>Life insurance premiums:</strong> Coverage above $50,000 in employer-provided life insurance</li>
+        <li><strong>Wage garnishments:</strong> Court-ordered deductions for child support, student loan defaults, or unpaid taxes</li>
+        <li><strong>Union dues:</strong> Monthly or weekly union membership fees</li>
+      </ul>
+
+      <h2 id="ytd">Year-to-Date Columns</h2>
+      <p>Most pay stubs show both current period amounts and year-to-date (YTD) totals. YTD is the running total of everything since January 1 of the current year.</p>
+      <p>Pay attention to YTD because: it's what your W-2 will show at year end; it helps you verify your Social Security withholding stops at the cap; and it lets you track your actual annual earnings to avoid surprises at tax time.</p>
+
+      <div class="callout red">
+        <div class="callout-label">Check for Errors</div>
+        <p>Payroll errors are more common than you think — especially with overtime, shift differentials, and tip reporting. Compare your pay stub to your time records every pay period. If something looks wrong, report it to HR immediately. Employers are legally required to fix payroll errors.</p>
+      </div>
+
+      <h2 id="check-yourself">How to Verify Your Paycheck Is Correct</h2>
+      <ol>
+        <li>Multiply your hourly rate × hours worked (or divide your salary by pay periods)</li>
+        <li>Verify Social Security withheld = gross pay × 6.2%</li>
+        <li>Verify Medicare withheld = gross pay × 1.45%</li>
+        <li>Check that 401(k) deductions match the percentage you elected</li>
+        <li>Compare year-to-date earnings to your expected annual salary</li>
+      </ol>
+      <p>If federal income tax withheld seems too low or too high, revisit your W-4 — you may need to update it, especially after a life event like marriage, divorce, or having a child.</p>
+
+      <div class="article-footer">
+        <div class="af-nav">
+          <a href="/salary" class="af-btn">← Back to Salary</a>
+          <a href="/investing/how-to-start-investing" class="af-btn next">Next: How to Start Investing →</a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="sidebar">
+      <div class="sb-card">
+        <div class="sb-title">In This Article</div>
+        <div class="toc-list">
+          <a href="#gross-vs-net" class="toc-link"><span class="toc-num">01</span> Gross vs Net Pay</a>
+          <a href="#earnings" class="toc-link"><span class="toc-num">02</span> Earnings Section</a>
+          <a href="#taxes" class="toc-link"><span class="toc-num">03</span> Tax Deductions</a>
+          <a href="#pre-tax" class="toc-link"><span class="toc-num">04</span> Pre-Tax Deductions</a>
+          <a href="#post-tax" class="toc-link"><span class="toc-num">05</span> Post-Tax Deductions</a>
+          <a href="#ytd" class="toc-link"><span class="toc-num">06</span> Year-to-Date</a>
+          <a href="#check-yourself" class="toc-link"><span class="toc-num">07</span> Verify Your Pay</a>
+        </div>
+      </div>
+
+      <div class="sb-card">
+        <div class="sb-title">Related Articles</div>
+        <a href="/taxes/how-taxes-work" class="related-link">
+          <span class="rl-arrow">→</span>
+          <div><div class="rl-title">How Taxes Work in the US</div><div class="rl-meta">5 min · Free</div></div>
+        </a>
+        <a href="/investing/how-to-start-investing" class="related-link">
+          <span class="rl-arrow">→</span>
+          <div><div class="rl-title">How to Start Investing</div><div class="rl-meta">7 min · Free</div></div>
+        </a>
+      </div>
+
+      <div class="premium-card">
+        <div class="pc-eye">Premium</div>
+        <div class="pc-title">Go deeper with Premium</div>
+        <div class="pc-desc">Unlock deep-dives on salary negotiation, benefits optimization, and maximizing your take-home pay legally.</div>
+        <button class="pc-btn">Get Premium — $9/mo →</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div>
+        <div class="footer-logo">Unschool<b>Me.</b></div>
+        <div class="footer-desc">Teaching real life skills that school forgot.</div>
+      </div>
+      <div>
+        <div class="footer-col-title">Topics</div>
+        <div class="footer-links">
+          <a href="/taxes">Taxes</a>
+          <a href="/banking">Banking</a>
+          <a href="/credit">Credit</a>
+          <a href="/government">Government</a>
+          <a href="/business">Business</a>
+          <a href="/rights">Rights</a>
+        <a href="/healthcare">Health</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Platform</div>
+        <div class="footer-links">
+          <a href="/#how">About</a>
+          <a href="/upload">Upload a Lesson</a>
+          <a href="/#pricing">Premium</a>
+          <a href="/chat" data-contact-link>Contact</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy">Built by someone who had to figure it all out alone. — UnschoolMe 2026 🇺🇸</div>
+    </div>
+    <div class="flag-b"></div>
+  </div>
+</footer>
+
+<script src="/js/config.js"></script>
+<script src="/js/main.js"></script>
+<script>
+window.addEventListener('scroll', () => {
+  const el = document.getElementById('readingProgress');
+  if (!el) return;
+  const scrollTop = window.scrollY;
+  const docHeight = document.body.scrollHeight - window.innerHeight;
+  el.style.width = (scrollTop / docHeight * 100) + '%';
+});
+const sections = document.querySelectorAll('h2[id]');
+const tocLinks = document.querySelectorAll('.toc-link');
+const tocObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      tocLinks.forEach(l => l.classList.remove('active'));
+      const active = document.querySelector(`.toc-link[href="#${entry.target.id}"]`);
+      if (active) active.classList.add('active');
+    }
+  });
+}, { rootMargin: '-20% 0% -70% 0%' });
+sections.forEach(s => tocObserver.observe(s));
+</script>
+
+</body>
+</html>

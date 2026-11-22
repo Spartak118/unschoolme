@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<title>Credit Score — UnschoolMe</title>
+<meta name="description" content="What a credit score is, how it's calculated, how to build it from zero, and how to protect it from damage.">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=DM+Sans:wght@300;400;500&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/main.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is credit utilization and why does it matter so much?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Credit utilization is how much of your available credit you are using. If your credit card limit is $1,000 and your balance is $300, your utilization is 30%. Utilization makes up 30% of your credit score. Keep utilization below 30% for a good score and below 10% for an excellent score. Pay your balance multiple times per month if needed. Requesting a credit limit increase also improves utilization without spending more."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between a hard and soft credit inquiry?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A hard inquiry happens when you apply for credit (credit card, loan, mortgage). It temporarily lowers your score by 5-10 points and stays on your report for 2 years. Multiple hard inquiries in a short period for the same type of loan (like shopping for a mortgage) count as one inquiry if done within 14-45 days. A soft inquiry happens when you check your own score or when lenders pre-screen you for offers. Soft inquiries do NOT affect your score."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long do negative items stay on my credit report?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Late payments: 7 years. Collections accounts: 7 years. Chapter 7 bankruptcy: 10 years. Chapter 13 bankruptcy: 7 years. Hard inquiries: 2 years. Paid off debts: 7-10 years (but show as paid, which helps). Accounts in good standing: 10 years after closing. The older the negative item, the less it affects your score. Time is one of the best credit repair tools."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is a secured credit card?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A secured credit card requires a cash deposit that becomes your credit limit. You deposit $200-$500 and get a card with that limit. It works exactly like a regular credit card — use it, get a statement, pay the bill. After 6-12 months of on-time payments many banks upgrade you to an unsecured card and return your deposit. Best secured cards for building credit: Discover it Secured, Capital One Secured, Chime Credit Builder."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is a credit freeze and when should I use it?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A credit freeze (also called security freeze) prevents lenders from accessing your credit report, making it impossible for identity thieves to open new accounts in your name. It is completely free to freeze and unfreeze at all three bureaus (Equifax, Experian, TransUnion). Freezing does not affect your score. If you are not actively applying for credit, freezing your credit is one of the best identity protection steps you can take."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What does it mean to become an authorized user, and can I do it as a teenager?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "An authorized user is someone added to another person's existing credit card — usually a parent's — without being legally responsible for the debt. Most major card issuers let a parent add a teen as young as 13-16 as an authorized user. The account's entire payment history, age, and low utilization can then show up on the teen's own credit report, sometimes giving them a starter score years before they turn 18. You get a card with your name on it, but the account owner still controls spending limits and payments."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can a teenager get their own secured credit card?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Most secured card issuers require you to be 18, or 21 with proof of independent income, to open an account in your own name. Under 18, the realistic path is becoming an authorized user on a parent's card, or a parent co-signing a secured card in some cases. Once you turn 18, a secured card (usually a $200-$500 refundable deposit becomes your limit) is the fastest way to start building credit entirely on your own."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does adding a teen as an authorized user actually help, or just look good?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It genuinely helps, but only if the primary account is managed well. If the parent's card has a long history, on-time payments, and low utilization, that history can be inherited on the teen's credit file the same month they're added. If the parent misses payments or runs high balances, that damage can show up on the teen's report too — so this only works with a card that's already being handled responsibly."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What's the risk of being an authorized user?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The main risk isn't to your score directly — it's that you have no control over the primary account. If the primary cardholder maxes out the card or misses a payment, it can lower your score too, even if you never personally used the card. Talk with the account owner about how the card is used before agreeing to be added, and check your own credit report periodically once you're old enough to do so."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<div class="flag"></div>
+
+<nav class="nav" id="nav">
+  <a href="/" class="nav-logo">Unschool<b>Me</b></a>
+  <div class="nav-links">
+    <a href="/taxes">Taxes</a>
+    <a href="/banking">Banking</a>
+    <a href="/credit" class="active">Credit</a>
+    <a href="/government">Government</a>
+    <a href="/business">Business</a>
+    <a href="/rights">Rights</a>
+      <a href="/healthcare">Health</a>
+  </div>
+  <div class="nav-right">
+    <button class="btn-ghost" onclick="location.href='/login'">Log in</button>
+    <button class="btn-gold" onclick="location.href='/login'">Get Started →</button>
+  </div>
+</nav>
+
+<div class="page-hero">
+  <div class="page-hero-bg" style="background-image:url('https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=1200&q=80')"></div>
+  <div class="page-hero-inner">
+    <div class="breadcrumb"><a href="/">Home</a> → <span>Credit Score</span></div>
+    <div class="ph-tag">📊 Credit Score</div>
+    <div class="ph-title">Everything about<br><em>Credit</em> — simply.</div>
+    <div class="ph-sub">What a credit score is, how it's calculated, how to build it from zero, and how to protect it from damage.</div>
+  </div>
+</div>
+
+<div class="content-wrap">
+  <div class="content-grid">
+
+    <div class="articles">
+      <div class="sec-eye">Articles</div>
+      <div class="sec-tit">Start reading</div>
+
+      <a href="/credit/what-is-a-credit-score" class="article-card fade-up">
+        <div class="ac-top">
+          <span class="badge free">Free</span>
+          <span class="ac-time">5 min read</span>
+        </div>
+        <div class="ac-title">What is a Credit Score — And Why It Controls Your Life</div>
+        <div class="ac-desc">Banks, landlords, even employers check your credit score. A number from 300 to 850 decides if you get the apartment, loan, or job.</div>
+        <div class="ac-bottom">
+          <span class="ac-author"><span class="ac-dot"></span>UnschoolMe Editorial</span>
+          <span class="ac-read">Read article →</span>
+        </div>
+      </a>
+
+      <a href="/credit/build-credit-from-zero" class="article-card fade-up">
+        <div class="ac-top">
+          <span class="badge free">Free</span>
+          <span class="ac-time">6 min read</span>
+        </div>
+        <div class="ac-title">How to Build Credit From Zero — The Complete Guide</div>
+        <div class="ac-desc">No credit history? No problem. Here's exactly how to go from zero to a great score using a secured card and simple habits.</div>
+        <div class="ac-bottom">
+          <span class="ac-author"><span class="ac-dot"></span>UnschoolMe Editorial</span>
+          <span class="ac-read">Read article →</span>
+        </div>
+      </a>
+
+      <a href="/credit/5-factors-credit-score" class="article-card fade-up">
+        <div class="ac-top">
+          <span class="badge free">Free</span>
+          <span class="ac-time">4 min read</span>
+        </div>
+        <div class="ac-title">The 5 Factors That Make Up Your Credit Score</div>
+        <div class="ac-desc">Payment history, utilization, length, mix, inquiries. Knowing these 5 factors lets you control your score strategically.</div>
+        <div class="ac-bottom">
+          <span class="ac-author"><span class="ac-dot"></span>UnschoolMe Editorial</span>
+          <span class="ac-read">Read article →</span>
+        </div>
+      </a>
+
+      <div class="article-card fade-up coming-soon" aria-disabled="true">
+        <div class="ac-top">
+          <span class="badge free">Free</span>
+          <span class="ac-time">5 min read</span>
+        </div>
+        <div class="ac-title">How to Build Credit as a Teenager — Authorized User Explained</div>
+        <div class="ac-desc">You don't need to be 18 to start building credit. Here's how becoming an authorized user on a parent's card can give you a 3-5 year head start.</div>
+        <div class="ac-bottom">
+          <span class="ac-author"><span class="ac-dot"></span>UnschoolMe Editorial</span>
+          <span class="ac-read">Coming soon</span>
+        </div>
+      </div>
+
+      <div class="article-card fade-up">
+        <div class="ac-top">
+          <span class="badge premium">Premium</span>
+          <span class="ac-time">8 min read</span>
+        </div>
+        <div class="ac-title">How to Raise Your Credit Score 100 Points Fast</div>
+        <div class="ac-desc">Specific strategies that actually work — dispute errors, reduce utilization, become an authorized user. With exact timelines.</div>
+        <div class="ac-bottom">
+          <span class="ac-author"><span class="ac-dot"></span>UnschoolMe Editorial</span>
+          <span class="ac-read">Unlock with Premium →</span>
+        </div>
+      </div>
+
+      <div class="article-card fade-up">
+        <div class="ac-top">
+          <span class="badge premium">Premium</span>
+          <span class="ac-time">7 min read</span>
+        </div>
+        <div class="ac-title">Credit Cards — How to Use Them to Build Wealth, Not Debt</div>
+        <div class="ac-desc">The right way to use credit cards: rewards, cashback, travel points — without ever paying a dollar of interest.</div>
+        <div class="ac-bottom">
+          <span class="ac-author"><span class="ac-dot"></span>UnschoolMe Editorial</span>
+          <span class="ac-read">Unlock with Premium →</span>
+        </div>
+      </div>
+
+      <!-- AffiliateCTA component: href is set at runtime from window.AFFILIATE_LINKS (see /js/config.js) -->
+      <a href="https://example-affiliate.com/PLACEHOLDER" class="affiliate-cta" data-affiliate-key="credit" target="_blank" rel="noopener sponsored">
+        <div>
+          <div class="affiliate-cta-title">Check your credit score free →</div>
+          <div class="affiliate-cta-sub">Sponsored — UnschoolMe may earn a commission</div>
+        </div>
+        <span class="affiliate-cta-arrow">→</span>
+      </a>
+
+      <div class="videos-sec">
+        <div class="sec-eye">Video Lessons</div>
+        <div class="sec-tit">Watch and learn</div>
+
+        <div class="video-card fade-up">
+          <div class="video-thumb">
+            <div class="play-btn">▶</div>
+            <div class="video-duration">9:30</div>
+          </div>
+          <div class="video-info">
+            <span class="vi-badge">Free</span>
+            <div class="vi-title">Credit Scores Explained in Under 10 Minutes</div>
+            <div class="vi-author">By UnschoolMe</div>
+          </div>
+        </div>
+
+        <div class="upload-cta creator-only fade-up">
+          <div class="upload-cta-icon">🎬</div>
+          <div class="upload-cta-title">Know credit well?</div>
+          <div class="upload-cta-desc">Upload your video and help others build better credit.</div>
+          <button class="upload-cta-btn" onclick="location.href='/upload'">Upload a Lesson ↑</button>
+        </div>
+      </div>
+
+      <div class="deep-dive-section">
+        <div class="dd-title">📚 Complete Credit Guide</div>
+        <div class="dd-accordion">
+          <div class="dd-item">
+            <div class="dd-question">What is credit utilization and why does it matter so much?</div>
+            <div class="dd-answer">Credit utilization is how much of your available credit you are using. If your credit card limit is $1,000 and your balance is $300, your utilization is 30%. Utilization makes up 30% of your credit score. Keep utilization below 30% for a good score and below 10% for an excellent score. Pay your balance multiple times per month if needed. Requesting a credit limit increase also improves utilization without spending more.</div>
+          </div>
+          <div class="dd-item">
+            <div class="dd-question">What is the difference between a hard and soft credit inquiry?</div>
+            <div class="dd-answer">A hard inquiry happens when you apply for credit (credit card, loan, mortgage). It temporarily lowers your score by 5-10 points and stays on your report for 2 years. Multiple hard inquiries in a short period for the same type of loan (like shopping for a mortgage) count as one inquiry if done within 14-45 days. A soft inquiry happens when you check your own score or when lenders pre-screen you for offers. Soft inquiries do NOT affect your score.</div>
+          </div>
+          <div class="dd-item">
+            <div class="dd-question">How long do negative items stay on my credit report?</div>
+            <div class="dd-answer">Late payments: 7 years. Collections accounts: 7 years. Chapter 7 bankruptcy: 10 years. Chapter 13 bankruptcy: 7 years. Hard inquiries: 2 years. Paid off debts: 7-10 years (but show as paid, which helps). Accounts in good standing: 10 years after closing. The older the negative item, the less it affects your score. Time is one of the best credit repair tools.</div>
+          </div>
+          <div class="dd-item">
+            <div class="dd-question">What is a secured credit card?</div>
+            <div class="dd-answer">A secured credit card requires a cash deposit that becomes your credit limit. You deposit $200-$500 and get a card with that limit. It works exactly like a regular credit card — use it, get a statement, pay the bill. After 6-12 months of on-time payments many banks upgrade you to an unsecured card and return your deposit. Best secured cards for building credit: Discover it Secured, Capital One Secured, Chime Credit Builder.</div>
+          </div>
+          <div class="dd-item">
+            <div class="dd-question">What is a credit freeze and when should I use it?</div>
+            <div class="dd-answer">A credit freeze (also called security freeze) prevents lenders from accessing your credit report, making it impossible for identity thieves to open new accounts in your name. It is completely free to freeze and unfreeze at all three bureaus (Equifax, Experian, TransUnion). Freezing does not affect your score. If you are not actively applying for credit, freezing your credit is one of the best identity protection steps you can take.</div>
+          </div>
+          <div class="dd-item">
+            <div class="dd-question">What does it mean to become an authorized user, and can I do it as a teenager?</div>
+            <div class="dd-answer">An authorized user is someone added to another person's existing credit card — usually a parent's — without being legally responsible for the debt. Most major card issuers let a parent add a teen as young as 13-16 as an authorized user. The account's entire payment history, age, and low utilization can then show up on the teen's own credit report, sometimes giving them a starter score years before they turn 18. You get a card with your name on it, but the account owner still controls spending limits and payments.</div>
+          </div>
+          <div class="dd-item">
+            <div class="dd-question">Can a teenager get their own secured credit card?</div>
+            <div class="dd-answer">Most secured card issuers require you to be 18, or 21 with proof of independent income, to open an account in your own name. Under 18, the realistic path is becoming an authorized user on a parent's card, or a parent co-signing a secured card in some cases. Once you turn 18, a secured card (usually a $200-$500 refundable deposit becomes your limit) is the fastest way to start building credit entirely on your own.</div>
+          </div>
+          <div class="dd-item">
+            <div class="dd-question">Does adding a teen as an authorized user actually help, or just look good?</div>
+            <div class="dd-answer">It genuinely helps, but only if the primary account is managed well. If the parent's card has a long history, on-time payments, and low utilization, that history can be inherited on the teen's credit file the same month they're added. If the parent misses payments or runs high balances, that damage can show up on the teen's report too — so this only works with a card that's already being handled responsibly.</div>
+          </div>
+          <div class="dd-item">
+            <div class="dd-question">What's the risk of being an authorized user?</div>
+            <div class="dd-answer">The main risk isn't to your score directly — it's that you have no control over the primary account. If the primary cardholder maxes out the card or misses a payment, it can lower your score too, even if you never personally used the card. Talk with the account owner about how the card is used before agreeing to be added, and check your own credit report periodically once you're old enough to do so.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- AdSlot component: paste your Google AdSense <ins class="adsbygoogle"> tag
+           inside this div, or call (adsbygoogle = window.adsbygoogle || []).push({});
+           in a script tag once the AdSense script is loaded. Placed below the
+           Complete Guide section, outside any gated Premium content. -->
+      <div class="ad-slot" data-ad-slot="topic-below-guide"></div>
+
+    </div>
+
+    <div class="sidebar">
+      <div class="sidebar-card">
+        <div class="sb-title">Credit Topics</div>
+        <div class="sb-links">
+          <a class="sb-link active" href="/credit/what-is-a-credit-score">What is a credit score</a>
+          <a class="sb-link" href="/credit/build-credit-from-zero">Build credit from zero</a>
+          <a class="sb-link" href="/credit/5-factors-credit-score">5 score factors</a>
+          <a class="sb-link" href="/credit/build-credit-from-zero">Build credit as a teen</a>
+          <span class="sb-link sb-soon" title="Coming soon">Raise your score fast</span>
+          <span class="sb-link sb-soon" title="Coming soon">Credit cards guide</span>
+          <span class="sb-link sb-soon" title="Coming soon">Dispute credit errors</span>
+          <span class="sb-link sb-soon" title="Coming soon">Free credit check</span>
+        </div>
+      </div>
+
+      <div class="premium-card">
+        <div class="pc-eye">Premium</div>
+        <div class="pc-title">Go deeper with Premium</div>
+        <div class="pc-desc">Unlock expert guides, full video library, and step-by-step walkthroughs.</div>
+        <button class="pc-btn">Get Premium — $9/mo →</button>
+      </div>
+
+      <div class="upload-card">
+        <div class="uc-title">Teach this topic</div>
+        <div class="uc-desc">Work in finance or know credit inside out? Upload a lesson and help others.</div>
+        <button class="uc-btn" onclick="location.href='/upload'">Upload a Lesson ↑</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div>
+        <div class="footer-logo">Unschool<b>Me.</b></div>
+        <div class="footer-desc">Teaching real life skills that school forgot.</div>
+      </div>
+      <div>
+        <div class="footer-col-title">Topics</div>
+        <div class="footer-links">
+          <a href="/taxes">Taxes</a>
+          <a href="/banking">Banking</a>
+          <a href="/credit">Credit</a>
+          <a href="/government">Government</a>
+          <a href="/business">Business</a>
+          <a href="/rights">Rights</a>
+        <a href="/healthcare">Health</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Platform</div>
+        <div class="footer-links">
+          <a href="/#how">About</a>
+          <a href="/upload">Upload a Lesson</a>
+          <a href="/#pricing">Premium</a>
+          <a href="/chat" data-contact-link>Contact</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy">Built by someone who had to figure it all out alone. — UnschoolMe 2026 🇺🇸</div>
+    </div>
+    <div class="flag-b"></div>
+  </div>
+</footer>
+
+<script src="/js/config.js"></script>
+<script src="/js/main.js"></script>
+</body>
+</html>

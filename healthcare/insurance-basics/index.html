@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<title>Health Insurance Basics Explained — UnschoolMe</title>
+<meta name="description" content="What premiums, deductibles, copays, coinsurance, and out-of-pocket maximums actually mean — plain-English definitions sourced from HealthCare.gov.">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=DM+Sans:wght@300;400;500&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/main.css">
+<style>
+.article-hero{background:#0A0A1E;padding:3.5rem 3rem;position:relative;overflow:hidden;}
+.article-hero::after{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,#B22234 33%,#fff 33%,#fff 66%,#3C3B6E 66%);}
+.ah-inner{max-width:960px;margin:0 auto;}
+.article-tag{display:inline-flex;align-items:center;gap:6px;background:rgba(200,169,110,0.1);border:1px solid rgba(200,169,110,0.3);border-radius:99px;font-size:11px;color:#C8A96E;padding:4px 14px;margin-bottom:1.2rem;}
+.article-title{font-family:'Cormorant Garamond',serif;font-size:46px;font-weight:700;color:#fff;letter-spacing:-1.5px;line-height:1.1;margin-bottom:1rem;max-width:680px;}
+.article-title em{font-style:italic;color:#C8A96E;}
+.article-subtitle{font-size:15px;color:rgba(255,255,255,0.45);line-height:1.75;max-width:560px;font-weight:300;margin-bottom:1.8rem;}
+.article-meta{display:flex;align-items:center;gap:1.5rem;flex-wrap:wrap;}
+.meta-badge{font-size:10px;letter-spacing:1.5px;text-transform:uppercase;padding:3px 12px;border-radius:99px;font-weight:500;background:#E8F5E9;color:#2E7D32;}
+.meta-item{font-size:12px;color:rgba(255,255,255,0.3);}
+.meta-sep{width:3px;height:3px;border-radius:50%;background:rgba(255,255,255,0.15);display:inline-block;}
+.content-grid{display:grid;grid-template-columns:1fr 280px;gap:3rem;align-items:start;}
+.key-takeaways{background:#0A0A1E;border-radius:14px;padding:1.8rem;margin-bottom:2.5rem;}
+.kt-label{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#C8A96E;font-weight:500;margin-bottom:1rem;}
+.kt-item{color:rgba(255,255,255,0.65);font-size:13px;display:flex;gap:10px;align-items:flex-start;margin-bottom:9px;line-height:1.6;font-weight:300;}
+.kt-arrow{color:#C8A96E;flex-shrink:0;font-size:11px;margin-top:2px;}
+.kt-item:last-child{margin-bottom:0;}
+.article-body h2{font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:700;color:#1A1A1A;margin:2.5rem 0 1rem;letter-spacing:-0.5px;line-height:1.2;}
+.article-body h3{font-size:10px;letter-spacing:2.5px;text-transform:uppercase;color:#B22234;font-weight:500;margin:2rem 0 0.7rem;}
+.article-body p{font-size:15px;line-height:1.85;color:#555;margin-bottom:1.2rem;font-weight:300;}
+.article-body p strong{color:#1A1A1A;font-weight:500;}
+.article-body ul,.article-body ol{padding-left:1.5rem;margin-bottom:1.3rem;}
+.article-body li{font-size:15px;line-height:1.8;color:#555;margin-bottom:7px;font-weight:300;}
+.article-body li strong{color:#1A1A1A;font-weight:500;}
+.callout{border-left:3px solid #C8A96E;background:#FEFCF7;padding:1.2rem 1.5rem;border-radius:0 10px 10px 0;margin:1.8rem 0;}
+.callout.red{border-color:#B22234;background:#FFF8F8;}
+.callout.blue{border-color:#3C3B6E;background:#F8F8FF;}
+.callout p{margin-bottom:0;font-size:14px;}
+.callout-label{font-size:10px;letter-spacing:2px;text-transform:uppercase;font-weight:500;color:#C8A96E;margin-bottom:6px;}
+.callout.red .callout-label{color:#B22234;}
+.callout.blue .callout-label{color:#3C3B6E;}
+.data-table{width:100%;border-collapse:collapse;margin:1.5rem 0;font-size:13px;border-radius:10px;overflow:hidden;}
+.data-table thead th{background:#0A0A1E;color:#C8A96E;padding:11px 16px;text-align:left;font-weight:500;letter-spacing:0.5px;font-size:11px;}
+.data-table tbody td{padding:11px 16px;border-bottom:1px solid #E8E4DC;color:#555;font-weight:300;}
+.data-table tbody tr:last-child td{border-bottom:none;}
+.data-table tbody tr:nth-child(even) td{background:#FAFAF8;}
+.sources-block{background:#F8F6F1;border:1px solid #E8E4DC;border-radius:14px;padding:1.5rem 1.8rem;margin:2rem 0;}
+.sources-title{font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:700;color:#1A1A1A;margin-bottom:0.8rem;}
+.sources-block ul{margin-bottom:0;padding-left:1.2rem;}
+.sources-block li{font-size:13px;color:#555;margin-bottom:5px;}
+.sources-block a{color:#C8A96E;text-decoration:none;}
+.sources-block a:hover{text-decoration:underline;}
+.disclaimer{font-size:12px;color:#999;font-style:italic;margin-top:1.5rem;line-height:1.6;}
+.article-footer{margin-top:3rem;padding-top:2rem;border-top:1px solid #E8E4DC;}
+.af-nav{display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem;}
+.af-btn{display:inline-flex;align-items:center;gap:8px;font-size:13px;color:#888;text-decoration:none;padding:10px 16px;border:1px solid #E8E4DC;border-radius:8px;background:#fff;transition:all 0.2s;}
+.af-btn:hover{border-color:#C8A96E;color:#1A1A1A;}
+.sidebar{position:sticky;top:2rem;}
+.sb-card{background:#fff;border:1px solid #E8E4DC;border-radius:14px;padding:1.5rem;margin-bottom:16px;}
+.sb-title{font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:700;color:#1A1A1A;margin-bottom:1rem;}
+.toc-list{display:flex;flex-direction:column;}
+.toc-link{font-size:12px;color:#888;padding:7px 0;border-bottom:1px solid #F0EDE8;text-decoration:none;transition:color 0.15s;display:flex;align-items:flex-start;gap:8px;font-weight:300;line-height:1.4;}
+.toc-link:last-child{border-bottom:none;}
+.toc-link.active,.toc-link:hover{color:#1A1A1A;}
+.toc-link .toc-num{font-size:10px;color:#C8A96E;flex-shrink:0;margin-top:2px;}
+</style>
+</head>
+<body>
+
+<div style="position:fixed;top:0;left:0;height:3px;background:#C8A96E;z-index:9999;transition:width 0.1s" id="readingProgress"></div>
+<div class="flag"></div>
+
+<nav class="nav" id="nav">
+  <a href="/" class="nav-logo">Unschool<b>Me</b></a>
+  <div class="nav-links">
+    <a href="/taxes">Taxes</a>
+    <a href="/banking">Banking</a>
+    <a href="/credit">Credit</a>
+    <a href="/government">Government</a>
+    <a href="/business">Business</a>
+    <a href="/rights">Rights</a>
+    <a href="/healthcare">Health</a>
+  </div>
+  <div class="nav-right">
+    <button class="btn-ghost" onclick="location.href='/login'">Log in</button>
+    <button class="btn-gold" onclick="location.href='/login'">Get Started →</button>
+  </div>
+</nav>
+
+<div class="article-hero">
+  <div class="ah-inner">
+    <div class="breadcrumb">
+      <a href="/">Home</a> → <a href="/healthcare">Healthcare</a> → <span>Insurance Basics</span>
+    </div>
+    <div class="article-tag">🩺 Healthcare · Free Article</div>
+    <h1 class="article-title">Health Insurance Basics — <em>Premiums, Deductibles, and Copays</em> Explained</h1>
+    <p class="article-subtitle">Four words control what you actually pay when you see a doctor. Here's what each one means, in plain English, straight from HealthCare.gov's own definitions.</p>
+    <div class="article-meta">
+      <span class="meta-badge">Free</span>
+      <span class="meta-item">5 min read</span>
+      <span class="meta-sep"></span>
+      <span class="meta-item">UnschoolMe Editorial</span>
+      <span class="meta-sep"></span>
+      <span class="meta-item">Updated 2026</span>
+    </div>
+  </div>
+</div>
+
+<div class="content-wrap">
+  <div class="content-grid">
+
+    <div class="article-body" id="article-body">
+
+      <div class="key-takeaways">
+        <div class="kt-label">Key Takeaways</div>
+        <div class="kt-item"><span class="kt-arrow">→</span> A premium is what you pay just to have insurance, every month, whether you use it or not.</div>
+        <div class="kt-item"><span class="kt-arrow">→</span> A deductible is what you pay out of pocket before your plan starts covering most costs.</div>
+        <div class="kt-item"><span class="kt-arrow">→</span> Copays and coinsurance are two different ways your plan can charge you for a visit or service.</div>
+        <div class="kt-item"><span class="kt-arrow">→</span> Your out-of-pocket maximum is a ceiling — once you hit it, your plan covers 100% of covered care for the rest of the year.</div>
+        <div class="kt-item"><span class="kt-arrow">→</span> Staying in-network (providers your plan has a contract with) is usually the single biggest factor in what you actually pay.</div>
+      </div>
+
+      <h2 id="why-this-matters">Why These Four Words Matter So Much</h2>
+      <p>Health insurance is confusing on purpose to nobody — it's just genuinely built from several separate pieces that all interact. Once you understand the four core terms — premium, deductible, copay (or coinsurance), and out-of-pocket maximum — almost every insurance document, plan comparison, or hospital bill starts to make sense. These definitions come directly from HealthCare.gov's official glossary, so you can trust them as the standard the rest of the healthcare system uses too.</p>
+      <p>The confusing part isn't any single term — it's that they all apply to the same visit at the same time, in a specific order. This article walks through each one, then shows how they combine in practice.</p>
+
+      <h2 id="premium">Premium — What You Pay Just to Be Covered</h2>
+      <p>A <strong>premium</strong> is the amount you pay for your health plan, usually every month, regardless of whether you go to the doctor at all that month. If you're on a parent's employer plan, the premium might come out of their paycheck automatically. If you buy a plan yourself through the ACA Marketplace, you pay it directly (sometimes reduced by a subsidy — more on that below).</p>
+      <p>Paying your premium keeps your coverage active. Missing payments can eventually cause your plan to lapse, leaving you uninsured even though you thought you had a plan.</p>
+
+      <h2 id="deductible">Deductible — What You Pay Before Insurance Kicks In</h2>
+      <p>A <strong>deductible</strong> is how much you have to pay for covered services yourself, each plan year, before your insurance starts paying its share — with one big exception: most plans cover certain preventive services (like annual checkups) at no cost even if you haven't met your deductible yet.</p>
+      <p>Plans vary a lot in deductible size. Generally, plans with lower monthly premiums tend to have higher deductibles, and plans with higher premiums tend to have lower deductibles — that trade-off is usually the main decision when comparing plans.</p>
+
+      <h2 id="copay-coinsurance">Copay and Coinsurance — Two Different Ways You Share Costs</h2>
+      <p>These two terms get confused constantly, but they work differently:</p>
+      <ul>
+        <li><strong>Copayment (copay):</strong> a fixed dollar amount for a specific covered service. HealthCare.gov's own glossary uses the example of a flat $30 charge for a visit — the exact amount depends entirely on your specific plan.</li>
+        <li><strong>Coinsurance:</strong> a percentage of the cost you pay, rather than a flat fee — HealthCare.gov's example is 20%. So if a covered service costs $100 and your coinsurance is 20%, you'd owe $20 and your plan covers the rest.</li>
+      </ul>
+      <p>Many plans use copays for routine visits (like a primary care appointment) and coinsurance for bigger, more variable costs (like a hospital stay), but this varies by plan — always check your specific plan's Summary of Benefits document.</p>
+
+      <h2 id="out-of-pocket-max">Out-of-Pocket Maximum — Your Annual Ceiling</h2>
+      <p>Your <strong>out-of-pocket maximum</strong> is the most you'll have to pay for covered services in a plan year. Once your deductible, copayments, and coinsurance for in-network care add up to this amount, your plan pays 100% of the cost of covered benefits for the rest of that plan year. One important detail: your monthly premiums do <em>not</em> count toward this limit — only your actual costs for care do.</p>
+
+      <div class="callout">
+        <div class="callout-label">How They Work Together</div>
+        <p>Picture a single covered visit: first, your plan checks whether you've met your deductible. If not, you typically pay the full allowed cost of the visit until you hit that number. After your deductible is met, you start paying only your copay or coinsurance share instead of the full cost. Once your total spending for the year (deductible + copays + coinsurance) reaches your out-of-pocket maximum, the plan covers 100% of further covered care for the rest of the year.</p>
+      </div>
+
+      <h2 id="in-network">In-Network vs. Out-of-Network</h2>
+      <p>Insurance companies negotiate contracted rates with specific doctors, clinics, and hospitals — these are your plan's "network." Seeing an <strong>in-network</strong> provider means you get the negotiated, usually lower rate, and your copay/coinsurance/deductible apply normally. Seeing an <strong>out-of-network</strong> provider can mean paying significantly more, or in some cases the plan not covering the visit at all, depending on your specific plan type. Always confirm a provider is in-network before a non-emergency visit.</p>
+
+      <h2 id="worked-example">Putting the Pieces Together: A Walkthrough</h2>
+      <p>Say you visit a doctor for a covered service, and you haven't met your deductible yet this year. Using HealthCare.gov's own example numbers: if your plan has a $30 copay for this type of visit but you haven't met your deductible, you may owe the full negotiated cost of the visit instead of just the copay — copays and coinsurance typically only kick in once you've met your deductible for the year, depending on your specific plan design. Some plans do cover certain services, like a set number of primary care visits, at a fixed copay even before the deductible is met — this varies by plan, so check your plan's Summary of Benefits and Coverage document, which is required to spell this out clearly.</p>
+      <p>Now imagine later in the year you've already met your deductible. For that same type of visit, you'd typically pay just your copay (a flat amount) or coinsurance (a percentage) instead of the full cost. And if your total spending for the year eventually reaches your out-of-pocket maximum, that visit — and everything else covered for the rest of the year — would cost you nothing at the time of service.</p>
+
+      <h2 id="hsa-fsa">HSAs and FSAs — Accounts That Can Help Cover These Costs</h2>
+      <p>Some plans, particularly ones with higher deductibles, are paired with a <strong>Health Savings Account (HSA)</strong> — a tax-advantaged account you (or an employer) can contribute to and use for qualified medical expenses. A <strong>Flexible Spending Account (FSA)</strong> is a similar but separate concept, usually offered through an employer, that also sets aside pre-tax money for healthcare costs, though FSA funds often have different rules about rolling over unused money to the next year. Not every plan offers these, and eligibility rules differ (HSAs specifically require an eligible high-deductible health plan), so check with your specific employer or plan if this is relevant to you.</p>
+
+      <h2 id="lowering-premiums">Lowering What You Pay for Marketplace Coverage</h2>
+      <p>If you buy your own plan through the ACA Health Insurance Marketplace, you may qualify for a <strong>premium tax credit</strong> — a subsidy that lowers your monthly premium based on your household income. According to the IRS and HealthCare.gov, eligibility is generally tied to your income relative to the federal poverty level, and whether you have access to other affordable coverage (like through an employer). The credit can be applied in advance to reduce what you pay each month, rather than waiting until you file taxes. Because eligibility rules and income thresholds can change, check HealthCare.gov directly for current numbers rather than relying on a fixed figure.</p>
+
+      <div class="sources-block">
+        <div class="sources-title">Sources &amp; Further Reading</div>
+        <ul>
+          <li><a href="https://www.healthcare.gov/glossary/" target="_blank" rel="noopener">HealthCare.gov — Health Insurance Glossary</a></li>
+          <li><a href="https://www.healthcare.gov/choose-a-plan/your-total-costs/" target="_blank" rel="noopener">HealthCare.gov — Premium, Deductible, and Out-of-Pocket Costs</a></li>
+          <li><a href="https://www.irs.gov/affordable-care-act/individuals-and-families/the-premium-tax-credit-the-basics" target="_blank" rel="noopener">IRS — The Premium Tax Credit: The Basics</a></li>
+        </ul>
+      </div>
+      <p class="disclaimer">This is general information, not legal or medical advice — for your specific situation, consult a licensed professional.</p>
+
+      <div class="article-footer">
+        <div class="af-nav">
+          <a href="/healthcare" class="af-btn">← Back to Healthcare</a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="sidebar">
+      <div class="sb-card">
+        <div class="sb-title">In This Article</div>
+        <div class="toc-list">
+          <a href="#why-this-matters" class="toc-link"><span class="toc-num">01</span> Why This Matters</a>
+          <a href="#premium" class="toc-link"><span class="toc-num">02</span> Premium</a>
+          <a href="#deductible" class="toc-link"><span class="toc-num">03</span> Deductible</a>
+          <a href="#copay-coinsurance" class="toc-link"><span class="toc-num">04</span> Copay & Coinsurance</a>
+          <a href="#out-of-pocket-max" class="toc-link"><span class="toc-num">05</span> Out-of-Pocket Max</a>
+          <a href="#in-network" class="toc-link"><span class="toc-num">06</span> In-Network vs Out</a>
+          <a href="#worked-example" class="toc-link"><span class="toc-num">07</span> A Worked Example</a>
+          <a href="#hsa-fsa" class="toc-link"><span class="toc-num">08</span> HSAs and FSAs</a>
+          <a href="#lowering-premiums" class="toc-link"><span class="toc-num">09</span> Lowering Premiums</a>
+        </div>
+      </div>
+
+      <div class="premium-card">
+        <div class="pc-eye">Premium</div>
+        <div class="pc-title">Go deeper with Premium</div>
+        <div class="pc-desc">Unlock plan-comparison worksheets and full insurance guides.</div>
+        <button class="pc-btn">Get Premium — $9/mo →</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div>
+        <div class="footer-logo">Unschool<b>Me.</b></div>
+        <div class="footer-desc">Teaching real life skills that school forgot.</div>
+      </div>
+      <div>
+        <div class="footer-col-title">Topics</div>
+        <div class="footer-links">
+          <a href="/taxes">Taxes</a>
+          <a href="/banking">Banking</a>
+          <a href="/credit">Credit</a>
+          <a href="/government">Government</a>
+          <a href="/business">Business</a>
+          <a href="/rights">Rights</a>
+          <a href="/healthcare">Health</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Platform</div>
+        <div class="footer-links">
+          <a href="/#how">About</a>
+          <a href="/upload">Upload a Lesson</a>
+          <a href="/#pricing">Premium</a>
+          <a href="/chat" data-contact-link>Contact</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy">Built by someone who had to figure it all out alone. — UnschoolMe 2026 🇺🇸</div>
+    </div>
+    <div class="flag-b"></div>
+  </div>
+</footer>
+
+<script src="/js/config.js"></script>
+<script src="/js/main.js"></script>
+<script>
+window.addEventListener('scroll', () => {
+  const el = document.getElementById('readingProgress');
+  if (!el) return;
+  const scrollTop = window.scrollY;
+  const docHeight = document.body.scrollHeight - window.innerHeight;
+  el.style.width = (scrollTop / docHeight * 100) + '%';
+});
+const sections = document.querySelectorAll('h2[id]');
+const tocLinks = document.querySelectorAll('.toc-link');
+const tocObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      tocLinks.forEach(l => l.classList.remove('active'));
+      const active = document.querySelector(`.toc-link[href="#${entry.target.id}"]`);
+      if (active) active.classList.add('active');
+    }
+  });
+}, { rootMargin: '-20% 0% -70% 0%' });
+sections.forEach(s => tocObserver.observe(s));
+</script>
+
+</body>
+</html>

@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<title>Crypto and Investment Scams — UnschoolMe</title>
+<meta name="description" content="How crypto and investment scams targeting young people actually work, and the red flags the FTC and SEC's Investor.gov warn about.">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=DM+Sans:wght@300;400;500&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/main.css">
+<style>
+.article-hero{background:#0A0A1E;padding:3.5rem 3rem;position:relative;overflow:hidden;}
+.article-hero::after{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,#B22234 33%,#fff 33%,#fff 66%,#3C3B6E 66%);}
+.ah-inner{max-width:960px;margin:0 auto;}
+.article-tag{display:inline-flex;align-items:center;gap:6px;background:rgba(200,169,110,0.1);border:1px solid rgba(200,169,110,0.3);border-radius:99px;font-size:11px;color:#C8A96E;padding:4px 14px;margin-bottom:1.2rem;}
+.article-title{font-family:'Cormorant Garamond',serif;font-size:46px;font-weight:700;color:#fff;letter-spacing:-1.5px;line-height:1.1;margin-bottom:1rem;max-width:680px;}
+.article-title em{font-style:italic;color:#C8A96E;}
+.article-subtitle{font-size:15px;color:rgba(255,255,255,0.45);line-height:1.75;max-width:560px;font-weight:300;margin-bottom:1.8rem;}
+.article-meta{display:flex;align-items:center;gap:1.5rem;flex-wrap:wrap;}
+.meta-badge{font-size:10px;letter-spacing:1.5px;text-transform:uppercase;padding:3px 12px;border-radius:99px;font-weight:500;background:#E8F5E9;color:#2E7D32;}
+.meta-item{font-size:12px;color:rgba(255,255,255,0.3);}
+.meta-sep{width:3px;height:3px;border-radius:50%;background:rgba(255,255,255,0.15);display:inline-block;}
+.content-grid{display:grid;grid-template-columns:1fr 280px;gap:3rem;align-items:start;}
+.key-takeaways{background:#0A0A1E;border-radius:14px;padding:1.8rem;margin-bottom:2.5rem;}
+.kt-label{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#C8A96E;font-weight:500;margin-bottom:1rem;}
+.kt-item{color:rgba(255,255,255,0.65);font-size:13px;display:flex;gap:10px;align-items:flex-start;margin-bottom:9px;line-height:1.6;font-weight:300;}
+.kt-arrow{color:#C8A96E;flex-shrink:0;font-size:11px;margin-top:2px;}
+.kt-item:last-child{margin-bottom:0;}
+.article-body h2{font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:700;color:#1A1A1A;margin:2.5rem 0 1rem;letter-spacing:-0.5px;line-height:1.2;}
+.article-body h3{font-size:10px;letter-spacing:2.5px;text-transform:uppercase;color:#B22234;font-weight:500;margin:2rem 0 0.7rem;}
+.article-body p{font-size:15px;line-height:1.85;color:#555;margin-bottom:1.2rem;font-weight:300;}
+.article-body p strong{color:#1A1A1A;font-weight:500;}
+.article-body ul,.article-body ol{padding-left:1.5rem;margin-bottom:1.3rem;}
+.article-body li{font-size:15px;line-height:1.8;color:#555;margin-bottom:7px;font-weight:300;}
+.article-body li strong{color:#1A1A1A;font-weight:500;}
+.callout{border-left:3px solid #C8A96E;background:#FEFCF7;padding:1.2rem 1.5rem;border-radius:0 10px 10px 0;margin:1.8rem 0;}
+.callout.red{border-color:#B22234;background:#FFF8F8;}
+.callout.blue{border-color:#3C3B6E;background:#F8F8FF;}
+.callout p{margin-bottom:0;font-size:14px;}
+.callout-label{font-size:10px;letter-spacing:2px;text-transform:uppercase;font-weight:500;color:#C8A96E;margin-bottom:6px;}
+.callout.red .callout-label{color:#B22234;}
+.callout.blue .callout-label{color:#3C3B6E;}
+.sources-block{background:#F8F6F1;border:1px solid #E8E4DC;border-radius:14px;padding:1.5rem 1.8rem;margin:2rem 0;}
+.sources-title{font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:700;color:#1A1A1A;margin-bottom:0.8rem;}
+.sources-block ul{margin-bottom:0;padding-left:1.2rem;}
+.sources-block li{font-size:13px;color:#555;margin-bottom:5px;}
+.sources-block a{color:#C8A96E;text-decoration:none;}
+.sources-block a:hover{text-decoration:underline;}
+.disclaimer{font-size:12px;color:#999;font-style:italic;margin-top:1.5rem;line-height:1.6;}
+.article-footer{margin-top:3rem;padding-top:2rem;border-top:1px solid #E8E4DC;}
+.af-nav{display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem;}
+.af-btn{display:inline-flex;align-items:center;gap:8px;font-size:13px;color:#888;text-decoration:none;padding:10px 16px;border:1px solid #E8E4DC;border-radius:8px;background:#fff;transition:all 0.2s;}
+.af-btn:hover{border-color:#C8A96E;color:#1A1A1A;}
+.sidebar{position:sticky;top:2rem;}
+.sb-card{background:#fff;border:1px solid #E8E4DC;border-radius:14px;padding:1.5rem;margin-bottom:16px;}
+.sb-title{font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:700;color:#1A1A1A;margin-bottom:1rem;}
+.toc-list{display:flex;flex-direction:column;}
+.toc-link{font-size:12px;color:#888;padding:7px 0;border-bottom:1px solid #F0EDE8;text-decoration:none;transition:color 0.15s;display:flex;align-items:flex-start;gap:8px;font-weight:300;line-height:1.4;}
+.toc-link:last-child{border-bottom:none;}
+.toc-link.active,.toc-link:hover{color:#1A1A1A;}
+.toc-link .toc-num{font-size:10px;color:#C8A96E;flex-shrink:0;margin-top:2px;}
+</style>
+</head>
+<body>
+
+<div style="position:fixed;top:0;left:0;height:3px;background:#C8A96E;z-index:9999;transition:width 0.1s" id="readingProgress"></div>
+<div class="flag"></div>
+
+<nav class="nav" id="nav">
+  <a href="/" class="nav-logo">Unschool<b>Me</b></a>
+  <div class="nav-links">
+    <a href="/taxes">Taxes</a>
+    <a href="/banking">Banking</a>
+    <a href="/credit">Credit</a>
+    <a href="/government">Government</a>
+    <a href="/business">Business</a>
+    <a href="/rights">Rights</a>
+    <a href="/healthcare">Health</a>
+  </div>
+  <div class="nav-right">
+    <button class="btn-ghost" onclick="location.href='/login'">Log in</button>
+    <button class="btn-gold" onclick="location.href='/login'">Get Started →</button>
+  </div>
+</nav>
+
+<div class="article-hero">
+  <div class="ah-inner">
+    <div class="breadcrumb">
+      <a href="/">Home</a> → <a href="/scams-safety">Scams &amp; Safety</a> → <span>Crypto & Investment Scams</span>
+    </div>
+    <div class="article-tag">🛡️ Scams &amp; Safety · Free Article</div>
+    <h1 class="article-title">Crypto and Investment Scams <em>Targeting Young People</em></h1>
+    <p class="article-subtitle">"Guaranteed returns," fake trading apps, strangers with can't-miss tips. Here's how to tell a real investment from a trap, based on FTC and SEC guidance.</p>
+    <div class="article-meta">
+      <span class="meta-badge">Free</span>
+      <span class="meta-item">5 min read</span>
+      <span class="meta-sep"></span>
+      <span class="meta-item">UnschoolMe Editorial</span>
+      <span class="meta-sep"></span>
+      <span class="meta-item">Updated 2026</span>
+    </div>
+  </div>
+</div>
+
+<div class="content-wrap">
+  <div class="content-grid">
+
+    <div class="article-body" id="article-body">
+
+      <div class="key-takeaways">
+        <div class="kt-label">Key Takeaways</div>
+        <div class="kt-item"><span class="kt-arrow">→</span> There's no such thing as a real investment that guarantees profits with no risk — the SEC calls this the classic warning sign of fraud.</div>
+        <div class="kt-item"><span class="kt-arrow">→</span> Anyone who insists you pay by cryptocurrency, wire transfer, or gift card is very likely a scammer.</div>
+        <div class="kt-item"><span class="kt-arrow">→</span> Pressure to "act now" is designed to stop you from thinking it through — real investment professionals don't push for immediate decisions.</div>
+        <div class="kt-item"><span class="kt-arrow">→</span> Scammers sometimes fake celebrity endorsements to seem credible — this is a documented FTC-tracked pattern.</div>
+        <div class="kt-item"><span class="kt-arrow">→</span> Once you send cryptocurrency, wire funds, or load a gift card for a scammer, there is usually no way to get it back.</div>
+      </div>
+
+      <h2 id="the-core-red-flag">The One Red Flag That Covers Almost Every Scam</h2>
+      <p>The Securities and Exchange Commission's Investor.gov puts it directly: the promise of a high rate of return with little or no risk is the classic warning sign of investment fraud. Every real investment carries risk — there's no legitimate opportunity that can guarantee you'll make money. If a pitch promises "guaranteed" returns, "risk-free" profits, or a specific high payout on a set schedule, that alone is enough reason to walk away.</p>
+      <p>Cryptocurrency scams specifically target young people in part because crypto itself is newer and less familiar territory even for people who consider themselves financially savvy, and because it moves quickly and irreversibly — both of which make it an efficient tool for a scammer once they've gained your trust.</p>
+
+      <h2 id="how-crypto-scams-work">How Crypto Investment Scams Typically Work</h2>
+      <p>According to FTC guidance, common tactics include promising you'll make money quickly, offering "guaranteed" returns, and sometimes stealing the identity of a real celebrity or business leader — falsely claiming that person will multiply the cryptocurrency you send them. Scammers may build what looks like a real trading platform, let you make a small "profit" early on to build trust, then either block withdrawals once you've invested more, or disappear entirely.</p>
+      <p>A common pattern the FTC has flagged: scammers meet people on dating apps or social media, build a relationship or friendship, and eventually steer the conversation toward a "can't miss" crypto opportunity — sometimes called "pig butchering" in industry reporting, though the FTC's own materials focus on describing the mechanics rather than that specific term.</p>
+
+      <h2 id="platform-red-flags">Platform and Communication Red Flags</h2>
+      <ul>
+        <li><strong>No real physical address or customer service phone number</strong> listed on the site.</li>
+        <li><strong>Pressure to move the conversation</strong> to WhatsApp, Telegram, or another messaging app outside the platform where you first connected.</li>
+        <li><strong>You can deposit money easily but can't withdraw it</strong>, or withdrawals require paying an additional "fee" or "tax" first.</li>
+        <li><strong>An unlicensed seller</strong> or aggressive salesperson using exaggerated or unverifiable credentials.</li>
+        <li><strong>Contact from a stranger</strong> through social media, a text, or a phone call pushing a specific investment.</li>
+      </ul>
+
+      <div class="callout red">
+        <div class="callout-label">Payment Method Is a Giveaway</div>
+        <p>The FTC is direct on this point: anyone who says you have to pay by cryptocurrency, wire transfer, or gift card is a scammer. These payment methods are effectively irreversible — once sent, there's typically no way to get the money back, which is exactly why scammers insist on them.</p>
+      </div>
+
+      <p>By contrast, a credit card payment for a legitimate purchase generally comes with dispute rights through your card issuer if something goes wrong. That protection is exactly what scammers are trying to route around by insisting on crypto, wire transfers, or gift cards instead — it's worth treating any pressure toward one of those specific payment methods as a signal on its own, separate from anything else about the pitch.</p>
+
+      <h2 id="before-you-invest">Before You Put Money Anywhere</h2>
+      <ul>
+        <li><strong>Research independently</strong> — search the company or platform name plus "review," "scam," or "complaint" before sending any money.</li>
+        <li><strong>Never share sensitive personal or financial details</strong> with someone who contacted you first about an investment — Investor.gov specifically warns against sharing bank details, Social Security numbers, or ID information with unsolicited contacts.</li>
+        <li><strong>Slow down deliberately</strong> — real opportunities don't disappear because you took a day to think it over. Pressure to act immediately is itself a red flag the SEC calls out directly.</li>
+        <li><strong>Verify licensing</strong> — legitimate investment professionals and platforms are generally registered; you can check with the SEC's Investor.gov resources.</li>
+      </ul>
+
+      <h2 id="social-media-ads">Scams Disguised as Social Media Ads or Influencer Tips</h2>
+      <p>A growing pattern the FTC has tracked is investment scams promoted through social media ads or posts made to look like tips from ordinary successful investors, sometimes using a stolen or AI-manipulated image of a real public figure to seem credible. The pitch typically links out to a slick-looking trading app or website that isn't a real, registered platform. Treat any investment opportunity you first encounter through a social media ad or unsolicited post with real skepticism, and verify independently before engaging — don't rely on the platform's own "proof" of returns, since a fake trading dashboard is trivial for a scammer to fabricate.</p>
+
+      <div class="callout blue">
+        <div class="callout-label">Watch for "Recovery" Follow-Up Scams</div>
+        <p>The FTC has warned that people who've already lost money to an investment or crypto scam are frequently targeted a second time by someone claiming they can recover the lost funds — for an upfront fee. This is itself a scam pattern, known as a recovery scam. Real government agencies and legitimate organizations never charge a fee to help you get your money back, and never guarantee a specific recovery amount. If you're contacted this way after already being scammed, treat it with the same suspicion as the original pitch.</p>
+      </div>
+
+      <h2 id="diversify-verify">If You Do Choose to Invest</h2>
+      <p>None of this means every mention of cryptocurrency or online investing is a scam — legitimate exchanges and investment platforms do exist. The practical habit worth building is independent verification: confirm a platform is a real, registered entity before depositing anything, start with an amount you could afford to lose entirely while you build confidence in a new platform, and be especially cautious about concentrating money into a single opportunity someone else is pushing you toward, rather than one you found and researched yourself.</p>
+
+      <h2 id="check-the-professional">How to Actually Check If an Investment Professional Is Real</h2>
+      <p>Investor.gov, run by the SEC, offers a free search tool called "Check Out Your Investment Professional." It lets you look up whether a specific person or firm is actually licensed and registered, and whether they have a history of complaints or regulatory actions against them. You search by the individual's or firm's name, and the tool draws on the same database that registered investment advisers and brokers are required to keep updated. If a name doesn't show up in the search at all, that's a strong signal the person isn't a registered financial professional — which matters, since cryptocurrency itself isn't always regulated the same way traditional securities are, making this kind of independent check even more important before trusting someone with your money.</p>
+
+      <h2 id="reporting-crypto">Reporting a Crypto or Investment Scam</h2>
+      <p>Report suspected investment or cryptocurrency scams at <strong>ReportFraud.ftc.gov</strong>. If you believe you've been the victim of securities fraud specifically, Investor.gov (run by the SEC) is also a resource for reporting and further guidance. Acting quickly — even though recovery isn't guaranteed — gives investigators the best chance of tracking a pattern across multiple victims.</p>
+
+      <div class="sources-block">
+        <div class="sources-title">Sources &amp; Further Reading</div>
+        <ul>
+          <li><a href="https://consumer.ftc.gov/spotting-cryptocurrency-investment-scams" target="_blank" rel="noopener">FTC Consumer Advice — Spotting Cryptocurrency Investment Scams</a></li>
+          <li><a href="https://www.investor.gov/protect-your-investments/fraud/how-avoid-fraud/red-flags-investment-fraud-checklist" target="_blank" rel="noopener">Investor.gov (SEC) — Red Flags of Investment Fraud Checklist</a></li>
+          <li><a href="https://www.investor.gov/introduction-investing/getting-started/working-investment-professional/check-out-your-investment-professional" target="_blank" rel="noopener">Investor.gov (SEC) — Check Out Your Investment Professional</a></li>
+          <li><a href="https://consumer.ftc.gov/articles/refund-and-recovery-scams" target="_blank" rel="noopener">FTC Consumer Advice — Refund and Recovery Scams</a></li>
+          <li><a href="https://reportfraud.ftc.gov/" target="_blank" rel="noopener">ReportFraud.ftc.gov — Report a Scam</a></li>
+        </ul>
+      </div>
+      <p class="disclaimer">This is general information, not legal or medical advice — for your specific situation, consult a licensed professional.</p>
+
+      <div class="article-footer">
+        <div class="af-nav">
+          <a href="/scams-safety" class="af-btn">← Back to Scams & Safety</a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="sidebar">
+      <div class="sb-card">
+        <div class="sb-title">In This Article</div>
+        <div class="toc-list">
+          <a href="#the-core-red-flag" class="toc-link"><span class="toc-num">01</span> The Core Red Flag</a>
+          <a href="#how-crypto-scams-work" class="toc-link"><span class="toc-num">02</span> How Crypto Scams Work</a>
+          <a href="#platform-red-flags" class="toc-link"><span class="toc-num">03</span> Platform Red Flags</a>
+          <a href="#before-you-invest" class="toc-link"><span class="toc-num">04</span> Before You Invest</a>
+          <a href="#social-media-ads" class="toc-link"><span class="toc-num">05</span> Social Media Scams</a>
+          <a href="#diversify-verify" class="toc-link"><span class="toc-num">06</span> If You Do Invest</a>
+          <a href="#check-the-professional" class="toc-link"><span class="toc-num">07</span> Checking a Professional</a>
+          <a href="#reporting-crypto" class="toc-link"><span class="toc-num">08</span> Reporting</a>
+        </div>
+      </div>
+
+      <div class="premium-card">
+        <div class="pc-eye">Premium</div>
+        <div class="pc-title">Go deeper with Premium</div>
+        <div class="pc-desc">Unlock the full victim-response playbook and scam scripts to recognize.</div>
+        <button class="pc-btn">Get Premium — $9/mo →</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div>
+        <div class="footer-logo">Unschool<b>Me.</b></div>
+        <div class="footer-desc">Teaching real life skills that school forgot.</div>
+      </div>
+      <div>
+        <div class="footer-col-title">Topics</div>
+        <div class="footer-links">
+          <a href="/taxes">Taxes</a>
+          <a href="/banking">Banking</a>
+          <a href="/credit">Credit</a>
+          <a href="/government">Government</a>
+          <a href="/business">Business</a>
+          <a href="/rights">Rights</a>
+          <a href="/healthcare">Health</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Platform</div>
+        <div class="footer-links">
+          <a href="/#how">About</a>
+          <a href="/upload">Upload a Lesson</a>
+          <a href="/#pricing">Premium</a>
+          <a href="/chat" data-contact-link>Contact</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy">Built by someone who had to figure it all out alone. — UnschoolMe 2026 🇺🇸</div>
+    </div>
+    <div class="flag-b"></div>
+  </div>
+</footer>
+
+<script src="/js/config.js"></script>
+<script src="/js/main.js"></script>
+<script>
+window.addEventListener('scroll', () => {
+  const el = document.getElementById('readingProgress');
+  if (!el) return;
+  const scrollTop = window.scrollY;
+  const docHeight = document.body.scrollHeight - window.innerHeight;
+  el.style.width = (scrollTop / docHeight * 100) + '%';
+});
+const sections = document.querySelectorAll('h2[id]');
+const tocLinks = document.querySelectorAll('.toc-link');
+const tocObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      tocLinks.forEach(l => l.classList.remove('active'));
+      const active = document.querySelector(`.toc-link[href="#${entry.target.id}"]`);
+      if (active) active.classList.add('active');
+    }
+  });
+}, { rootMargin: '-20% 0% -70% 0%' });
+sections.forEach(s => tocObserver.observe(s));
+</script>
+
+</body>
+</html>

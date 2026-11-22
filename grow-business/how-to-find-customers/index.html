@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<title>How to Find Your First 10 Customers — UnschoolMe</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=DM+Sans:wght@300;400;500&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/main.css">
+<style>
+.article-hero{background:#0A0A1E;padding:3.5rem 3rem;position:relative;overflow:hidden;}
+.article-hero::after{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,#B22234 33%,#fff 33%,#fff 66%,#3C3B6E 66%);}
+.ah-inner{max-width:960px;margin:0 auto;}
+.article-tag{display:inline-flex;align-items:center;gap:6px;background:rgba(200,169,110,0.1);border:1px solid rgba(200,169,110,0.3);border-radius:99px;font-size:11px;color:#C8A96E;padding:4px 14px;margin-bottom:1.2rem;}
+.article-title{font-family:'Cormorant Garamond',serif;font-size:46px;font-weight:700;color:#fff;letter-spacing:-1.5px;line-height:1.1;margin-bottom:1rem;max-width:680px;}
+.article-title em{font-style:italic;color:#C8A96E;}
+.article-subtitle{font-size:15px;color:rgba(255,255,255,0.45);line-height:1.75;max-width:560px;font-weight:300;margin-bottom:1.8rem;}
+.article-meta{display:flex;align-items:center;gap:1.5rem;flex-wrap:wrap;}
+.meta-badge{font-size:10px;letter-spacing:1.5px;text-transform:uppercase;padding:3px 12px;border-radius:99px;font-weight:500;background:#E8F5E9;color:#2E7D32;}
+.meta-item{font-size:12px;color:rgba(255,255,255,0.3);}
+.meta-sep{width:3px;height:3px;border-radius:50%;background:rgba(255,255,255,0.15);display:inline-block;}
+.content-grid{display:grid;grid-template-columns:1fr 280px;gap:3rem;align-items:start;}
+.key-takeaways{background:#0A0A1E;border-radius:14px;padding:1.8rem;margin-bottom:2.5rem;}
+.kt-label{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#C8A96E;font-weight:500;margin-bottom:1rem;}
+.kt-item{color:rgba(255,255,255,0.65);font-size:13px;display:flex;gap:10px;align-items:flex-start;margin-bottom:9px;line-height:1.6;font-weight:300;}
+.kt-arrow{color:#C8A96E;flex-shrink:0;font-size:11px;margin-top:2px;}
+.kt-item:last-child{margin-bottom:0;}
+.article-body h2{font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:700;color:#1A1A1A;margin:2.5rem 0 1rem;letter-spacing:-0.5px;line-height:1.2;}
+.article-body h3{font-size:10px;letter-spacing:2.5px;text-transform:uppercase;color:#B22234;font-weight:500;margin:2rem 0 0.7rem;}
+.article-body p{font-size:15px;line-height:1.85;color:#555;margin-bottom:1.2rem;font-weight:300;}
+.article-body p strong{color:#1A1A1A;font-weight:500;}
+.article-body ul,.article-body ol{padding-left:1.5rem;margin-bottom:1.3rem;}
+.article-body li{font-size:15px;line-height:1.8;color:#555;margin-bottom:7px;font-weight:300;}
+.article-body li strong{color:#1A1A1A;font-weight:500;}
+.callout{border-left:3px solid #C8A96E;background:#FEFCF7;padding:1.2rem 1.5rem;border-radius:0 10px 10px 0;margin:1.8rem 0;}
+.callout.red{border-color:#B22234;background:#FFF8F8;}
+.callout.blue{border-color:#3C3B6E;background:#F8F8FF;}
+.callout p{margin-bottom:0;font-size:14px;}
+.callout-label{font-size:10px;letter-spacing:2px;text-transform:uppercase;font-weight:500;color:#C8A96E;margin-bottom:6px;}
+.callout.red .callout-label{color:#B22234;}
+.callout.blue .callout-label{color:#3C3B6E;}
+.example-box{background:#F8F6F1;border:1px solid #E8E4DC;border-radius:14px;padding:1.5rem;margin:1.8rem 0;}
+.ex-label{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#888;margin-bottom:1rem;font-weight:500;}
+.article-footer{margin-top:3rem;padding-top:2rem;border-top:1px solid #E8E4DC;}
+.af-nav{display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem;}
+.af-btn{display:inline-flex;align-items:center;gap:8px;font-size:13px;color:#888;text-decoration:none;padding:10px 16px;border:1px solid #E8E4DC;border-radius:8px;background:#fff;transition:all 0.2s;}
+.af-btn:hover{border-color:#C8A96E;color:#1A1A1A;}
+.sidebar{position:sticky;top:2rem;}
+.sb-card{background:#fff;border:1px solid #E8E4DC;border-radius:14px;padding:1.5rem;margin-bottom:16px;}
+.sb-title{font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:700;color:#1A1A1A;margin-bottom:1rem;}
+.toc-list{display:flex;flex-direction:column;}
+.toc-link{font-size:12px;color:#888;padding:7px 0;border-bottom:1px solid #F0EDE8;text-decoration:none;transition:color 0.15s;display:flex;align-items:flex-start;gap:8px;font-weight:300;line-height:1.4;}
+.toc-link:last-child{border-bottom:none;}
+.toc-link.active,.toc-link:hover{color:#1A1A1A;}
+.toc-link .toc-num{font-size:10px;color:#C8A96E;flex-shrink:0;margin-top:2px;}
+</style>
+</head>
+<body>
+
+<div style="position:fixed;top:0;left:0;height:3px;background:#C8A96E;z-index:9999;transition:width 0.1s" id="readingProgress"></div>
+<div class="flag"></div>
+
+<nav class="nav" id="nav">
+  <a href="/" class="nav-logo">Unschool<b>Me</b></a>
+  <div class="nav-links">
+    <a href="/taxes">Taxes</a>
+    <a href="/banking">Banking</a>
+    <a href="/credit">Credit</a>
+    <a href="/government">Government</a>
+    <a href="/business">Business</a>
+    <a href="/rights">Rights</a>
+      <a href="/healthcare">Health</a>
+  </div>
+  <div class="nav-right">
+    <button class="btn-ghost" onclick="location.href='/login'">Log in</button>
+    <button class="btn-gold" onclick="location.href='/login'">Get Started →</button>
+  </div>
+</nav>
+
+<div class="article-hero">
+  <div class="ah-inner">
+    <div class="breadcrumb">
+      <a href="/">Home</a> → <a href="/grow-business">Grow Your Business</a> → <span>Finding Your First Customers</span>
+    </div>
+    <div class="article-tag">📈 Grow Your Business · Free Article</div>
+    <h1 class="article-title">How to Find Your First 10 <em>Customers</em> Without Paid Ads</h1>
+    <p class="article-subtitle">Most new businesses fail at customer acquisition because they wait for customers to find them. Here's exactly what to do instead — before you have a marketing budget.</p>
+    <div class="article-meta">
+      <span class="meta-badge">Free</span>
+      <span class="meta-item">5 min read</span>
+      <span class="meta-sep"></span>
+      <span class="meta-item">UnschoolMe Editorial</span>
+      <span class="meta-sep"></span>
+      <span class="meta-item">Updated 2026</span>
+    </div>
+  </div>
+</div>
+
+<div class="content-wrap">
+  <div class="content-grid">
+
+    <div class="article-body" id="article-body">
+
+      <div class="key-takeaways">
+        <div class="kt-label">Key Takeaways</div>
+        <div class="kt-item"><span class="kt-arrow">→</span> Most first customers come from your personal network, not from ads — start with warm outreach.</div>
+        <div class="kt-item"><span class="kt-arrow">→</span> A free Google Business Profile is the single highest-ROI tool for local businesses.</div>
+        <div class="kt-item"><span class="kt-arrow">→</span> Referrals convert far better than any ad — always ask directly after completing work.</div>
+        <div class="kt-item"><span class="kt-arrow">→</span> Discounting your first 1-3 clients in exchange for testimonials is one of the best trades a new business can make.</div>
+        <div class="kt-item"><span class="kt-arrow">→</span> Systematic follow-up with past customers generates more repeat business than most competitors ever bother to try.</div>
+      </div>
+
+      <h2 id="why-businesses-fail">Why Most New Businesses Fail at Customer Acquisition</h2>
+      <p>The most common mistake new business owners make isn't a bad product — it's waiting passively for customers to discover them. They build a website, maybe post on social media a few times, and then wonder why the phone isn't ringing. Customer acquisition in the earliest stage of a business is not a marketing problem, it's an <strong>outreach problem</strong>. You have to go directly to people, not wait for them to stumble onto you.</p>
+
+      <h2 id="warm-outreach">The Warm Outreach Method</h2>
+      <p>Before spending a dollar on advertising, contact every person you know personally — friends, family, former coworkers, old classmates — and tell them <strong>specifically</strong> what you do and who it's for. Not "I started a business," but "I help small restaurants set up online ordering systems, do you know anyone who runs one?" Specificity is what turns a vague well-wish into an actual referral, because it gives people something concrete to match against people they know. The overwhelming majority of first customers for new businesses come from personal networks, not from strangers finding an ad.</p>
+
+      <div class="callout">
+        <div class="callout-label">LinkedIn Message Script That Gets Responses</div>
+        <p>Keep it to under 5 sentences, mention a specific problem you solve, and never attach a file or pitch deck in the first message. Example: "Hi [Name] — I noticed [specific detail about their business]. I help businesses like yours with [specific problem]. Would it be worth a quick 10-minute call to see if it's a fit? No pressure either way." Short, specific, low-commitment asks get replies. Long pitches get ignored.</p>
+      </div>
+
+      <h2 id="google-business-profile">Set Up a Google Business Profile — Free, 15 Minutes</h2>
+      <p>For any business with a local component, a <strong>Google Business Profile</strong> is the single highest-return marketing tool available, and it costs nothing. It puts you directly into Google Maps results and local search — meaning when someone searches "[your service] near me," you show up without spending a cent on ads. Fill it out completely: hours, photos, services, and encourage early customers to leave reviews. This one listing often drives more real customer inquiries than a paid ad campaign for local businesses.</p>
+
+      <h2 id="local-communities">Local Facebook Groups and Nextdoor</h2>
+      <p>Join Facebook groups and Nextdoor threads relevant to your area or industry, and spend time genuinely answering people's questions before ever mentioning your business. When someone posts "does anyone know a good [your service]?", you're already established as helpful and visible, and a natural mention of what you do reads as helpful, not spammy. Businesses that show up only to sell get ignored or removed from these groups — businesses that show up to help build trust that converts later.</p>
+
+      <h2 id="referral-ask">The Referral Ask Script</h2>
+      <p>Referrals convert dramatically better than cold outreach or ads, because they arrive with built-in trust. But most business owners never actually ask for them. After completing work for a happy client, say exactly this: <strong>"I'm glad you're happy — do you know one other person who might need this? I'd appreciate the introduction."</strong> This is direct, easy to say yes to, and gives the client a clear, low-effort action. Make asking for a referral a standard final step after every completed job, not an occasional afterthought.</p>
+
+      <h2 id="cold-email">Cold Email Structure That Works</h2>
+      <p>If you're reaching businesses you don't know personally, cold email can work — but only with strict discipline:</p>
+      <ul>
+        <li><strong>Subject line</strong> that states a specific benefit, not a vague greeting</li>
+        <li><strong>3 sentences maximum</strong> in the body — respect the reader's time</li>
+        <li><strong>One clear call to action</strong> — a single question or ask, not multiple options</li>
+        <li><strong>Follow up exactly once</strong>, about 5 days later, then stop if there's no response</li>
+      </ul>
+      <p>Long emails, multiple asks, and repeated follow-ups all reduce response rates rather than improve them.</p>
+
+      <h2 id="discount-first-clients">Why Discounting Your First Clients Pays Off</h2>
+      <p>Offering your first one to three clients a lower price — or in some cases a free project — in exchange for a genuine testimonial and permission to use their name is one of the best trades a brand-new business can make. A specific, credible testimonial from a real client is worth more in future sales than the discount costs you upfront, because it removes the biggest obstacle new businesses face: nobody has proof you're good yet. Once you have 2-3 strong case studies, you can raise your prices back to normal and use those stories to close new business at full rate.</p>
+
+      <div class="example-box">
+        <div class="ex-label">Example: The First 3 Clients Trade</div>
+        <p style="margin-bottom:0;">You normally charge $500 for a project. For your first 3 clients, you charge $250 in exchange for a written testimonial and a case study photo or quote. Total discount given: $750. In return you gain 3 credible references that let you confidently charge $500-700 for every client afterward — the discount pays for itself with the very next full-price sale.</p>
+      </div>
+
+      <h2 id="systematic-followup">Follow Up Every 60 Days</h2>
+      <p>Most competitors do a job and never contact the client again. A simple check-in every 60 days — "just wanted to see how everything's going, let me know if you need anything" — keeps you top of mind for repeat business and referrals, at almost no cost in time. A large share of realistic long-term revenue for small businesses comes from repeat customers, not new ones, and repeat business rarely happens automatically — it happens because someone bothered to follow up.</p>
+
+      <div class="article-footer">
+        <div class="af-nav">
+          <a href="/grow-business" class="af-btn">← Back to Grow Your Business</a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="sidebar">
+      <div class="sb-card">
+        <div class="sb-title">In This Article</div>
+        <div class="toc-list">
+          <a href="#why-businesses-fail" class="toc-link"><span class="toc-num">01</span> Why Businesses Fail Here</a>
+          <a href="#warm-outreach" class="toc-link"><span class="toc-num">02</span> Warm Outreach</a>
+          <a href="#google-business-profile" class="toc-link"><span class="toc-num">03</span> Google Business Profile</a>
+          <a href="#local-communities" class="toc-link"><span class="toc-num">04</span> Local Communities</a>
+          <a href="#referral-ask" class="toc-link"><span class="toc-num">05</span> The Referral Ask</a>
+          <a href="#cold-email" class="toc-link"><span class="toc-num">06</span> Cold Email</a>
+          <a href="#discount-first-clients" class="toc-link"><span class="toc-num">07</span> Discounting First Clients</a>
+          <a href="#systematic-followup" class="toc-link"><span class="toc-num">08</span> Follow-Up System</a>
+        </div>
+      </div>
+
+      <div class="premium-card">
+        <div class="pc-eye">Premium</div>
+        <div class="pc-title">Go deeper with Premium</div>
+        <div class="pc-desc">Unlock outreach templates, referral scripts, and full customer acquisition playbooks.</div>
+        <button class="pc-btn">Get Premium — $9/mo →</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div>
+        <div class="footer-logo">Unschool<b>Me.</b></div>
+        <div class="footer-desc">Teaching real life skills that school forgot.</div>
+      </div>
+      <div>
+        <div class="footer-col-title">Topics</div>
+        <div class="footer-links">
+          <a href="/taxes">Taxes</a>
+          <a href="/banking">Banking</a>
+          <a href="/credit">Credit</a>
+          <a href="/government">Government</a>
+          <a href="/business">Business</a>
+          <a href="/rights">Rights</a>
+        <a href="/healthcare">Health</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Platform</div>
+        <div class="footer-links">
+          <a href="/#how">About</a>
+          <a href="/upload">Upload a Lesson</a>
+          <a href="/#pricing">Premium</a>
+          <a href="/chat" data-contact-link>Contact</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy">Built by someone who had to figure it all out alone. — UnschoolMe 2026 🇺🇸</div>
+    </div>
+    <div class="flag-b"></div>
+  </div>
+</footer>
+
+<script src="/js/config.js"></script>
+<script src="/js/main.js"></script>
+<script>
+window.addEventListener('scroll', () => {
+  const el = document.getElementById('readingProgress');
+  if (!el) return;
+  const scrollTop = window.scrollY;
+  const docHeight = document.body.scrollHeight - window.innerHeight;
+  el.style.width = (scrollTop / docHeight * 100) + '%';
+});
+const sections = document.querySelectorAll('h2[id]');
+const tocLinks = document.querySelectorAll('.toc-link');
+const tocObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      tocLinks.forEach(l => l.classList.remove('active'));
+      const active = document.querySelector(`.toc-link[href="#${entry.target.id}"]`);
+      if (active) active.classList.add('active');
+    }
+  });
+}, { rootMargin: '-20% 0% -70% 0%' });
+sections.forEach(s => tocObserver.observe(s));
+</script>
+
+</body>
+</html>
